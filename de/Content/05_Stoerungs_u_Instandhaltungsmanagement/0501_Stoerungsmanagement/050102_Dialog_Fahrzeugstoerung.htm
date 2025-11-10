@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="de" xml:lang="de" class="_Skins_Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Störungen an Fahrzeugen erfassen oder bearbeiten: Felder, Workflows und Systemwirkung auf die Disposition. Zustände, Störungsgrad und störungsbezogener Werkstattauftrag." /><title>Dialog Fahrzeugstörung</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Branding/Branding.css" rel="stylesheet" type="text/css" />
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+        <link href="../../Resources/TableStyles/Alternate-Row-Color.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Zurück" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Zu Hauptinhalt springen</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Konto</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Einstellungen</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Navigationsbereich anzeigen" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../0000_Einleitung.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Konto</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Einstellungen</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Suchfeld" placeholder="Suchen" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter:</span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Suchfilter" title="Alle Dateien" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">Alle Dateien</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Suchen" role="button" tabindex="0"><span class="invisible-label">Suche absenden</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Sie sind hier:</span>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 id="titel">Dialog Fahrzeugstörung</h1>
+                                        <p class="mc-shortdesc">Erfassen und bearbeiten Sie Fahrzeug&#8209;Störungen. Der <em>Störungsgrad</em> bewertet die Einsatzfähigkeit und wirkt unmittelbar auf die Disposition.</p>
+                                        <h2>Überblick</h2>
+                                        <p>Der Dialog <strong>Fahrzeugstörung</strong> ermöglicht dem berechtigten Benutzer das Anlegen und Bearbeiten von Störungen an einem Fahrzeug in PEAK.DMS. Jede Störung erhält einen <strong>Störungsgrad</strong>, der die betriebliche <strong>Einsatzfähigkeit</strong> abbildet und in Disposition und Sichten berücksichtigt wird.</p>
+                                        <p>Störungen können über einen <strong>Störungsbaum</strong> (projektierten Störungskatalog) kategorisiert werden. Der Katalog ist fahrzeugtypspezifisch hinterlegt und vom Administrator anpassbar.</p>
+                                        <h2>Dialog öffnen</h2>
+                                        <p><strong>So öffnen Sie den Dialog Fahrzeugstörung:</strong>
+                                        </p>
+                                        <h3>Neue Störung anlegen</h3>
+                                        <ul>
+                                            <li>Linksklick auf Schaltfläche <strong>Fahrzeugstörung</strong> in der Symbolleiste "Dialog"</li>
+                                            <li>Menü <strong>Ansicht</strong> → entsprechender Eintrag</li>
+                                            <li>Sicht <em>Fahrzeugstörungen</em>: Symbolleiste → Schaltfläche <em>Hinzufügen</em></li>
+                                            <li>Sicht <em>Fahrzeugstörungen</em>: Kontextmenü → <strong>Hinzufügen…</strong></li>
+                                        </ul>
+                                        <h3>Bestehende Störung bearbeiten</h3>
+                                        <ul>
+                                            <li>Sicht <em>Fahrzeugstörungen</em>: <strong>Doppelklick</strong> auf eine Zeile</li>
+                                            <li>Sicht <em>Fahrzeugstörungen</em>: Kontextmenü → <strong>Bearbeiten…</strong></li>
+                                        </ul>
+                                        <p class="note"><strong>Hinweis:</strong> Wird der Dialog über das Kontextmenü eines Fahrzeugs geöffnet, ist die Fahrzeugnummer vorbelegt.</p>
+                                        <h2>Dialogstruktur</h2>
+                                        <p>Der Dialog ist in zwei Reiter unterteilt:</p>
+                                        <ul>
+                                            <li><strong>Basisdaten:</strong> Fahrzeugidentifikation, Störungskategorisierung, Störungsgrad, Meldungsdaten</li>
+                                            <li><strong>Details:</strong> Ausführliche Beschreibungen, Handlungshinweise, Bemerkungen</li>
+                                        </ul>
+                                        <h2>Felder und Bedeutung</h2>
+                                        <!-- Reiter: Basisdaten -->
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Geschlossen" data-mc-alt2="Offen" /><h2>Reiter „Basisdaten"</h2></a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <h3>Fahrzeugidentifikation</h3>
+                                                <table class="TableStyle-Alternate-Row-Color" style="mc-table-style: url('../../Resources/TableStyles/Alternate-Row-Color.css');" cellspacing="21" data-mc-table-style="Alternate Row Color">
+                                                    <thead>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
+                                                            <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Feld</th>
+                                                            <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Beschreibung</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Fahrzeug</td>
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Nummer des ausgewählten Fahrzeugs. Bei Aufruf über Fahrzeugkontext vorbelegt.</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Typ</td>
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Fahrzeugtyp zum Fahrzeug (Anzeige).</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h3>Kategorie – Erfassung der Fahrzeugstörung</h3>
+                                                <table class="TableStyle-Alternate-Row-Color" style="mc-table-style: url('../../Resources/TableStyles/Alternate-Row-Color.css');" cellspacing="21" data-mc-table-style="Alternate Row Color">
+                                                    <thead>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
+                                                            <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Feld</th>
+                                                            <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Beschreibung</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störungsbaum</td>
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">
+                                                                <p>Auswahl einer Störungskategorie im vordefinierten Störungsbaum. Störungsarten sind mit einheitlichen Nummern versehen (Schnelleingabe möglich).</p>
+                                                                <p>In der Störungskategorie hinterlegt:</p>
+                                                                <ul>
+                                                                    <li>Betriebliche Einsatzfähigkeit des Fahrzeugs</li>
+                                                                    <li>Fehlendes Leistungsmerkmal</li>
+                                                                    <li>Handlungshinweis</li>
+                                                                </ul>
+                                                                <p>Nach Auswahl werden die Felder "Störungsgrad" und "Störungstext" entsprechend der Konfiguration ausgefüllt.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Negiertes Leistungsmerkmal</td>
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Fehlendes Leistungsmerkmal bei Auftreten der ausgewählten Störung (Anzeige).</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Dispo&#8209;Fahrzeugtyp</td>
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Berechneter/vorgeschlagener alternativer Ersatz-Fahrzeugtyp nach Eingabe der Störung. Kann manuell angepasst werden.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p class="tip"><strong>Tipp:</strong> Navigieren Sie den Störungsbaum so genau wie möglich durch, um eine präzise Kategorisierung zu erreichen. Alternativ können Sie die Störungsnummer direkt eingeben.</p>
+                                                <h3>Störung – Eigenschaften</h3>
+                                                <table class="TableStyle-Alternate-Row-Color" style="mc-table-style: url('../../Resources/TableStyles/Alternate-Row-Color.css');" cellspacing="21" data-mc-table-style="Alternate Row Color">
+                                                    <thead>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
+                                                            <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Feld</th>
+                                                            <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Beschreibung</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störungsgrad</td>
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Betriebliche Einsatzfähigkeit des Fahrzeugs. Siehe <a href="05010201_Stoerungsgrade.htm" class="MCXref xref">Fault Levels</a>.</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Meldungsnummer</td>
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Nummer zur eindeutigen Identifizierung der Fahrzeugstörung (optional, textueller Bezeichner, frei festlegbar).</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Zustand</td>
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Aktueller Bearbeitungsstand: Neu, Gemeldet, In Bearbeitung, Erledigt, Kein Befund. Siehe <a href="05010202_Stoerungszustaende.htm" class="MCXref xref">Fault States</a>.</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Ersteller</td>
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Benutzer, der die Störung erfasst hat (Anzeige).</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Gemeldet am</td>
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Zeitpunkt der Störungsmeldung (Anzeige).</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Störungstext</td>
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Ausführliche Beschreibung des Defekts/Schadens (Freitext). Wird aus Störungsbaum vorbelegt, kann angepasst werden.</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Handlungshinweis</td>
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Hinweise für Werkstatt/Service (Freitext). Wird aus Störungsbaum vorbelegt.</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Bemerkungen</td>
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Optionaler Kommentar (Freitext).</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h3>Schaltfläche „Mehr"</h3>
+                                                <p>Wenn für die Störungskategorie ein Dokument mit detaillierten Handlungshinweisen hinterlegt ist, kann es durch Betätigen der Schaltfläche <strong>Mehr</strong> angezeigt werden. Die Schaltfläche ist gesperrt, wenn kein Dokument hinterlegt ist.</p>
+                                                <h3>Optionen – Behandlung der Fahrzeugstörung</h3>
+                                                <table class="TableStyle-Alternate-Row-Color" style="mc-table-style: url('../../Resources/TableStyles/Alternate-Row-Color.css');" cellspacing="21" data-mc-table-style="Alternate Row Color">
+                                                    <thead>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
+                                                            <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Option</th>
+                                                            <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Beschreibung</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Werkstattauftrag erstellen</td>
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Checkbox: Anlegen eines Werkstattauftrages zur Behebung dieser Störung.</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Alle offenen Störungen hinzufügen</td>
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Checkbox (aktiv wenn "Werkstattauftrag erstellen" markiert): Alle gemeldeten Störungen des Fahrzeugs werden dem anzulegenden Werkstattauftrag zugewiesen.</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body1" data-mc-conditions="Customers.SSB">
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Fahrzeugreservierung erstellen</td>
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Checkbox: Störung direkt nach Erfassung in Fahrzeugreservierung überführen.</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body2" data-mc-conditions="Customers.SSB">
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Alle Störungen vom Fahrzeug mit einfügen</td>
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Checkbox (aktiv wenn "Fahrzeugreservierung erstellen" markiert): Alle offenen Störungen in die Fahrzeugreservierung einschließen.</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Erledigt</td>
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Checkbox: Überführen der Fahrzeugstörung in Zustand "Erledigt". Nur aktiv im Zustand "Gemeldet" oder "In Bearbeitung".</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Kein Befund</td>
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Checkbox: Überführen der Fahrzeugstörung in Zustand "Kein Befund" (nach ergebnisloser Prüfung). Nur aktiv im Zustand "Gemeldet".</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p class="note"><strong>Hinweis:</strong> Die Checkboxen "Erledigt" und "Kein Befund" sind bei Ersterfassung einer Störung inaktiv.</p>
+                                            </div>
+                                        </div>
+                                        <!-- Reiter: Details -->
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Geschlossen" data-mc-alt2="Offen" /><h2>Reiter „Details"</h2></a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <table class="TableStyle-Alternate-Row-Color" style="mc-table-style: url('../../Resources/TableStyles/Alternate-Row-Color.css');" cellspacing="21" data-mc-table-style="Alternate Row Color">
+                                                    <thead>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
+                                                            <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Feld</th>
+                                                            <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Beschreibung</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Beschreibung</td>
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Ausführliche Beschreibung des Schadens/Defekts.</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body2" data-mc-conditions="Customers.SSB">
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Kurztext (Fahrerinfo)</td>
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Max. 40 Zeichen Kurzinfo für Fahrerterminals. Wird angezeigt in: Fahrzeugakte (neben Fahrzeugzustand), Fahrzeugliste, Fahrerabfahrtstafel (Umlaufinformation). Feld ist mit Benutzerrecht verbunden.</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Handlungshinweis</td>
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Hinweise für Werkstatt/Service.</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Bemerkungen</td>
+                                                            <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Optionaler Kommentar.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p class="tip" data-mc-conditions="Customers.SSB"><strong>Best Practice:</strong> Formulieren Sie den Kurztext knapp und aussagekräftig, da nur 40 Zeichen zur Verfügung stehen.</p>
+                                            </div>
+                                        </div>
+                                        <h2>Workflows</h2>
+                                        <h3>Neue Störung anlegen</h3>
+                                        <p><strong>So legen Sie eine neue Fahrzeugstörung an:</strong>
+                                        </p>
+                                        <p><em>Voraussetzung:</em> Dialog "Fahrzeugstörung" ist im Zustand "Neu" geöffnet.</p>
+                                        <ol>
+                                            <li value="1"><strong>Fahrzeug</strong> auswählen (ggf. bereits vorbelegt bei kontextbezogenem Aufruf).</li>
+                                            <li value="2"><strong>Störungsbaum:</strong> Störungskategorie auswählen
+				<ul><li>Per Baum-Navigation durch Öffnen der Äste <em>oder</em></li><li>Per Schnelleingabe der Störungsnummer</li></ul><p>Das System füllt automatisch: Störungsgrad, Störungstext, Handlungshinweis, Negiertes Leistungsmerkmal, Dispo-Fahrzeugtyp.</p></li>
+                                            <li value="3"><strong>Störungsgrad</strong> prüfen und bei Bedarf manuell anpassen.</li>
+                                            <li value="4"><strong>Meldungsnummer</strong> eingeben (optional).</li>
+                                            <li value="5"><strong>Störungstext</strong> prüfen und ergänzen.</li>
+                                            <li value="6"><strong>Kurztext</strong> eingeben (SSB, optional, max. 40 Zeichen).</li>
+                                            <li value="7"><strong>Handlungshinweis</strong> prüfen und ergänzen (optional).</li>
+                                            <li value="8"><strong>Bemerkungen</strong> eingeben (optional).</li>
+                                            <li value="9">Optional: <strong>Werkstattauftrag erstellen</strong> aktivieren
+				<ul><li>Bei Bedarf: <strong>Alle offenen Störungen hinzufügen</strong> aktivieren</li></ul></li>
+                                            <li value="10">Optional: <strong>Fahrzeugreservierung erstellen</strong> aktivieren (SSB).</li>
+                                            <li value="11">Linksklick auf <strong>OK</strong>.</li>
+                                        </ol>
+                                        <p><em>Ergebnis:</em>
+                                        </p>
+                                        <ul>
+                                            <li>Störung ist im Zustand "Gemeldet" gespeichert.</li>
+                                            <li>Dialog ist geschlossen.</li>
+                                            <li>Störung erscheint in Sicht "Fahrzeugstörungen" und störungsbezogenen Sichten.</li>
+                                            <li>Fahrzeug steht dem Betrieb entsprechend dem Störungsgrad ggf. nicht mehr zur Verfügung.</li>
+                                            <li>Bei aktivierter Option öffnet sich Dialog "Werkstattauftrag" oder "Fahrzeugreservierung".</li>
+                                        </ul>
+                                        <p>Detaillierte Informationen siehe <a href="05010203_Stoerung_anlegen.htm" class="MCXref xref">Create Vehicle Fault</a>.</p>
+                                        <h3>Störung bearbeiten</h3>
+                                        <p>Die Bearbeitung einer Störung ermöglicht das nachträgliche Ändern von Eigenschaften. Die zur Bearbeitung freigegebenen Dialogfelder hängen vom aktuellen Zustand der Störung ab.</p>
+                                        <p><strong>Störung im Zustand "Gemeldet":</strong>
+                                        </p>
+                                        <ul>
+                                            <li>Alle Felder wie bei Neuanlage editierbar</li>
+                                            <li>Checkboxen "Erledigt" und "Kein Befund" sind aktiv</li>
+                                            <li>Werkstattauftrag kann erstellt werden</li>
+                                        </ul>
+                                        <p><strong>Störung im Zustand "In Bearbeitung":</strong>
+                                        </p>
+                                        <ul>
+                                            <li>Editierbar: "Ende", "Organisationseinheit"</li>
+                                            <li>Viele Felder sind für nachträgliche Änderungen gesperrt</li>
+                                            <li>Checkbox "Erledigt" ist aktiv</li>
+                                        </ul>
+                                        <p>Detaillierte Informationen siehe <a href="05010204_Stoerung_bearbeiten.htm" class="MCXref xref">Edit Vehicle Fault</a>.</p>
+                                        <h3>Störungsbezogenen Werkstattauftrag anlegen</h3>
+                                        <p>Für eine oder mehrere Störungen eines Fahrzeugs kann ein Werkstattauftrag angelegt werden. Die Störung wechselt dabei von "Gemeldet" in "In Bearbeitung".</p>
+                                        <p>Detaillierte Informationen siehe <a href="05010205_Werkstattauftrag_zu_Stoerung.htm" class="MCXref xref">Create Garage Order for Fault</a>.</p>
+                                        <h3>Störung als erledigt melden</h3>
+                                        <p>Eine Störung kann manuell oder automatisch in den Zustand "Erledigt" überführt werden.</p>
+                                        <p><strong>Manuelle Wege:</strong>
+                                        </p>
+                                        <ul>
+                                            <li>Sicht "Fahrzeugstörungen": Kontextmenü → <strong>Fertig melden</strong> / <strong>Erledigt</strong></li>
+                                            <li>Dialog "Fahrzeugstörung": Checkbox <strong>Erledigt</strong> aktivieren</li>
+                                        </ul>
+                                        <p><strong>Automatisch:</strong> Störung wird automatisch auf "Erledigt" gesetzt, wenn der zugehörige Werkstattauftrag in den Zustand "Beendet" wechselt.</p>
+                                        <p>Detaillierte Informationen siehe <a href="05010206_Stoerung_erledigt_melden.htm" class="MCXref xref">Report Vehicle Fault as Completed</a>.</p>
+                                        <h3>Störung abbrechen (Kein Befund)</h3>
+                                        <p>Eine Störung kann nach ergebnisloser Prüfung in den Zustand "Kein Befund" überführt werden. Diese Aktion erfordert eine spezielle Berechtigung.</p>
+                                        <p><strong>Wege:</strong>
+                                        </p>
+                                        <ul>
+                                            <li>Sicht "Fahrzeugstörungen": Kontextmenü → <strong>Abbrechen</strong></li>
+                                            <li>Dialog "Fahrzeugstörung": Checkbox <strong>Kein Befund</strong> aktivieren</li>
+                                        </ul>
+                                        <h2>Systemwirkung</h2>
+                                        <h3>Dispositionswirkung</h3>
+                                        <ul>
+                                            <li>Der <strong>Störungsgrad</strong> steuert die Verfügbarkeit des Fahrzeugs in der <strong>automatischen Umlaufdisposition</strong>.</li>
+                                            <li>Bei <strong>manueller Disposition</strong> werden Störungsgrade berücksichtigt.</li>
+                                            <li>Fahrzeuge können je nach Störungsgrad vollständig oder teilweise gesperrt sein.</li>
+                                        </ul>
+                                        <h3>Aggregation bei mehreren Störungen</h3>
+                                        <ul>
+                                            <li>In Sichten wird der <strong>höchste (kritischste) Störungsgrad</strong> angezeigt.</li>
+                                            <li>Die Disposition verwendet ebenfalls den höchsten Störungsgrad aller Störungen eines Fahrzeugs.</li>
+                                        </ul>
+                                        <h3>Anzeige in Sichten</h3>
+                                        <p>Störungsdaten erscheinen in:</p>
+                                        <ul>
+                                            <li><strong>Sicht Fahrzeugstörungen:</strong> Alle Störungen mit Status und Störungsgrad</li>
+                                            <li><strong>Fahrzeugakte:</strong> Störungen zum Fahrzeug, Kurztext neben Fahrzeugzustand</li>
+                                            <li><strong>Fahrzeugliste:</strong> Störungsgrad-Anzeige, Kurztext</li>
+                                            <li><strong>Fahrerabfahrtstafel (SSB):</strong> Kurztext in Umlaufinformation</li>
+                                            <li><strong>Störungsbezogene Listen:</strong> Je nach Konfiguration</li>
+                                        </ul>
+                                        <h3>Verknüpfungen</h3>
+                                        <ul>
+                                            <li><strong>Werkstattaufträge:</strong> Störung kann Werkstattauftrag auslösen; Zustandswechsel bei Beendigung</li>
+                                            <li><strong>Fahrzeugreservierungen (SSB):</strong> Störung kann Fahrzeugreservierung auslösen</li>
+                                        </ul>
+                                        <h2>Best Practices</h2>
+                                        <ul>
+                                            <li><strong>Störungsbaum:</strong> So genau wie möglich durchnavigieren für präzise Kategorisierung</li>
+                                            <li><strong>Störungstext:</strong> Aus Katalog kann und sollte bei Bedarf manuell ergänzt werden</li>
+                                            <li><strong>Störungsgrad:</strong> Sorgfältige Auswahl, da direkte Auswirkung auf Disposition; bei Unsicherheit eher höheren (kritischeren) Störungsgrad wählen</li>
+                                            <li><strong>Mehrere Störungen:</strong> Bei mehreren Störungen desselben Fahrzeugs "Alle offenen Störungen hinzufügen" erwägen (vermeidet mehrere parallele Werkstattaufträge)</li>
+                                            <li><strong>Dokumentation:</strong> Handlungshinweise vollständig erfassen; Bemerkungen für Kommunikation zwischen Schichten/Abteilungen nutzen</li>
+                                        </ul>
+                                        <h2>Abbildungen</h2>
+                                        <figure class="Figure" id="fig_fzgstoerung_basis">
+                                            <img src="../../Resources/Images/image200.png" alt="Dialog Fahrzeugstörung, Reiter Basisdaten mit Feldern Fahrzeug, Typ, Störungsbaum, Störungsgrad, Meldungsnummer, Zustand." />
+                                            <figcaption>Dialog <em>Fahrzeugstörung</em> &#160;–&#160; Reiter <em>Basisdaten</em>.</figcaption>
+                                        </figure>
+                                        <figure class="Figure" id="fig_fzgstoerung_neu">
+                                            <img src="../../Resources/Images/image201.png" alt="Dialog Fahrzeugstörung beim Anlegen einer neuen Störung im Zustand Neu." />
+                                            <figcaption>Dialog <em>Fahrzeugstörung</em> &#160;–&#160; Neue Störung anlegen.</figcaption>
+                                        </figure>
+                                        <figure class="Figure" id="fig_fzgstoerung_werkstatt">
+                                            <img src="../../Resources/Images/image202.png" alt="Dialog Fahrzeugstörung mit aktivierter Option Werkstattauftrag erstellen." />
+                                            <figcaption>Dialog <em>Fahrzeugstörung</em> &#160;–&#160; Werkstattauftrag zu Störung erstellen.</figcaption>
+                                        </figure>
+                                        <h2>Siehe auch</h2>
+                                        <ul>
+                                            <li><a href="050101_Liste_Fahrzeugstoerungen.htm" class="MCXref xref">Sicht „Fahrzeugstörungen“</a>
+                                            </li>
+                                            <li><a href="050100_Stoerungsmanagement_INTRO.htm" class="MCXref xref">Störungsmanagement</a>
+                                            </li>
+                                            <li><a href="05010201_Stoerungsgrade.htm" class="MCXref xref">Fault Levels</a>
+                                            </li>
+                                            <li><a href="05010202_Stoerungszustaende.htm" class="MCXref xref">Fault States</a>
+                                            </li>
+                                            <li><a href="05010203_Stoerung_anlegen.htm" class="MCXref xref">Create Vehicle Fault</a>
+                                            </li>
+                                            <li><a href="05010204_Stoerung_bearbeiten.htm" class="MCXref xref">Edit Vehicle Fault</a>
+                                            </li>
+                                            <li><a href="05010205_Werkstattauftrag_zu_Stoerung.htm" class="MCXref xref">Create Garage Order for Fault</a>
+                                            </li>
+                                            <li><a href="05010206_Stoerung_erledigt_melden.htm" class="MCXref xref">Report Vehicle Fault as Completed</a>
+                                            </li>
+                                            <li>
+                Störungsbaum und Störungskatalog <!-- TODO: unresolved link (kein DE-Topic gefunden): 05010207_Stoerungsbaum_Katalog.htm --></li>
+                                            <li><a href="../0503_Versorgungsmanagement/050301_Versorgungsauftraege/05030102_Dialog_Versorgungsauftrag.htm" class="MCXref xref">
+   Der Dialog "Versorgungsauftrag"
+  </a>
+                                            </li>
+                                            <li><a href="../../03_Stammdaten_Verwaltung/0301_Fahrzeugmanagement/030102_Dialog_Fahrzeugakte/030102_Fahrzeugakte.htm" class="MCXref xref">Die Fahrzeugakte</a>
+                                            </li>
+                                            <li><a href="../../04_Betriebssteuerung_und_Disposition/0403_Fahrzeugdisposition/040300_Fahrzeugdisposition_INTRO.htm" class="MCXref xref">Fahrzeugdisposition &#160;–&#160; Einführung</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

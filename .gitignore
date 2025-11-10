@@ -1,0 +1,36 @@
+# OS files
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editor directories
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Database and generated files
+*.s3db
+*.s3db-shm
+*.s3db-wal
+Analyzer/Content.cadbf/Content12.*
+
+# Build / Output
+Output/
+*/Output/
+
+# Backups and temporary
+*.bak
+*~
+
+# Logs
+*.log
+
+# Misc
+*.tmp
+
+# Keep project files like .flprj if you want; otherwise ignore
+# *.flprj
