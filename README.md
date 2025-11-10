@@ -8,32 +8,78 @@ Inhalt:
 - `Output/` - generierte Outputs (standardmäßig ausgeblendet via `.gitignore`)
 - `Analyzer/` - Datenbank-Dateien (ebenfalls ausgeblendet)
 
-Aktueller Status:
+Projekt: DmsOnlineHelp
 
-- Dieses Repository wurde soeben neu initialisiert (Neustart auf Wunsch des Benutzers).
-- Die Datei `.gitignore` ist vorhanden und schließt generierte Outputs / DB-Dateien aus.
+Dieses Repository enthält die lokale Ausgabe der Online‑Hilfe (HTML, Skripte, Ressourcen) für das DmsOnlineHelp‑Projekt.
 
-Wie weiter (lokal):
-1. Lokales Repository ist initialisiert und enthält diesen README sowie `.gitignore`.
-2. Um ein Remote-Repository auf GitHub zu erstellen und zu pushen, haben Sie zwei Optionen:
+Wichtige Ordner (Top-Level)
 
-Option A — mit GitHub CLI (empfohlen, wenn `gh` installiert und angemeldet):
+- `de/` — Deutsche Ausgabe der Onlinehilfe (viele HTML-, JS- und Ressourcen-Dateien)
+- `en/` — Englische Ausgabe der Onlinehilfe
+- `Content/`, `Data/`, `Resources/`, `Skins/` — Projekt- und Hilfsdaten (Strukturen, Indizes, Suchdaten)
+- `.gitignore` — Ausschlussregeln für generierte/temporäre Dateien
+- `README.md` — diese Datei
 
-    gh repo create <OWNER>/<REPO> --public --source=. --remote=origin --push
+Aktueller Repo‑Status
 
-Option B — manuell über GitHub-Webseite:
-- Erstellen Sie ein neues Repo auf https://github.com
-- Dann lokal ausführen:
+- Ein lokales Git‑Repository wurde initialisiert (Branch `main`).
+- Remote `origin` wurde mit der URL `https://github.com/tkarstaedt/DmsOnlineHelp.git` gesetzt (Push benötigt ggf. Authentifizierung).
+- Initialer Commit wurde erstellt (enthält die Projektdateien und Ressourcen).
 
-    git remote add origin https://github.com/<OWNER>/<REPO>.git
-    git branch -M main
-    git push -u origin main
+GitHub Pages — mögliche Veröffentlichungsoptionen
 
-Wichtig:
-- Beim ersten Push werden ggf. Anmeldeinformationen benötigt (GitHub Token oder gh CLI).
-- Passen Sie `.gitignore` an, falls Sie weitere Dateien ausschließen möchten.
+Dieser Repository‑Typ eignet sich gut, um eine statische Online‑Hilfe als GitHub Pages zu hosten. Es gibt drei gebräuchliche Varianten:
 
-Wenn Sie möchten, kann ich das Remote-Repository für Sie erstellen und den Push durchführen — dafür benötige ich, dass Sie auf dieser Maschine bereits mit `gh auth login` angemeldet sind, oder mir die Erlaubnis geben, die `gh`-Befehle auszuführen.
+1) Veröffentlichung aus `main:/docs` (einfach und schnell)
+    - Kopieren Sie den fertigen Site‑Output (z. B. den Inhalt von `de/`) in ein Verzeichnis `docs/` im Root.
+    - Commit & push auf `main`.
+    - GitHub → Settings → Pages → Source: wählen Sie `main` und `/(docs)`.
 
+    Beispiel (PowerShell):
+
+```powershell
+cd 'c:\github\DmsOnlineHelp'
+robocopy .\de .\docs /E
+git add docs
+git commit -m "docs: add de site for GitHub Pages"
+git push origin main
+```
+
+2) Veröffentlichung auf `gh-pages` Branch (saubere Trennung)
+    - Legen Sie einen `gh-pages` Branch an und legen Sie die fertige Site in dessen Root.
+    - Pushen Sie `gh-pages` und wählen Sie in GitHub Pages als Quelle `gh-pages` / root.
+
+    Beispiel (schnell, mit subtree):
+
+```powershell
+cd 'c:\github\DmsOnlineHelp'
+git subtree push --prefix de origin gh-pages
+```
+
+3) Automatisiertes Deployment per GitHub Actions
+    - Erstellen Sie einen Workflow unter `.github/workflows/` der bei Push die Site baut/kopiert und nach `gh-pages` (oder `main:/docs`) deployed.
+    - Vorteil: Automatische Aktualisierung bei jedem Commit.
+
+Hinweise und Empfehlungen
+
+- Repo enthält viele Binärdateien (Fonts, Bilder). Falls einzelne Dateien >100 MB sind, entfernt sie vor dem Push oder verwenden Sie Git LFS (`git lfs install`, `git lfs track "*.ttf"` usw.).
+- Beim Push per HTTPS benötigen Sie ein Personal Access Token (PAT) oder die Browser‑Authentifizierung des Git Credential Managers. Alternativ: SSH‑Zugang und SSH‑URL.
+- Wenn Sie nur die deutsche Hilfe veröffentlichen wollen, ist die `main:/docs` Variante am einfachsten.
+
+Remote / Push Status
+
+- Remote `origin` ist gesetzt auf: `https://github.com/tkarstaedt/DmsOnlineHelp.git`.
+- Ein vorher gestarteter Push wartete auf Browser‑Authentifizierung; bitte schließen Sie die Anmeldung/Autorisierung ab, damit Pushes abgeschlossen werden können.
+
+Nächste Schritte — Vorschlag
+
+1. Entscheiden, welche Sprache veröffentlicht werden soll (`de` oder `en`).
+2. Ich kann die `docs/`-Variante lokal vorbereiten (kopieren & commit). Danach müssen Sie die Auth in Ihrem Browser abschließen, damit ich / Sie die Änderungen pushen können.
+3. Optional: Git LFS aktivieren, wenn viele große Binärdateien versioniert werden sollen.
+
+Wenn Sie möchten, erledige ich Schritt 2 jetzt: sagen Sie kurz welche Sprache live gehen soll (z. B. `de`).
+
+---
+Automatisch aktualisiert: 2025-11-10
 ---
 Automatisch aktualisiert: 2025-11-10
