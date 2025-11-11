@@ -117,14 +117,19 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1 id="titel">Umlaufdisposition &#160;–&#160; Einführung</h1>
-                                        <p class="mc-shortdesc">Die Umlaufdisposition weist geplante Umläufe geeigneten Fahrzeugen zu und macht das Ergebnis im <em>Aufstellplan</em> und im <em>Betriebsbild</em> sichtbar.</p>
+                                        <p class="mc-shortdesc">Die Umlaufdisposition weist geplante Umläufe geeigneten Fahrzeugen zu und macht das Ergebnis
+        im <em>Aufstellplan</em> und im <em>Betriebsbild</em> sichtbar.</p>
                                         <h2>Zweck und Abgrenzung</h2>
-                                        <p>Die Umlaufdisposition ordnet Umläufe auf Basis der aktuellen Hofsituation passenden Fahrzeugen zu. Aufgabe ist es, jedem geplanten Umlauf ein Fahrzeug zuzuweisen und einen störungsfreien Betriebsablauf zu gewährleisten.</p>
-                                        <p>Sie ist abzugrenzen von der <strong>Fahrzeug&#8209;/Stellplatzdisposition</strong> (physische Zuordnung <em>Fahrzeug↔Stellplatz</em>) und stellt die <strong>logische Zuordnung</strong> <em>Umlauf↔Fahrzeug</em> dar, indirekt beeinflusst durch die Stellplatzlage.</p>
+                                        <p>Die Umlaufdisposition ordnet Umläufe auf Basis der aktuellen Hofsituation passenden Fahrzeugen zu. Aufgabe ist
+        es, jedem geplanten Umlauf ein Fahrzeug zuzuweisen und einen störungsfreien Betriebsablauf zu gewährleisten.</p>
+                                        <p>Sie ist abzugrenzen von der <strong>Fahrzeug&#8209;/Stellplatzdisposition</strong> (physische Zuordnung
+        <em>Fahrzeug↔Stellplatz</em>) und stellt die <strong>logische Zuordnung</strong> <em>Umlauf↔Fahrzeug</em> dar,
+        indirekt beeinflusst durch die Stellplatzlage.</p>
                                         <h2>Berücksichtigte Faktoren</h2>
                                         <p>Die Umlaufdisposition berücksichtigt bei der Zuordnung:</p>
                                         <ul>
-                                            <li><strong>Fahrzeugeigenschaften</strong>: Fahrzeugtyp, Reichweite/SoC, Störungsgrad, Linieneinschränkungen</li>
+                                            <li><strong>Fahrzeugeigenschaften</strong>: Fahrzeugtyp, Reichweite/SoC, Störungsgrad, Linieneinschränkungen
+        </li>
                                             <li><strong>Geplante Reservierungen</strong> des zu disponierenden Fahrzeugs</li>
                                             <li><strong>Aktueller Stellplatz</strong> und topologische Abhängigkeiten auf dem Betriebshof</li>
                                             <li><strong>Stellplatzeigenschaften</strong>: Spurlängen, Ladepunkte, zugelassene Nutzung, Ausrücklogik</li>
@@ -133,31 +138,45 @@
                                         </ul>
                                         <h2>Betriebsmodi</h2>
                                         <ul>
-                                            <li><strong>Manuell</strong>: Disponentin/Disponent weist dem zu disponierenden Umlauf ein Fahrzeug zu und bestätigt Änderungen.</li>
-                                            <li><strong>Halbautomatisch</strong>: Benutzer stößt die Umlaufdisposition im Dialog „Umlaufdisposition" an; das System berechnet Vorschläge automatisiert; Bestätigung durch die Disposition.</li>
-                                            <li><strong>Vollautomatisch</strong>: Erfolgt in regelmäßig wiederkehrenden, konfigurierbaren Intervallen (z.&#160;B. alle 3–5&#160;Minuten); System setzt freigegebene Regeln selbstständig um; Vorschläge können überprüft/übersteuert werden.</li>
+                                            <li><strong>Manuell</strong>: Disponentin/Disponent weist dem zu disponierenden Umlauf ein Fahrzeug zu und
+            bestätigt Änderungen.</li>
+                                            <li><strong>Halbautomatisch</strong>: Benutzer stößt die Umlaufdisposition im Dialog „Umlaufdisposition" an; das
+            System berechnet Vorschläge automatisiert; Bestätigung durch die Disposition.</li>
+                                            <li><strong>Vollautomatisch</strong>: Erfolgt in regelmäßig wiederkehrenden, konfigurierbaren Intervallen
+            (z.&#160;B. alle 3–5&#160;Minuten); System setzt freigegebene Regeln selbstständig um; Vorschläge können
+            überprüft/übersteuert werden.</li>
                                         </ul>
                                         <h2>Ablauf der Disposition</h2>
-                                        <p>Die Umlaufdisposition berechnet die Fahrzeugzuweisungen in <strong>sequenzieller Abfolge</strong>, beginnend mit dem zum frühesten Zeitpunkt startenden Umlauf. Zeitlich unmittelbar beginnende Umläufe werden zuerst mit einsatzbereiten Fahrzeugen besetzt.</p>
+                                        <p>Die Umlaufdisposition berechnet die Fahrzeugzuweisungen in <strong>sequenzieller Abfolge</strong>, beginnend mit
+        dem zum frühesten Zeitpunkt startenden Umlauf. Zeitlich unmittelbar beginnende Umläufe werden zuerst mit
+        einsatzbereiten Fahrzeugen besetzt.</p>
                                         <h3>Planungsperiode</h3>
-                                        <p>Die Planungsperiode beginnt zum Zeitpunkt der Dispositionsausführung und endet am Ende der aktuellen Ausrückphase.</p>
+                                        <p>Die Planungsperiode beginnt zum Zeitpunkt der Dispositionsausführung und endet am Ende der aktuellen
+        Ausrückphase.</p>
                                         <h3>Umdisposition und Umlauffixierung</h3>
-                                        <p>Bei verändertem Zustand im Betriebshof (Fahrzeugpositionen, Störungen, Reservierungen, Sonderfahrten) kann die Umlaufdisposition bereits zugeteilte Umläufe auf andere Fahrzeuge umdisponieren.</p>
+                                        <p>Bei verändertem Zustand im Betriebshof (Fahrzeugpositionen, Störungen, Reservierungen, Sonderfahrten) kann die
+        Umlaufdisposition bereits zugeteilte Umläufe auf andere Fahrzeuge umdisponieren.</p>
                                         <p><strong>Umlauffixierung</strong>: Umlaufbindungen werden <em>nicht</em> aufgebrochen, wenn:</p>
                                         <ul>
-                                            <li>sich der Umlauf in der konfigurierbaren <strong>Umlauffixierungszeit</strong> (z.&#160;B. 25&#160;Minuten vor Umlaufstart) befindet oder</li>
+                                            <li>sich der Umlauf in der konfigurierbaren <strong>Umlauffixierungszeit</strong> (z.&#160;B. 25&#160;Minuten
+            vor Umlaufstart) befindet oder</li>
                                             <li>die Umlaufzuteilung manuell durch eine Wunschvorbelegung erfolgte.</li>
                                         </ul>
                                         <h2>Bedienkern</h2>
-                                        <p>Die Disposition wird je <strong>Betriebshof</strong>, <strong>Betriebstag</strong> und <strong>Ausrückphase</strong> ausgeführt. Nur Höfe im Modus <em>Freie Aufstellung</em> sind wählbar.</p>
+                                        <p>Die Disposition wird je <strong>Betriebshof</strong>, <strong>Betriebstag</strong> und
+        <strong>Ausrückphase</strong> ausgeführt. Nur Höfe im Modus <em>Freie Aufstellung</em> sind wählbar.</p>
                                         <ul>
-                                            <li><strong>Disposition starten</strong>: Berechnung anhand der aktuellen Hofbelegung; Ergebnisprüfung im <em>Aufstellplan</em> und im <em>Betriebsbild</em>.</li>
-                                            <li><strong>Umläufe zurücksetzen</strong>: hebt erzeugte Zuordnungen auf; Umläufe im Zustand <em>Wird durchgeführt</em> bleiben zugeordnet.</li>
+                                            <li><strong>Disposition starten</strong>: Berechnung anhand der aktuellen Hofbelegung; Ergebnisprüfung im
+            <em>Aufstellplan</em> und im <em>Betriebsbild</em>.</li>
+                                            <li><strong>Umläufe zurücksetzen</strong>: hebt erzeugte Zuordnungen auf; Umläufe im Zustand <em>Wird
+                durchgeführt</em> bleiben zugeordnet.</li>
                                             <li><strong>Ausrückphase wechseln</strong>: Disposition wird mit aktueller Belegung erneut berechnet.</li>
-                                            <li><strong>Berechtigungen</strong>: erforderliche Rechte zum Starten/Löschen der Umlaufdisposition beachten.</li>
+                                            <li><strong>Berechtigungen</strong>: erforderliche Rechte zum Starten/Löschen der Umlaufdisposition beachten.
+        </li>
                                         </ul>
                                         <h2>Fahrzeugmangel</h2>
-                                        <p>Berechnet die Umlaufdisposition einen <strong>Fahrzeugmangel</strong>, beginnt der erste unbesetzte Umlauf zum spätmöglichsten Zeitpunkt. Dies gewährt dem Betrieb den größtmöglichen Handlungsspielraum.</p>
+                                        <p>Berechnet die Umlaufdisposition einen <strong>Fahrzeugmangel</strong>, beginnt der erste unbesetzte Umlauf zum
+        spätmöglichsten Zeitpunkt. Dies gewährt dem Betrieb den größtmöglichen Handlungsspielraum.</p>
                                         <ul>
                                             <li>Bei Fahrzeugmangel: zum spätesten Zeitpunkt einsetzende Umläufe werden nicht besetzt.</li>
                                             <li>Der berechtigte Benutzer wird über eine Meldung auf den Fahrzeugmangel hingewiesen.</li>
@@ -165,41 +184,57 @@
                                         </ul>
                                         <h2>Aufhebung von Umlaufzuweisungen</h2>
                                         <h3>Automatisiert berechnete Zuweisung</h3>
-                                        <p>Eine automatisiert berechnete Umlaufzuweisung wird aufgehoben, wenn der geplante Umlauf außerhalb der konfigurierbaren Umlauffixierungszeit beginnt <em>und</em> einer der folgenden Fälle eintritt:</p>
+                                        <p>Eine automatisiert berechnete Umlaufzuweisung wird aufgehoben, wenn der geplante Umlauf außerhalb der
+        konfigurierbaren Umlauffixierungszeit beginnt <em>und</em> einer der folgenden Fälle eintritt:</p>
                                         <ul>
                                             <li>das disponierte Fahrzeug verlässt seinen aktuellen Stellplatz,</li>
                                             <li>das disponierte Fahrzeug wird durch ein vor ihm gestörtes Fahrzeug blockiert (Ausrücken nicht möglich),</li>
                                             <li>das disponierte Fahrzeug wird als gestört gemeldet.</li>
                                         </ul>
-                                        <p><strong>Hinweis</strong>: Die Zuweisung bleibt bestehen, wenn das Fahrzeug als gestört gemeldet wird und der Umlauf innerhalb eines konfigurierbaren Zeitraums beginnt (z.&#160;B. ≤&#160;15&#160;Min).</p>
+                                        <p><strong>Hinweis</strong>: Die Zuweisung bleibt bestehen, wenn das Fahrzeug als gestört gemeldet wird und der
+        Umlauf innerhalb eines konfigurierbaren Zeitraums beginnt (z.&#160;B. ≤&#160;15&#160;Min).</p>
                                         <h3>Manuell gesetzte Zuweisung</h3>
                                         <p>Eine manuell gesetzte Umlaufzuweisung kann ausschließlich vom berechtigten Benutzer aufgehoben werden.</p>
                                         <h2>Abbruch und Höchstdauer</h2>
-                                        <p>Die <strong>Höchstdauer</strong>, mit der die Umlaufdisposition automatisiert ausgeführt wird, ist konfigurierbar. Erreicht eine laufende Umlaufdisposition die konfigurierte Höchstdauer, wird diese abgebrochen.</p>
+                                        <p>Die <strong>Höchstdauer</strong>, mit der die Umlaufdisposition automatisiert ausgeführt wird, ist
+        konfigurierbar. Erreicht eine laufende Umlaufdisposition die konfigurierte Höchstdauer, wird diese abgebrochen.
+    </p>
                                         <ul>
                                             <li>Das Ergebnis der berechneten Zuordnungen ist ggf. unvollständig.</li>
-                                            <li>Ein unvollständiges Ergebnis hat zur Folge, dass nicht allen geplanten Umläufen ein Fahrzeug zugewiesen werden konnte.</li>
+                                            <li>Ein unvollständiges Ergebnis hat zur Folge, dass nicht allen geplanten Umläufen ein Fahrzeug zugewiesen
+            werden konnte.</li>
                                         </ul>
                                         <h2>Ergebnisdarstellung</h2>
                                         <ul>
-                                            <li><strong>Aufstellplan</strong>: Zuordnung der Umläufe zu Spuren/Stellplätzen mit den zugehörigen Fahrzeugen; Reihenfolge spiegelt Ausrücklogik.</li>
-                                            <li><strong>Betriebsbild</strong>: Fahrzeugsymbole zeigen farbkodiert erfolgreiche Umlaufzuweisungen; visuelle Stellplatzbelegung mit Status&#8209; und Warnhinweisen (z.&#160;B. Konflikte, Werkstatt).</li>
+                                            <li><strong>Aufstellplan</strong>: Zuordnung der Umläufe zu Spuren/Stellplätzen mit den zugehörigen Fahrzeugen;
+            Reihenfolge spiegelt Ausrücklogik.</li>
+                                            <li><strong>Betriebsbild</strong>: Fahrzeugsymbole zeigen farbkodiert erfolgreiche Umlaufzuweisungen; visuelle
+            Stellplatzbelegung mit Status&#8209; und Warnhinweisen (z.&#160;B. Konflikte, Werkstatt).</li>
                                             <li><strong>Tabellarische Sichten</strong>: zeigen die aktuelle Umlaufzuweisung zu einem Fahrzeug.</li>
                                         </ul>
                                         <h2>Zusammenspiel mit Kursaufstellplanung</h2>
-                                        <p>Die <strong>Kursaufstellplanung</strong> bildet die Planungsgrundlage (Szenarien), der <strong>operative Kursaufstellplan</strong> die tagesaktuelle Umsetzung und der <strong>Aufstellplan</strong> die grafische Kontrolle inkl. Konsistenzprüfungen. Regeln wie Typzulässigkeit und Nutzungsarten fließen in die Disposition ein.</p>
+                                        <p>Die <strong>Kursaufstellplanung</strong> bildet die Planungsgrundlage (Szenarien), der <strong>operative
+            Kursaufstellplan</strong> die tagesaktuelle Umsetzung und der <strong>Aufstellplan</strong> die grafische
+        Kontrolle inkl. Konsistenzprüfungen. Regeln wie Typzulässigkeit und Nutzungsarten fließen in die Disposition
+        ein.</p>
                                         <h2>Best Practices</h2>
                                         <ul>
-                                            <li>Vor Schichtbeginn Vorschauperioden in Dispositionssichten und Bereichskalendern prüfen; manuelle Eingriffe dokumentieren.</li>
-                                            <li>Regeln/Prioritäten der Automatik pflegen und Vorschläge mit Scoring prüfen; nur zielgerichtet übersteuern.</li>
-                                            <li>Konflikte mit Werkstatt/Versorgung und Ausrücklogik im Aufstellplan abstimmen; Konsistenzprüfungen nutzen.</li>
+                                            <li>Vor Schichtbeginn Vorschauperioden in Dispositionssichten und Bereichskalendern prüfen; manuelle Eingriffe
+            dokumentieren.</li>
+                                            <li>Regeln/Prioritäten der Automatik pflegen und Vorschläge mit Scoring prüfen; nur zielgerichtet übersteuern.
+        </li>
+                                            <li>Konflikte mit Werkstatt/Versorgung und Ausrücklogik im Aufstellplan abstimmen; Konsistenzprüfungen nutzen.
+        </li>
                                             <li>Umlauffixierungszeiten und Vorschauzeitfenster an betriebliche Anforderungen anpassen.</li>
                                             <li>Bei Fahrzeugmangel frühzeitig reagieren; automatische Meldungen beachten.</li>
                                         </ul>
                                         <h2 data-mc-conditions="Customers.SSB">SSB&#160;–&#160;projektspezifische Hinweise</h2>
                                         <ul data-mc-conditions="Customers.SSB">
-                                            <li>Betriebsmodi und <strong>Prioritäten/Regeln</strong> (Linien&#8209;/Umlaufprioritäten, Fahrzeugklassen, Einsatzfenster) sind projektspezifisch parametriert; Bestätigungsstufen/Informationsketten folgen internen Abläufen.</li>
-                                            <li>Restriktionen aus dem <strong>Kursaufstellplan</strong> (z.&#160;B. Tunnelbetrieb, Fahrzeuglängen, Energie/Ladefenster) steuern die automatische Belegung und später die Rotation.</li>
+                                            <li>Betriebsmodi und <strong>Prioritäten/Regeln</strong> (Linien&#8209;/Umlaufprioritäten, Fahrzeugklassen,
+            Einsatzfenster) sind projektspezifisch parametriert; Bestätigungsstufen/Informationsketten folgen internen
+            Abläufen.</li>
+                                            <li>Restriktionen aus dem <strong>Kursaufstellplan</strong> (z.&#160;B. Tunnelbetrieb, Fahrzeuglängen,
+            Energie/Ladefenster) steuern die automatische Belegung und später die Rotation.</li>
                                             <li>Umlauffixierungszeit, Höchstdauer und Vorschauzeitfenster sind kundenspezifisch konfiguriert.</li>
                                         </ul>
                                         <h2>Abbildungen</h2>
@@ -217,9 +252,7 @@
                                             </li>
                                             <li><a href="04010603_Halbautomatische_Umlaufdisposition.htm" class="MCXref xref" xrefformat="{para}">Halbautomatische Umlaufdisposition</a>
                                             </li>
-                                            <li><a href="../../0402_Kursaufstellplanung/040200_Kursaufstellplanung_INTRO.htm" class="MCXref xref" xrefformat="{para}">
-   Kursaufstellplanung
-  </a>
+                                            <li><a href="../../0402_Kursaufstellplanung/040200_Kursaufstellplanung_INTRO.htm" class="MCXref xref" xrefformat="{para}">Kursaufstellplanung</a>
                                             </li>
                                             <li><a href="../../0402_Kursaufstellplanung/040202_Operativer_Kursaufstellplan.htm" class="MCXref xref" xrefformat="{para}">Operativer Kursaufstellplan</a>
                                             </li>

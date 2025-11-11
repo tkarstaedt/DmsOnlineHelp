@@ -3,9 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
-   Sicht VersorgungsauftrÃ¤ge
-  </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Sicht Versorgungsaufträge</title>
         <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
@@ -117,421 +115,276 @@
                                         </div>
                                     </div>
                                     <div role="main" id="mc-main-content">
-                                        <h1>
-   Die Sicht "VersorgungsauftrÃ¤ge"
-  </h1>
+                                        <h1>Die Sicht "Versorgungsaufträge"</h1>
                                         <p class="mc-shortdesc">
-   Die Sicht "VersorgungsauftrÃ¤ge" listet alle geplanten, laufenden und beendeten VersorgungsauftrÃ¤ge auf. Dies sind durchzufÃ¼hrende Arbeiten am Fahrzeug, die nicht zwingend durch die Werkstatt erfolgen mÃ¼ssen (z.B. Durchsicht, Reinigung, Betanken, Besandung).
+    Die Sicht "Versorgungsaufträge" listet alle geplanten, laufenden und beendeten Versorgungsaufträge auf. Dies sind
+    durchzuführende Arbeiten am Fahrzeug, die nicht zwingend durch die Werkstatt erfolgen müssen (z.B. Durchsicht,
+    Reinigung, Betanken, Besandung).
   </p>
                                         <p>
-   FÃ¼r jeden Versorgungstyp kann der Administrator festlegen, ob das Fahrzeug fÃ¼r die Disposition blockiert wird, wie lange die AusfÃ¼hrung standardmÃ¤ÃŸig dauert und ob das Fahrzeug nach Ablauf der Standarddauer automatisch fertig gemeldet wird. Ein Versorgungsauftrag beginnt, wenn das Fahrzeug auf einer Spur mit der entsprechenden Nutzungsart steht und der aktuelle Zeitpunkt im Zeitbereich des Auftrags liegt. Nach Abschluss der Arbeiten muss der Auftrag fertig gemeldet werden, damit das Fahrzeug wieder fÃ¼r die Disposition zur VerfÃ¼gung steht.
+    Für jeden Versorgungstyp kann der Administrator festlegen, ob das Fahrzeug für die Disposition blockiert wird, wie
+    lange die Ausführung standardmäßig dauert und ob das Fahrzeug nach Ablauf der Standarddauer automatisch fertig
+    gemeldet wird. Ein Versorgungsauftrag beginnt, wenn das Fahrzeug auf einer Spur mit der entsprechenden Nutzungsart
+    steht und der aktuelle Zeitpunkt im Zeitbereich des Auftrags liegt. Nach Abschluss der Arbeiten muss der Auftrag
+    fertig gemeldet werden, damit das Fahrzeug wieder für die Disposition zur Verfügung steht.
   </p>
-                                        <h2 id="aufruf-der-sicht">
-   Aufruf der Sicht
-  </h2>
+                                        <h2 id="aufruf-der-sicht">Aufruf der Sicht</h2>
                                         <p class="intro">
-   Sie kÃ¶nnen die Liste der VersorgungsauftrÃ¤ge auf folgende Weisen Ã¶ffnen:
+    Sie können die Liste der Versorgungsaufträge auf folgende Weisen öffnen:
   </p>
                                         <ul>
                                             <li>
-    Ãœber die Symbolleiste "Datensichten" durch einen Klick auf die SchaltflÃ¤che
-    <strong>
-     VersorgungsauftrÃ¤ge
-    </strong>
-    .
-   </li>
+      Über die Symbolleiste "Datensichten" durch einen Klick auf die Schaltfläche
+      <strong>Versorgungsaufträge</strong>
+      .
+    </li>
                                             <li>
-    Ãœber das MenÃ¼:
-    <strong>
-     Ansicht
-    </strong>
-    &gt;
-    <strong>
-     Datensichten
-    </strong>
-    &gt;
-    <strong>
-     VersorgungsauftrÃ¤ge
-    </strong>
-    .
-   </li>
+      Über das Menü:
+      <strong>Ansicht</strong>
+      &gt;
+      <strong>Datensichten</strong>
+      &gt;
+      <strong>Versorgungsaufträge</strong>
+      .
+    </li>
                                         </ul>
-                                        <h2 id="inhalte-der-sicht">
-   Inhalte der Sicht
-  </h2>
+                                        <h2 id="inhalte-der-sicht">Inhalte der Sicht</h2>
                                         <p class="intro">
-   Die Liste der VersorgungsauftrÃ¤ge enthÃ¤lt typischerweise die folgenden Spalten:
+    Die Liste der Versorgungsaufträge enthält typischerweise die folgenden Spalten:
   </p>
                                         <ul>
-                                            <li><strong>
-     Datum:
-    </strong>
-    Der Tag, fÃ¼r den dieser Auftrag geplant ist.
-   </li>
-                                            <li><strong>
-     Geplanter Beginn:
-    </strong>
-    Zeitpunkt, zu dem der Versorgungsauftrag beginnen soll.
-   </li>
-                                            <li><strong>
-     Geplantes Ende:
-    </strong>
-    Zeitpunkt, zu dem der Versorgungsauftrag spÃ¤testens beendet sein soll.
-   </li>
-                                            <li><strong>
-     Versorgungstyp:
-    </strong>
-    Art des Versorgungsauftrags.
-   </li>
-                                            <li><strong>
-     Dauer:
-    </strong>
-    Dauer des Versorgungsauftrags in Stunden, Minuten und Sekunden.
-   </li>
-                                            <li><strong>
-     Fahrzeug:
-    </strong>
-    Fahrzeugnummer des Fahrzeugs, dem der Auftrag zugeordnet ist.
-   </li>
-                                            <li><strong>
-     Fahrzeugtyp:
-    </strong>
-    Fahrzeugtyp des Fahrzeugs.
-   </li>
-                                            <li><strong>
-     Zustand:
-    </strong>
-    Aktueller Zustand des Auftrags (z.B. Gemeldet, In Bearbeitung, Erledigt, Abgebrochen).
-   </li>
-                                            <li><strong>
-     Betriebszweig:
-    </strong>
-    Bus oder Schiene.
-   </li>
-                                            <li><strong>
-     Fzg.-Betriebshof:
-    </strong>
-    Heimat- oder aktueller Ausleih-Betriebshof des Fahrzeuges.
-   </li>
-                                            <li><strong>
-     Standort:
-    </strong>
-    Aktueller Standort des Fahrzeugs im Betriebshof.
-   </li>
-                                            <li><strong>
-     Bemerkung:
-    </strong>
-    ZusÃ¤tzlicher Text zum Versorgungsauftrag.
-   </li>
-                                            <li><strong>
-     Ersteller:
-    </strong>
-    Benutzer, der den Auftrag angelegt hat.
-   </li>
-                                            <li><strong>
-     Erstellungszeit:
-    </strong>
-    Zeitpunkt, zu dem der Auftrag angelegt wurde.
-   </li>
-                                            <li><strong>
-     Fertig gemeldet durch:
-    </strong>
-    Benutzer, der den Auftrag beendet hat.
-   </li>
-                                            <li><strong>
-     Ende:
-    </strong>
-    Zeitpunkt, zu dem der Auftrag beendet wurde.
-   </li>
+                                            <li><strong>Datum:</strong>
+      Der Tag, für den dieser Auftrag geplant ist.
+    </li>
+                                            <li><strong>Geplanter Beginn:</strong>
+      Zeitpunkt, zu dem der Versorgungsauftrag beginnen soll.
+    </li>
+                                            <li><strong>Geplantes Ende:</strong>
+      Zeitpunkt, zu dem der Versorgungsauftrag spätestens beendet sein soll.
+    </li>
+                                            <li><strong>Versorgungstyp:</strong>
+      Art des Versorgungsauftrags.
+    </li>
+                                            <li><strong>Dauer:</strong>
+      Dauer des Versorgungsauftrags in Stunden, Minuten und Sekunden.
+    </li>
+                                            <li><strong>Fahrzeug:</strong>
+      Fahrzeugnummer des Fahrzeugs, dem der Auftrag zugeordnet ist.
+    </li>
+                                            <li><strong>Fahrzeugtyp:</strong>
+      Fahrzeugtyp des Fahrzeugs.
+    </li>
+                                            <li><strong>Zustand:</strong>
+      Aktueller Zustand des Auftrags (z.B. Gemeldet, In Bearbeitung, Erledigt, Abgebrochen).
+    </li>
+                                            <li><strong>Betriebszweig:</strong>
+      Bus oder Schiene.
+    </li>
+                                            <li><strong>Fzg.-Betriebshof:</strong>
+      Heimat- oder aktueller Ausleih-Betriebshof des Fahrzeuges.
+    </li>
+                                            <li><strong>Standort:</strong>
+      Aktueller Standort des Fahrzeugs im Betriebshof.
+    </li>
+                                            <li><strong>Bemerkung:</strong>
+      Zusätzlicher Text zum Versorgungsauftrag.
+    </li>
+                                            <li><strong>Ersteller:</strong>
+      Benutzer, der den Auftrag angelegt hat.
+    </li>
+                                            <li><strong>Erstellungszeit:</strong>
+      Zeitpunkt, zu dem der Auftrag angelegt wurde.
+    </li>
+                                            <li><strong>Fertig gemeldet durch:</strong>
+      Benutzer, der den Auftrag beendet hat.
+    </li>
+                                            <li><strong>Ende:</strong>
+      Zeitpunkt, zu dem der Auftrag beendet wurde.
+    </li>
                                         </ul>
-                                        <h2 id="funktionen-der-sicht">
-   Funktionen in der Sicht
-  </h2>
+                                        <h2 id="funktionen-der-sicht">Funktionen in der Sicht</h2>
                                         <p class="intro">
-   Ãœber das KontextmenÃ¼ (Rechtsklick auf einen Auftrag) kÃ¶nnen je nach Zustand des Auftrags verschiedene Aktionen ausgefÃ¼hrt werden:
+    Über das Kontextmenü (Rechtsklick auf einen Auftrag) können je nach Zustand des Auftrags verschiedene Aktionen
+    ausgeführt werden:
   </p>
                                         <ul>
-                                            <li><strong>
-     HinzufÃ¼gen:
-    </strong>
-    Einen neuen Versorgungsauftrag anlegen.
-   </li>
-                                            <li><strong>
-     Bearbeiten:
-    </strong>
-    Einen bestehenden Auftrag Ã¤ndern.
-   </li>
-                                            <li><strong>
-     Fertig melden:
-    </strong>
-    Einen Auftrag als erledigt melden.
-   </li>
-                                            <li><strong>
-     Unterbrechen:
-    </strong>
-    Einen laufenden Auftrag unterbrechen (splitten). Der ursprÃ¼ngliche Auftrag wird zum aktuellen Zeitpunkt beendet und ein neuer Auftrag wird fÃ¼r einen spÃ¤teren Zeitpunkt angelegt.
-   </li>
+                                            <li><strong>Hinzufügen:</strong>
+      Einen neuen Versorgungsauftrag anlegen.
+    </li>
+                                            <li><strong>Bearbeiten:</strong>
+      Einen bestehenden Auftrag ändern.
+    </li>
+                                            <li><strong>Fertig melden:</strong>
+      Einen Auftrag als erledigt melden.
+    </li>
+                                            <li><strong>Unterbrechen:</strong>
+      Einen laufenden Auftrag unterbrechen (splitten). Der ursprüngliche Auftrag wird zum aktuellen Zeitpunkt beendet
+      und ein neuer Auftrag wird für einen späteren Zeitpunkt angelegt.
+    </li>
                                         </ul>
                                         <p>
-   Ein Doppelklick auf einen Eintrag Ã¶ffnet den Dialog "Versorgungsauftrag" zur Bearbeitung.
+    Ein Doppelklick auf einen Eintrag öffnet den Dialog "Versorgungsauftrag" zur Bearbeitung.
   </p>
                                         <p class="mc-shortdesc">
-   Die tabellarische Sicht
-   <strong>
-    â€žVersorgungsauftrÃ¤geâ€œ
-   </strong>
-   listet alle geplanten, laufenden und
-			abgeschlossenen Versorgungsarbeiten je Fahrzeug auf (z.Â&#160;B. Waschen, Tanken, Innenreinigung).
-			Jeder Auftrag ist genau
-   <strong>
-    einem Fahrzeug
-   </strong>
-   und
-   <strong>
-    einer Versorgungsart
-   </strong>
-   zugeordnet.
+    Die tabellarische Sicht
+    <strong>"Versorgungsaufträge "</strong>
+    listet alle geplanten, laufenden und
+    abgeschlossenen Versorgungsarbeiten je Fahrzeug auf (z.Â&#160;B. Waschen, Tanken, Innenreinigung).
+    Jeder Auftrag ist genau
+    <strong>einem Fahrzeug</strong>
+    und
+    <strong>einer Versorgungsart</strong>
+    zugeordnet.
   </p>
-                                        <h2 id="definition">
-   Definition &amp; Zweck
-  </h2>
+                                        <h2 id="definition">Definition &amp; Zweck</h2>
                                         <ul>
-                                            <li><strong>
-     Versorgungsauftrag
-    </strong>
-    = zeitliche Reservierung eines Fahrzeugs fÃ¼r eine betriebliche Versorgung (Beginn/Ende definieren den Reservierungszeitraum).
-   </li>
-                                            <li><strong>
-     Ziel
-    </strong>
-    : Planung, DurchfÃ¼hrung und Nachverfolgung nichtâ€‘werkstattpflichtiger Arbeiten mit dispositiver Wirkung.
-   </li>
+                                            <li><strong>Versorgungsauftrag</strong>
+      = zeitliche Reservierung eines Fahrzeugs für eine betriebliche Versorgung (Beginn/Ende definieren den
+      Reservierungszeitraum).
+    </li>
+                                            <li><strong>Ziel</strong>
+      : Planung, Durchführung und Nachverfolgung nicht-werkstattpflichtiger Arbeiten mit dispositiver Wirkung.
+    </li>
                                         </ul>
-                                        <h2 id="aufruf">
-   Aufruf
-  </h2>
+                                        <h2 id="aufruf">Aufruf</h2>
                                         <ul>
                                             <li>
-    Symbolleiste:
-    <em>
-     Datensichten â†’ VersorgungsauftrÃ¤ge
-    </em></li>
+      Symbolleiste:
+      <em>Datensichten â†’ Versorgungsaufträge</em></li>
                                             <li>
-    MenÃ¼:
-    <em>
-     Ansicht â†’ Datensichten â†’ VersorgungsauftrÃ¤ge
-    </em></li>
+      Menü:
+      <em>Ansicht â†’ Datensichten â†’ Versorgungsaufträge</em></li>
                                             <li>
-    Doppelklick auf einen Eintrag Ã¶ffnet den Dialog
-    <em>
-     Versorgungsauftrag
-    </em>
-    .
-   </li>
+      Doppelklick auf einen Eintrag öffnet den Dialog
+      <em>Versorgungsauftrag</em>
+      .
+    </li>
                                         </ul>
-                                        <h2 id="spalten">
-   Spalten (Standardkonfiguration)
-  </h2>
+                                        <h2 id="spalten">Spalten (Standardkonfiguration)</h2>
                                         <ul>
-                                            <li><strong>
-     Fahrzeug
-    </strong>
-    (Nummer),
-    <strong>
-     Fahrzeugtyp
-    </strong></li>
-                                            <li><strong>
-     Beginn
-    </strong>
-    (Betriebstag/Uhrzeit),
-    <strong>
-     Ende
-    </strong>
-    (Betriebstag/Uhrzeit)
-   </li>
-                                            <li><strong>
-     Zustand
-    </strong>
-    (Bearbeitungsstand)
-   </li>
-                                            <li><strong>
-     Betriebshof
-    </strong>
-    (Ort der AuftragsdurchfÃ¼hrung)
-   </li>
-                                            <li><strong>
-     Versorgungsart
-    </strong>
+                                            <li><strong>Fahrzeug</strong>
+      (Nummer),
+      <strong>Fahrzeugtyp</strong></li>
+                                            <li><strong>Beginn</strong>
+      (Betriebstag/Uhrzeit),
+      <strong>Ende</strong>
+      (Betriebstag/Uhrzeit)
+    </li>
+                                            <li><strong>Zustand</strong>
+      (Bearbeitungsstand)
+    </li>
+                                            <li><strong>Betriebshof</strong>
+      (Ort der Auftragsdurchführung)
+    </li>
+                                            <li><strong>Versorgungsart</strong>
                                             </li>
-                                            <li><strong>
-     Erstellt von / erstellt am
-    </strong>
+                                            <li><strong>Erstellt von / erstellt am</strong>
                                             </li>
-                                            <li><strong>
-     Fertig gemeldet von / fertig gemeldet am
-    </strong>
+                                            <li><strong>Fertig gemeldet von / fertig gemeldet am</strong>
                                             </li>
                                         </ul>
-                                        <h2 id="zustaende">
-   ZustÃ¤nde &amp; dispositive Wirkung
-  </h2>
+                                        <h2 id="zustaende">Zustände &amp; dispositive Wirkung</h2>
                                         <p class="intro">
-   Typische ZustÃ¤nde und ihr Effekt:
+    Typische Zustände und ihr Effekt:
   </p>
                                         <ul>
-                                            <li><strong>
-     Vorgeschlagen
-    </strong>
-    : optionaler Termin; keine dispositive Wirkung.
-   </li>
-                                            <li><strong>
-     Geplant
-    </strong>
-    : bindend terminiert; Fahrzeug im Reservierungszeitraum dispositiv gesperrt.
-   </li>
-                                            <li><strong>
-     In Bearbeitung
-    </strong>
-    : startet automatisch auf passender Versorgungsspur oder manuell; Sperrwirkung bleibt bis Abschluss bestehen (auch Ã¼ber geplantes Ende hinaus).
-   </li>
-                                            <li><strong>
-     Beendet
-    </strong>
-    : Versorgung erfolgreich abgeschlossen; Fahrzeug wieder einsetzbar (ggf. automatische RÃ¼ckmeldung durch Anlagen).
-   </li>
-                                            <li><strong>
-     Abgebrochen
-    </strong>
-    : nicht erfolgreich; Fahrzeug ebenfalls wieder einsetzbar.
-   </li>
+                                            <li><strong>Vorgeschlagen</strong>
+      : optionaler Termin; keine dispositive Wirkung.
+    </li>
+                                            <li><strong>Geplant</strong>
+      : bindend terminiert; Fahrzeug im Reservierungszeitraum dispositiv gesperrt.
+    </li>
+                                            <li><strong>In Bearbeitung</strong>
+      : startet automatisch auf passender Versorgungsspur oder manuell; Sperrwirkung bleibt bis Abschluss bestehen (auch
+      über geplantes Ende hinaus).
+    </li>
+                                            <li><strong>Beendet</strong>
+      : Versorgung erfolgreich abgeschlossen; Fahrzeug wieder einsetzbar (ggf. automatische Rückmeldung durch Anlagen).
+    </li>
+                                            <li><strong>Abgebrochen</strong>
+      : nicht erfolgreich; Fahrzeug ebenfalls wieder einsetzbar.
+    </li>
                                         </ul>
-                                        <h2 id="bedienung">
-   Bedienhandlungen
-  </h2>
+                                        <h2 id="bedienung">Bedienhandlungen</h2>
                                         <ul>
-                                            <li><strong>
-     HinzufÃ¼gen
-    </strong>
-    â€“ neuen Versorgungsauftrag anlegen (Dialog).
-   </li>
-                                            <li><strong>
-     Bearbeiten
-    </strong>
-    â€“ Eigenschaften Ã¤ndern (zustandsabhÃ¤ngig).
-   </li>
-                                            <li><strong>
-     DurchfÃ¼hren
-    </strong>
-    â€“ von
-    <em>
-     Geplant
-    </em>
-    â†’
-    <em>
-     In Bearbeitung
-    </em>
-    .
-   </li>
-                                            <li><strong>
-     Fertig melden
-    </strong>
-    â€“ in
-    <em>
-     Beendet
-    </em>
-    setzen.
-   </li>
-                                            <li><strong>
-     Abbrechen
-    </strong>
-    â€“ ohne erfolgreiche DurchfÃ¼hrung beenden.
-   </li>
-                                            <li><strong>
-     Splitten/Unterbrechen
-    </strong>
-    â€“ Auftrag zeitlich teilen (legt Anschlussauftrag an).
-   </li>
+                                            <li><strong>Hinzufügen</strong>
+      â€“ neuen Versorgungsauftrag anlegen (Dialog).
+    </li>
+                                            <li><strong>Bearbeiten</strong>
+      â€“ Eigenschaften ändern (zustandsabhängig).
+    </li>
+                                            <li><strong>Durchführen</strong>
+      â€“ von
+      <em>Geplant</em>
+      â†’
+      <em>In Bearbeitung</em>
+      .
+    </li>
+                                            <li><strong>Fertig melden</strong>
+      â€“ in
+      <em>Beendet</em>
+      setzen.
+    </li>
+                                            <li><strong>Abbrechen</strong>
+      â€“ ohne erfolgreiche Durchführung beenden.
+    </li>
+                                            <li><strong>Splitten/Unterbrechen</strong>
+      â€“ Auftrag zeitlich teilen (legt Anschlussauftrag an).
+    </li>
                                         </ul>
-                                        <h2 id="integration">
-   Integration in Disposition &amp; Sichten
-  </h2>
+                                        <h2 id="integration">Integration in Disposition &amp; Sichten</h2>
                                         <ul>
-                                            <li><strong>
-     Disposition
-    </strong>
-    : BerÃ¼cksichtigt VersorgungsauftrÃ¤ge mit gÃ¼ltigem Reservierungszeitraum (Umlauf/Fahrzeugdisposition blockiert je nach Zustand/Art).
-   </li>
-                                            <li><strong>
-     Fahrzeugakte
-    </strong>
-    : Reiter
-    <em>
-     VersorgungsauftrÃ¤ge
-    </em>
-    zeigt alle AuftrÃ¤ge fahrzeugbezogen; Direktnavigation aus der Liste.
-   </li>
-                                            <li><strong>
-     Betriebsbild
-    </strong>
-    : Fahrzeuge mit aktiven Versorgungen sind visuell markiert (farbliche Kodierung projektabhÃ¤ngig).
-   </li>
+                                            <li><strong>Disposition</strong>
+      : Berücksichtigt Versorgungsaufträge mit gültigem Reservierungszeitraum (Umlauf/Fahrzeugdisposition blockiert je
+      nach Zustand/Art).
+    </li>
+                                            <li><strong>Fahrzeugakte</strong>
+      : Reiter
+      <em>Versorgungsaufträge</em>
+      zeigt alle Aufträge fahrzeugbezogen; Direktnavigation aus der Liste.
+    </li>
+                                            <li><strong>Betriebsbild</strong>
+      : Fahrzeuge mit aktiven Versorgungen sind visuell markiert (farbliche Kodierung projektabhängig).
+    </li>
                                         </ul>
-                                        <h2 id="vsp">
-   Versorgungsspurterminal (VSP) â€“ optional
-  </h2>
+                                        <h2 id="vsp">Versorgungsspurterminal (VSP) â€“ optional</h2>
                                         <p>
-   FÃ¼r Versorgungsteams steht eine vereinfachte BedienoberflÃ¤che bereit. Sobald ein Fahrzeug eine Versorgungsspur
-			befÃ¤hrt, erscheinen relevante Daten und Aktionen (u.â€¯a. StÃ¶rung fertigmelden, neue StÃ¶rung anlegen).
+    Für Versorgungsteams steht eine vereinfachte Bedienoberfläche bereit. Sobald ein Fahrzeug eine Versorgungsspur
+    befährt, erscheinen relevante Daten und Aktionen (u.â€¯a. Störung fertigmelden, neue Störung anlegen).
   </p>
-                                        <h2 id="automatik">
-   Automatische Erzeugung (projektspezifisch)
-  </h2>
+                                        <h2 id="automatik">Automatische Erzeugung (projektspezifisch)</h2>
                                         <p>
-   VersorgungsauftrÃ¤ge kÃ¶nnen auch automatisch angelegt werden (z.Â&#160;B. â€žDurchsichtâ€œ bei Einfahrt in den Betriebshof;
-			Reinigungsdisposition; Fremdsysteme).
+    Versorgungsaufträge können auch automatisch angelegt werden (z.Â&#160;B. "Durchsicht " bei Einfahrt in den Betriebshof;
+    Reinigungsdisposition; Fremdsysteme).
   </p>
-                                        <h2 id="dialog">
-   KurzÃ¼berblick: Dialog â€žVersorgungsauftragâ€œ
-  </h2>
+                                        <h2 id="dialog">Kurzüberblick: Dialog "Versorgungsauftrag "</h2>
                                         <ul>
-                                            <li><strong>
-     Basisdaten
-    </strong>
-    : Fahrzeug, Fahrzeugtyp, Versorgungsart, Bemerkung.
-   </li>
-                                            <li><strong>
-     Terminierung
-    </strong>
-    : Beginn/Ende, optional
-    <em>
-     GanztÃ¤gig
-    </em>
-    , Betriebshof; informelle Felder
-    <em>
-     FrÃ¼herer Beginn/SpÃ¤teres Ende
-    </em>
-    (ohne dispositive Wirkung).
-   </li>
-                                            <li><strong>
-     Zustand &amp; Optionen
-    </strong>
-    : Bearbeitungsstand und projektabhÃ¤ngige Optionen.
-   </li>
+                                            <li><strong>Basisdaten</strong>
+      : Fahrzeug, Fahrzeugtyp, Versorgungsart, Bemerkung.
+    </li>
+                                            <li><strong>Terminierung</strong>
+      : Beginn/Ende, optional
+      <em>Ganztägig</em>
+      , Betriebshof; informelle Felder
+      <em>Früherer Beginn/Späteres Ende</em>
+      (ohne dispositive Wirkung).
+    </li>
+                                            <li><strong>Zustand &amp; Optionen</strong>
+      : Bearbeitungsstand und projektabhängige Optionen.
+    </li>
                                         </ul>
-                                        <h2 id="abbildungen">
-   Abbildungen (Platzhalter)
-  </h2>
+                                        <h2 id="abbildungen">Abbildungen (Platzhalter)</h2>
                                         <figure>
-                                            <img alt="Sicht VersorgungsauftrÃ¤ge â€“ tabellarische Ãœbersicht" src="Resources/Images/Sicht-Versorgungsauftraege.png" style="max-width: 100%;height: auto;" />
+                                            <img alt="Sicht Versorgungsaufträge â€“ tabellarische Übersicht" src="Resources/Images/Sicht-Versorgungsauftraege.png" style="max-width: 100%;height: auto;" />
                                             <figcaption>
-    Abbildung 1: Sicht â€žVersorgungsauftrÃ¤geâ€œ mit Spalten Fahrzeug, Zeitraum, Zustand, Versorgungsart (Platzhalter).
-   </figcaption>
+      Abbildung 1: Sicht "Versorgungsaufträge " mit Spalten Fahrzeug, Zeitraum, Zustand, Versorgungsart (Platzhalter).
+    </figcaption>
                                         </figure>
                                         <figure>
                                             <img alt="Dialog Versorgungsauftrag â€“ Basisdaten &amp; Terminierung" src="Resources/Images/Dialog-Versorgungsauftrag.png" style="max-width: 100%;height: auto;" />
                                             <figcaption>
-    Abbildung 2: Dialog â€žVersorgungsauftragâ€œ â€“ Basisdaten, Terminierung und Optionen (Platzhalter).
-   </figcaption>
+      Abbildung 2: Dialog "Versorgungsauftrag " â€“ Basisdaten, Terminierung und Optionen (Platzhalter).
+    </figcaption>
                                         </figure>
                                     </div>
                                 </div>

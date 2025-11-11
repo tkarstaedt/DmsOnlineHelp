@@ -119,23 +119,31 @@
                                     <div role="main" id="mc-main-content">
                                         <h1 id="titel">Regeln &amp; Kompatibilität</h1>
                                         <p class="mc-shortdesc">
-			Dieses Topic beschreibt die <strong>Regeln</strong> und <strong>Kompatibilitätsanforderungen</strong> für Kuppelaufträge. Es unterscheidet <em>harte</em> (verbindliche) Kriterien und <em>weiche</em> (gewichtete) Kriterien, erläutert die Prüflogik und zeigt, wie Konflikte gelöst werden.
-		</p>
+        Dieses Topic beschreibt die <strong>Regeln</strong> und <strong>Kompatibilitätsanforderungen</strong> für
+        Kuppelaufträge. Es unterscheidet <em>harte</em> (verbindliche) Kriterien und <em>weiche</em> (gewichtete)
+        Kriterien, erläutert die Prüflogik und zeigt, wie Konflikte gelöst werden.
+    </p>
                                         <h2 id="grundlagen">Grundlagen</h2>
                                         <p>
-			Kuppelaufträge (Typ <em>Kuppeln</em> oder <em>Trennen</em>) betreffen immer ein <a href="05040100_Begriffe_und_Konzepte.htm" class="MCXref xref">Begriffe &amp; Konzepte: Kuppelaufträge</a>. Vor der Bestätigung prüft das System die Kompatibilität; die <a href="../../../04_Betriebssteuerung_und_Disposition/0403_Fahrzeugdisposition/040303_Automatische_Fahrzeugdisposition.htm" class="MCXref xref">Automatische Fahrzeugdisposition</a> nutzt dieselben Regeln zur Vorschlagsbildung.
-		</p>
+        Kuppelaufträge (Typ <em>Kuppeln</em> oder <em>Trennen</em>) betreffen immer ein <a href="05040100_Begriffe_und_Konzepte.htm" class="MCXref xref">Begriffe &amp; Konzepte: Kuppelaufträge</a>. Vor der Bestätigung
+        prüft das System die Kompatibilität; die <a href="../../../04_Betriebssteuerung_und_Disposition/0403_Fahrzeugdisposition/040303_Automatische_Fahrzeugdisposition.htm" class="MCXref xref">Automatische Fahrzeugdisposition</a> nutzt dieselben Regeln zur Vorschlagsbildung.
+    </p>
                                         <h2 id="harte-kriterien">Harte Kriterien (müssen erfüllt sein)</h2>
                                         <ul>
                                             <li><strong>Kupplungssystem</strong>: mechanisch/elektrisch kompatibel; ggf. Kupplungshöhe/Geometrie.</li>
-                                            <li><strong>Technische Freigaben</strong>: Sicherheit/Abnahmen vorhanden; keine sicherheitsrelevanten Sperren.</li>
-                                            <li><strong>Fahrzeugklasse/Profil</strong>: zulässige Kombinationen (z.&#160;B. Länge, Gewicht, Achslast, Trittstufen).</li>
-                                            <li><strong>Depot-/Infrastrukturbindung</strong>: Kuppelpunkt unterstützt die Kombination (Gleis/Rampe/Energieanschlüsse).</li>
-                                            <li><strong>Restriktions&#8209;Flags</strong>: gesetzte Flags <em>„Nicht kuppeln“</em>/<em>„Nicht trennen“</em> schließen die gegenteilige Maßnahme aus.</li>
+                                            <li><strong>Technische Freigaben</strong>: Sicherheit/Abnahmen vorhanden; keine sicherheitsrelevanten Sperren.
+        </li>
+                                            <li><strong>Fahrzeugklasse/Profil</strong>: zulässige Kombinationen (z.&#160;B. Länge, Gewicht, Achslast,
+            Trittstufen).</li>
+                                            <li><strong>Depot-/Infrastrukturbindung</strong>: Kuppelpunkt unterstützt die Kombination
+            (Gleis/Rampe/Energieanschlüsse).</li>
+                                            <li><strong>Restriktions&#8209;Flags</strong>: gesetzte Flags <em>„Nicht kuppeln“</em>/<em>„Nicht trennen“</em>
+            schließen die gegenteilige Maßnahme aus.</li>
                                         </ul>
                                         <h2 id="weiche-kriterien">Weiche Kriterien (werden gewichtet)</h2>
                                         <ul>
-                                            <li><strong>Restreichweite/Energie</strong>: SoC/Tankstand, prognostizierte Reichweite bis nächster Versorgung.</li>
+                                            <li><strong>Restreichweite/Energie</strong>: SoC/Tankstand, prognostizierte Reichweite bis nächster Versorgung.
+        </li>
                                             <li><strong>Linienkritikalität</strong>: Priorität wichtiger Linien/Umläufe, Abfahrtsnähe.</li>
                                             <li><strong>Depotpräferenzen</strong>: Heimathof, Rückkehrlogik, Umlaufverlängerungen.</li>
                                             <li><strong>Betriebsstabilität</strong>: Minimierung von Folgekonflikten, Pufferzeiten am Kuppelpunkt.</li>
@@ -143,8 +151,10 @@
                                         </ul>
                                         <h2 id="prueflogik">Prüflogik (vereinfacht)</h2>
                                         <ol>
-                                            <li value="1"><strong>Harte Kriterien</strong> prüfen &#160;→&#160; <em>nicht erfüllt</em> = <strong>Abbruch</strong>/Stornoempfehlung mit Begründung.</li>
-                                            <li value="2"><strong>Weiche Kriterien</strong> scoren &#160;→&#160; Bewertung/Empfehlung (z.&#160;B. „geeignet“/„suboptimal“).</li>
+                                            <li value="1"><strong>Harte Kriterien</strong> prüfen &#160;→&#160; <em>nicht erfüllt</em> =
+            <strong>Abbruch</strong>/Stornoempfehlung mit Begründung.</li>
+                                            <li value="2"><strong>Weiche Kriterien</strong> scoren &#160;→&#160; Bewertung/Empfehlung (z.&#160;B.
+            „geeignet“/„suboptimal“).</li>
                                             <li value="3"><strong>Konflikte</strong> sammeln (Sperrungen, Versorgungsslots, Zeit/Ort).</li>
                                             <li value="4"><strong>Ergebnis</strong> anzeigen: Empfehlung + Hinweise; Disponent kann bestätigen oder verwerfen.</li>
                                         </ol>
@@ -161,36 +171,48 @@
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Inkompatibles Kupplungssystem</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Harte Regel schlägt fehl</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Auftrag anpassen oder stornieren; Regelwerk/Konfiguration prüfen</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Auftrag anpassen oder stornieren;
+                    Regelwerk/Konfiguration prüfen</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Restriktions&#8209;Flag gesetzt (Nicht kuppeln/trennen)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Restriktions&#8209;Flag gesetzt (Nicht
+                    kuppeln/trennen)</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Fahrzeugmarker vorhanden</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Flag respektieren; Ursache dokumentieren; Alternativen suchen</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Flag respektieren; Ursache dokumentieren;
+                    Alternativen suchen</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Versorgungsslot kollidiert</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Überlappung Zeitfenster</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Kuppelzeit oder Slot verschieben; Bereich Versorgung abstimmen</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Kuppelzeit oder Slot verschieben; Bereich
+                    Versorgung abstimmen</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Werkstattsperre</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Hard/Soft&#8209;Sperrstatus</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Sperre auflösen oder anderes Fahrzeugpaar wählen</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Sperre auflösen oder anderes Fahrzeugpaar
+                    wählen</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Unzureichender Puffer am Kuppelpunkt</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Fahrplan-/Kalenderprüfung</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Zeitfenster anpassen; anderen Ort wählen; Fahrplanpuffer prüfen</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Zeitfenster anpassen; anderen Ort wählen;
+                    Fahrplanpuffer prüfen</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                         <h2 id="best-practice">Best Practices</h2>
                                         <ul>
-                                            <li><strong>Ein Dialog, zwei Modi:</strong> Bedienlogik identisch für Kuppeln und Trennen; Titel passt sich an (siehe Dialog Kuppelauftrag <!-- TODO: unresolved link (kein DE-Topic gefunden): ../050402_Kuppelauftraege/05040201_Dialog_Kuppelauftrag.htm -->).</li>
-                                            <li><strong>Vor Bestätigung</strong> Kompatibilität, Sperren, Versorgungsslots und Puffer prüfen (siehe <a href="../050402_Kuppelauftraege/050402_Kuppelauftraege.htm" class="MCXref xref">Kuppelaufträge</a>).</li>
-                                            <li><strong>Storno-Folgen</strong> kennen: System setzt nicht einsatzverhindernde Marker <em>Nicht kuppeln</em>/<em>Nicht trennen</em>, die die Automatik verbindlich respektiert.</li>
-                                            <li><strong>Dokumentation</strong>: Gründe und Entscheidungen im Auftrag festhalten; erleichtert Auswertung und Nachweis.</li>
+                                            <li><strong>Ein Dialog, zwei Modi:</strong> Bedienlogik identisch für Kuppeln und Trennen; Titel passt sich an
+            (siehe Dialog Kuppelauftrag
+            <!-- TODO: unresolved link (kein DE-Topic gefunden): ../050402_Kuppelauftraege/05040201_Dialog_Kuppelauftrag.htm -->).
+        </li>
+                                            <li><strong>Vor Bestätigung</strong> Kompatibilität, Sperren, Versorgungsslots und Puffer prüfen (siehe
+            <a href="../050402_Kuppelauftraege/050402_Kuppelauftraege.htm" class="MCXref xref">Kuppelaufträge</a>).</li>
+                                            <li><strong>Storno-Folgen</strong> kennen: System setzt nicht einsatzverhindernde Marker <em>Nicht
+                kuppeln</em>/<em>Nicht trennen</em>, die die Automatik verbindlich respektiert.</li>
+                                            <li><strong>Dokumentation</strong>: Gründe und Entscheidungen im Auftrag festhalten; erleichtert Auswertung und
+            Nachweis.</li>
                                         </ul>
                                         <h2 id="siehe-auch">Siehe auch</h2>
                                         <ul>
@@ -199,9 +221,11 @@
                                             <li><a href="../050402_Kuppelauftraege/050402_Kuppelauftraege.htm" class="MCXref xref">Kuppelaufträge</a>
                                             </li>
                                             <li>
-                Dialog Kuppelauftrag <!-- TODO: unresolved link (kein DE-Topic gefunden): ../050402_Kuppelauftraege/05040201_Dialog_Kuppelauftrag.htm --></li>
+            Dialog Kuppelauftrag
+            <!-- TODO: unresolved link (kein DE-Topic gefunden): ../050402_Kuppelauftraege/05040201_Dialog_Kuppelauftrag.htm --></li>
                                             <li>
-                Manuelle Disposition <!-- TODO: unresolved link (kein DE-Topic gefunden): ../../04_Betriebssteuerung_und_Disposition/0403_Fahrzeugdisposition/040302_Manuelle_Disposition.htm --></li>
+            Manuelle Disposition
+            <!-- TODO: unresolved link (kein DE-Topic gefunden): ../../04_Betriebssteuerung_und_Disposition/0403_Fahrzeugdisposition/040302_Manuelle_Disposition.htm --></li>
                                             <li><a href="../../../04_Betriebssteuerung_und_Disposition/0403_Fahrzeugdisposition/040303_Automatische_Fahrzeugdisposition.htm" class="MCXref xref">Automatische Fahrzeugdisposition</a>
                                             </li>
                                         </ul>

@@ -116,28 +116,48 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1>Balancing und Reservekapazität konfigurieren</h1>
-                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Balancing sorgt dafür, dass alle Zellen einer Batterie gleichmäßig geladen werden, was die Lebensdauer erhöht und die Kapazität optimal nutzt. Die Reservekapazität garantiert, dass immer ein Energiepuffer für unvorhergesehene Fahrten zur Verfügung steht. Dieses Topic beschreibt, wie Sie beide Parameter im DMS pflegen und welche Auswirkungen sie haben.</p>
+                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Balancing sorgt dafür, dass alle Zellen einer Batterie gleichmäßig geladen werden, was die
+        Lebensdauer erhöht und die Kapazität optimal nutzt. Die Reservekapazität garantiert, dass immer ein
+        Energiepuffer für unvorhergesehene Fahrten zur Verfügung steht. Dieses Topic beschreibt, wie Sie beide Parameter
+        im DMS pflegen und welche Auswirkungen sie haben.</p>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Balancing</h2>
-                                        <p xmlns="http://www.w3.org/1999/xhtml">Beim Balancing werden die Zellen der Batterie ausgeglichen. Je nach Fahrzeughersteller und Batterietyp können <em>aktive</em> oder <em>passive</em> Verfahren eingesetzt werden. Das DMS speichert im Stammdatensatz das <strong>Balancingverfahren</strong> und die <strong>Balancingdauer</strong> (Minuten)【736875587044737†L180-L186】. Diese Werte werden für Prognosen des Ladeendes verwendet und beeinflussen die Planung von Ladeaufträgen.</p>
+                                        <p xmlns="http://www.w3.org/1999/xhtml">Beim Balancing werden die Zellen der Batterie ausgeglichen. Je nach Fahrzeughersteller und Batterietyp können
+        <em>aktive</em> oder <em>passive</em> Verfahren eingesetzt werden. Das DMS speichert im Stammdatensatz das
+        <strong>Balancingverfahren</strong> und die <strong>Balancingdauer</strong>
+        (Minuten)【736875587044737†L180-L186】. Diese Werte werden für Prognosen des Ladeendes verwendet und beeinflussen
+        die Planung von Ladeaufträgen.</p>
                                         <h3 xmlns="http://www.w3.org/1999/xhtml">Einstellungen</h3>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
-                                            <li><strong>Balancingverfahren:</strong> Wählen Sie aus den angebotenen Verfahren (Aktiv, Passiv). Aktiv bedeutet, dass die Batterie während des Balancings Energie in andere Zellen überträgt; passiv, dass überschüssige Energie in Wärme umgewandelt wird.</li>
-                                            <li><strong>Balancingdauer:</strong> Legen Sie fest, wie lange der Balancingvorgang in der Regel dauert. Längere Balancingphasen können die Verfügbarkeit des Fahrzeugs einschränken.</li>
-                                            <li><strong>Balancing-Zeitfenster:</strong> Definieren Sie ggf. Zeiträume (z.&#160;B. nachts), in denen Balancing bevorzugt durchgeführt wird, um Lade- und Umlaufpläne nicht zu beeinträchtigen.</li>
+                                            <li><strong>Balancingverfahren:</strong> Wählen Sie aus den angebotenen Verfahren (Aktiv, Passiv). Aktiv
+            bedeutet, dass die Batterie während des Balancings Energie in andere Zellen überträgt; passiv, dass
+            überschüssige Energie in Wärme umgewandelt wird.</li>
+                                            <li><strong>Balancingdauer:</strong> Legen Sie fest, wie lange der Balancingvorgang in der Regel dauert. Längere
+            Balancingphasen können die Verfügbarkeit des Fahrzeugs einschränken.</li>
+                                            <li><strong>Balancing-Zeitfenster:</strong> Definieren Sie ggf. Zeiträume (z.&#160;B. nachts), in denen
+            Balancing bevorzugt durchgeführt wird, um Lade- und Umlaufpläne nicht zu beeinträchtigen.</li>
                                         </ul>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Reservekapazität</h2>
-                                        <p xmlns="http://www.w3.org/1999/xhtml">Die <strong>Reservekapazität</strong> ist die Energiemenge, die nicht verplant wird. Sie dient als Puffer für unvorhergesehene Umsetzfahrten, Werkstattfahrten oder andere Notfälle. In den Elektrostammdaten legen Sie die Höhe der Reservekapazität in&#160;kWh fest.</p>
+                                        <p xmlns="http://www.w3.org/1999/xhtml">Die <strong>Reservekapazität</strong> ist die Energiemenge, die nicht verplant wird. Sie dient als Puffer für
+        unvorhergesehene Umsetzfahrten, Werkstattfahrten oder andere Notfälle. In den Elektrostammdaten legen Sie die
+        Höhe der Reservekapazität in&#160;kWh fest.</p>
                                         <h3 xmlns="http://www.w3.org/1999/xhtml">Empfehlungen</h3>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
-                                            <li>Setzen Sie die Reservekapazität proportional zur Gesamtkapazität (z.&#160;B. 10–20&#160;% der nutzbaren Kapazität). Eine zu geringe Reserve kann zu ungeplanten Stopps führen, während eine zu hohe Reserve die nutzbare Energiemenge einschränkt.</li>
-                                            <li>Berücksichtigen Sie betriebliche Besonderheiten wie lange Umsetzwege oder fehlende Ladepunkte in Außenbereichen.</li>
-                                            <li>Passen Sie die Reservekapazität saisonal an: Im Winter kann ein größerer Puffer sinnvoll sein, da der Energiebedarf (Heizung, Vorkonditionierung) steigt.</li>
+                                            <li>Setzen Sie die Reservekapazität proportional zur Gesamtkapazität (z.&#160;B. 10–20&#160;% der nutzbaren
+            Kapazität). Eine zu geringe Reserve kann zu ungeplanten Stopps führen, während eine zu hohe Reserve die
+            nutzbare Energiemenge einschränkt.</li>
+                                            <li>Berücksichtigen Sie betriebliche Besonderheiten wie lange Umsetzwege oder fehlende Ladepunkte in
+            Außenbereichen.</li>
+                                            <li>Passen Sie die Reservekapazität saisonal an: Im Winter kann ein größerer Puffer sinnvoll sein, da der
+            Energiebedarf (Heizung, Vorkonditionierung) steigt.</li>
                                         </ul>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Auswirkungen auf die Disposition</h2>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
-                                            <li>Das Balancing wird vom System bei der Berechnung des Ladeendes berücksichtigt. Ladeaufträge sollten so eingeplant werden, dass Balancingphasen abgeschlossen sind, bevor das Fahrzeug wieder eingesetzt wird.</li>
-                                            <li>Die Reservekapazität vermindert die verfügbare Energiemenge für Umläufe. Planen Sie Fahrten so, dass die Reserve nicht unterschritten wird. Dies wird bei der Reichweitenprognose automatisch berücksichtigt.</li>
-                                            <li>Bei Wartung oder Austausch der Batterie müssen Balancing- und Reserveparameter überprüft und ggf. angepasst werden.</li>
+                                            <li>Das Balancing wird vom System bei der Berechnung des Ladeendes berücksichtigt. Ladeaufträge sollten so
+            eingeplant werden, dass Balancingphasen abgeschlossen sind, bevor das Fahrzeug wieder eingesetzt wird.</li>
+                                            <li>Die Reservekapazität vermindert die verfügbare Energiemenge für Umläufe. Planen Sie Fahrten so, dass die
+            Reserve nicht unterschritten wird. Dies wird bei der Reichweitenprognose automatisch berücksichtigt.</li>
+                                            <li>Bei Wartung oder Austausch der Batterie müssen Balancing- und Reserveparameter überprüft und ggf. angepasst
+            werden.</li>
                                         </ul>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Siehe auch</h2>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
@@ -145,7 +165,8 @@
                                             </li>
                                             <li><a href="06030502_Elektroprozessdaten.htm" class="MCXref xref" xrefformat="{para}">Elektroprozessdaten anzeigen</a>
                                             </li>
-                                            <li><a href="../060303_Ladeauftraege_planen/030304_Notfallregeln_und_Umschaltung.htm" class="MCXref xref" xrefformat="{para}">Notfallregeln und Umschaltung</a>
+                                            <li><a href="../060303_Ladeauftraege_planen/030304_Notfallregeln_und_Umschaltung.htm" class="MCXref xref" xrefformat="{para}">Notfallregeln
+                und Umschaltung</a>
                                             </li>
                                         </ul>
                                     </div>

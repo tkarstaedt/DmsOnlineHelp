@@ -117,7 +117,9 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1>Sicht „Ladevorgänge“</h1>
-                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Die tabellarische Sicht „Ladevorgänge“ listet alle laufenden, geplanten und abgeschlossenen Ladevorgänge auf. Sie erlaubt es, die Auslastung der Ladeinfrastruktur zu überwachen und bei Bedarf in die Planung einzugreifen.</p>
+                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Die tabellarische Sicht „Ladevorgänge“ listet alle laufenden, geplanten und abgeschlossenen
+        Ladevorgänge auf. Sie erlaubt es, die Auslastung der Ladeinfrastruktur zu überwachen und bei Bedarf in die
+        Planung einzugreifen.</p>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Spalten (Standard)</h2>
                                         <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Die verfügbaren Spalten sind projektspezifisch. Typische Spalten in der Standardkonfiguration:</p>
                                         <table style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" class="TableStyle-Alternate-Row-Color" cellspacing="21" xmlns="http://www.w3.org/1999/xhtml">
@@ -134,15 +136,18 @@
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Ladepunkt</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Bezeichnung des zugewiesenen Ladepunkts.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Bezeichnung des zugewiesenen Ladepunkts.
+                </td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Startzeit</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Geplanter oder tatsächlicher Ladebeginn.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Geplanter oder tatsächlicher Ladebeginn.
+                </td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Endzeit</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Geplantes oder tatsächliches Ladeende.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Geplantes oder tatsächliches Ladeende.
+                </td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Energie&#160;[kWh]</td>
@@ -150,11 +155,13 @@
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Status</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">z.&#160;B. <em>geplant</em>, <em>läuft</em>, <em>unterbrochen</em>, <em>abgeschlossen</em>.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">z.&#160;B. <em>geplant</em>,
+                    <em>läuft</em>, <em>unterbrochen</em>, <em>abgeschlossen</em>.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Ladephase</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Vorkonditionierung, Laden, Balancing.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Vorkonditionierung, Laden, Balancing.
+                </td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Priorität</td>
@@ -170,23 +177,32 @@
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li><strong>Filter nach Status:</strong> z.&#160;B. nur laufende Ladevorgänge anzeigen.</li>
                                             <li><strong>Sortieren nach Startzeit:</strong> Zeigt früh beginnende Vorgänge oben an.</li>
-                                            <li><strong>Filter nach Ladepunkt:</strong> Zeigt alle Vorgänge an einem bestimmten Ladepunkt an, um dessen Auslastung zu prüfen.</li>
+                                            <li><strong>Filter nach Ladepunkt:</strong> Zeigt alle Vorgänge an einem bestimmten Ladepunkt an, um dessen
+            Auslastung zu prüfen.</li>
                                         </ul>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Aktionen</h2>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
-                                            <li><strong>Auftrag bearbeiten:</strong> Ändern Sie Start-/Endzeiten oder Priorität, wenn sich Fahrpläne ändern.</li>
-                                            <li><strong>Auftrag abbrechen:</strong> Beenden Sie einen Ladevorgang vorzeitig (z.&#160;B. wegen Störung) und legen Sie ggf. einen neuen Auftrag an.</li>
-                                            <li><strong>Ladevorgang überwachen:</strong> Klicken Sie auf einen Vorgang, um Details wie aktuelle Ladeleistung und SOC&#8209;Entwicklung einzusehen.</li>
-                                            <li><strong>Umsetzen:</strong> Wenn das Fahrzeug den Ladeplatz wechseln muss, kann eine Umsetzfahrt angelegt werden (siehe
-        Umsetzfahrt (Dialog) <!-- TODO: unresolved link (kein DE-Topic gefunden): ../../060105_Umsetzfahrt_Dialog.htm -->).</li>
+                                            <li><strong>Auftrag bearbeiten:</strong> Ändern Sie Start-/Endzeiten oder Priorität, wenn sich Fahrpläne ändern.
+        </li>
+                                            <li><strong>Auftrag abbrechen:</strong> Beenden Sie einen Ladevorgang vorzeitig (z.&#160;B. wegen Störung) und
+            legen Sie ggf. einen neuen Auftrag an.</li>
+                                            <li><strong>Ladevorgang überwachen:</strong> Klicken Sie auf einen Vorgang, um Details wie aktuelle Ladeleistung
+            und SOC&#8209;Entwicklung einzusehen.</li>
+                                            <li><strong>Umsetzen:</strong> Wenn das Fahrzeug den Ladeplatz wechseln muss, kann eine Umsetzfahrt angelegt
+            werden (siehe
+            Umsetzfahrt (Dialog)
+            <!-- TODO: unresolved link (kein DE-Topic gefunden): ../../060105_Umsetzfahrt_Dialog.htm -->).</li>
                                         </ul>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Hinweise</h2>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
-                                            <li>Die Sicht „Ladevorgänge“ ergänzt das SOC&#8209;Dashboard und bietet Einblick in die Auslastung der Ladeinfrastruktur.</li>
+                                            <li>Die Sicht „Ladevorgänge“ ergänzt das SOC&#8209;Dashboard und bietet Einblick in die Auslastung der
+            Ladeinfrastruktur.</li>
                                             <li>Ladevorgänge können durch automatische Planung erzeugt worden sein (siehe
-        <a href="../060303_Ladeauftraege_planen/06030301_Ladeauftrag_anlegen.htm" class="MCXref xref">Ladeauftrag anlegen</a>).</li>
+            <a href="../060303_Ladeauftraege_planen/06030301_Ladeauftrag_anlegen.htm" class="MCXref xref">Ladeauftrag anlegen</a>).
+        </li>
                                             <li>Bei Abweichungen (z.&#160;B. Ladeunterbrechung) kann das System eine Notfallregel anwenden (siehe
-        <a href="../060303_Ladeauftraege_planen/06030304_Notfallregeln_und_Umschaltung.htm" class="MCXref xref">Notfallregeln und Umschaltung</a>).</li>
+            <a href="../060303_Ladeauftraege_planen/06030304_Notfallregeln_und_Umschaltung.htm" class="MCXref xref">Notfallregeln und Umschaltung</a>).
+        </li>
                                         </ul>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Siehe auch</h2>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
@@ -195,7 +211,8 @@
                                             <li><a href="../060303_Ladeauftraege_planen/06030301_Ladeauftrag_anlegen.htm" class="MCXref xref">Ladeauftrag anlegen</a>
                                             </li>
                                             <li>
-                Umsetzfahrt (Dialog) <!-- TODO: unresolved link (kein DE-Topic gefunden): ../../060105_Umsetzfahrt_Dialog.htm --></li>
+            Umsetzfahrt (Dialog)
+            <!-- TODO: unresolved link (kein DE-Topic gefunden): ../../060105_Umsetzfahrt_Dialog.htm --></li>
                                         </ul>
                                     </div>
                                 </div>

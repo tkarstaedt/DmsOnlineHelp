@@ -118,7 +118,8 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1 id="titel">KPIs Kuppelmanagement</h1>
-                                        <p class="mc-shortdesc">Auswertung der wichtigsten Kennzahlen für Kuppel- und Trennvorgänge in PEAK.DMS – inklusive Definitionen, Formeln, Filter und Verweise auf Export/Nachweis.</p>
+                                        <p class="mc-shortdesc">Auswertung der wichtigsten Kennzahlen für Kuppel- und Trennvorgänge in PEAK.DMS – inklusive
+        Definitionen, Formeln, Filter und Verweise auf Export/Nachweis.</p>
                                         <h2 id="ziele">Ziele der Auswertung</h2>
                                         <ul>
                                             <li>Transparenz über Menge, Qualität und Timing von Kuppel&#8209;/Trennvorgängen schaffen.</li>
@@ -127,7 +128,8 @@
                                         </ul>
                                         <h2 id="datenbasis">Datenbasis</h2>
                                         <ul>
-                                            <li><strong>Kuppelaufträge</strong>: Statuswechsel (Geplant → Bestätigt/Storniert), Zeitstempel, Quelle, Kommentar.</li>
+                                            <li><strong>Kuppelaufträge</strong>: Statuswechsel (Geplant → Bestätigt/Storniert), Zeitstempel, Quelle,
+            Kommentar.</li>
                                             <li><strong>Signalisierung</strong>: gemeldeter Traktionszustand (besteht/aufgelöst) inkl. Zeit, Quelle.</li>
                                             <li><strong>Konflikt-/Prüfereignisse</strong>: Kompatibilität, Sperren, Versorgungsslots.</li>
                                         </ul>
@@ -145,51 +147,68 @@
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>Bestätigungsquote</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Anteil bestätigter Aufträge an allen erledigten Aufträgen.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Anteil bestätigter Aufträge an allen
+                    erledigten Aufträgen.</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Bestätigt ÷ (Bestätigt + Storniert)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Optional nach Typ (Kuppeln/Trennen) und Quelle (manuell/automatisch) splitten.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Optional nach Typ (Kuppeln/Trennen) und
+                    Quelle (manuell/automatisch) splitten.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>Stornoquote</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Anteil stornierter Aufträge an allen erledigten Aufträgen.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Anteil stornierter Aufträge an allen
+                    erledigten Aufträgen.</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Storniert ÷ (Bestätigt + Storniert)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Hohe Werte deuten auf Regelkonflikte oder falsche Vorgaben hin.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Hohe Werte deuten auf Regelkonflikte oder
+                    falsche Vorgaben hin.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>Durchlaufzeit Auftrag</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Zeit von Auftragserzeugung bis Bestätigung/Storno.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Zeit von Auftragserzeugung bis
+                    Bestätigung/Storno.</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">t(Bestätigt|Storniert) − t(Erzeugt)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Median statt Mittelwert verwenden, Ausreißer trennen.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Median statt Mittelwert verwenden,
+                    Ausreißer trennen.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>Konfliktquote</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Anteil der Aufträge mit mindestens einem Konflikt (Kompatibilität/Sperre/Slot).</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Anz. Aufträge mit Konflikt ÷ Anz. aller Aufträge</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Anteil der Aufträge mit mindestens einem
+                    Konflikt (Kompatibilität/Sperre/Slot).</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Anz. Aufträge mit Konflikt ÷ Anz. aller
+                    Aufträge</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Konfliktklassen gesondert ausweisen.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>Zeit bis Wirksamkeit (Signalisierung)</strong>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>Zeit bis Wirksamkeit
+                        (Signalisierung)</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Zeit zwischen Signalisierung und operativer Darstellung in Sichten/Kalendern.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Zeit zwischen Signalisierung und
+                    operativer Darstellung in Sichten/Kalendern.</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">t(Darstellung) − t(Signalisierung)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Sollte nahe 0 sein; Abweichungen prüfen (Schnittstellen/Refresh).</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Sollte nahe 0 sein; Abweichungen prüfen
+                    (Schnittstellen/Refresh).</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>Flag-Nutzung nach Storno</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Häufigkeit gesetzter Flags <em>Nicht kuppeln</em>/<em>Nicht trennen</em> nach Storno.</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Anz. gesetzter Flags ÷ Anz. stornierter Aufträge</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Zeigt, ob Stornogründe korrekt abgesichert werden.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Häufigkeit gesetzter Flags <em>Nicht
+                        kuppeln</em>/<em>Nicht trennen</em> nach Storno.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Anz. gesetzter Flags ÷ Anz. stornierter
+                    Aufträge</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Zeigt, ob Stornogründe korrekt
+                    abgesichert werden.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1"><strong>Re-Öffnungsrate</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Anteil von Aufträgen, die nach Storno neu angelegt werden.</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Anz. Neuauflagen nach Storno ÷ Anz. stornierter Aufträge</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Hinweis auf unklare Regeln oder wechselnde Betriebslage.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Anteil von Aufträgen, die nach Storno neu
+                    angelegt werden.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Anz. Neuauflagen nach Storno ÷ Anz.
+                    stornierter Aufträge</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Hinweis auf unklare Regeln oder
+                    wechselnde Betriebslage.</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -203,21 +222,29 @@
                                         </ul>
                                         <h2 id="best-practice">Best Practices</h2>
                                         <ul>
-                                            <li>KPIs immer mit <strong>Definition</strong> einblenden (Tooltip oder Legende), um Missverständnisse zu vermeiden.</li>
-                                            <li><strong>Median</strong> und <strong>Perzentile</strong> für Zeit-KPIs verwenden; Ausreißer separat darstellen.</li>
-                                            <li>Konfliktklassen <strong>separat ausweisen</strong> (Kompatibilität, Sperre, Slot), um Maßnahmen abzuleiten.</li>
-                                            <li><strong>Signalisierung vs. Auftrag</strong> abgleichen: Bei Abweichung dominiert die gemeldete Signalisierung; widersprechende Aufträge prüfen.</li>
+                                            <li>KPIs immer mit <strong>Definition</strong> einblenden (Tooltip oder Legende), um Missverständnisse zu
+            vermeiden.</li>
+                                            <li><strong>Median</strong> und <strong>Perzentile</strong> für Zeit-KPIs verwenden; Ausreißer separat
+            darstellen.</li>
+                                            <li>Konfliktklassen <strong>separat ausweisen</strong> (Kompatibilität, Sperre, Slot), um Maßnahmen abzuleiten.
+        </li>
+                                            <li><strong>Signalisierung vs. Auftrag</strong> abgleichen: Bei Abweichung dominiert die gemeldete
+            Signalisierung; widersprechende Aufträge prüfen.</li>
                                         </ul>
                                         <h2 id="export">Export &amp; Nachweis</h2>
-                                        <p>Nutzen Sie die Funktionen aus <a href="../../../04_Betriebssteuerung_und_Disposition/05_Dispositionsstatistiken/0502_Statistiken_exportieren.htm" class="MCXref xref">Statistiken exportieren</a>, um KPI&#8209;Daten (CSV/Excel) für Audits oder weiterführende Analysen zu sichern.</p>
+                                        <p>Nutzen Sie die Funktionen aus <a href="../../../04_Betriebssteuerung_und_Disposition/05_Dispositionsstatistiken/0502_Statistiken_exportieren.htm" class="MCXref xref">
+            Statistiken exportieren</a>, um KPI&#8209;Daten (CSV/Excel) für Audits oder weiterführende
+        Analysen zu sichern.</p>
                                         <h2 id="siehe-auch">Siehe auch</h2>
                                         <ul>
                                             <li><a href="../050402_Kuppelauftraege/050402_Kuppelauftraege.htm" class="MCXref xref">Kuppelaufträge</a>
                                             </li>
                                             <li>
-                Dialog Kuppelauftrag <!-- TODO: unresolved link (kein DE-Topic gefunden): ../050402_Kuppelauftraege/05040201_Dialog_Kuppelauftrag.htm --></li>
+            Dialog Kuppelauftrag
+            <!-- TODO: unresolved link (kein DE-Topic gefunden): ../050402_Kuppelauftraege/05040201_Dialog_Kuppelauftrag.htm --></li>
                                             <li>
-                Kuppeln &amp; Trennen: Signalisierung <!-- TODO: unresolved link (kein DE-Topic gefunden): ../050405_Kuppeln_und_Trennen_Signalisierung.htm --></li>
+            Kuppeln &amp; Trennen: Signalisierung
+            <!-- TODO: unresolved link (kein DE-Topic gefunden): ../050405_Kuppeln_und_Trennen_Signalisierung.htm --></li>
                                             <li><a href="../../../04_Betriebssteuerung_und_Disposition/0405_Dispositionsstatistiken/040501_Statistiken_erstellen.htm" class="MCXref xref">Statistiken erstellen</a>
                                             </li>
                                             <li><a href="../../../04_Betriebssteuerung_und_Disposition/0406_Bereichskalender/040601_Kalender_Umlauf.htm" class="MCXref xref">Kalender: Umläufe</a>

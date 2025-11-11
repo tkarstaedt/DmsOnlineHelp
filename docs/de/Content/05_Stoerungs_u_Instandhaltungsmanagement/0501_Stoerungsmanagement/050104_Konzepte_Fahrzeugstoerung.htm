@@ -118,19 +118,23 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1 id="titel">Störungskonzept – Grundlagen</h1>
-                                        <p class="mc-shortdesc">Das Störungsmanagement in PEAK.DMS erfasst, kategorisiert und bewertet Fahrzeugdefekte über ein strukturiertes System aus Störungsgraden, Zuständen, Störungsbaum und Leistungsmerkmalen.</p>
+                                        <p class="mc-shortdesc">Das Störungsmanagement in PEAK.DMS erfasst, kategorisiert und bewertet Fahrzeugdefekte über
+        ein strukturiertes System aus Störungsgraden, Zuständen, Störungsbaum und Leistungsmerkmalen.</p>
                                         <h2>Überblick</h2>
                                         <p>Das Störungskonzept in PEAK.DMS umfasst vier zentrale Komponenten:</p>
                                         <ul>
                                             <li><strong>Störungsgrade (A–E):</strong> Bewerten die betriebliche Einsatzfähigkeit des Fahrzeugs</li>
                                             <li><strong>Störungszustände:</strong> Steuern den Bearbeitungsworkflow von der Meldung bis zur Behebung</li>
                                             <li><strong>Störungsbaum:</strong> Strukturiert die Kategorisierung über Kategorie / System / Komponente</li>
-                                            <li><strong>Leistungsmerkmale:</strong> Definieren negierte Ausstattungsmerkmale und deren Auswirkung auf die Disposition</li>
+                                            <li><strong>Leistungsmerkmale:</strong> Definieren negierte Ausstattungsmerkmale und deren Auswirkung auf die
+            Disposition</li>
                                         </ul>
-                                        <p>Zusammen bilden diese Komponenten ein vollständiges System zur Erfassung, Bewertung und dispositiven Integration von Fahrzeugstörungen.</p>
+                                        <p>Zusammen bilden diese Komponenten ein vollständiges System zur Erfassung, Bewertung und dispositiven Integration
+        von Fahrzeugstörungen.</p>
                                         <!-- STÖRUNGSGRADE -->
                                         <h2 id="stoerungsgrade">Störungsgrade</h2>
-                                        <p>Der <strong>Störungsgrad</strong> bewertet die betriebliche Einsatzfähigkeit eines Fahrzeugs. Er steuert die Verfügbarkeit in der Disposition und ist entscheidend für die automatische und manuelle Umlaufplanung.</p>
+                                        <p>Der <strong>Störungsgrad</strong> bewertet die betriebliche Einsatzfähigkeit eines Fahrzeugs. Er steuert die
+        Verfügbarkeit in der Disposition und ist entscheidend für die automatische und manuelle Umlaufplanung.</p>
                                         <h3>Übersicht der Störungsgrade</h3>
                                         <p>PEAK.DMS unterscheidet fünf Störungsgrade von A (keine Einschränkung) bis E (nicht einsatzfähig):</p>
                                         <table class="TableStyle-Alternate-Row-Color" style="mc-table-style: url('../../Resources/TableStyles/Alternate-Row-Color.css');" cellspacing="21" data-mc-table-style="Alternate Row Color">
@@ -148,41 +152,48 @@
                                                     </td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Keine Einschränkung</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Voll einsatzfähig</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Fahrzeug ohne Einschränkung disponierbar</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Fahrzeug ohne Einschränkung disponierbar
+                </td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>B</strong>
                                                     </td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Geringfügige Einschränkung</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Einsatzfähig mit leichten Einschränkungen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Fahrzeug disponierbar, ggf. mit Hinweis an Fahrer</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Einsatzfähig mit leichten Einschränkungen
+                </td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Fahrzeug disponierbar, ggf. mit Hinweis
+                    an Fahrer</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>C</strong>
                                                     </td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Eingeschränkt einsatzfähig</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Eingeschränkt einsatzfähig</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Fahrzeug eingeschränkt disponierbar (z.&#160;B. nur für bestimmte Linien/Umläufe)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Fahrzeug eingeschränkt disponierbar
+                    (z.&#160;B. nur für bestimmte Linien/Umläufe)</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>D</strong>
                                                     </td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Bedingt einsatzfähig</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Nur in Notfällen einsetzbar</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Fahrzeug für automatische Disposition gesperrt, nur manuelle Zuweisung in Ausnahmefällen</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Fahrzeug für automatische Disposition
+                    gesperrt, nur manuelle Zuweisung in Ausnahmefällen</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1"><strong>E</strong>
                                                     </td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Nicht einsatzfähig</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Nicht einsatzfähig</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Fahrzeug vollständig gesperrt, keine Disposition möglich</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Fahrzeug vollständig gesperrt, keine
+                    Disposition möglich</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                         <h3>Detaillierte Beschreibung der Störungsgrade</h3>
                                         <h4>Störungsgrad A – Keine Einschränkung</h4>
-                                        <p><strong>Einsatzfähigkeit:</strong> Das Fahrzeug ist voll einsatzfähig und kann ohne Einschränkungen disponiert werden.</p>
+                                        <p><strong>Einsatzfähigkeit:</strong> Das Fahrzeug ist voll einsatzfähig und kann ohne Einschränkungen disponiert
+        werden.</p>
                                         <p><strong>Typische Störungen:</strong>
                                         </p>
                                         <ul>
@@ -192,7 +203,8 @@
                                         </ul>
                                         <p><strong>Dispositive Wirkung:</strong> Keine. Das Fahrzeug steht uneingeschränkt zur Verfügung.</p>
                                         <h4>Störungsgrad B – Geringfügige Einschränkung</h4>
-                                        <p><strong>Einsatzfähigkeit:</strong> Das Fahrzeug ist einsatzfähig, die Störung sollte jedoch zeitnah behoben werden.</p>
+                                        <p><strong>Einsatzfähigkeit:</strong> Das Fahrzeug ist einsatzfähig, die Störung sollte jedoch zeitnah behoben
+        werden.</p>
                                         <p><strong>Typische Störungen:</strong>
                                         </p>
                                         <ul>
@@ -201,9 +213,11 @@
                                             <li>Geringfügige Fahrkomforteinschränkungen</li>
                                             <li>Warnleuchten ohne unmittelbare Betriebsauswirkung</li>
                                         </ul>
-                                        <p><strong>Dispositive Wirkung:</strong> Das Fahrzeug wird normal disponiert. Optional kann ein Hinweis an den Fahrer ausgegeben werden (projektspezifisch).</p>
+                                        <p><strong>Dispositive Wirkung:</strong> Das Fahrzeug wird normal disponiert. Optional kann ein Hinweis an den
+        Fahrer ausgegeben werden (projektspezifisch).</p>
                                         <h4>Störungsgrad C – Eingeschränkt einsatzfähig</h4>
-                                        <p><strong>Einsatzfähigkeit:</strong> Das Fahrzeug ist mit Einschränkungen einsetzbar. Der Einsatz ist ggf. auf bestimmte Linien oder Umläufe beschränkt.</p>
+                                        <p><strong>Einsatzfähigkeit:</strong> Das Fahrzeug ist mit Einschränkungen einsetzbar. Der Einsatz ist ggf. auf
+        bestimmte Linien oder Umläufe beschränkt.</p>
                                         <p><strong>Typische Störungen:</strong>
                                         </p>
                                         <ul>
@@ -222,7 +236,8 @@
                                             <li>Negierung von Leistungsmerkmalen wird wirksam (siehe <a href="#leistungsmerkmale" class="MCXref xref">Störungskonzept – Grundlagen</a>)</li>
                                         </ul>
                                         <h4>Störungsgrad D – Bedingt einsatzfähig</h4>
-                                        <p><strong>Einsatzfähigkeit:</strong> Das Fahrzeug sollte nur in Notfällen und Ausnahmesituationen eingesetzt werden.</p>
+                                        <p><strong>Einsatzfähigkeit:</strong> Das Fahrzeug sollte nur in Notfällen und Ausnahmesituationen eingesetzt
+        werden.</p>
                                         <p><strong>Typische Störungen:</strong>
                                         </p>
                                         <ul>
@@ -240,7 +255,8 @@
                                             <li>Fahrzeug wird in Fahrzeugliste und Disposition-Übersichten mit Warnhinweis dargestellt</li>
                                         </ul>
                                         <h4>Störungsgrad E – Nicht einsatzfähig</h4>
-                                        <p><strong>Einsatzfähigkeit:</strong> Das Fahrzeug ist nicht einsatzfähig und darf nicht im Fahrgastbetrieb eingesetzt werden.</p>
+                                        <p><strong>Einsatzfähigkeit:</strong> Das Fahrzeug ist nicht einsatzfähig und darf nicht im Fahrgastbetrieb
+        eingesetzt werden.</p>
                                         <p><strong>Typische Störungen:</strong>
                                         </p>
                                         <ul>
@@ -261,10 +277,14 @@
                                         <h3>Aggregationslogik bei mehreren Störungen</h3>
                                         <p>Ein Fahrzeug kann mehrere Störungen gleichzeitig aufweisen. In diesem Fall gilt folgende Logik:</p>
                                         <ul>
-                                            <li><strong>Höchster Störungsgrad dominiert:</strong> Die Einsatzfähigkeit des Fahrzeugs richtet sich nach dem kritischsten (höchsten) Störungsgrad.</li>
-                                            <li><strong>Beispiel:</strong> Fahrzeug hat Störung mit Grad B (defekte Innenbeleuchtung) und Störung mit Grad D (eingeschränkte Bremsfunktion) → Fahrzeug gilt als „bedingt einsatzfähig" (Grad D).</li>
-                                            <li><strong>Anzeige in Sichten:</strong> In der Spalte <em>Störungsgrad</em> der Fahrzeugstörungen-Liste wird der höchste Grad des Fahrzeugs angezeigt.</li>
-                                            <li><strong>Disposition:</strong> Die Disposition verwendet automatisch den höchsten Störungsgrad zur Bewertung der Verfügbarkeit.</li>
+                                            <li><strong>Höchster Störungsgrad dominiert:</strong> Die Einsatzfähigkeit des Fahrzeugs richtet sich nach dem
+            kritischsten (höchsten) Störungsgrad.</li>
+                                            <li><strong>Beispiel:</strong> Fahrzeug hat Störung mit Grad B (defekte Innenbeleuchtung) und Störung mit Grad D
+            (eingeschränkte Bremsfunktion) → Fahrzeug gilt als „bedingt einsatzfähig" (Grad D).</li>
+                                            <li><strong>Anzeige in Sichten:</strong> In der Spalte <em>Störungsgrad</em> der Fahrzeugstörungen-Liste wird
+            der höchste Grad des Fahrzeugs angezeigt.</li>
+                                            <li><strong>Disposition:</strong> Die Disposition verwendet automatisch den höchsten Störungsgrad zur Bewertung
+            der Verfügbarkeit.</li>
                                         </ul>
                                         <h3>Best Practices für Störungsgrad-Auswahl</h3>
                                         <table class="TableStyle-Alternate-Row-Color" style="mc-table-style: url('../../Resources/TableStyles/Alternate-Row-Color.css');" cellspacing="21" data-mc-table-style="Alternate Row Color">
@@ -277,29 +297,36 @@
                                             <tbody>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störungsgrad konservativ bewerten</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Im Zweifelsfall eher einen höheren Grad wählen, um Risiken zu minimieren.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Im Zweifelsfall eher einen höheren Grad
+                    wählen, um Risiken zu minimieren.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Jahreszeit und Einsatzprofil berücksichtigen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Klimaanlagenausfall im Hochsommer: Grad C oder D. Im Winter: ggf. nur Grad B.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Jahreszeit und Einsatzprofil
+                    berücksichtigen</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Klimaanlagenausfall im Hochsommer: Grad C
+                    oder D. Im Winter: ggf. nur Grad B.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störungsbaum nutzen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Störungsbaum enthält oft Vorschläge für Störungsgrad je Komponente.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Störungsbaum enthält oft Vorschläge für
+                    Störungsgrad je Komponente.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Mit Disposition abstimmen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Bei kritischen Störungen (D/E) Disposition informieren, um Ausfälle zu kompensieren.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Bei kritischen Störungen (D/E)
+                    Disposition informieren, um Ausfälle zu kompensieren.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Regelmäßige Überprüfung</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Störungsgrade bei langfristigen Störungen regelmäßig neu bewerten.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Störungsgrade bei langfristigen Störungen
+                    regelmäßig neu bewerten.</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                         <!-- STÖRUNGSZUSTÄNDE -->
                                         <h2 id="stoerungszustaende">Störungszustände und Zustandsmodell</h2>
-                                        <p>Jede Fahrzeugstörung durchläuft einen definierten Lebenszyklus vom Anlegen bis zur Behebung oder Archivierung. Der <strong>Zustand</strong> steuert die Sichtbarkeit, Bearbeitbarkeit und dispositive Wirkung der Störung.</p>
+                                        <p>Jede Fahrzeugstörung durchläuft einen definierten Lebenszyklus vom Anlegen bis zur Behebung oder Archivierung.
+        Der <strong>Zustand</strong> steuert die Sichtbarkeit, Bearbeitbarkeit und dispositive Wirkung der Störung.</p>
                                         <h3>Zustandsdiagramm</h3><pre class="mermaid">
 			stateDiagram-v2
 			[*] --&gt; Angelegt: Störung wird erfasst
@@ -312,17 +339,17 @@
 			InBearbeitung --&gt; KeinBefund: Nach Prüfung kein Befund
 			Erledigt --&gt; [*]: Archivierung
 			KeinBefund --&gt; [*]: Archivierung
-    
+
 			note right of Gemeldet
 			Störung wirkt dispositiv
 			(Störungsgrad aktiv)
 			end note
-    
+
 			note right of InBearbeitung
 			Fahrzeug ggf. reserviert
 			(Werkstatt/Betriebshof)
 			end note
-    
+
 			note right of Erledigt
 			Störung behoben,
 			keine dispositive Wirkung mehr
@@ -330,8 +357,10 @@
 		</pre>
                                         <h3>Beschreibung der Störungszustände</h3>
                                         <h4>Zustand: Angelegt (Neu)</h4>
-                                        <p><strong>Bedeutung:</strong> Die Störung wird gerade im Dialog erfasst. Die Erfassung wurde noch nicht mit „OK" abgeschlossen.</p>
-                                        <p><strong>Sichtbarkeit:</strong> Nur für den erfassenden Benutzer im Dialog sichtbar. Erscheint <strong>nicht</strong> in der Störungsliste.</p>
+                                        <p><strong>Bedeutung:</strong> Die Störung wird gerade im Dialog erfasst. Die Erfassung wurde noch nicht mit „OK"
+        abgeschlossen.</p>
+                                        <p><strong>Sichtbarkeit:</strong> Nur für den erfassenden Benutzer im Dialog sichtbar. Erscheint
+        <strong>nicht</strong> in der Störungsliste.</p>
                                         <p><strong>Dispositive Wirkung:</strong> Keine. Die Störung ist noch nicht aktiv.</p>
                                         <p><strong>Mögliche Aktionen:</strong>
                                         </p>
@@ -340,46 +369,66 @@
                                             <li>Abbrechen → Störung wird verworfen</li>
                                         </ul>
                                         <h4>Zustand: Gemeldet</h4>
-                                        <p><strong>Bedeutung:</strong> Die Störung wurde erfasst, gespeichert und ist aktiv. Sie ist noch unbearbeitet und wartet auf Maßnahmen.</p>
-                                        <p><strong>Sichtbarkeit:</strong> In allen Störungs-Sichten sichtbar. Erscheint in Fahrzeugakte und ggf. in Fahrerinformation.</p>
-                                        <p><strong>Dispositive Wirkung:</strong> <strong>Störungsgrad ist aktiv.</strong> Die Störung wirkt sich auf die Verfügbarkeit des Fahrzeugs in der Disposition aus.</p>
+                                        <p><strong>Bedeutung:</strong> Die Störung wurde erfasst, gespeichert und ist aktiv. Sie ist noch unbearbeitet und
+        wartet auf Maßnahmen.</p>
+                                        <p><strong>Sichtbarkeit:</strong> In allen Störungs-Sichten sichtbar. Erscheint in Fahrzeugakte und ggf. in
+        Fahrerinformation.</p>
+                                        <p><strong>Dispositive Wirkung:</strong> <strong>Störungsgrad ist aktiv.</strong> Die Störung wirkt sich auf die
+        Verfügbarkeit des Fahrzeugs in der Disposition aus.</p>
                                         <p><strong>Mögliche Aktionen:</strong>
                                         </p>
                                         <ul>
-                                            <li><strong>Werkstattauftrag erstellen / Beauftragen:</strong> → Zustand wechselt zu <strong>In Bearbeitung</strong></li>
+                                            <li><strong>Werkstattauftrag erstellen / Beauftragen:</strong> → Zustand wechselt zu <strong>In
+                Bearbeitung</strong></li>
                                             <li><strong>Fahrzeugreservierung erstellen:</strong> → Zustand wechselt zu <strong>In Bearbeitung</strong></li>
-                                            <li><strong>Fertig melden / Erledigt:</strong> → Zustand wechselt zu <strong>Erledigt</strong> (bei sofortiger Behebung)</li>
-                                            <li><strong>Kein Befund:</strong> → Zustand wechselt zu <strong>Kein Befund</strong> (wenn Störung nicht nachvollziehbar)</li>
+                                            <li><strong>Fertig melden / Erledigt:</strong> → Zustand wechselt zu <strong>Erledigt</strong> (bei sofortiger
+            Behebung)</li>
+                                            <li><strong>Kein Befund:</strong> → Zustand wechselt zu <strong>Kein Befund</strong> (wenn Störung nicht
+            nachvollziehbar)</li>
                                         </ul>
-                                        <p><strong>Berechtigungen:</strong> Alle berechtigten Benutzer (Disposition, Betriebshof, Werkstatt) können gemeldete Störungen bearbeiten.</p>
+                                        <p><strong>Berechtigungen:</strong> Alle berechtigten Benutzer (Disposition, Betriebshof, Werkstatt) können
+        gemeldete Störungen bearbeiten.</p>
                                         <h4>Zustand: In Bearbeitung</h4>
-                                        <p><strong>Bedeutung:</strong> Die Störung wurde in einen Werkstattauftrag oder eine Fahrzeugreservierung überführt und wird aktiv bearbeitet.</p>
-                                        <p><strong>Sichtbarkeit:</strong> Weiterhin in Störungs-Sichten sichtbar. Verknüpfung zum Werkstattauftrag / zur Fahrzeugreservierung wird angezeigt.</p>
-                                        <p><strong>Dispositive Wirkung:</strong> <strong>Störungsgrad ist aktiv.</strong> Fahrzeug ist ggf. zusätzlich durch Werkstattauftrag / Fahrzeugreservierung gesperrt.</p>
+                                        <p><strong>Bedeutung:</strong> Die Störung wurde in einen Werkstattauftrag oder eine Fahrzeugreservierung überführt
+        und wird aktiv bearbeitet.</p>
+                                        <p><strong>Sichtbarkeit:</strong> Weiterhin in Störungs-Sichten sichtbar. Verknüpfung zum Werkstattauftrag / zur
+        Fahrzeugreservierung wird angezeigt.</p>
+                                        <p><strong>Dispositive Wirkung:</strong> <strong>Störungsgrad ist aktiv.</strong> Fahrzeug ist ggf. zusätzlich durch
+        Werkstattauftrag / Fahrzeugreservierung gesperrt.</p>
                                         <p><strong>Mögliche Aktionen:</strong>
                                         </p>
                                         <ul>
-                                            <li><strong>Werkstattauftrag beenden:</strong> → Störung wechselt <strong>automatisch</strong> zu <strong>Erledigt</strong></li>
-                                            <li><strong>Fahrzeugreservierung beenden:</strong> → Störung wechselt <strong>automatisch</strong> zu <strong>Erledigt</strong></li>
-                                            <li><strong>Manuell auf Erledigt setzen:</strong> → Zustand wechselt zu <strong>Erledigt</strong> (bei vorzeitiger Behebung)</li>
-                                            <li><strong>Kein Befund:</strong> → Zustand wechselt zu <strong>Kein Befund</strong> (wenn nach Prüfung kein Defekt festgestellt)</li>
+                                            <li><strong>Werkstattauftrag beenden:</strong> → Störung wechselt <strong>automatisch</strong> zu
+            <strong>Erledigt</strong></li>
+                                            <li><strong>Fahrzeugreservierung beenden:</strong> → Störung wechselt <strong>automatisch</strong> zu
+            <strong>Erledigt</strong></li>
+                                            <li><strong>Manuell auf Erledigt setzen:</strong> → Zustand wechselt zu <strong>Erledigt</strong> (bei
+            vorzeitiger Behebung)</li>
+                                            <li><strong>Kein Befund:</strong> → Zustand wechselt zu <strong>Kein Befund</strong> (wenn nach Prüfung kein
+            Defekt festgestellt)</li>
                                         </ul>
                                         <p><strong>Berechtigungen:</strong> Werkstatt-Benutzer und berechtigte Disponenten können den Zustand ändern.</p>
                                         <h4>Zustand: Erledigt (Beendet)</h4>
-                                        <p><strong>Bedeutung:</strong> Die Störung wurde erfolgreich behoben. Das Fahrzeug ist wieder voll einsatzfähig (bzgl. dieser Störung).</p>
-                                        <p><strong>Sichtbarkeit:</strong> Erscheint weiterhin in der Störungsliste (bis zur Archivierung). Kann durch Filter ausgeblendet werden.</p>
-                                        <p><strong>Dispositive Wirkung:</strong> <strong>Keine.</strong> Der Störungsgrad dieser Störung wird nicht mehr berücksichtigt.</p>
+                                        <p><strong>Bedeutung:</strong> Die Störung wurde erfolgreich behoben. Das Fahrzeug ist wieder voll einsatzfähig
+        (bzgl. dieser Störung).</p>
+                                        <p><strong>Sichtbarkeit:</strong> Erscheint weiterhin in der Störungsliste (bis zur Archivierung). Kann durch Filter
+        ausgeblendet werden.</p>
+                                        <p><strong>Dispositive Wirkung:</strong> <strong>Keine.</strong> Der Störungsgrad dieser Störung wird nicht mehr
+        berücksichtigt.</p>
                                         <p><strong>Mögliche Aktionen:</strong>
                                         </p>
                                         <ul>
                                             <li>Anzeigen / Nachvollziehen</li>
                                             <li>Nach konfigurierter Zeit: Automatische Archivierung</li>
                                         </ul>
-                                        <p class="note"><strong>Hinweis:</strong> Bei mehreren Störungen wird der Störungsgrad des Fahrzeugs aus den verbleibenden <em>nicht erledigten</em> Störungen berechnet.</p>
+                                        <p class="note"><strong>Hinweis:</strong> Bei mehreren Störungen wird der Störungsgrad des Fahrzeugs aus den
+        verbleibenden <em>nicht erledigten</em> Störungen berechnet.</p>
                                         <h4>Zustand: Kein Befund</h4>
-                                        <p><strong>Bedeutung:</strong> Die Störung wurde geprüft, konnte aber nicht nachvollzogen werden. Es wurde kein Defekt festgestellt.</p>
+                                        <p><strong>Bedeutung:</strong> Die Störung wurde geprüft, konnte aber nicht nachvollzogen werden. Es wurde kein
+        Defekt festgestellt.</p>
                                         <p><strong>Sichtbarkeit:</strong> Erscheint in der Störungsliste mit Kennzeichnung „Kein Befund".</p>
-                                        <p><strong>Dispositive Wirkung:</strong> <strong>Keine.</strong> Der Störungsgrad wird nicht mehr berücksichtigt.</p>
+                                        <p><strong>Dispositive Wirkung:</strong> <strong>Keine.</strong> Der Störungsgrad wird nicht mehr berücksichtigt.
+    </p>
                                         <p><strong>Typische Szenarien:</strong>
                                         </p>
                                         <ul>
@@ -413,13 +462,15 @@
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Angelegt</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">–</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Dialog abbrechen (Störung wird verworfen)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Dialog abbrechen (Störung wird verworfen)
+                </td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Manuell</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Gemeldet</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">In Bearbeitung</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Werkstattauftrag / Fahrzeugreservierung erstellen</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Werkstattauftrag / Fahrzeugreservierung
+                    erstellen</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Automatisch</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
@@ -437,7 +488,8 @@
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">In Bearbeitung</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Erledigt</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Werkstattauftrag / Fahrzeugreservierung beenden</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Werkstattauftrag / Fahrzeugreservierung
+                    beenden</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Automatisch</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
@@ -455,13 +507,15 @@
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Erledigt</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">–</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Archivierung (nach konfigurierter Zeit)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Archivierung (nach konfigurierter Zeit)
+                </td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Automatisch</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Kein Befund</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">–</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Archivierung (nach konfigurierter Zeit)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Archivierung (nach konfigurierter Zeit)
+                </td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Automatisch</td>
                                                 </tr>
                                             </tbody>
@@ -476,24 +530,29 @@
                                             </thead>
                                             <tbody>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störung anlegen (Angelegt → Gemeldet)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störung anlegen (Angelegt → Gemeldet)
+                </td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Alle Benutzer mit Störungserfassung</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Werkstattauftrag erstellen (Gemeldet → In Bearbeitung)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Werkstattauftrag erstellen (Gemeldet → In
+                    Bearbeitung)</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Disposition, Werkstatt</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störung fertig melden (→ Erledigt)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Je nach Projekt: Alle oder nur Werkstatt/Disposition</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Je nach Projekt: Alle oder nur
+                    Werkstatt/Disposition</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Kein Befund setzen (→ Kein Befund)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Werkstatt, ggf. eingeschränkt auf Werkstattleitung</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Werkstatt, ggf. eingeschränkt auf
+                    Werkstattleitung</td>
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <p class="note"><strong>Hinweis:</strong> Berechtigungen sind projektspezifisch konfigurierbar und können vom Administrator angepasst werden.</p>
+                                        <p class="note"><strong>Hinweis:</strong> Berechtigungen sind projektspezifisch konfigurierbar und können vom
+        Administrator angepasst werden.</p>
                                         <h3>Automatische vs. manuelle Zustandswechsel</h3>
                                         <p><strong>Automatische Zustandswechsel:</strong>
                                         </p>
@@ -513,41 +572,50 @@
                                         </ul>
                                         <!-- STÖRUNGSBAUM -->
                                         <h2 id="stoerungsbaum">Störungsbaum und Störungskatalog</h2>
-                                        <p>Der <strong>Störungsbaum</strong> (auch <em>Störungskatalog</em>) ist eine hierarchische Struktur zur systematischen Kategorisierung von Fahrzeugstörungen. Er ermöglicht eine schnelle, strukturierte Erfassung und erleichtert Auswertungen und Statistiken.</p>
+                                        <p>Der <strong>Störungsbaum</strong> (auch <em>Störungskatalog</em>) ist eine hierarchische Struktur zur
+        systematischen Kategorisierung von Fahrzeugstörungen. Er ermöglicht eine schnelle, strukturierte Erfassung und
+        erleichtert Auswertungen und Statistiken.</p>
                                         <h3>Hierarchische Struktur</h3>
                                         <p>Der Störungsbaum ist dreistufig aufgebaut:</p>
                                         <ol>
-                                            <li value="1"><strong>Kategorie</strong> (oberste Ebene): Grobe Einteilung (z.&#160;B. „Antrieb", „Fahrwerk", „Fahrgastraum", „Elektrik")</li>
-                                            <li value="2"><strong>System</strong> (mittlere Ebene): Funktionale Systeme innerhalb der Kategorie (z.&#160;B. „Motor", „Getriebe", „Lenkung", „Klimaanlage")</li>
-                                            <li value="3"><strong>Komponente</strong> (unterste Ebene): Konkrete Bauteile oder Einzelstörungen (z.&#160;B. „Zündkerze", „Einspritzdüse", „Türöffner Tür 1")</li>
+                                            <li value="1"><strong>Kategorie</strong> (oberste Ebene): Grobe Einteilung (z.&#160;B. „Antrieb", „Fahrwerk",
+            „Fahrgastraum", „Elektrik")</li>
+                                            <li value="2"><strong>System</strong> (mittlere Ebene): Funktionale Systeme innerhalb der Kategorie (z.&#160;B. „Motor",
+            „Getriebe", „Lenkung", „Klimaanlage")</li>
+                                            <li value="3"><strong>Komponente</strong> (unterste Ebene): Konkrete Bauteile oder Einzelstörungen (z.&#160;B.
+            „Zündkerze", „Einspritzdüse", „Türöffner Tür 1")</li>
                                         </ol>
                                         <h4>Beispiel: Störungsbaum-Pfad</h4><pre>
-			Kategorie:    Fahrgastraum
-			System:       Klimaanlage
-			Komponente:   Klimakompressor defekt
-			Komponente:   Lüftung ausgefallen
-			Komponente:   Heizung defekt
-			System:       Türen
-			Komponente:   Türöffner Tür 1
-			Komponente:   Türschließer Tür 2
-			Komponente:   Türsensor defekt
+			Kategorie: Fahrgastraum
+			System: Klimaanlage
+			Komponente: Klimakompressor defekt
+			Komponente: Lüftung ausgefallen
+			Komponente: Heizung defekt
+			System: Türen
+			Komponente: Türöffner Tür 1
+			Komponente: Türschließer Tür 2
+			Komponente: Türsensor defekt
 		</pre>
                                         <h3>Fahrzeugtypspezifische Konfiguration</h3>
                                         <p>Der Störungsbaum wird <strong>je Fahrzeugtyp</strong> konfiguriert. Das bedeutet:</p>
                                         <ul>
                                             <li>Unterschiedliche Fahrzeugtypen können unterschiedliche Störungsbäume haben</li>
                                             <li>Bei der Störungserfassung wird automatisch der zum Fahrzeugtyp passende Störungsbaum geladen</li>
-                                            <li>Beispiel: Ein Gelenkbus hat andere Komponenten als ein Standardbus (z.&#160;B. zusätzliche Türen, Gelenkeinrichtung)</li>
+                                            <li>Beispiel: Ein Gelenkbus hat andere Komponenten als ein Standardbus (z.&#160;B. zusätzliche Türen,
+            Gelenkeinrichtung)</li>
                                         </ul>
-                                        <p class="note"><strong>Hinweis:</strong> Die Störungsbaum-Konfiguration wird vom <strong>Administrator</strong> über die Systemkonfiguration vorgenommen.</p>
+                                        <p class="note"><strong>Hinweis:</strong> Die Störungsbaum-Konfiguration wird vom <strong>Administrator</strong>
+        über die Systemkonfiguration vorgenommen.</p>
                                         <h3>Störungsnummern und Schnelleingabe</h3>
-                                        <p>Jeder Eintrag im Störungsbaum kann mit einer <strong>Störungsnummer</strong> versehen werden. Diese ermöglicht eine beschleunigte Erfassung:</p>
+                                        <p>Jeder Eintrag im Störungsbaum kann mit einer <strong>Störungsnummer</strong> versehen werden. Diese ermöglicht
+        eine beschleunigte Erfassung:</p>
                                         <ul>
                                             <li><strong>Eingabe der Störungsnummer</strong> im Feld „Störungsnr." oder „Schnelleingabe"</li>
                                             <li>System navigiert automatisch zum entsprechenden Eintrag im Störungsbaum</li>
                                             <li>Alle hinterlegten Informationen (Störungsgrad, Text, etc.) werden übernommen</li>
                                         </ul>
-                                        <p><strong>Einsatzszenario:</strong> Werkstatt-Mitarbeiter kennen häufige Störungsnummern auswendig und können diese direkt eingeben, ohne durch den Baum zu navigieren.</p>
+                                        <p><strong>Einsatzszenario:</strong> Werkstatt-Mitarbeiter kennen häufige Störungsnummern auswendig und können diese
+        direkt eingeben, ohne durch den Baum zu navigieren.</p>
                                         <h3>Hinterlegte Informationen im Störungsbaum</h3>
                                         <p>Für jeden Eintrag (insbesondere auf Komponenten-Ebene) können folgende Informationen hinterlegt werden:</p>
                                         <table class="TableStyle-Alternate-Row-Color" style="mc-table-style: url('../../Resources/TableStyles/Alternate-Row-Color.css');" cellspacing="21" data-mc-table-style="Alternate Row Color">
@@ -562,32 +630,43 @@
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>Störungsgrad (Vorschlag)</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Empfohlener Störungsgrad für diese Störung (A–E)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Wird bei Auswahl automatisch vorgeschlagen, kann vom Benutzer überschrieben werden</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Empfohlener Störungsgrad für diese
+                    Störung (A–E)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Wird bei Auswahl automatisch
+                    vorgeschlagen, kann vom Benutzer überschrieben werden</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>Störungstext</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Standardisierte Beschreibung der Störung</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Wird in das Feld „Beschreibung" übernommen, kann ergänzt werden</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Standardisierte Beschreibung der Störung
+                </td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Wird in das Feld „Beschreibung"
+                    übernommen, kann ergänzt werden</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>Handlungshinweis</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Hinweise für Werkstatt oder Fahrer (z.&#160;B. „Ersatzteil im Lager vorhanden")</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Wird im Dialog angezeigt und in Werkstattauftrag übernommen</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Hinweise für Werkstatt oder Fahrer
+                    (z.&#160;B. „Ersatzteil im Lager vorhanden")</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Wird im Dialog angezeigt und in
+                    Werkstattauftrag übernommen</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>Leistungsmerkmal (negiert)</strong>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>Leistungsmerkmal
+                        (negiert)</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Ausstattungsmerkmal, das durch die Störung ausfällt</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Steuert Berechnung des Dispo-Fahrzeugtyps (siehe <a href="#leistungsmerkmale" class="MCXref xref">Störungskonzept – Grundlagen</a>)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Ausstattungsmerkmal, das durch die
+                    Störung ausfällt</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Steuert Berechnung des Dispo-Fahrzeugtyps
+                    (siehe <a href="#leistungsmerkmale" class="MCXref xref">Störungskonzept – Grundlagen</a>)</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1"><strong>Dokumente / Bilder</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Referenzen zu Reparaturanleitungen, Schaltplänen, Fotos</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Werden im Dialog verlinkt und können geöffnet werden</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Referenzen zu Reparaturanleitungen,
+                    Schaltplänen, Fotos</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Werden im Dialog verlinkt und können
+                    geöffnet werden</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -595,10 +674,13 @@
                                         <p>Der Störungsbaum wird über die <strong>Systemkonfiguration</strong> gepflegt:</p>
                                         <ul>
                                             <li><strong>Zugriff:</strong> Nur Administratoren oder berechtigte Konfigurationsbenutzer</li>
-                                            <li><strong>Menü:</strong> <em>Konfiguration</em> → <em>Stammdaten</em> → <em>Störungsbaum</em> (projektspezifisch)</li>
-                                            <li><strong>Funktionen:</strong> Kategorien / Systeme / Komponenten hinzufügen, bearbeiten, löschen; Störungsnummern vergeben; Leistungsmerkmale zuordnen</li>
+                                            <li><strong>Menü:</strong> <em>Konfiguration</em> → <em>Stammdaten</em> → <em>Störungsbaum</em>
+            (projektspezifisch)</li>
+                                            <li><strong>Funktionen:</strong> Kategorien / Systeme / Komponenten hinzufügen, bearbeiten, löschen;
+            Störungsnummern vergeben; Leistungsmerkmale zuordnen</li>
                                         </ul>
-                                        <p class="note"><strong>Best Practice:</strong> Änderungen am Störungsbaum sollten dokumentiert und mit Werkstatt sowie Disposition abgestimmt werden.</p>
+                                        <p class="note"><strong>Best Practice:</strong> Änderungen am Störungsbaum sollten dokumentiert und mit Werkstatt
+        sowie Disposition abgestimmt werden.</p>
                                         <h3>Dokumentenanbindung</h3>
                                         <p>Für Störungsbaum-Einträge können <strong>Dokumente</strong> hinterlegt werden:</p>
                                         <ul>
@@ -610,9 +692,12 @@
                                         <p>Diese Dokumente werden im Dialog <em>Fahrzeugstörung</em> angezeigt und können direkt geöffnet werden.</p>
                                         <!-- LEISTUNGSMERKMALE -->
                                         <h2 id="leistungsmerkmale">Leistungsmerkmale und deren Negierung</h2>
-                                        <p>Leistungsmerkmale beschreiben die <strong>Ausstattung</strong> eines Fahrzeugs (z.&#160;B. Klimaanlage, Niederflurtechnik, WLAN). Bei Störungen können Leistungsmerkmale <strong>negiert</strong> werden, um die reduzierte Einsatzfähigkeit abzubilden.</p>
+                                        <p>Leistungsmerkmale beschreiben die <strong>Ausstattung</strong> eines Fahrzeugs (z.&#160;B. Klimaanlage,
+        Niederflurtechnik, WLAN). Bei Störungen können Leistungsmerkmale <strong>negiert</strong> werden, um die
+        reduzierte Einsatzfähigkeit abzubilden.</p>
                                         <h3>Was sind Leistungsmerkmale?</h3>
-                                        <p>Leistungsmerkmale sind konfigurierbare Attribute, die die funktionale Ausstattung eines Fahrzeugs beschreiben. Sie werden verwendet, um:</p>
+                                        <p>Leistungsmerkmale sind konfigurierbare Attribute, die die funktionale Ausstattung eines Fahrzeugs beschreiben.
+        Sie werden verwendet, um:</p>
                                         <ul>
                                             <li>Fahrzeuge nach Ausstattung zu filtern und zu suchen</li>
                                             <li>Fahrzeugtypen zu differenzieren (z.&#160;B. „Standardbus" vs. „Standardbus mit Klimaanlage")</li>
@@ -629,15 +714,18 @@
                                             <tbody>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Klimaanlage</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Fahrzeug verfügt über funktionierende Klimaanlage</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Fahrzeug verfügt über funktionierende
+                    Klimaanlage</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Niederflur</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Fahrzeug ist niederflurig und barrierefrei</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Fahrzeug ist niederflurig und
+                    barrierefrei</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Rampe / Hubeinrichtung</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Fahrzeug hat Rampe oder Hublift für Rollstuhlfahrer</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Fahrzeug hat Rampe oder Hublift für
+                    Rollstuhlfahrer</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">WLAN</td>
@@ -645,7 +733,8 @@
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">USB-Ladestationen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Lademöglichkeiten für Fahrgäste vorhanden</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Lademöglichkeiten für Fahrgäste vorhanden
+                </td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Videoüberwachung</td>
@@ -653,7 +742,8 @@
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Fahrgast-Information</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Dynamische Fahrgastinformation (Anzeigen, Ansagen)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Dynamische Fahrgastinformation (Anzeigen,
+                    Ansagen)</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -661,7 +751,8 @@
                                         <p>Wenn eine Störung ein Leistungsmerkmal beeinträchtigt, kann dieses <strong>negiert</strong> werden:</p>
                                         <ul>
                                             <li>Im Störungsbaum wird dem Störungseintrag ein <strong>Leistungsmerkmal</strong> zugeordnet</li>
-                                            <li>Bei Erfassung einer Störung mit diesem Eintrag wird das Leistungsmerkmal automatisch <strong>für dieses Fahrzeug negiert</strong></li>
+                                            <li>Bei Erfassung einer Störung mit diesem Eintrag wird das Leistungsmerkmal automatisch <strong>für dieses
+                Fahrzeug negiert</strong></li>
                                             <li>Das Fahrzeug gilt nun als „ohne dieses Leistungsmerkmal"</li>
                                         </ul>
                                         <h4>Beispiel: Klimaanlage defekt</h4>
@@ -672,7 +763,8 @@
                                             <li value="4">Das Fahrzeug gilt nun als „Bus ohne Klimaanlage"</li>
                                         </ol>
                                         <h3>Auswirkung auf Dispo-Fahrzeugtyp</h3>
-                                        <p>Die Negierung von Leistungsmerkmalen führt zur Berechnung eines <strong>Dispo-Fahrzeugtyps</strong> (auch <em>Ersatz-Fahrzeugtyp</em>):</p>
+                                        <p>Die Negierung von Leistungsmerkmalen führt zur Berechnung eines <strong>Dispo-Fahrzeugtyps</strong> (auch
+        <em>Ersatz-Fahrzeugtyp</em>):</p>
                                         <ul>
                                             <li><strong>Ursprünglicher Fahrzeugtyp:</strong> „Standardbus mit Klimaanlage"</li>
                                             <li><strong>Negiertes Leistungsmerkmal:</strong> „Klimaanlage"</li>
@@ -680,7 +772,8 @@
                                         </ul>
                                         <p>Die Disposition verwendet den <strong>Dispo-Fahrzeugtyp</strong> für Verfügbarkeitsberechnung und Zuweisung:</p>
                                         <ul>
-                                            <li>Umläufe, die explizit „Fahrzeug mit Klimaanlage" erfordern, können diesem Fahrzeug <strong>nicht zugewiesen</strong> werden</li>
+                                            <li>Umläufe, die explizit „Fahrzeug mit Klimaanlage" erfordern, können diesem Fahrzeug <strong>nicht
+                zugewiesen</strong> werden</li>
                                             <li>Umläufe ohne diese Anforderung können das Fahrzeug weiterhin nutzen</li>
                                         </ul>
                                         <h3>Beispiele für Leistungsmerkmal-Negierung</h3>
@@ -696,27 +789,32 @@
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Klimaanlage ausgefallen</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Klimaanlage</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Fahrzeug für klimatisierungspflichtige Umläufe nicht verfügbar</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Fahrzeug für klimatisierungspflichtige
+                    Umläufe nicht verfügbar</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Rampe defekt</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Barrierefreiheit / Rampe</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Fahrzeug für barrierefreie Umläufe gesperrt</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Fahrzeug für barrierefreie Umläufe
+                    gesperrt</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">WLAN-Router ausgefallen</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">WLAN</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Fahrzeug für WLAN-pflichtige Linien nicht verfügbar (projektspezifisch)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Fahrzeug für WLAN-pflichtige Linien nicht
+                    verfügbar (projektspezifisch)</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Tür 3 defekt</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Vollständige Türfunktion</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Fahrzeug nur für Linien mit geringer Fahrgastfrequenz einsetzbar</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Fahrzeug nur für Linien mit geringer
+                    Fahrgastfrequenz einsetzbar</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Videoüberwachung defekt</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Videoüberwachung</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Fahrzeug ggf. für Nachtlinien gesperrt (projektspezifisch)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Fahrzeug ggf. für Nachtlinien gesperrt
+                    (projektspezifisch)</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -732,13 +830,15 @@
                                         <ul>
                                             <li>Das negierte Leistungsmerkmal wird <strong>automatisch wiederhergestellt</strong></li>
                                             <li>Der Dispo-Fahrzeugtyp wird <strong>neu berechnet</strong></li>
-                                            <li>Das Fahrzeug steht wieder mit vollem Leistungsumfang zur Verfügung (sofern keine weiteren Störungen vorliegen)</li>
+                                            <li>Das Fahrzeug steht wieder mit vollem Leistungsumfang zur Verfügung (sofern keine weiteren Störungen
+            vorliegen)</li>
                                         </ul>
                                         <h3>Konfiguration von Leistungsmerkmalen</h3>
                                         <p>Leistungsmerkmale werden vom <strong>Administrator</strong> konfiguriert:</p>
                                         <ul>
                                             <li><strong>Definition:</strong> Welche Leistungsmerkmale gibt es im System?</li>
-                                            <li><strong>Zuordnung zu Fahrzeugtypen:</strong> Welche Fahrzeugtypen haben welche Leistungsmerkmale standardmäßig?</li>
+                                            <li><strong>Zuordnung zu Fahrzeugtypen:</strong> Welche Fahrzeugtypen haben welche Leistungsmerkmale
+            standardmäßig?</li>
                                             <li><strong>Zuordnung im Störungsbaum:</strong> Welche Störung negiert welches Leistungsmerkmal?</li>
                                             <li><strong>Dispositionsregeln:</strong> Welche Umläufe/Linien erfordern welche Leistungsmerkmale?</li>
                                         </ul>
@@ -746,7 +846,8 @@
                                         <h2>Best Practices – Gesamtüberblick</h2>
                                         <h3>Störungserfassung</h3>
                                         <ul>
-                                            <li><strong>Störungsbaum vollständig nutzen:</strong> Navigieren Sie bis zur Komponenten-Ebene für präzise Kategorisierung</li>
+                                            <li><strong>Störungsbaum vollständig nutzen:</strong> Navigieren Sie bis zur Komponenten-Ebene für präzise
+            Kategorisierung</li>
                                             <li><strong>Störungsgrad sorgfältig wählen:</strong> Berücksichtigen Sie dispositive Auswirkungen</li>
                                             <li><strong>Vollständige Beschreibung:</strong> Erfassen Sie Symptome, Handlungshinweise und Bemerkungen</li>
                                             <li><strong>Leistungsmerkmale beachten:</strong> Prüfen Sie, ob negierte Leistungsmerkmale korrekt sind</li>
@@ -754,22 +855,27 @@
                                         <h3>Störungsbearbeitung</h3>
                                         <ul>
                                             <li><strong>Schnelle Störungen direkt fertig melden:</strong> Vermeiden Sie unnötige Werkstattaufträge</li>
-                                            <li><strong>Mehrere Störungen bündeln:</strong> Nutzen Sie „Alle offenen Störungen hinzufügen" beim Werkstattauftrag</li>
+                                            <li><strong>Mehrere Störungen bündeln:</strong> Nutzen Sie „Alle offenen Störungen hinzufügen" beim
+            Werkstattauftrag</li>
                                             <li><strong>Kein Befund dokumentieren:</strong> Erfassen Sie, warum keine Störung gefunden wurde</li>
                                             <li><strong>Zustand aktuell halten:</strong> Vermeiden Sie veraltete Zustände</li>
                                         </ul>
                                         <h3>Disposition</h3>
                                         <ul>
                                             <li><strong>Störungsgrade überwachen:</strong> Prüfen Sie regelmäßig Fahrzeuge mit Grad C/D/E</li>
-                                            <li><strong>Dispo-Fahrzeugtyp berücksichtigen:</strong> Achten Sie auf negierte Leistungsmerkmale bei Umlaufzuweisung</li>
+                                            <li><strong>Dispo-Fahrzeugtyp berücksichtigen:</strong> Achten Sie auf negierte Leistungsmerkmale bei
+            Umlaufzuweisung</li>
                                             <li><strong>Kommunikation mit Werkstatt:</strong> Stimmen Sie kritische Störungen ab</li>
                                         </ul>
                                         <h3>Administration</h3>
                                         <ul>
                                             <li><strong>Störungsbaum aktuell halten:</strong> Passen Sie Kategorien an neue Fahrzeugtypen an</li>
-                                            <li><strong>Leistungsmerkmale konsistent definieren:</strong> Vermeiden Sie Widersprüche in Dispositionsregeln</li>
-                                            <li><strong>Berechtigungen regelmäßig prüfen:</strong> Stellen Sie sicher, dass nur berechtigte Benutzer kritische Aktionen ausführen</li>
-                                            <li><strong>Archivierungszeiten optimieren:</strong> Balancieren Sie zwischen Nachvollziehbarkeit und Performance</li>
+                                            <li><strong>Leistungsmerkmale konsistent definieren:</strong> Vermeiden Sie Widersprüche in Dispositionsregeln
+        </li>
+                                            <li><strong>Berechtigungen regelmäßig prüfen:</strong> Stellen Sie sicher, dass nur berechtigte Benutzer
+            kritische Aktionen ausführen</li>
+                                            <li><strong>Archivierungszeiten optimieren:</strong> Balancieren Sie zwischen Nachvollziehbarkeit und
+            Performance</li>
                                         </ul>
                                         <!-- SIEHE AUCH -->
                                         <h2>Siehe auch</h2>
@@ -778,9 +884,7 @@
                                             </li>
                                             <li><a href="050102_Dialog_Fahrzeugstoerung.htm" class="MCXref xref">Dialog Fahrzeugstörung</a>
                                             </li>
-                                            <li><a href="../0502_Werkstattmanagement/050201_Werkstattauftraege/05020101_Liste_Werkstattauftraege.htm" class="MCXref xref">
-   Die Sicht â€žWerkstattauftrÃ¤geâ€œ
-  </a>
+                                            <li><a href="../0502_Werkstattmanagement/050201_Werkstattauftraege/05020101_Liste_Werkstattauftraege.htm" class="MCXref xref">Die Sicht "Werkstattaufträge "</a>
                                             </li>
                                             <li><a href="../../03_Stammdaten_Verwaltung/0301_Fahrzeugmanagement/030101_Fahrzeugliste/030101_Fahrzeugliste.htm" class="MCXref xref">Fahrzeugliste</a>
                                             </li>

@@ -117,20 +117,27 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1 id="titel">Fahrzeugdisposition &#160;–&#160; Einführung</h1>
-                                        <p class="mc-shortdesc">Disposition der Fahrzeuge für Einrückung und Folgeeinsatz &#160;–&#160; automatische Vorschläge nutzen oder Stellplätze manuell festlegen; Fokus auf rangierarme Ausrückbedingungen.</p>
+                                        <p class="mc-shortdesc">Disposition der Fahrzeuge für Einrückung und Folgeeinsatz &#160;–&#160; automatische
+        Vorschläge nutzen oder Stellplätze manuell festlegen; Fokus auf rangierarme Ausrückbedingungen.</p>
                                         <h2>Zweck und Einordnung</h2>
-                                        <p>Aufgabe der Fahrzeugdisposition ist es, jedem Fahrzeug einen Stellplatz auf dem Betriebshof zuzuweisen und einen störungsfreien Betriebsablauf zu gewährleisten.</p>
+                                        <p>Aufgabe der Fahrzeugdisposition ist es, jedem Fahrzeug einen Stellplatz auf dem Betriebshof zuzuweisen und einen
+        störungsfreien Betriebsablauf zu gewährleisten.</p>
                                         <ul>
                                             <li>Sicherstellung der geplanten Umläufe und Überwachung der aktuellen Fahrzeugbewegungen.</li>
-                                            <li>Auswahl geeigneter Stellplätze, sodass ein Ausrücken <strong>ohne Rangieren</strong> und ohne Bewegungen anderer Fahrzeuge möglich ist.</li>
-                                            <li><strong>Automatische Disposition</strong> durch das System; Entscheidungen können <strong>manuell geändert</strong> werden.</li>
-                                            <li><strong>Abgrenzung zur Umlaufdisposition</strong>: Fahrzeugdisposition = physische Zuordnung <em>Fahrzeug↔Stellplatz</em>; Umlaufdisposition = logische Zuordnung <em>Umlauf↔Fahrzeug</em>.</li>
+                                            <li>Auswahl geeigneter Stellplätze, sodass ein Ausrücken <strong>ohne Rangieren</strong> und ohne Bewegungen
+            anderer Fahrzeuge möglich ist.</li>
+                                            <li><strong>Automatische Disposition</strong> durch das System; Entscheidungen können <strong>manuell
+                geändert</strong> werden.</li>
+                                            <li><strong>Abgrenzung zur Umlaufdisposition</strong>: Fahrzeugdisposition = physische Zuordnung
+            <em>Fahrzeug↔Stellplatz</em>; Umlaufdisposition = logische Zuordnung <em>Umlauf↔Fahrzeug</em>.</li>
                                         </ul>
                                         <h2>Berücksichtigte Faktoren</h2>
                                         <p>Die Fahrzeugdisposition berücksichtigt bei der Stellplatzzuweisung:</p>
                                         <ul>
-                                            <li><strong>Fahrzeugeigenschaften</strong>: Fahrzeugtyp, Reichweite/SoC, Störungsgrad, Linieneinschränkungen</li>
-                                            <li><strong>Geplante Reservierungen</strong> des zu disponierenden Fahrzeugs (Werkstatt, Versorgung, Waschaufträge)</li>
+                                            <li><strong>Fahrzeugeigenschaften</strong>: Fahrzeugtyp, Reichweite/SoC, Störungsgrad, Linieneinschränkungen
+        </li>
+                                            <li><strong>Geplante Reservierungen</strong> des zu disponierenden Fahrzeugs (Werkstatt, Versorgung,
+            Waschaufträge)</li>
                                             <li><strong>Stellplatzeigenschaften</strong>: Spurlängen, Nutzungsarten, Typzulässigkeit, Ladepunkte</li>
                                             <li><strong>Eigenschaften der geplanten Umläufe</strong>
                                             </li>
@@ -139,28 +146,41 @@
                                             <li><strong>Ergebnis der Vorplanung</strong> (sofern durchgeführt)</li>
                                             <li><strong>Ergebnis der Zieldisposition</strong>
                                             </li>
-                                            <li><strong>Prognostizierte Einfahrt</strong> des Fahrzeugs auf den Betriebshof (sofern ITCS-Schnittstelle besteht)</li>
+                                            <li><strong>Prognostizierte Einfahrt</strong> des Fahrzeugs auf den Betriebshof (sofern ITCS-Schnittstelle
+            besteht)</li>
                                         </ul>
                                         <h2>Betriebsmodi</h2>
                                         <ul>
-                                            <li><strong>Manuell</strong>: Berechtigter Benutzer weist über Dialog „Fahrzeugdisposition" mit Schaltfläche „Manuell disponieren" dem Fahrzeug einen Stellplatz zu. Auswahl: Fahrzeug, Betriebshof, Parkplatz (per Meter oder Streckenabschnitt); Bestätigung erzeugt Verlegungsauftrag.</li>
-                                            <li><strong>Halbautomatisch</strong>: Berechtigter Benutzer stößt Fahrzeugdisposition im Dialog „Fahrzeugdisposition" an; läuft dann automatisiert ab.</li>
+                                            <li><strong>Manuell</strong>: Berechtigter Benutzer weist über Dialog „Fahrzeugdisposition" mit Schaltfläche
+            „Manuell disponieren" dem Fahrzeug einen Stellplatz zu. Auswahl: Fahrzeug, Betriebshof, Parkplatz (per Meter
+            oder Streckenabschnitt); Bestätigung erzeugt Verlegungsauftrag.</li>
+                                            <li><strong>Halbautomatisch</strong>: Berechtigter Benutzer stößt Fahrzeugdisposition im Dialog
+            „Fahrzeugdisposition" an; läuft dann automatisiert ab.</li>
                                             <li><strong>Vollautomatisch</strong>: Fahrzeugdisposition wird automatisch angestoßen, sobald:
-				<ul><li>Ortung die Einfahrt eines Fahrzeugs auf dem Betriebshof registriert,</li><li>Einfahrt eines Fahrzeugs entsprechend prognostizierter Ankunftszeit durch ITCS erwartet wird,</li><li>Fahrzeug einen entsprechenden Topologieknoten auf dem Betriebshof passiert.</li></ul></li>
+            <ul><li>Ortung die Einfahrt eines Fahrzeugs auf dem Betriebshof registriert,</li><li>Einfahrt eines Fahrzeugs entsprechend prognostizierter Ankunftszeit durch ITCS erwartet wird,</li><li>Fahrzeug einen entsprechenden Topologieknoten auf dem Betriebshof passiert.</li></ul></li>
                                         </ul>
                                         <h2>Ablauf der erweiterten Fahrzeugdisposition</h2>
-                                        <p>Die erweiterte Fahrzeugdisposition wird angestoßen, wenn automatische oder halbautomatische Fahrzeugdisposition ausgelöst wird.</p>
+                                        <p>Die erweiterte Fahrzeugdisposition wird angestoßen, wenn automatische oder halbautomatische Fahrzeugdisposition
+        ausgelöst wird.</p>
                                         <h3>Sequenzielle Verarbeitung</h3>
-                                        <p>Bei mehreren Fahrzeugen erfolgt die fahrzeugweise Zuordnung eines Stellplatzes in <strong>sequenzieller Abfolge</strong>. Erst nachdem ein Stellplatz dem vorhergehenden Fahrzeug zugewiesen wurde, wird das nächste Fahrzeug disponiert.</p>
+                                        <p>Bei mehreren Fahrzeugen erfolgt die fahrzeugweise Zuordnung eines Stellplatzes in <strong>sequenzieller
+            Abfolge</strong>. Erst nachdem ein Stellplatz dem vorhergehenden Fahrzeug zugewiesen wurde, wird das nächste
+        Fahrzeug disponiert.</p>
                                         <h3>Prozessschritte</h3>
                                         <ol>
-                                            <li value="1"><strong>Zieldisposition</strong>: Ermittelt eine oder mehrere Zielnutzungsarten basierend auf dem Zustand des zu disponierenden Fahrzeugs.</li>
-                                            <li value="2"><strong>Qualicision®</strong> (PSI-eigene Software): Berechnet Lösungsmenge mit allen alternativen Stellplatzzuweisungen und deren Rangfolge. Die Stellplatzzuweisung mit dem höchsten Rang ist der Zielstellplatz.</li>
+                                            <li value="1"><strong>Zieldisposition</strong>: Ermittelt eine oder mehrere Zielnutzungsarten basierend auf dem Zustand
+            des zu disponierenden Fahrzeugs.</li>
+                                            <li value="2"><strong>Qualicision®</strong> (PSI-eigene Software): Berechnet Lösungsmenge mit allen alternativen
+            Stellplatzzuweisungen und deren Rangfolge. Die Stellplatzzuweisung mit dem höchsten Rang ist der
+            Zielstellplatz.</li>
                                         </ol>
                                         <h3>Ergebnis</h3>
-                                        <p>Zuweisung des zu disponierenden Fahrzeugs zu dem, im Hinblick auf die aktuellen betrieblichen Anforderungen, optimalen Stellplatz. Der zugewiesene Stellplatz ist für das disponierte Fahrzeug reserviert und für sonstige Fahrzeugabstellungen blockiert.</p>
+                                        <p>Zuweisung des zu disponierenden Fahrzeugs zu dem, im Hinblick auf die aktuellen betrieblichen Anforderungen,
+        optimalen Stellplatz. Der zugewiesene Stellplatz ist für das disponierte Fahrzeug reserviert und für sonstige
+        Fahrzeugabstellungen blockiert.</p>
                                         <h2>Abstellungsmöglichkeiten</h2>
-                                        <p>Fahrzeuge können stetig disponiert werden, sofern sich diese auf dem betrachteten Betriebshof befinden oder einen Umlauf im Streckennetz bedienen, welcher in dem betrachteten Betriebshof endet.</p>
+                                        <p>Fahrzeuge können stetig disponiert werden, sofern sich diese auf dem betrachteten Betriebshof befinden oder einen
+        Umlauf im Streckennetz bedienen, welcher in dem betrachteten Betriebshof endet.</p>
                                         <ul>
                                             <li><strong>Direkte Abstellung</strong>: unmittelbare Zuweisung zum Zielstellplatz</li>
                                             <li><strong>Zwischenabstellung</strong>: für Auftrag (Werkstatt, Versorgung) oder als Wender</li>
@@ -168,17 +188,22 @@
                                         </ul>
                                         <h2>Bestandteile</h2>
                                         <ul>
-                                            <li><strong>Dialog Fahrzeugdisposition</strong> &#160;–&#160; automatischer Vorschlag, manuelle Zielstellplatzvergabe.</li>
+                                            <li><strong>Dialog Fahrzeugdisposition</strong> &#160;–&#160; automatischer Vorschlag, manuelle
+            Zielstellplatzvergabe.</li>
                                             <li><strong>Stellplatz&#8209;Disposition</strong> über Kontextmenü.</li>
-                                            <li><strong>Wunschfahrzeug&#8209;Logik</strong> &#160;–&#160; vorbelegte Fahrzeuge werden bevorzugt disponiert.</li>
-                                            <li><strong>Sonderfälle</strong> &#160;–&#160; u.&#160;a. unerwartet einrückende Fahrzeuge, Schleppverbund, Werkstattfahrzeuge.</li>
+                                            <li><strong>Wunschfahrzeug&#8209;Logik</strong> &#160;–&#160; vorbelegte Fahrzeuge werden bevorzugt disponiert.
+        </li>
+                                            <li><strong>Sonderfälle</strong> &#160;–&#160; u.&#160;a. unerwartet einrückende Fahrzeuge, Schleppverbund,
+            Werkstattfahrzeuge.</li>
                                         </ul>
                                         <h2>Aufruf</h2>
                                         <ul>
                                             <li>Symbolleiste <em>Dialog</em> &#160;→&#160; <strong>Fahrzeugdisposition</strong>.</li>
                                             <li>Menü <em>Bearbeiten</em> &#160;→&#160; <strong>Fahrzeugdisposition</strong>.</li>
-                                            <li>Kontextmenü im <em>Betriebsbild</em> (Fahrzeug) &#160;→&#160; <strong>Stellplatz&#8209;Disposition</strong>.</li>
-                                            <li>Doppelklick in <em>Umlaufliste</em>/<em>Einrückliste</em> bei Status <em>Wird durchgeführt</em> öffnet die Fahrzeugdisposition.</li>
+                                            <li>Kontextmenü im <em>Betriebsbild</em> (Fahrzeug) &#160;→&#160; <strong>Stellplatz&#8209;Disposition</strong>.
+        </li>
+                                            <li>Doppelklick in <em>Umlaufliste</em>/<em>Einrückliste</em> bei Status <em>Wird durchgeführt</em> öffnet die
+            Fahrzeugdisposition.</li>
                                         </ul>
                                         <h2>Typische Workflows</h2>
                                         <h3>Nach Einrücken disponieren</h3>
@@ -186,47 +211,67 @@
                                             <li value="1">Dialog <em>Fahrzeugdisposition</em> öffnen.</li>
                                             <li value="2"><strong>Automatisch disponieren</strong>: Systemvorschlag prüfen.</li>
                                             <li value="3">Vorschlag <strong>akzeptieren</strong> &#160;→&#160; Stellplatz mitteilen und Fahrstraße stellen.</li>
-                                            <li value="4">Vorschlag <strong>verwerfen</strong> &#160;→&#160; <strong>manuell disponieren</strong> und Stellplatz mitteilen.</li>
+                                            <li value="4">Vorschlag <strong>verwerfen</strong> &#160;→&#160; <strong>manuell disponieren</strong> und Stellplatz
+            mitteilen.</li>
                                         </ol>
                                         <h3>Unerwartet einrückende Fahrzeuge</h3>
                                         <ul>
                                             <li>Dialog aus Menü/Toolbar starten, Fahrzeugnummer wählen, anschließend wie oben disponieren.</li>
-                                            <li><em>Schleppverbund</em>: nach Rücksprache mit Werkstatt <strong>manuell in Werkstatt disponieren</strong> (Fahrzeuge ggf. kuppeln oder separat disponieren).</li>
+                                            <li><em>Schleppverbund</em>: nach Rücksprache mit Werkstatt <strong>manuell in Werkstatt disponieren</strong>
+            (Fahrzeuge ggf. kuppeln oder separat disponieren).</li>
                                         </ul>
                                         <h3>Vorbelegte Wunschfahrzeuge</h3>
                                         <ul>
-                                            <li>Für Umläufe vorgemerkte <strong>Wunschfahrzeuge</strong> werden genau dorthin disponiert (keine Fremddisposition auf diesen Umlauf).</li>
-                                            <li>Entsteht eine Lücke, wird das Fahrzeug nicht disponiert bzw. die Disposition mit Fehlermeldung abgebrochen.</li>
+                                            <li>Für Umläufe vorgemerkte <strong>Wunschfahrzeuge</strong> werden genau dorthin disponiert (keine
+            Fremddisposition auf diesen Umlauf).</li>
+                                            <li>Entsteht eine Lücke, wird das Fahrzeug nicht disponiert bzw. die Disposition mit Fehlermeldung abgebrochen.
+        </li>
                                         </ul>
                                         <h2>Überwachung und Prüfung</h2>
-                                        <p>PSItraffic verfolgt und prüft anhand projektierter <strong>Topologieknoten</strong>, ob das disponierte Fahrzeug auf dem zugewiesenen, geplanten Stellplatz abgestellt wird.</p>
+                                        <p>PSItraffic verfolgt und prüft anhand projektierter <strong>Topologieknoten</strong>, ob das disponierte Fahrzeug
+        auf dem zugewiesenen, geplanten Stellplatz abgestellt wird.</p>
                                         <ul>
-                                            <li>Bei Prüfung wird die aktuelle <strong>Fahrtzeit</strong> des Fahrzeugs berücksichtigt, die es benötigt, um den geplanten Stellplatz zu erreichen.</li>
-                                            <li>Erreicht disponiertes Fahrzeug <strong>innerhalb konfigurierbarem Zeitraum</strong> den geplanten Stellplatz &#160;→&#160; geplanter Stellplatz wird in aktuellen Stellplatz überführt.</li>
+                                            <li>Bei Prüfung wird die aktuelle <strong>Fahrtzeit</strong> des Fahrzeugs berücksichtigt, die es benötigt, um
+            den geplanten Stellplatz zu erreichen.</li>
+                                            <li>Erreicht disponiertes Fahrzeug <strong>innerhalb konfigurierbarem Zeitraum</strong> den geplanten Stellplatz
+            &#160;→&#160; geplanter Stellplatz wird in aktuellen Stellplatz überführt.</li>
                                             <li>Wird Fahrzeug auf <strong>anderem Stellplatz</strong> abgestellt &#160;→&#160; Warnmeldung.</li>
                                         </ul>
                                         <h3>Stellplatzanzeiger</h3>
-                                        <p>Sofern Anzeigersteuerung Teil des Lieferumfangs ist: geplante Stellplatzzuweisung wird an Stellplatzanzeiger übermittelt, sobald disponiertes Fahrzeug über einen für diesen Anzeiger projektierten Topologieknoten fährt.</p>
+                                        <p>Sofern Anzeigersteuerung Teil des Lieferumfangs ist: geplante Stellplatzzuweisung wird an Stellplatzanzeiger
+        übermittelt, sobald disponiertes Fahrzeug über einen für diesen Anzeiger projektierten Topologieknoten fährt.
+    </p>
                                         <h3>Aufhebung der Stellplatzzuweisung</h3>
-                                        <p>Erreicht disponiertes Fahrzeug innerhalb konfigurierbarem Zeitraum <strong>nicht</strong> den zugewiesenen Stellplatz &#160;→&#160; Stellplatzreservierung wird aufgehoben. Der Stellplatz wird bei der nächsten Fahrzeugdisposition wieder berücksichtigt. Die Aufhebung verhindert mögliche Störungen im Betriebsablauf.</p>
+                                        <p>Erreicht disponiertes Fahrzeug innerhalb konfigurierbarem Zeitraum <strong>nicht</strong> den zugewiesenen
+        Stellplatz &#160;→&#160; Stellplatzreservierung wird aufgehoben. Der Stellplatz wird bei der nächsten
+        Fahrzeugdisposition wieder berücksichtigt. Die Aufhebung verhindert mögliche Störungen im Betriebsablauf.</p>
                                         <h2>Sonderfälle</h2>
                                         <h3>Fahrzeuge mit Störung oder Werkstattauftrag</h3>
                                         <ul>
-                                            <li>Fahrzeuge mit <strong>Werkstattreservierung</strong> oder <strong>Störung</strong>, die (zeitlich) keinen Umlauf mehr zulassen, erhalten Abstellplatz in der Werkstattabstellung angezeigt.</li>
-                                            <li>Bei Werkstattreservierung am aktuellen Betriebstag: <strong>Vorrang</strong> vor gleichzeitig oder später beginnenden Versorgungen.</li>
-                                            <li>Fahrzeuge mit Werkstattreservierung werden vorab immer versorgt, damit sie nach Werkstatt ohne weitere Versorgung voll einsatzfähig sind und endabgestellt werden können.</li>
-                                            <li>Zur Bearbeitung werden Fahrzeuge von Werkstattmitarbeitern aus dem Stauraum bzw. den für gestörte/mit Werkstattauftrag versehenen Stellplätzen geholt und in die Werkstatt gefahren.</li>
+                                            <li>Fahrzeuge mit <strong>Werkstattreservierung</strong> oder <strong>Störung</strong>, die (zeitlich) keinen
+            Umlauf mehr zulassen, erhalten Abstellplatz in der Werkstattabstellung angezeigt.</li>
+                                            <li>Bei Werkstattreservierung am aktuellen Betriebstag: <strong>Vorrang</strong> vor gleichzeitig oder später
+            beginnenden Versorgungen.</li>
+                                            <li>Fahrzeuge mit Werkstattreservierung werden vorab immer versorgt, damit sie nach Werkstatt ohne weitere
+            Versorgung voll einsatzfähig sind und endabgestellt werden können.</li>
+                                            <li>Zur Bearbeitung werden Fahrzeuge von Werkstattmitarbeitern aus dem Stauraum bzw. den für gestörte/mit
+            Werkstattauftrag versehenen Stellplätzen geholt und in die Werkstatt gefahren.</li>
                                         </ul>
                                         <h3>Fahrzeuge in der Endabstellung</h3>
                                         <ul>
-                                            <li>Fahrzeuge, die noch während des Tags erneut ausrücken oder nicht versorgt werden sollen, werden direkt endabgestellt.</li>
-                                            <li>Auch in Endabstellung können Versorgungen durchgeführt werden; Personal geht zum Stellplatz des bereitgestellten Fahrzeugs.</li>
-                                            <li>Nach Bearbeitung: entweder alle Tätigkeiten erledigt und Fahrzeug steht Umlaufdisposition wieder zur Verfügung oder offene Tätigkeiten erfordern Umsetzung.</li>
+                                            <li>Fahrzeuge, die noch während des Tags erneut ausrücken oder nicht versorgt werden sollen, werden direkt
+            endabgestellt.</li>
+                                            <li>Auch in Endabstellung können Versorgungen durchgeführt werden; Personal geht zum Stellplatz des
+            bereitgestellten Fahrzeugs.</li>
+                                            <li>Nach Bearbeitung: entweder alle Tätigkeiten erledigt und Fahrzeug steht Umlaufdisposition wieder zur
+            Verfügung oder offene Tätigkeiten erfordern Umsetzung.</li>
                                         </ul>
                                         <h2>Ergebnisdarstellung</h2>
                                         <ul>
-                                            <li><strong>Betriebsbild</strong>: Fahrzeuge werden auf ihnen zugewiesenen Stellplätzen angezeigt; Fahrzeugsymbole standardmäßig in Ausfahrtrichtung dargestellt.</li>
-                                            <li><strong>Tabellarische Sichten</strong>: Zuweisung des disponierten Fahrzeugs zu seinem Stellplatz wird angezeigt.</li>
+                                            <li><strong>Betriebsbild</strong>: Fahrzeuge werden auf ihnen zugewiesenen Stellplätzen angezeigt;
+            Fahrzeugsymbole standardmäßig in Ausfahrtrichtung dargestellt.</li>
+                                            <li><strong>Tabellarische Sichten</strong>: Zuweisung des disponierten Fahrzeugs zu seinem Stellplatz wird
+            angezeigt.</li>
                                             <li><strong>Aufstellplan</strong>: grafische Kontrolle der Disposition inkl. Konsistenzprüfungen.</li>
                                             <li>Disposition wirkt auf einfahrtsnahe Prozesse.</li>
                                         </ul>
@@ -234,13 +279,16 @@
                                         <ul>
                                             <li>Fehlermeldung, wenn Störungen/Reservierungen/Waschaufträge einen Umlaufeinsatz ausschließen.</li>
                                             <li>Vorschläge können verworfen und <strong>manuelle Zielstellplätze</strong> vergeben werden.</li>
-                                            <li>Das BMS errechnet anhand der <strong>Dispositionsregeln</strong> und des <strong>Fahrzeugzustands</strong> einen Stellplatz.</li>
-                                            <li>Fahrzeuge können stetig disponiert werden, sofern sie sich auf dem betrachteten Betriebshof befinden oder einen dort endenden Umlauf bedienen.</li>
+                                            <li>Das BMS errechnet anhand der <strong>Dispositionsregeln</strong> und des <strong>Fahrzeugzustands</strong>
+            einen Stellplatz.</li>
+                                            <li>Fahrzeuge können stetig disponiert werden, sofern sie sich auf dem betrachteten Betriebshof befinden oder
+            einen dort endenden Umlauf bedienen.</li>
                                         </ul>
                                         <h2>Abbildungen</h2>
                                         <figure class="Figure" id="fig_fzgdisp_dialog">
                                             <img src="../../Resources/Images/Dialog-Fahrzeugdisposition.png" alt="Dialog Fahrzeugdisposition mit automatischem Vorschlag und Optionen zum manuellen Disponieren." />
-                                            <figcaption>Dialog <em>Fahrzeugdisposition</em> &#160;–&#160; Vorschlag annehmen oder manuell disponieren.</figcaption>
+                                            <figcaption>Dialog <em>Fahrzeugdisposition</em> &#160;–&#160; Vorschlag annehmen oder manuell disponieren.
+        </figcaption>
                                         </figure>
                                         <h2>Siehe auch</h2>
                                         <ul>
@@ -251,7 +299,8 @@
                                             <li><a href="../0401_Umlaufmanagement/040106_Umlaufdisposition/04010603_Halbautomatische_Umlaufdisposition.htm" class="MCXref xref" xrefformat="{para}">Halbautomatische Umlaufdisposition</a>
                                             </li>
                                             <li>
-                Fahrzeugtausch auf Strecke <!-- TODO: unresolved link (kein DE-Topic gefunden): 04010602_Fahrzeugtausch_auf_Strecke.htm --></li>
+            Fahrzeugtausch auf Strecke
+            <!-- TODO: unresolved link (kein DE-Topic gefunden): 04010602_Fahrzeugtausch_auf_Strecke.htm --></li>
                                             <li><a href="../0401_Umlaufmanagement/040105_Einrueckliste/040105_Einrueckliste.htm" class="MCXref xref" xrefformat="{para}">Sicht „Einrückliste“</a>
                                             </li>
                                             <li><a href="../0401_Umlaufmanagement/040104_Ausrueckliste/040104_Ausrueckliste.htm" class="MCXref xref" xrefformat="{para}">Sicht „Ausrückliste“</a>

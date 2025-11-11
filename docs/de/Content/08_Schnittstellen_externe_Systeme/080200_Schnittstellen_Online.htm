@@ -117,11 +117,15 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1>Online-Schnittstellen (Echtzeit)</h1>
-                                        <p class="intro">Online-Schnittstellen ermöglichen die Übertragung von Daten zwischen Systemen in Echtzeit. Sie versorgen PEAK.DMS mit aktuellen Informationen und leiten ausgewählte Betriebsdaten an nachgelagerte Systeme weiter. </p>
+                                        <p class="intro">Online-Schnittstellen ermöglichen die Übertragung von Daten zwischen Systemen in Echtzeit. Sie
+        versorgen PEAK.DMS mit aktuellen Informationen und leiten ausgewählte Betriebsdaten an nachgelagerte Systeme
+        weiter. </p>
                                         <h2>Echtzeit-Zielgruppen (datenabnehmende Systeme)</h2>
-                                        <p class="intro">Externe Systeme nutzen von PEAK.DMS bereitgestellte Betriebsdaten für Anzeige und Weiterverarbeitung.</p>
+                                        <p class="intro">Externe Systeme nutzen von PEAK.DMS bereitgestellte Betriebsdaten für Anzeige und
+        Weiterverarbeitung.</p>
                                         <ul>
-                                            <li><strong>Fahrgastinformationssysteme</strong> – Prognosen und Abfahrts-/Ankunftsinformationen für Haltestellen/Bahnhöfe.</li>
+                                            <li><strong>Fahrgastinformationssysteme</strong> – Prognosen und Abfahrts-/Ankunftsinformationen für
+            Haltestellen/Bahnhöfe.</li>
                                             <li><strong>Anzeiger</strong> – Betriebshof-, Haltestellen- und Bahnhofsanzeigen für Fahrer/Reisende.</li>
                                             <li><strong>Fahrplan/Umlauf</strong> – Soll/Ist-Abgleich, Umlaufänderungen</li>
                                             <li><strong>Leitstelle/Disposition</strong> – Echtzeit-Informationen, Ereignisse</li>
@@ -139,30 +143,35 @@
                                             <tbody>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Inbound (→ PEAK.DMS)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Laufende Betriebsdaten, z.&#160;B. Ortung/Status über Prozessanschluss (siehe eigenes Kapitel).</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Laufende Betriebsdaten, z.&#160;B.
+                    Ortung/Status über Prozessanschluss (siehe eigenes Kapitel).</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Outbound (von PEAK.DMS →)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Bereitstellung von Prognosen, Abfahrts-/Ankunftsdaten an FIS/Anzeiger in Echtzeit.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Bereitstellung von Prognosen,
+                    Abfahrts-/Ankunftsdaten an FIS/Anzeiger in Echtzeit.</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                         <h3 data-mc-conditions="Customers.SSB">SSB-Schnittstellencharakteristik</h3>
-                                        <p data-mc-conditions="Customers.SSB"><strong>Inbound</strong>: Ereignisse/Status aus Leitstelle, Fahrzeugen oder Peripherie (kurzzyklisch). 
-			<strong>Outbound</strong>: bestätigte Dispositions-/Versorgungsinformationen, Stellplatzziele, 
-			sowie Statusmeldungen an angebundene Systeme.
-		</p>
+                                        <p data-mc-conditions="Customers.SSB"><strong>Inbound</strong>: Ereignisse/Status aus Leitstelle, Fahrzeugen oder
+        Peripherie (kurzzyklisch).
+        <strong>Outbound</strong>: bestätigte Dispositions-/Versorgungsinformationen, Stellplatzziele,
+        sowie Statusmeldungen an angebundene Systeme.
+    </p>
                                         <p data-mc-conditions="Customers.SSB">
-			Latenz- und Verfügbarkeitsvorgaben richten sich nach SSB-Betriebsfenstern; 
-			Puffern/Retry-Mechanismen sind projektspezifisch konfiguriert.
-		</p>
+        Latenz- und Verfügbarkeitsvorgaben richten sich nach SSB-Betriebsfenstern;
+        Puffern/Retry-Mechanismen sind projektspezifisch konfiguriert.
+    </p>
                                         <h2>Abgrenzung zum Prozessanschluss</h2>
-                                        <p class="intro">„Prozessanschluss“ bezeichnet speziell die Echtzeit-Anbindung an Betriebsprozesse (z.&#160;B. Ortung auf Strecke/Betriebshof) sowie Steuerimpulse zurück in den Betrieb. Details siehe eigenes Thema.</p>
+                                        <p class="intro">„Prozessanschluss“ bezeichnet speziell die Echtzeit-Anbindung an Betriebsprozesse (z.&#160;B.
+        Ortung auf Strecke/Betriebshof) sowie Steuerimpulse zurück in den Betrieb. Details siehe eigenes Thema.</p>
                                         <p>
-			Online-Schnittstellen dienen der <em>Echtzeit-Synchronisation</em> mit minimaler Latenz 
-			(z. B. Umlauf-/Fahrzeugstatus, Freigaben). Telemetrie/Ortung mit höherem Rohdatenvolumen 
-			ist unter <a href="080300_Schnittstellen_Prozessanschluss.htm" class="MCXref xref">Prozessanschluss (Ortung &amp; Telemetrie)</a> beschrieben.
-		</p>
+        Online-Schnittstellen dienen der <em>Echtzeit-Synchronisation</em> mit minimaler Latenz
+        (z. B. Umlauf-/Fahrzeugstatus, Freigaben). Telemetrie/Ortung mit höherem Rohdatenvolumen
+        ist unter <a href="080300_Schnittstellen_Prozessanschluss.htm" class="MCXref xref">Prozessanschluss (Ortung &amp; Telemetrie)</a>
+        beschrieben.
+    </p>
                                         <h2>Verwandte Themen</h2>
                                         <ul>
                                             <li><a href="080300_Schnittstellen_Prozessanschluss.htm" class="MCXref xref">Prozessanschluss (Ortung &amp; Telemetrie)</a>

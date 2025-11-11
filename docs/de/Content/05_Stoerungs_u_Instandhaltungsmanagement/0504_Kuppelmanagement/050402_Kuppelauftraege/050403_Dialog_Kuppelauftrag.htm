@@ -118,10 +118,14 @@
                                     <div role="main" id="mc-main-content">
                                         <h1 id="titel">Dialog: Kuppelauftrag</h1>
                                         <p class="mc-shortdesc">
-			Der Dialog <strong>Kuppelauftrag</strong> wird für <em>Kuppeln</em> und <em>Trennen</em> gleichermaßen verwendet. Titel und Auftragstyp passen sich dem Kontext an (Fahrzeug kuppeln, Traktion trennen), die Felder und Aktionen bleiben identisch.
-		</p>
+        Der Dialog <strong>Kuppelauftrag</strong> wird für <em>Kuppeln</em> und <em>Trennen</em> gleichermaßen
+        verwendet. Titel und Auftragstyp passen sich dem Kontext an (Fahrzeug kuppeln, Traktion trennen), die Felder und
+        Aktionen bleiben identisch.
+    </p>
                                         <h2 id="modi">Ein Dialog – zwei Modi</h2>
-                                        <p>Im Modus <em>Fahrzeug kuppeln</em> wird die geplante <strong>Kupplung</strong> eines Fahrzeugpaars bestätigt oder storniert. Im Modus <em>Traktion trennen</em> verhält sich der Dialog identisch, bezieht sich aber auf die <strong>Trennung</strong> der Traktion.</p>
+                                        <p>Im Modus <em>Fahrzeug kuppeln</em> wird die geplante <strong>Kupplung</strong> eines Fahrzeugpaars bestätigt oder
+        storniert. Im Modus <em>Traktion trennen</em> verhält sich der Dialog identisch, bezieht sich aber auf die
+        <strong>Trennung</strong> der Traktion.</p>
                                         <figure>
                                             <img src="../../../Resources/Images/dlg_couple_01.png" alt="Dialog 'Fahrzeug kuppeln' mit Fahrzeugpaar und Aktionen Bestätigen/Stornieren." />
                                             <figcaption>Modus <em>Fahrzeug kuppeln</em>: Kupplungsauftrag bestätigen oder stornieren.</figcaption>
@@ -136,18 +140,24 @@
                                             <li><strong>Traktion</strong>: Kennung des Fahrzeugpaars (z.&#160;B. <code>4185-4139</code>).</li>
                                             <li><strong>Fahrzeuge</strong>: Tabelle mit <em>Nummer</em> und <em>Standort</em> beider Fahrzeuge.</li>
                                             <li><strong>Umläufe</strong>: betroffene Umläufe/Kurse (wenn erkannt), sonst leer.</li>
-                                            <li><strong>Aktionen</strong>: <em>Bestätigen</em> und <em>Stornieren</em>; zusätzlich <em>Schließen</em> und <em>Hilfe</em>.</li>
+                                            <li><strong>Aktionen</strong>: <em>Bestätigen</em> und <em>Stornieren</em>; zusätzlich <em>Schließen</em> und
+            <em>Hilfe</em>.</li>
                                         </ul>
                                         <h2 id="schritte">Vorgehen</h2>
                                         <ol>
                                             <li value="1">Prüfen Sie <a href="../050401_Grundlagen_Kuppeln_Trennen/05040101_Regeln_und_Kompatibilitaet.htm" class="MCXref xref" xrefformat="{para}">Regeln &amp; Kompatibilität</a>.</li>
                                             <li value="2">Kontrollieren Sie Traktion, Fahrzeuge und ggf. betroffene Umläufe.</li>
-                                            <li value="3">Klicken Sie auf <em>Bestätigen</em>, um dem DMS zu signalisieren, dass die Maßnahme ausgeführt wurde, oder auf <em>Stornieren</em>, um die Maßnahme abzulehnen.</li>
+                                            <li value="3">Klicken Sie auf <em>Bestätigen</em>, um dem DMS zu signalisieren, dass die Maßnahme ausgeführt wurde, oder
+            auf <em>Stornieren</em>, um die Maßnahme abzulehnen.</li>
                                         </ol>
                                         <h2 id="wirkung">Systemwirkung</h2>
                                         <ul>
-                                            <li><strong>Bestätigen</strong>: Der Kuppel- bzw. Trennzustand wird sofort im System übernommen. Das Fahrzeugpaar erscheint entsprechend <strong>als gekuppelt</strong> bzw. <strong>als getrennt</strong> in Betriebsbild, Dispositionssichten und Kalendern.</li>
-                                            <li><strong>Stornieren</strong>: Für beide Fahrzeuge werden <strong>nicht einsatzverhindernde Störungsmarker</strong> erzeugt. Je nach Typ enthalten sie das Flag <em>Nicht kuppeln</em> oder <em>Nicht trennen</em>. Die <a href="../../../04_Betriebssteuerung_und_Disposition/0403_Fahrzeugdisposition/040303_Automatische_Fahrzeugdisposition.htm" class="MCXref xref" xrefformat="{para}">Automatische Fahrzeugdisposition</a> respektiert diese Flags verbindlich.</li>
+                                            <li><strong>Bestätigen</strong>: Der Kuppel- bzw. Trennzustand wird sofort im System übernommen. Das
+            Fahrzeugpaar erscheint entsprechend <strong>als gekuppelt</strong> bzw. <strong>als getrennt</strong> in
+            Betriebsbild, Dispositionssichten und Kalendern.</li>
+                                            <li><strong>Stornieren</strong>: Für beide Fahrzeuge werden <strong>nicht einsatzverhindernde
+                Störungsmarker</strong> erzeugt. Je nach Typ enthalten sie das Flag <em>Nicht kuppeln</em> oder
+            <em>Nicht trennen</em>. Die <a href="../../../04_Betriebssteuerung_und_Disposition/0403_Fahrzeugdisposition/040303_Automatische_Fahrzeugdisposition.htm" class="MCXref xref" xrefformat="{para}">Automatische Fahrzeugdisposition</a> respektiert diese Flags verbindlich.</li>
                                         </ul>
                                         <h2 id="alternativen">Alternative Bedienwege</h2>
                                         <p>Die gleichen Aktionen stehen in der Liste <em>Kuppelaufträge</em> über Toolbar und Kontextmenü zur Verfügung:</p>

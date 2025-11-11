@@ -116,26 +116,55 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1>Umlaufmanagement</h1>
-                                        <p class="intro">Das Umlaufmanagement dient der Planung, Anzeige und Bearbeitung von Umläufen, einschließlich Sonderumlaufbestellungen und Auswertungen.</p>
-                                        <ul>
-                                            <li><a href="040102_Planfahrten_Sonderfahrten/040102_Planfahrten_Sonderfahrten.htm#Planfa" class="MCXref xref" xrefformat="{para}">Dialog „Sonderumlaufbestellung“ - Planfahrten &amp; Sonderfahrten </a>
-                                            </li>
-                                            <li><a href="040103_Umlaufliste/040103_Umlaufliste.htm" class="MCXref xref" xrefformat="{para}">Sicht „Umlaufliste“ </a>
-                                            </li>
-                                            <li><a href="040101_Umlaufakte/040101_Umlaufakte.htm" class="MCXref xref" xrefformat="{para}">Dialog „Umlaufakte“</a>
-                                            </li>
+                                        <p xmlns="http://www.w3.org/1999/xhtml">Das Umlaufmanagement dient der Planung, Anzeige und Bearbeitung von Umläufen.</p>
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Kernfunktionen</h2>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
+                                            <li><a href="040102_Planfahrten_Sonderfahrten.htm" class="MCXref xref" xrefformat="{para}">Planfahrten &amp; Sonderfahrten</a>:
+            Erfassung des Fahrplans und Anlage von Ad-hoc-Fahrten (Sonderfahrten).
+        </li>
+                                            <li><a href="040103_Umlaufliste.htm" class="MCXref xref" xrefformat="{para}">Umlaufliste</a>: Tabellarische Ansicht und Verwaltung
+            aller Umläufe.
+        </li>
+                                            <li><a href="040101_Umlaufakte.htm" class="MCXref xref" xrefformat="{para}">Dialog „Umlaufakte“</a>: Zentrale Bearbeitung
+            betriebsrelevanter Angaben eines Umlaufs.
+        </li>
                                         </ul>
-                                        <h2 id="ssb-umlauf-regeln" data-mc-conditions="Customers.SSB">SSB-Regeln für Umlaufzuordnung &amp; Rotation</h2>
-                                        <ul data-mc-conditions="Customers.SSB">
-                                            <li><strong>Linienprioritäten</strong> und <strong>Abschnittsrestriktionen</strong> (z. B. Tunnelbetrieb, BR-Bindung)</li>
-                                            <li><strong>Fahrzeugklassen</strong> inkl. Länge/Energie; <em>nur zulässige</em> Typen für bestimmte Umläufe</li>
-                                            <li><strong>Ladefenster/SOC-Schwellen</strong> beeinflussen Aus-/Einrückfähigkeit</li>
-                                            <li><strong>Rotationstrigger</strong>: Nichtverfügbarkeit, Verspätung, Energie/Technik</li>
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Fahrzeugtausch und -wechsel (auf Strecke)</h2>
+                                        <p xmlns="http://www.w3.org/1999/xhtml">Der erweiterte Dialog für den Fahrzeugtausch/Fahrzeugwechsel wird verwendet, um eine Änderung der
+        Fahrzeugzuordnung zu einem Umlauf zu erfassen, insbesondere für Tauschvorgänge, die auf Strecke stattgefunden
+        haben und nicht über das RBL gemeldet wurden.</p>
+                                        <p xmlns="http://www.w3.org/1999/xhtml">Das System unterscheidet abhängig von einem Zeitparameter (derzeit auf 30 Minuten nach Umlaufbeginn eingestellt)
+        zwischen zwei Arten von Zuordnungskorrekturen:</p>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
+                                            <li><b>Fahrzeugauswechselung (Innerhalb von 30 Minuten):</b> Das neue Fahrzeug wird als aktuelles Fahrzeug und
+            als geplantes (verheiratetes) Fahrzeug gesetzt. Dies dient zur Korrektur, falls ein anderes Fahrzeug als
+            geplant den Betriebshof verlassen hat.</li>
+                                            <li><b>Fahrzeugtausch (Nach 30 Minuten):</b> Das neue Fahrzeug wird als aktuelles Fahrzeug gesetzt, das geplante
+            Fahrzeug bleibt jedoch unverändert. Dies dokumentiert einen Tausch auf Strecke.</li>
                                         </ul>
-                                        <h3 id="ssb-umlauf-konflikte" data-mc-conditions="Customers.SSB">Konfliktauflösung (Auszug)</h3>
-                                        <ul data-mc-conditions="Customers.SSB">
-                                            <li>Automatische Alternativvorschläge gemäß SSB-Prioritäten</li>
-                                            <li>Manuelle Übersteuerung mit Begründung &amp; Protokoll</li>
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Statussteuerung: Umlauf ausfallen lassen und löschen</h2>
+                                        <p xmlns="http://www.w3.org/1999/xhtml">Zur Entfernung eines Umlaufs aus dem operativen Betrieb stehen zwei unterschiedliche Aktionen zur Verfügung:</p>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
+                                            <li>
+                                                <p><b>Umlauf ausfallen lassen:</b>
+                                                </p>
+                                                <ul>
+                                                    <li>Setzt den Umlauf in den Zustand <b>Ausgefallen</b>, sofern er sich im Status Geplant befindet und
+                    noch nicht begonnen hat.</li>
+                                                    <li>Das System entfernt automatisch alle Fahrzeugzuordnungen (Wunschfahrzeug, aktuell, geplant).</li>
+                                                    <li>Der Umlauf wird bei der Disposition nicht mehr berücksichtigt und nicht mehr im operativen
+                    Kursaufstellplan angezeigt.</li>
+                                                    <li>Ein ausgefallener Umlauf kann unter bestimmten Bedingungen reaktiviert werden.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p><b>Umlauf löschen:</b>
+                                                </p>
+                                                <ul>
+                                                    <li>Entfernt den Umlauf dauerhaft aus dem System.</li>
+                                                    <li>Diese Funktion ist primär für manuell angelegte Umläufe (z. B. eine Sonderfahrt) vorgesehen.</li>
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>

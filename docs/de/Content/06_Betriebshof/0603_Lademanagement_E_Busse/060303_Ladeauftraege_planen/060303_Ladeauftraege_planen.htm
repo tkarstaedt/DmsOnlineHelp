@@ -116,38 +116,51 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1>Ladeaufträge planen</h1>
-                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Dieses Unterkapitel beschreibt, wie Sie in <strong>PEAK.DMS</strong> Ladevorgänge für Elektrobusse planen. Sie lernen, Ladeaufträge anzulegen, Zeitfenster und Prioritäten zu definieren und den Abgleich mit Fahrplänen sicherzustellen. Die Planung hilft dabei, Energiebedarf, Ladezeiten und Betriebsabläufe optimal zu koordinieren, damit Fahrzeuge zum Abfahrtstermin ausreichend geladen sind und die Energieversorgung effizient genutzt wird.</p>
+                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Dieses Unterkapitel beschreibt, wie Sie in <strong>PEAK.DMS</strong> Ladevorgänge für Elektrobusse
+        planen. Sie lernen, Ladeaufträge anzulegen, Zeitfenster und Prioritäten zu definieren und den Abgleich mit
+        Fahrplänen sicherzustellen. Die Planung hilft dabei, Energiebedarf, Ladezeiten und Betriebsabläufe optimal zu
+        koordinieren, damit Fahrzeuge zum Abfahrtstermin ausreichend geladen sind und die Energieversorgung effizient
+        genutzt wird.</p>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Was Sie hier tun</h2>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li>Ladeaufträge für einzelne Fahrzeuge anlegen (siehe
-        <a href="06030301_Ladeauftrag_anlegen.htm" class="MCXref xref" xrefformat="{para}">Ladeauftrag anlegen</a>).
-      </li>
+            <a href="06030301_Ladeauftrag_anlegen.htm" class="MCXref xref" xrefformat="{para}">Ladeauftrag anlegen</a>).
+        </li>
                                             <li>Ladefenster nach Dringlichkeit und Energiebedarf priorisieren (siehe
-        <a href="06030302_Priorisierung_Ladefenster.htm" class="MCXref xref" xrefformat="{para}">Priorisierung der Ladefenster</a>).
-      </li>
+            <a href="06030302_Priorisierung_Ladefenster.htm" class="MCXref xref" xrefformat="{para}">Priorisierung der Ladefenster</a>).
+        </li>
                                             <li>Ladeplanung mit Fahrplan und Umläufen abgleichen (siehe
-        <a href="06030303_Abgleich_mit_Fahrplan.htm" class="MCXref xref" xrefformat="{para}">Ladeplan mit Fahrplan abgleichen</a>).
-      </li>
+            <a href="06030303_Abgleich_mit_Fahrplan.htm" class="MCXref xref" xrefformat="{para}">Ladeplan mit Fahrplan abgleichen</a>).
+        </li>
                                             <li>(Optional) Regeln für Notfälle und Umschaltungen festlegen, um auf unerwartete Ereignisse zu reagieren.</li>
                                         </ul>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Grundlagen des Ladeauftrags</h2>
-                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Ein Ladeauftrag definiert, wann und wie ein E&#8209;Bus an einer Ladesäule geladen wird. In der Regel werden folgende Parameter benötigt:</p>
+                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Ein Ladeauftrag definiert, wann und wie ein E&#8209;Bus an einer Ladesäule geladen wird. In der
+        Regel werden folgende Parameter benötigt:</p>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li><strong>Fahrzeug:</strong> Das zu ladende Fahrzeug (z.&#160;B. E&#8209;Bus Nr.&#160;12345).</li>
                                             <li><strong>Startzeit:</strong> Zeitpunkt, an dem das Laden beginnen soll.</li>
-                                            <li><strong>Endzeit/Deadline:</strong> Zeitpunkt, zu dem das Fahrzeug für den nächsten Umlauf bereit sein muss.</li>
-                                            <li><strong>Energiebedarf:</strong> Benötigte Energiemenge oder gewünschter SOC (State of Charge) zu Ladeende.</li>
+                                            <li><strong>Endzeit/Deadline:</strong> Zeitpunkt, zu dem das Fahrzeug für den nächsten Umlauf bereit sein muss.
+        </li>
+                                            <li><strong>Energiebedarf:</strong> Benötigte Energiemenge oder gewünschter SOC (State of Charge) zu Ladeende.
+        </li>
                                             <li><strong>Ladeleistung:</strong> Gewählte Ladeleistung bzw. maximal verfügbare Leistung am Ladepunkt.</li>
                                         </ul>
-                                        <p xmlns="http://www.w3.org/1999/xhtml">Das System kann verfügbare Ladepunkte und Leistung pro Ladefenster berücksichtigen und schlägt passende Zeitfenster vor. Intelligente Planungslösungen integrieren Route&#8209; und Umlaufdaten sowie teils telematikgestützte Prognosen für Energiebedarf und ermöglichen dadurch den optimalen Einsatz der Ladeinfrastruktur. Die Priorisierung der Ladevorgänge orientiert sich in der Regel an Abfahrtzeiten, Energiebedarf und verfügbaren Ladepunkten, um Engpässe zu vermeiden und günstigere Stromtarife zu nutzen.</p>
+                                        <p xmlns="http://www.w3.org/1999/xhtml">Das System kann verfügbare Ladepunkte und Leistung pro Ladefenster berücksichtigen und schlägt passende
+        Zeitfenster vor. Intelligente Planungslösungen integrieren Route&#8209; und Umlaufdaten sowie teils
+        telematikgestützte Prognosen für Energiebedarf und ermöglichen dadurch den optimalen Einsatz der
+        Ladeinfrastruktur. Die Priorisierung der Ladevorgänge orientiert sich in der Regel an Abfahrtzeiten,
+        Energiebedarf und verfügbaren Ladepunkten, um Engpässe zu vermeiden und günstigere Stromtarife zu nutzen.</p>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Weiterführende Themen</h2>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li><strong>Parameter und Stammdaten für E&#8209;Busse:</strong> Siehe
-        <a href="../060305_Parametrierung_E_Busse/06030501_Elektrostammdaten.htm" class="MCXref xref" xrefformat="{para}">Elektrostammdaten bearbeiten</a> und
-        <a href="../060305_Parametrierung_E_Busse/06030503_Balancing_Reservekapazitaet.htm" class="MCXref xref" xrefformat="{para}">Balancing und Reservekapazität konfigurieren</a> für Details zur Batterie und Ladekapazitäten.</li>
+            <a href="../060305_Parametrierung_E_Busse/06030501_Elektrostammdaten.htm" class="MCXref xref" xrefformat="{para}">Elektrostammdaten bearbeiten</a> und
+            <a href="../060305_Parametrierung_E_Busse/06030503_Balancing_Reservekapazitaet.htm" class="MCXref xref" xrefformat="{para}">Balancing und Reservekapazität konfigurieren</a> für Details zur Batterie und Ladekapazitäten.
+        </li>
                                             <li><strong>Ladeinfrastruktur:</strong> Einen Ladepunkt anlegen oder die Ladeleistung ändern, siehe
-        <a href="../060302_Ladestationen_verwalten/06030201_Ladepunkt_anlegen.htm" class="MCXref xref" xrefformat="{para}">Ladepunkt anlegen</a> und
-        <a href="../060302_Ladestationen_verwalten/06030202_Ladeleistung_festlegen.htm" class="MCXref xref" xrefformat="{para}">Ladeleistung festlegen</a>.</li>
+            <a href="../060302_Ladestationen_verwalten/06030201_Ladepunkt_anlegen.htm" class="MCXref xref" xrefformat="{para}">Ladepunkt anlegen</a> und
+            <a href="../060302_Ladestationen_verwalten/06030202_Ladeleistung_festlegen.htm" class="MCXref xref" xrefformat="{para}">Ladeleistung festlegen</a>.
+        </li>
                                         </ul>
                                     </div>
                                 </div>

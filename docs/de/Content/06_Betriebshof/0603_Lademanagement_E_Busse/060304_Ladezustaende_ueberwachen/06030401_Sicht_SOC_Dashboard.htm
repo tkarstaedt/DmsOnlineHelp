@@ -117,9 +117,12 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1>Sicht „SOC-Dashboard“ anzeigen</h1>
-                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Das SOC-Dashboard (State of Charge) stellt für jedes Elektrofahrzeug aktuelle Ladeinformationen bereit. Die Sicht hilft, Fahrzeuge mit kritischem SOC zu identifizieren, Reichweiten abzuschätzen und passende Ladeaufträge zu planen. Dieser Abschnitt erklärt die Spalten, Filter und typischen Aktionen des Dashboards.</p>
+                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Das SOC-Dashboard (State of Charge) stellt für jedes Elektrofahrzeug aktuelle Ladeinformationen
+        bereit. Die Sicht hilft, Fahrzeuge mit kritischem SOC zu identifizieren, Reichweiten abzuschätzen und passende
+        Ladeaufträge zu planen. Dieser Abschnitt erklärt die Spalten, Filter und typischen Aktionen des Dashboards.</p>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Spalten (Standardkonfiguration)</h2>
-                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Die tabellarische Sicht enthält die dynamischen Felder aus den Elektroprozessdaten der Fahrzeugakte, beispielsweise:</p>
+                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Die tabellarische Sicht enthält die dynamischen Felder aus den Elektroprozessdaten der
+        Fahrzeugakte, beispielsweise:</p>
                                         <table style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" class="TableStyle-Alternate-Row-Color" cellspacing="21" xmlns="http://www.w3.org/1999/xhtml">
                                             <thead>
                                                 <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
@@ -134,54 +137,73 @@
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Aktueller SOC&#160;[%]</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Ladezustand der Traktionsbatterie in Prozent.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Ladezustand der Traktionsbatterie in
+                    Prozent.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Aktueller SOC&#160;[kWh]</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Derzeit nutzbare Energie der Batterie.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Derzeit nutzbare Energie der Batterie.
+                </td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Restreichweite ohne Umlauf</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Verbleibende Reichweite in km ohne Berücksichtigung geplanter Fahrten.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Verbleibende Reichweite in km ohne
+                    Berücksichtigung geplanter Fahrten.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Restreichweite mit Umlauf</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Restreichweite, bezogen auf den aktuell disponierten Umlauf.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Restreichweite, bezogen auf den aktuell
+                    disponierten Umlauf.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Angeschlossen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Gibt an, ob das Fahrzeug an einer Ladesäule angeschlossen ist und ggf. welche Ladephase aktiv ist (Laden, Vorkonditionierung, Balancing).</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Gibt an, ob das Fahrzeug an einer
+                    Ladesäule angeschlossen ist und ggf. welche Ladephase aktiv ist (Laden, Vorkonditionierung,
+                    Balancing).</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Vorauss. Ladeende</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Prognostizierter Zeitpunkt, zu dem die Batterie den Ziel-SOC erreicht (Vollladung).</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Prognostizierter Zeitpunkt, zu dem die
+                    Batterie den Ziel-SOC erreicht (Vollladung).</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Alarme</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Anzeige von Warnungen oder Hinweisen bei Unterschreitung von Schwellenwerten.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Anzeige von Warnungen oder Hinweisen bei
+                    Unterschreitung von Schwellenwerten.</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Filtern und Sortieren</h2>
                                         <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Über Filter und Sortierfunktionen können Sie sich auf kritische Fahrzeuge fokussieren:</p>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
-                                            <li><strong>Filter nach SOC:</strong> Zeige nur Fahrzeuge mit SOC unter einem bestimmten Wert (z.&#160;B. &lt;&#160;40%).</li>
-                                            <li><strong>Sortieren nach Restreichweite:</strong> Fahrzeuge mit geringster Restreichweite erscheinen oben.</li>
-                                            <li><strong>Filter nach Angeschlossen:</strong> Zeige nur Fahrzeuge, die aktuell laden oder an der Ladesäule stehen.</li>
+                                            <li><strong>Filter nach SOC:</strong> Zeige nur Fahrzeuge mit SOC unter einem bestimmten Wert (z.&#160;B.
+            &lt;&#160;40%).</li>
+                                            <li><strong>Sortieren nach Restreichweite:</strong> Fahrzeuge mit geringster Restreichweite erscheinen oben.
+        </li>
+                                            <li><strong>Filter nach Angeschlossen:</strong> Zeige nur Fahrzeuge, die aktuell laden oder an der Ladesäule
+            stehen.</li>
                                         </ul>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Aktionen</h2>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
-                                            <li><strong>Ladeauftrag anlegen:</strong> Direkt aus dem Dashboard heraus können Sie per Rechtsklick einen Ladeauftrag erstellen (siehe
-        <a href="../060303_Ladeauftraege_planen/06030301_Ladeauftrag_anlegen.htm" class="MCXref xref">Ladeauftrag anlegen</a>).</li>
-                                            <li><strong>Umsetzfahrt planen:</strong> Falls ein Fahrzeug in einen anderen Bereich umgesetzt werden soll, können Sie eine Umsetzfahrt auslösen (siehe
-        Umsetzfahrt (Dialog) <!-- TODO: unresolved link (kein DE-Topic gefunden): ../../060105_Umsetzfahrt_Dialog.htm -->).</li>
-                                            <li><strong>Fahrzeugdetails anzeigen:</strong> Öffnen Sie die Fahrzeugakte und wechseln Sie zum Reiter <em>Elektroprozessdaten</em>, um weitere Details zu sehen.</li>
+                                            <li><strong>Ladeauftrag anlegen:</strong> Direkt aus dem Dashboard heraus können Sie per Rechtsklick einen
+            Ladeauftrag erstellen (siehe
+            <a href="../060303_Ladeauftraege_planen/06030301_Ladeauftrag_anlegen.htm" class="MCXref xref">Ladeauftrag anlegen</a>).
+        </li>
+                                            <li><strong>Umsetzfahrt planen:</strong> Falls ein Fahrzeug in einen anderen Bereich umgesetzt werden soll,
+            können Sie eine Umsetzfahrt auslösen (siehe
+            Umsetzfahrt (Dialog)
+            <!-- TODO: unresolved link (kein DE-Topic gefunden): ../../060105_Umsetzfahrt_Dialog.htm -->).</li>
+                                            <li><strong>Fahrzeugdetails anzeigen:</strong> Öffnen Sie die Fahrzeugakte und wechseln Sie zum Reiter
+            <em>Elektroprozessdaten</em>, um weitere Details zu sehen.</li>
                                         </ul>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Hinweise</h2>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
-                                            <li>Die angezeigten SOC-Werte basieren auf der Telematik und können zeitverzögert sein. Planen Sie Pufferzeiten ein.</li>
-                                            <li>SOC-Schwellenwerte und Alarmgrenzen können in den Systemeinstellungen oder Parametern konfiguriert werden (siehe
-        <a href="06030403_Alarmierung_Schwellenwerte.htm" class="MCXref xref">Alarmierung und Schwellenwerte konfigurieren</a>).</li>
+                                            <li>Die angezeigten SOC-Werte basieren auf der Telematik und können zeitverzögert sein. Planen Sie Pufferzeiten
+            ein.</li>
+                                            <li>SOC-Schwellenwerte und Alarmgrenzen können in den Systemeinstellungen oder Parametern konfiguriert werden
+            (siehe
+            <a href="06030403_Alarmierung_Schwellenwerte.htm" class="MCXref xref">Alarmierung und Schwellenwerte konfigurieren</a>).
+        </li>
                                             <li>Bei Fahrzeugen mit hybridem Antrieb werden nur die elektrischen Komponenten berücksichtigt.</li>
                                         </ul>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Siehe auch</h2>

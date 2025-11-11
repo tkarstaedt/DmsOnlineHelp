@@ -119,11 +119,13 @@
                                     <div role="main" id="mc-main-content">
                                         <h1 id="titel">Troubleshooting Fahrplandaten &amp; Kalender</h1>
                                         <p class="mc-shortdesc">
-			In dieser Anleitung finden Sie häufige Probleme im Umfeld von Fahrplandaten, VDV-Kalender, DMS-Tagesarten und DMS-Kalender sowie deren Ursachen, Prüfpfade und Maßnahmen.
-		</p>
+        In dieser Anleitung finden Sie häufige Probleme im Umfeld von Fahrplandaten, VDV-Kalender, DMS-Tagesarten und
+        DMS-Kalender sowie deren Ursachen, Prüfpfade und Maßnahmen.
+    </p>
                                         <h2 id="hinweise">Allgemeine Hinweise</h2>
                                         <ul>
-                                            <li>Arbeiten Sie schrittweise: <em>Symptom&#160;→&#160;Prüfung&#160;→&#160;Ursache&#160;→&#160;Maßnahme</em>.</li>
+                                            <li>Arbeiten Sie schrittweise: <em>Symptom&#160;→&#160;Prüfung&#160;→&#160;Ursache&#160;→&#160;Maßnahme</em>.
+        </li>
                                             <li>Dokumentieren Sie manuelle Eingriffe (Datum, Rolle, Kommentar), um spätere Analysen zu erleichtern.</li>
                                             <li>Vergleichen Sie Produktiv- und Testsystem, wenn verfügbar.</li>
                                         </ul>
@@ -146,39 +148,50 @@
                                             </thead>
                                             <tbody>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Betriebstage fehlen in einem Zeitraum</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">DMS-Kalender nicht fortgeschrieben oder Import nicht durchgeführt</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Betriebstage fehlen in einem Zeitraum
+                </td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">DMS-Kalender nicht fortgeschrieben oder
+                    Import nicht durchgeführt</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">
-						1) Kalender <a href="040404_DMS_Kalender_pflegen.htm" class="MCXref xref">Dialog „DMS-Kalender pflegen“</a>.<br />						2) Importstatus prüfen (VDV-452) und ggf. erneut importieren.<br />						3) Bereichskalender prüfen.
-					</td>
+                    1) Kalender <a href="040404_DMS_Kalender_pflegen.htm" class="MCXref xref">Dialog „DMS-Kalender pflegen“</a>.<br />
+                    2) Importstatus prüfen (VDV-452) und ggf. erneut importieren.<br /> 3) Bereichskalender prüfen.
+                </td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Falsche Tagesart an einem Datum</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Fehlerhafte Zuordnung im <a href="040402_VDV_Kalender.htm" class="MCXref xref">VDV&#8209;Kalender</a> oder unvollständige Tagesarten</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">
-						1) Tagesartenbestand prüfen/ergänzen (<a href="040403_DMS_Tagesarten.htm" class="MCXref xref">DMS-Tagesarten</a>).<br />						2) Zuordnung im VDV-Kalender korrigieren.<br />						3) Bei Planungsfehler: Datengrundlage korrigieren und erneut liefern.
-					</td>
+                    1) Tagesartenbestand prüfen/ergänzen (<a href="040403_DMS_Tagesarten.htm" class="MCXref xref">DMS-Tagesarten</a>).<br /> 2) Zuordnung im VDV-Kalender korrigieren.<br /> 3) Bei Planungsfehler:
+                    Datengrundlage korrigieren und erneut liefern.
+                </td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Unerwartete operative Version aktiv</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Falsche oder vorgezogene Freigabe der Basisversion</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Falsche oder vorgezogene Freigabe der
+                    Basisversion</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">
-						1) Freigabeprotokoll prüfen.<br />						2) Ggf. Rollback auf letzte freigegebene Version (<a href="040405_Prozess_Import_bis_Operativ.htm" class="MCXref xref">Prozess: Import bis Operativ</a>).<br />						3) Korrekte Version freigeben und dokumentieren.
-					</td>
+                    1) Freigabeprotokoll prüfen.<br /> 2) Ggf. Rollback auf letzte freigegebene Version (<a href="040405_Prozess_Import_bis_Operativ.htm" class="MCXref xref">Prozess: Import bis Operativ</a>).<br /> 3) Korrekte Version
+                    freigeben und dokumentieren.
+                </td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Bereichskalender weichen von DMS-Kalender ab</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Teilweise Aktualisierung, Caching oder Filter</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Bereichskalender weichen von DMS-Kalender
+                    ab</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Teilweise Aktualisierung, Caching oder
+                    Filter</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">
-						1) Ansicht aktualisieren (manuell).<br />						2) Filter/Sicht prüfen.<br />						3) Referenzdaten im DMS-Kalender verifizieren.
-					</td>
+                    1) Ansicht aktualisieren (manuell).<br /> 2) Filter/Sicht prüfen.<br /> 3) Referenzdaten im
+                    DMS-Kalender verifizieren.
+                </td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Import meldet Warnungen/Fehler</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Strukturelle Probleme der Lieferung (VDV-452) oder fehlende Stammdaten</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Strukturelle Probleme der Lieferung
+                    (VDV-452) oder fehlende Stammdaten</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">
-						1) Importlog analysieren.<br />						2) Fehlende Stammdaten ergänzen.<br />						3) Lieferung korrigieren und erneut importieren.
-					</td>
+                    1) Importlog analysieren.<br /> 2) Fehlende Stammdaten ergänzen.<br /> 3) Lieferung korrigieren und
+                    erneut importieren.
+                </td>
                                                 </tr>
                                             </tbody>
                                         </table>

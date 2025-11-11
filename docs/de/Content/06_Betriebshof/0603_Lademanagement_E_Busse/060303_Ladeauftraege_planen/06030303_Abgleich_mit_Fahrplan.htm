@@ -116,31 +116,49 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1>Ladeplan mit Fahrplan abgleichen</h1>
-                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Ladeaufträge müssen mit den geplanten Umläufen der Fahrzeuge abgestimmt werden. Dieses Topic erläutert, wie Sie sicherstellen, dass ein Ladeauftrag den Fahrplan nicht beeinträchtigt und das Fahrzeug rechtzeitig und ausreichend geladen für den nächsten Einsatz bereitsteht.</p>
+                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Ladeaufträge müssen mit den geplanten Umläufen der Fahrzeuge abgestimmt werden. Dieses Topic
+        erläutert, wie Sie sicherstellen, dass ein Ladeauftrag den Fahrplan nicht beeinträchtigt und das Fahrzeug
+        rechtzeitig und ausreichend geladen für den nächsten Einsatz bereitsteht.</p>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Warum ist der Abgleich wichtig?</h2>
-                                        <p xmlns="http://www.w3.org/1999/xhtml">Die Ladeplanung ist ein Teil der Gesamtdisposition. Wenn ein Fahrzeug während des Ladevorgangs für einen Umlauf benötigt wird, kann es zu Verspätungen oder einer unzureichenden Ladung kommen. Die Integration des Ladeplans mit Fahrplan&#8209; und Umlaufdaten gewährleistet, dass die Ladezeiten optimal gewählt werden und die Fahrzeuge zu Einsatzbeginn voll einsatzfähig sind【736875587044737†L180-L186】.</p>
+                                        <p xmlns="http://www.w3.org/1999/xhtml">Die Ladeplanung ist ein Teil der Gesamtdisposition. Wenn ein Fahrzeug während des Ladevorgangs für einen Umlauf
+        benötigt wird, kann es zu Verspätungen oder einer unzureichenden Ladung kommen. Die Integration des Ladeplans
+        mit Fahrplan&#8209; und Umlaufdaten gewährleistet, dass die Ladezeiten optimal gewählt werden und die Fahrzeuge
+        zu Einsatzbeginn voll einsatzfähig sind【736875587044737†L180-L186】.</p>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Abgleich durchführen</h2>
                                         <ol xmlns="http://www.w3.org/1999/xhtml">
-                                            <li value="1">Ermitteln Sie mithilfe der Dispositionssoftware oder der Fahrplantabelle die Abfahrtszeit und den Umlauf, dem das Fahrzeug zugeordnet ist.</li>
-                                            <li value="2">Öffnen Sie im Dialog <em>Ladeauftrag anlegen</em> die Funktion <strong>Fahrplanabgleich</strong> (wenn vorhanden). Dieses Modul zeigt an, ob das geplante Ladefenster mit dem Fahrplan kollidiert.</li>
-                                            <li value="3">Wenn eine Kollision erkannt wird (z.&#160;B. Startzeit des Umlaufs innerhalb des Ladefensters), passen Sie entweder die <em>Startzeit</em> des Ladevorgangs an oder wählen Sie einen anderen Ladepunkt mit höherer Leistung, um den Ladeprozess zu verkürzen.</li>
-                                            <li value="4">Berücksichtigen Sie zusätzliche Zeit für die Vorkonditionierung des Fahrzeugs (Heizung/Klimatisierung) und für eventuelle Umsetzfahrten (vgl.
-        Umsetzfahrt (Dialog) <!-- TODO: unresolved link (kein DE-Topic gefunden): ../060105_Umsetzfahrt_Dialog.htm -->).</li>
+                                            <li value="1">Ermitteln Sie mithilfe der Dispositionssoftware oder der Fahrplantabelle die Abfahrtszeit und den Umlauf,
+            dem das Fahrzeug zugeordnet ist.</li>
+                                            <li value="2">Öffnen Sie im Dialog <em>Ladeauftrag anlegen</em> die Funktion <strong>Fahrplanabgleich</strong> (wenn
+            vorhanden). Dieses Modul zeigt an, ob das geplante Ladefenster mit dem Fahrplan kollidiert.</li>
+                                            <li value="3">Wenn eine Kollision erkannt wird (z.&#160;B. Startzeit des Umlaufs innerhalb des Ladefensters), passen Sie
+            entweder die <em>Startzeit</em> des Ladevorgangs an oder wählen Sie einen anderen Ladepunkt mit höherer
+            Leistung, um den Ladeprozess zu verkürzen.</li>
+                                            <li value="4">Berücksichtigen Sie zusätzliche Zeit für die Vorkonditionierung des Fahrzeugs (Heizung/Klimatisierung) und
+            für eventuelle Umsetzfahrten (vgl.
+            Umsetzfahrt (Dialog)
+            <!-- TODO: unresolved link (kein DE-Topic gefunden): ../060105_Umsetzfahrt_Dialog.htm -->).</li>
                                             <li value="5">Bestätigen Sie den geänderten Ladeauftrag und prüfen Sie, ob der Energiebedarf weiterhin erfüllt wird.</li>
                                         </ol>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Abhängigkeiten erkennen</h2>
                                         <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Beim Abgleich sollten Sie folgende Abhängigkeiten berücksichtigen:</p>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
-                                            <li><strong>Umlaufwechsel:</strong> Fahrzeuge, die während des Ladefensters den Umlauf wechseln, benötigen eventuell eine Zwischenladung oder eine schnellere Ladeleistung.</li>
-                                            <li><strong>Reservepuffer:</strong> Planen Sie Pufferzeiten ein, falls Verzögerungen auf der Strecke auftreten. Ein zu knapp bemessenes Ladefenster kann zu unvollständiger Ladung führen.</li>
-                                            <li><strong>Vorkonditionierung:</strong> Wenn das Fahrzeug vor Abfahrt vorkonditioniert werden muss (Heizung/Klima), verlängert sich der Energiebedarf und die Ladezeit (siehe
-        <a href="../060305_Parametrierung_E_Busse/06030501_Elektrostammdaten.htm" class="MCXref xref" xrefformat="{para}">Elektrostammdaten bearbeiten</a>).</li>
+                                            <li><strong>Umlaufwechsel:</strong> Fahrzeuge, die während des Ladefensters den Umlauf wechseln, benötigen
+            eventuell eine Zwischenladung oder eine schnellere Ladeleistung.</li>
+                                            <li><strong>Reservepuffer:</strong> Planen Sie Pufferzeiten ein, falls Verzögerungen auf der Strecke auftreten.
+            Ein zu knapp bemessenes Ladefenster kann zu unvollständiger Ladung führen.</li>
+                                            <li><strong>Vorkonditionierung:</strong> Wenn das Fahrzeug vor Abfahrt vorkonditioniert werden muss
+            (Heizung/Klima), verlängert sich der Energiebedarf und die Ladezeit (siehe
+            <a href="../060305_Parametrierung_E_Busse/06030501_Elektrostammdaten.htm" class="MCXref xref" xrefformat="{para}">Elektrostammdaten bearbeiten</a>).
+        </li>
                                         </ul>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Best Practices</h2>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
-                                            <li>Führen Sie den Abgleich so früh wie möglich durch – am besten bei der Erstellung des Ladeauftrags. Änderungen im Fahrplan können später zu Anpassungen zwingen.</li>
-                                            <li>Nehmen Sie automatisierte Tools zur Unterstützung des Abgleichs in Anspruch. Intelligente Ladeplanungslösungen integrieren Telematik&#8209; und Fahrplandaten【736875587044737†L180-L186】.</li>
-                                            <li>Sollte der Fahrplan kurzfristig geändert werden, prüfen Sie, ob der Ladeauftrag angepasst oder neu priorisiert werden muss.</li>
+                                            <li>Führen Sie den Abgleich so früh wie möglich durch – am besten bei der Erstellung des Ladeauftrags.
+            Änderungen im Fahrplan können später zu Anpassungen zwingen.</li>
+                                            <li>Nehmen Sie automatisierte Tools zur Unterstützung des Abgleichs in Anspruch. Intelligente
+            Ladeplanungslösungen integrieren Telematik&#8209; und Fahrplandaten【736875587044737†L180-L186】.</li>
+                                            <li>Sollte der Fahrplan kurzfristig geändert werden, prüfen Sie, ob der Ladeauftrag angepasst oder neu
+            priorisiert werden muss.</li>
                                         </ul>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Siehe auch</h2>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
@@ -149,7 +167,8 @@
                                             <li><a href="06030302_Priorisierung_Ladefenster.htm" class="MCXref xref" xrefformat="{para}">Priorisierung der Ladefenster</a>
                                             </li>
                                             <li>
-                Umsetzfahrt (Dialog) <!-- TODO: unresolved link (kein DE-Topic gefunden): ../060105_Umsetzfahrt_Dialog.htm --></li>
+            Umsetzfahrt (Dialog)
+            <!-- TODO: unresolved link (kein DE-Topic gefunden): ../060105_Umsetzfahrt_Dialog.htm --></li>
                                         </ul>
                                     </div>
                                 </div>

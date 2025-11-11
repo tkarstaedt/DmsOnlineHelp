@@ -118,14 +118,21 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1 id="titel">Fahrzeugtypmuster</h1>
-                                        <p class="mc-shortdesc">Fahrzeugtypmuster fassen Fahrzeugtypen mit Prioritäten zusammen und vereinfachen die Vorgabe zulässiger Typen in Disposition und Planung.</p>
+                                        <p class="mc-shortdesc">Fahrzeugtypmuster fassen Fahrzeugtypen mit Prioritäten zusammen und vereinfachen die Vorgabe
+        zulässiger Typen in Disposition und Planung.</p>
                                         <h2>Begriff und Zweck</h2>
-                                        <p>Ein <strong>Fahrzeugtypmuster</strong> ist eine <em>Gruppe</em> von Fahrzeugtypen in beliebiger Anzahl. Jeder Fahrzeugtyp im Muster ist mit einer <strong>Priorität</strong> versehen (1&#160;=&#160;niedrig, 10&#160;=&#160;hoch), welche die Auswertungsreihenfolge der (halb&#8209;/voll)automatischen Disposition für Umlauf&#8209; und Stellplatzzuweisungen steuert. Ein Fahrzeugtyp kann in <em>mehreren</em> Mustern enthalten sein. Muster dienen der schnellen Konfiguration zulässiger Typen; Typen, die <em>nicht</em> im Muster aufgeführt sind, gelten als <strong>nicht zulässig</strong>.</p>
+                                        <p>Ein <strong>Fahrzeugtypmuster</strong> ist eine <em>Gruppe</em> von Fahrzeugtypen in beliebiger Anzahl. Jeder
+        Fahrzeugtyp im Muster ist mit einer <strong>Priorität</strong> versehen (1&#160;=&#160;niedrig,
+        10&#160;=&#160;hoch), welche die Auswertungsreihenfolge der (halb&#8209;/voll)automatischen Disposition für
+        Umlauf&#8209; und Stellplatzzuweisungen steuert. Ein Fahrzeugtyp kann in <em>mehreren</em> Mustern enthalten
+        sein. Muster dienen der schnellen Konfiguration zulässiger Typen; Typen, die <em>nicht</em> im Muster aufgeführt
+        sind, gelten als <strong>nicht zulässig</strong>.</p>
                                         <h2>Sicht „Fahrzeugtypmuster“ öffnen</h2>
                                         <ul>
                                             <li>Symbolleiste <em>Datensichten</em> &#160;→&#160; <strong>Fahrzeugtypmuster</strong></li>
                                             <li>Menü <em>Ansicht</em> &#160;→&#160; <em>Datensichten</em> &#160;→&#160; <strong>Fahrzeugtypmuster</strong></li>
-                                            <li><strong>Doppelklick</strong> auf eine Zeile: öffnet den Dialog <em>Fahrzeugtypmuster</em> (Details siehe separates Topic)</li>
+                                            <li><strong>Doppelklick</strong> auf eine Zeile: öffnet den Dialog <em>Fahrzeugtypmuster</em> (Details siehe
+            separates Topic)</li>
                                         </ul>
                                         <figure class="Figure" id="fig_fahrzeugtyp_basis">
                                             <img src="../../../Resources/Images/sicht_fahrzeugtypmuster_basis.png" alt="Sicht/Liste Fahrzeugtypmuster" />
@@ -143,26 +150,32 @@
                                             <tbody>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Name/Bezeichnung</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Eindeutige Bezeichnung des Fahrzeugtypmusters.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Eindeutige Bezeichnung des
+                    Fahrzeugtypmusters.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Fahrzeugtypen (Überblick)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Zusammenfassung der zum Muster gehörenden Fahrzeugtypen (Prioritäten werden in der Liste nicht angezeigt; Einsicht im Dialog).</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Zusammenfassung der zum Muster gehörenden
+                    Fahrzeugtypen (Prioritäten werden in der Liste nicht angezeigt; Einsicht im Dialog).</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">VDV&#160;Fahrzeugtyp&#8209;Nr.</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Extern zugewiesene Typnummer aus Fahrplanungssystemen (Schnittstelle).</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Extern zugewiesene Typnummer aus
+                    Fahrplanungssystemen (Schnittstelle).</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2" data-mc-conditions="Customers.SSB">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">DIVA&#160;Fzg.TypNr.</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Projektspezifische Nummer aus DIVA; korrespondiert mit dem Muster im Planungssystem.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Projektspezifische Nummer aus DIVA;
+                    korrespondiert mit dem Muster im Planungssystem.</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                         <h2>Arbeitsweise und Hinweise</h2>
                                         <ul>
-                                            <li>Die <strong>Prioritäten</strong> im Muster beschreiben die Präferenz des jeweiligen Fahrzeugtyps bei der Zuweisung zu einem Umlauf/Stellplatz (1&#160;bis&#160;10, 10&#160;=&#160;höchste).</li>
-                                            <li>Muster <strong>vereinfachen</strong> die Pflege zulässiger Typen in Dispositionsprozessen; die Automatik berücksichtigt nur <em>in den Mustern enthaltene</em> Typen.</li>
+                                            <li>Die <strong>Prioritäten</strong> im Muster beschreiben die Präferenz des jeweiligen Fahrzeugtyps bei der
+            Zuweisung zu einem Umlauf/Stellplatz (1&#160;bis&#160;10, 10&#160;=&#160;höchste).</li>
+                                            <li>Muster <strong>vereinfachen</strong> die Pflege zulässiger Typen in Dispositionsprozessen; die Automatik
+            berücksichtigt nur <em>in den Mustern enthaltene</em> Typen.</li>
                                         </ul>
                                         <h2>Siehe auch</h2>
                                         <ul>

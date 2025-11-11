@@ -118,13 +118,17 @@
                                     <div role="main" id="mc-main-content">
                                         <h1 id="titel">Begriffe &amp; Konzepte: Kuppelaufträge</h1>
                                         <p class="mc-shortdesc">
-			Dieses Topic definiert zentrale Begriffe des Kuppelmanagements. <strong>Kuppelaufträge</strong> werden als <strong>Überbegriff</strong> verwendet und schließen <em>Trennaufträge</em> mit ein. Der gleiche Dialog dient zur Bearbeitung beider Typen; er passt nur den Titel an.
-		</p>
+		Dieses Topic definiert zentrale Begriffe des Kuppelmanagements. <strong>Kuppelaufträge</strong> werden als
+		<strong>Überbegriff</strong> verwendet und schließen <em>Trennaufträge</em> mit ein. Der gleiche Dialog dient
+		zur Bearbeitung beider Typen; er passt nur den Titel an.
+	</p>
                                         <h2 id="kuppelauftrag">Kuppelauftrag (Überbegriff)</h2>
                                         <p>
-			Ein <strong>Kuppelauftrag</strong> steuert den <em>Zustand</em> eines <strong>Fahrzeugpaars</strong> zu einem <strong>Kuppelpunkt</strong>. Er hat einen <em>Typ</em> 
-			(<strong>Kuppeln</strong> oder <strong>Trennen</strong>) und durchläuft ein <em>Statusmodell</em> (z.&#160;B. Geplant → Bestätigt/Storniert → Abgeschlossen).
-		</p>
+		Ein <strong>Kuppelauftrag</strong> steuert den <em>Zustand</em> eines <strong>Fahrzeugpaars</strong> zu einem
+		<strong>Kuppelpunkt</strong>. Er hat einen <em>Typ</em>
+		(<strong>Kuppeln</strong> oder <strong>Trennen</strong>) und durchläuft ein <em>Statusmodell</em> (z.&#160;B.
+		Geplant → Bestätigt/Storniert → Abgeschlossen).
+	</p>
                                         <h3 id="attribute">Typische Attribute</h3>
                                         <ul>
                                             <li><strong>Auftragstyp</strong>: Kuppeln | Trennen</li>
@@ -137,12 +141,14 @@
                                         </ul>
                                         <h2 id="fahrzeugpaar">Fahrzeugpaar</h2>
                                         <p>
-			Zwei Fahrzeuge, die als <em>Traktion</em> zusammengeführt oder getrennt werden können. Relevante Eigenschaften: Kupplbarkeit, Energie/SoC, Fahrzeugklasse, Länge, Depot, Sperrstatus.
-		</p>
+		Zwei Fahrzeuge, die als <em>Traktion</em> zusammengeführt oder getrennt werden können. Relevante Eigenschaften:
+		Kupplbarkeit, Energie/SoC, Fahrzeugklasse, Länge, Depot, Sperrstatus.
+	</p>
                                         <h2 id="kuppelpunkt">Kuppelpunkt</h2>
                                         <p>
-			Ort&#8209;Zeit&#8209;Referenz für die Maßnahme (z.&#160;B. Betriebshof<strong>/</strong>Gleis, Haltestelle). Ein Kuppelpunkt sollte ausreichend Puffer und die nötige Infrastruktur bieten.
-		</p>
+		Ort&#8209;Zeit&#8209;Referenz für die Maßnahme (z.&#160;B. Betriebshof <strong>/</strong> Gleis, Haltestelle). Ein
+		Kuppelpunkt sollte ausreichend Puffer und die nötige Infrastruktur bieten.
+	</p>
                                         <h2 id="statusmodell">Statusmodell &amp; Lebenszyklus</h2>
                                         <ol>
                                             <li value="1"><strong>Erzeugt</strong> (aus Dispositionsvorgabe/Regel/Import; optional manuell)</li>
@@ -153,22 +159,32 @@
                                         </ol>
                                         <h2 id="restriktionsflags">Restriktions&#8209;Flags (Störungsmarker)</h2>
                                         <p>
-			Bei Stornierung legt das System <strong>nicht einsatzverhindernde</strong> Störungen an beiden Fahrzeugen an. Diese enthalten je nach Auftragstyp das Flag <strong>„Nicht kuppeln“</strong> bzw. <strong>„Nicht trennen“</strong>. 
-			Die Flags dienen als verbindliche Anweisung an die Disposition und die <a href="../../../04_Betriebssteuerung_und_Disposition/0403_Fahrzeugdisposition/040303_Automatische_Fahrzeugdisposition.htm" class="MCXref xref" xrefformat="{para}">Automatische Fahrzeugdisposition</a>, die entsprechende Maßnahme künftig <em>nicht erneut</em> vorzuschlagen.
-		</p>
+		Bei Stornierung legt das System <strong>nicht einsatzverhindernde</strong> Störungen an beiden Fahrzeugen an.
+		Diese enthalten je nach Auftragstyp das Flag <strong>„Nicht kuppeln“</strong> bzw. <strong>„Nicht
+			trennen“</strong>.
+		Die Flags dienen als verbindliche Anweisung an die Disposition und die <a href="../../../04_Betriebssteuerung_und_Disposition/0403_Fahrzeugdisposition/040303_Automatische_Fahrzeugdisposition.htm" class="MCXref xref" xrefformat="{para}">Automatische Fahrzeugdisposition</a>, die entsprechende Maßnahme künftig <em>nicht erneut</em> vorzuschlagen.
+	</p>
                                         <h2 id="rollen">Rollen &amp; Verantwortlichkeiten</h2>
                                         <ul>
-                                            <li><strong>Disposition</strong>: Sicht <em>Kuppelaufträge</em> bedienen, Bestätigen/Stornieren, kommentieren.</li>
+                                            <li><strong>Disposition</strong>: Sicht <em>Kuppelaufträge</em> bedienen, Bestätigen/Stornieren, kommentieren.
+		</li>
                                             <li><strong>Fachadmin</strong>: Regeln/Kompatibilität pflegen, Eskalationen bearbeiten.</li>
-                                            <li><strong>Werkstatt/Versorgung</strong>: Sperr&#8209;/Sicherheitszustände liefern, die Kuppelbarkeit beeinflussen.</li>
+                                            <li><strong>Werkstatt/Versorgung</strong>: Sperr&#8209;/Sicherheitszustände liefern, die Kuppelbarkeit beeinflussen.
+		</li>
                                         </ul>
                                         <h2 id="zusammenhaenge">Zusammenhänge</h2>
                                         <ul>
-                                            <li><a href="../050402_Kuppelauftraege/050402_Kuppelauftraege.htm" class="MCXref xref" xrefformat="{para}">Kuppelaufträge</a> (Liste, Toolbar, Kontextmenü, Dialog)</li>
-                                            <li><a href="../050402_Kuppelauftraege/050403_Dialog_Kuppelauftrag.htm" class="MCXref xref" xrefformat="{para}">Dialog: Kuppelauftrag</a> (ein Dialog, zwei Modi)</li>
-                                            <li><a href="../../../04_Betriebssteuerung_und_Disposition/0406_Bereichskalender/040601_Kalender_Umlauf.htm" class="MCXref xref" xrefformat="{para}">Kalender: Umläufe</a> (Ereignisse und Wirkung im Zeitstrahl)</li>
-                                            <li>Manuelle Disposition <!-- TODO: unresolved link (kein DE-Topic gefunden): ../../04_Betriebssteuerung_und_Disposition/0403_Fahrzeugdisposition/040302_Manuelle_Disposition.htm --> (Konfliktlösung)</li>
-                                            <li><a href="../../../04_Betriebssteuerung_und_Disposition/0403_Fahrzeugdisposition/040303_Automatische_Fahrzeugdisposition.htm" class="MCXref xref" xrefformat="{para}">Automatische Fahrzeugdisposition</a> (Respektiert Flags)</li>
+                                            <li><a href="../050402_Kuppelauftraege/050402_Kuppelauftraege.htm" class="MCXref xref" xrefformat="{para}">Kuppelaufträge</a> (Liste, Toolbar, Kontextmenü, Dialog)
+		</li>
+                                            <li><a href="../050402_Kuppelauftraege/050403_Dialog_Kuppelauftrag.htm" class="MCXref xref" xrefformat="{para}">Dialog: Kuppelauftrag</a> (ein Dialog, zwei Modi)
+		</li>
+                                            <li><a href="../../../04_Betriebssteuerung_und_Disposition/0406_Bereichskalender/040601_Kalender_Umlauf.htm" class="MCXref xref" xrefformat="{para}">Kalender: Umläufe</a> (Ereignisse und Wirkung im Zeitstrahl)
+		</li>
+                                            <li>Manuelle Disposition
+			<!-- TODO: unresolved link (kein DE-Topic gefunden): ../../04_Betriebssteuerung_und_Disposition/0403_Fahrzeugdisposition/040302_Manuelle_Disposition.htm -->
+			(Konfliktlösung)</li>
+                                            <li><a href="../../../04_Betriebssteuerung_und_Disposition/0403_Fahrzeugdisposition/040303_Automatische_Fahrzeugdisposition.htm" class="MCXref xref" xrefformat="{para}">Automatische Fahrzeugdisposition</a> (Respektiert Flags)
+		</li>
                                         </ul>
                                     </div>
                                 </div>

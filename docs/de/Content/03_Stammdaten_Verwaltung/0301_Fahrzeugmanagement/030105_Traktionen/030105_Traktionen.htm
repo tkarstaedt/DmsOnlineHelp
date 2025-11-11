@@ -117,42 +117,63 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1 id="titel">Traktionen</h1>
-                                        <p class="mc-shortdesc">Verwalten Sie Fahrzeug&#8209;Traktionen im DMS: Signalisieren Sie Kuppeln/Trennen, beachten Sie Kompatibilitäten (Traktionstyp) und nutzen Sie die Sicht <em>Traktionen</em> für Übersicht und Navigation.</p>
+                                        <p class="mc-shortdesc">Verwalten Sie Fahrzeug&#8209;Traktionen im DMS: Signalisieren Sie Kuppeln/Trennen, beachten
+        Sie Kompatibilitäten (Traktionstyp) und nutzen Sie die Sicht <em>Traktionen</em> für Übersicht und Navigation.
+    </p>
                                         <h2>Begriff und Einordnung</h2>
-                                        <p>Eine <strong>Traktion</strong> ist ein Verband aus gekuppelten Schienenfahrzeugen, der als Einheit disponiert, dargestellt und überwacht wird. Die Traktionsbildung oder &#8209;trennung kann automatisch (z.&#160;B. aus Kursaufstellplänen bzw. RBL&#8209;Rückmeldungen) oder manuell erfolgen.</p>
+                                        <p>Eine <strong>Traktion</strong> ist ein Verband aus gekuppelten Schienenfahrzeugen, der als Einheit disponiert,
+        dargestellt und überwacht wird. Die Traktionsbildung oder &#8209;trennung kann automatisch (z.&#160;B. aus
+        Kursaufstellplänen bzw. RBL&#8209;Rückmeldungen) oder manuell erfolgen.</p>
                                         <h2>Signalisierung vs. Kuppelaufträge</h2>
-                                        <p>Die <strong>Signalisierung</strong> (Kuppeln/Trennen) ist eine eigenständige Funktion: Sie melden dem DMS, dass eine Traktion <em>besteht</em> bzw. <em>aufgelöst</em> wurde. Sie ist nicht identisch mit <strong>Kuppelaufträgen</strong> (geplante Vorgänge). Bei Abweichungen dominiert der <strong>tatsächlich signalisierte</strong> Zustand die operative Darstellung; Aufträge sind zu bestätigen oder zu stornieren.</p>
-                                        <p>Systemwirkung in Aufträgen: <em>Bestätigen</em> setzt den Zustand sofort, <em>Stornieren</em> erzeugt nicht einsatzverhindernde Störungsmarker mit den Flags <em>Nicht kuppeln</em>/<em>Nicht trennen</em>, die die Automatik verbindlich respektiert.</p>
+                                        <p>Die <strong>Signalisierung</strong> (Kuppeln/Trennen) ist eine eigenständige Funktion: Sie melden dem DMS, dass
+        eine Traktion <em>besteht</em> bzw. <em>aufgelöst</em> wurde. Sie ist nicht identisch mit
+        <strong>Kuppelaufträgen</strong> (geplante Vorgänge). Bei Abweichungen dominiert der <strong>tatsächlich
+            signalisierte</strong> Zustand die operative Darstellung; Aufträge sind zu bestätigen oder zu stornieren.
+    </p>
+                                        <p>Systemwirkung in Aufträgen: <em>Bestätigen</em> setzt den Zustand sofort, <em>Stornieren</em> erzeugt nicht
+        einsatzverhindernde Störungsmarker mit den Flags <em>Nicht kuppeln</em>/<em>Nicht trennen</em>, die die
+        Automatik verbindlich respektiert.</p>
                                         <h2>Kompatibilität und Traktionstyp</h2>
-                                        <p>Ein <strong>Traktionstyp</strong> beschreibt zulässige Kombinationen kuppelbarer Fahrzeugtypen inklusive Reihenfolge. Bei der Traktionsbildung stehen nur zu diesem Traktionstyp passende Fahrzeuge zur Auswahl. Die Pflege erfolgt im Fahrzeugtyp&#8209;Kontext (z.&#160;B. Reiter <em>Traktion</em>).</p>
+                                        <p>Ein <strong>Traktionstyp</strong> beschreibt zulässige Kombinationen kuppelbarer Fahrzeugtypen inklusive
+        Reihenfolge. Bei der Traktionsbildung stehen nur zu diesem Traktionstyp passende Fahrzeuge zur Auswahl. Die
+        Pflege erfolgt im Fahrzeugtyp&#8209;Kontext (z.&#160;B. Reiter <em>Traktion</em>).</p>
                                         <h2>Bedienwege</h2>
                                         <h3>Sicht „Traktionen“</h3>
-                                        <p>Die Sicht zeigt aktuell gekuppelte Fahrzeuge tabellarisch, z.&#160;B. mit Spalten <em>Traktion</em>, <em>Typ</em>, <em>Störungsgrad</em>, <em>Stellplatz</em>. Doppelklick öffnet die Fahrzeugakte; Kontextmenü bietet u.&#160;a. <em>Trennen</em>.</p>
+                                        <p>Die Sicht zeigt aktuell gekuppelte Fahrzeuge tabellarisch, z.&#160;B. mit Spalten <em>Traktion</em>,
+        <em>Typ</em>, <em>Störungsgrad</em>, <em>Stellplatz</em>. Doppelklick öffnet die Fahrzeugakte; Kontextmenü
+        bietet u.&#160;a. <em>Trennen</em>.</p>
                                         <figure class="Figure" id="fig_traktion_sicht">
                                             <img src="../../../Resources/Images/sicht_traktionen.png" alt="Sicht Traktionen mit Spalten Typ, Stellplatz, Störungsgrad; Doppelklick öffnet Fahrzeugakte." />
                                             <figcaption>Sicht <em>Traktionen</em> &#160;–&#160; Übersicht und Aktionen.</figcaption>
                                         </figure>
                                         <h3>Dialog „Kuppeln/Trennen“ (Signalisierung)</h3>
                                         <ul>
-                                            <li><strong>Modus Kuppeln</strong>: Traktionstyp wählen und zwei Fahrzeuge angeben; <em>OK</em> signalisiert die hergestellte Traktion.</li>
+                                            <li><strong>Modus Kuppeln</strong>: Traktionstyp wählen und zwei Fahrzeuge angeben; <em>OK</em> signalisiert die
+            hergestellte Traktion.</li>
                                             <li><strong>Modus Trennen</strong>: bestehende Traktion auswählen; <em>OK</em> signalisiert die Auflösung.</li>
                                             <li>Aufruf über Symbolleiste, Menü oder Kontextmenü (z.&#160;B. Betriebsbild, Fahrzeugliste).</li>
                                         </ul>
                                         <figure class="Figure" id="fig_signal_kuppeln">
                                             <img src="../../../Resources/Images/dialog_kuppeln.png" alt="Dialog 'Kuppeln/Trennen' im Modus Kuppeln: Traktionstyp und zwei Fahrzeuge; OK/Abbrechen/Hilfe." />
-                                            <figcaption>Modus <em>Kuppeln</em> – Traktionstyp wählen und Fahrzeuge angeben; <em>OK</em> signalisiert die hergestellte Traktion.</figcaption>
+                                            <figcaption>Modus <em>Kuppeln</em> – Traktionstyp wählen und Fahrzeuge angeben; <em>OK</em> signalisiert die
+            hergestellte Traktion.</figcaption>
                                         </figure>
                                         <figure class="Figure" id="fig_signal_trennen">
                                             <figcaption>
                                                 <img src="../../../Resources/Images/dlg_trennen.png" />
                                             </figcaption>
-                                            <figcaption>Modus <em>Trennen</em> – bestehende Traktion auswählen; <em>OK</em> signalisiert die Auflösung.</figcaption>
+                                            <figcaption>Modus <em>Trennen</em> – bestehende Traktion auswählen; <em>OK</em> signalisiert die Auflösung.
+        </figcaption>
                                         </figure>
                                         <h2>Disposition und Darstellung</h2>
                                         <ul>
-                                            <li>Die <strong>ganze Traktion</strong> wird als Einheit einem Umlauf zugewiesen; längere Einheiten benötigen zusammenhängende Stellplatzlängen und passende Ausrückrichtungen.</li>
-                                            <li>Automatische Traktionsbildung/&#8209;trennung kann aus Kursaufstellplänen oder via RBL&#8209;Rückmeldungen erfolgen.</li>
-                                            <li>Im <strong>Betriebsbild</strong> werden gekuppelte Fahrzeuge durch <em>Zusammenrücken</em>, entkoppelte durch <em>Auseinanderrücken</em> visualisiert; nicht benachbarte Fahrzeuge einer logischen Traktion können gestrichelt umrandet sein (projektspezifisch).</li>
+                                            <li>Die <strong>ganze Traktion</strong> wird als Einheit einem Umlauf zugewiesen; längere Einheiten benötigen
+            zusammenhängende Stellplatzlängen und passende Ausrückrichtungen.</li>
+                                            <li>Automatische Traktionsbildung/&#8209;trennung kann aus Kursaufstellplänen oder via RBL&#8209;Rückmeldungen
+            erfolgen.</li>
+                                            <li>Im <strong>Betriebsbild</strong> werden gekuppelte Fahrzeuge durch <em>Zusammenrücken</em>, entkoppelte
+            durch <em>Auseinanderrücken</em> visualisiert; nicht benachbarte Fahrzeuge einer logischen Traktion können
+            gestrichelt umrandet sein (projektspezifisch).</li>
                                         </ul>
                                         <h2>Siehe auch</h2>
                                         <ul>

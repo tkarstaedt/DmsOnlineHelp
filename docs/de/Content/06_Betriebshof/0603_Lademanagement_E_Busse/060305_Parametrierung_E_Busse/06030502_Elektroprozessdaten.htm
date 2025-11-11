@@ -117,7 +117,10 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1>Elektroprozessdaten anzeigen</h1>
-                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Die Elektroprozessdaten zeigen dynamische Informationen zum aktuellen Ladezustand eines Elektrofahrzeugs an. Sie werden im Reiter „Elektroprozessdaten“ der Fahrzeugakte angezeigt und können nicht bearbeitet werden. Die Daten stammen aus der Bordelektronik oder der Telematik und dienen der Überwachung und Planung.</p>
+                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Die Elektroprozessdaten zeigen dynamische Informationen zum aktuellen Ladezustand eines
+        Elektrofahrzeugs an. Sie werden im Reiter „Elektroprozessdaten“ der Fahrzeugakte angezeigt und können nicht
+        bearbeitet werden. Die Daten stammen aus der Bordelektronik oder der Telematik und dienen der Überwachung und
+        Planung.</p>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Angezeigte Felder</h2>
                                         <p class="intro" xmlns="http://www.w3.org/1999/xhtml">In der Standardkonfiguration werden folgende Felder angezeigt:</p>
                                         <table style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" class="TableStyle-Alternate-Row-Color" cellspacing="21" xmlns="http://www.w3.org/1999/xhtml">
@@ -130,52 +133,66 @@
                                             <tbody>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Aktueller SOC in&#160;%</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Aktueller Ladezustand der Batterie in Prozent.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Aktueller Ladezustand der Batterie in
+                    Prozent.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Aktueller SOC in&#160;kWh</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Aktuell nutzbare Energie der Traktionsbatterie in kWh.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Aktuell nutzbare Energie der
+                    Traktionsbatterie in kWh.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Restreichweite ohne Umlaufbezug</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Berechnete Reichweite (km), wenn kein geplanter Umlauf berücksichtigt wird.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Berechnete Reichweite (km), wenn kein
+                    geplanter Umlauf berücksichtigt wird.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Restreichweite mit Umlaufbezug</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Restreichweite (km) bezogen auf den aktuell disponierten Umlauf.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Restreichweite (km) bezogen auf den
+                    aktuell disponierten Umlauf.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Ladephase (Checkbox)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Angekreuzt, wenn eine Ladephase aktiv ist (Laden, Vorkonditionierung, Balancing).</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Angekreuzt, wenn eine Ladephase aktiv ist
+                    (Laden, Vorkonditionierung, Balancing).</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Ladestartzeit</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Zeitpunkt, an dem das Laden (falls eingeplant) beginnen soll.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Zeitpunkt, an dem das Laden (falls
+                    eingeplant) beginnen soll.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Ladeendzeit (prognostiziert)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Voraussichtlicher Zeitpunkt, an dem die Batterie den Ziel-SOC erreicht (Vollladung).</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Voraussichtlicher Zeitpunkt, an dem die
+                    Batterie den Ziel-SOC erreicht (Vollladung).</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Anwendung</h2>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
-                                            <li><strong>Planung:</strong> Nutzen Sie die Prozessdaten als Ausgangspunkt für das Anlegen von Ladeaufträgen (siehe
-        <a href="../060303_Ladeauftraege_planen/06030301_Ladeauftrag_anlegen.htm" class="MCXref xref">Ladeauftrag anlegen</a>).</li>
-                                            <li><strong>Überwachung:</strong> Vergleichen Sie den aktuellen SOC mit den im System hinterlegten Schwellenwerten. Bei Abweichungen werden entsprechende Alarme ausgelöst (siehe
-        <a href="../060304_Ladezustaende_ueberwachen/06030403_Alarmierung_Schwellenwerte.htm" class="MCXref xref">Alarmierung und Schwellenwerte konfigurieren</a>).</li>
-                                            <li><strong>Historie:</strong> Manche Systeme protokollieren die Entwicklung des SOC im Zeitverlauf, um Batteriedegradation zu analysieren (projektspezifisch).</li>
+                                            <li><strong>Planung:</strong> Nutzen Sie die Prozessdaten als Ausgangspunkt für das Anlegen von Ladeaufträgen
+            (siehe
+            <a href="../060303_Ladeauftraege_planen/06030301_Ladeauftrag_anlegen.htm" class="MCXref xref">Ladeauftrag anlegen</a>).
+        </li>
+                                            <li><strong>Überwachung:</strong> Vergleichen Sie den aktuellen SOC mit den im System hinterlegten
+            Schwellenwerten. Bei Abweichungen werden entsprechende Alarme ausgelöst (siehe
+            <a href="../060304_Ladezustaende_ueberwachen/06030403_Alarmierung_Schwellenwerte.htm" class="MCXref xref">Alarmierung und Schwellenwerte konfigurieren</a>).
+        </li>
+                                            <li><strong>Historie:</strong> Manche Systeme protokollieren die Entwicklung des SOC im Zeitverlauf, um
+            Batteriedegradation zu analysieren (projektspezifisch).</li>
                                         </ul>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Hinweise</h2>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li>Die Prozessdaten sind nur lesbar; Anpassungen erfolgen über Ladeaufträge und Stellplatzdisposition.</li>
-                                            <li>Unstimmigkeiten (z.&#160;B. fehlende Daten) können auf eine Störung der Telematik oder des Fahrzeugs hinweisen.</li>
+                                            <li>Unstimmigkeiten (z.&#160;B. fehlende Daten) können auf eine Störung der Telematik oder des Fahrzeugs
+            hinweisen.</li>
                                         </ul>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Siehe auch</h2>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li><a href="06030501_Elektrostammdaten.htm" class="MCXref xref">Elektrostammdaten bearbeiten</a>
                                             </li>
-                                            <li><a href="../060304_Ladezustaende_ueberwachen/030401_Sicht_SOC_Dashboard.htm" class="MCXref xref">Sicht „SOC-Dashboard“</a>
+                                            <li><a href="../060304_Ladezustaende_ueberwachen/030401_Sicht_SOC_Dashboard.htm" class="MCXref xref">Sicht „SOC-Dashboard“
+            </a>
                                             </li>
                                             <li><a href="../060304_Ladezustaende_ueberwachen/06030402_Sicht_Ladevorgaenge.htm" class="MCXref xref">Sicht „Ladevorgänge“</a>
                                             </li>

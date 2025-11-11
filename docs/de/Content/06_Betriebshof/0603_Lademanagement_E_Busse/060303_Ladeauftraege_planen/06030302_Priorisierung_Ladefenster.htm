@@ -116,38 +116,55 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1>Priorisierung der Ladefenster</h1>
-                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">In Zeiten hoher Auslastung der Ladeinfrastruktur müssen die verfügbaren Ladefenster sinnvoll verteilt werden. In <strong>PEAK.DMS</strong> können Sie Ladeaufträge priorisieren, um sicherzustellen, dass Fahrzeuge mit dringender Abfahrt oder geringer Restreichweite bevorzugt geladen werden. Dieses Topic erläutert, wie Prioritäten gesetzt werden und welche Kriterien bei der Sortierung berücksichtigt werden sollten.</p>
+                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">In Zeiten hoher Auslastung der Ladeinfrastruktur müssen die verfügbaren Ladefenster sinnvoll
+        verteilt werden. In <strong>PEAK.DMS</strong> können Sie Ladeaufträge priorisieren, um sicherzustellen, dass
+        Fahrzeuge mit dringender Abfahrt oder geringer Restreichweite bevorzugt geladen werden. Dieses Topic erläutert,
+        wie Prioritäten gesetzt werden und welche Kriterien bei der Sortierung berücksichtigt werden sollten.</p>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Wann ist eine Priorisierung erforderlich?</h2>
                                         <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Eine Priorisierung ist insbesondere dann nötig, wenn:</p>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li>die Zahl der verfügbaren Ladepunkte geringer ist als die Anzahl der gleichzeitig zu ladenden Fahrzeuge,</li>
                                             <li>Fahrzeuge zu ähnlichen Zeitpunkten abfahren und nicht alle ausreichend geladen werden können,</li>
-                                            <li>unterschiedliche Ladevorgänge verschiedene Energiemengen benötigen (z.&#160;B. Schnellladebedarf vs. Nachladung).</li>
+                                            <li>unterschiedliche Ladevorgänge verschiedene Energiemengen benötigen (z.&#160;B. Schnellladebedarf vs.
+            Nachladung).</li>
                                         </ul>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Kriterien für die Priorität</h2>
                                         <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Die Priorität sollte anhand objektiver Kriterien vergeben werden. Typische Kriterien sind:</p>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li><strong>Abfahrtzeit:</strong> Fahrzeuge, die früher abfahren, sollten zuerst geladen werden.</li>
-                                            <li><strong>Energiebedarf:</strong> Fahrzeuge mit geringem SOC oder mit großem Energiebedarf haben Vorrang, da sie länger laden müssen【736875587044737†L180-L186】.</li>
-                                            <li><strong>Fahrgastrelevanz:</strong> Fahrzeugkurse mit hoher Fahrgastzahl (z.&#160;B. Hauptverkehrszeiten) können bevorzugt werden.</li>
-                                            <li><strong>Verfügbare Ladeleistung:</strong> An Schnellladesäulen können mehrere kleine Ladevorgänge schneller nacheinander abgewickelt werden; an Normalladepunkten wird ggf. länger geladen.</li>
-                                            <li><strong>Kosten:</strong> Wenn Stromtarife zeitabhängig sind, lohnt es sich, Ladevorgänge außerhalb der Spitzenzeiten einzuplanen【736875587044737†L190-L199】.</li>
+                                            <li><strong>Energiebedarf:</strong> Fahrzeuge mit geringem SOC oder mit großem Energiebedarf haben Vorrang, da
+            sie länger laden müssen【736875587044737†L180-L186】.</li>
+                                            <li><strong>Fahrgastrelevanz:</strong> Fahrzeugkurse mit hoher Fahrgastzahl (z.&#160;B. Hauptverkehrszeiten)
+            können bevorzugt werden.</li>
+                                            <li><strong>Verfügbare Ladeleistung:</strong> An Schnellladesäulen können mehrere kleine Ladevorgänge schneller
+            nacheinander abgewickelt werden; an Normalladepunkten wird ggf. länger geladen.</li>
+                                            <li><strong>Kosten:</strong> Wenn Stromtarife zeitabhängig sind, lohnt es sich, Ladevorgänge außerhalb der
+            Spitzenzeiten einzuplanen【736875587044737†L190-L199】.</li>
                                         </ul>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Priorität festlegen</h2>
                                         <ol xmlns="http://www.w3.org/1999/xhtml">
                                             <li value="1">Öffnen Sie den Dialog <em>Ladeauftrag anlegen</em> oder bearbeiten Sie einen bestehenden Auftrag.</li>
-                                            <li value="2">Wählen Sie im Feld <strong>Priorität</strong> den gewünschten Wert (z.&#160;B. Hoch, Normal, Niedrig). Die Auswahl kann projektspezifische Bezeichnungen enthalten (1–3 oder A–C).</li>
-                                            <li value="3">Prüfen Sie, ob das Start&#8209; und Endzeitfenster des Ladeauftrags mit den verfügbaren Ladepunkten kompatibel ist. Bei Kollisionen schlägt das System alternative Zeitfenster vor.</li>
-                                            <li value="4">Ändern Sie bei Bedarf die Startzeit oder verschieben Sie den Auftrag manuell, um die verfügbare Ladeleistung optimal auszunutzen.</li>
+                                            <li value="2">Wählen Sie im Feld <strong>Priorität</strong> den gewünschten Wert (z.&#160;B. Hoch, Normal, Niedrig). Die
+            Auswahl kann projektspezifische Bezeichnungen enthalten (1–3 oder A–C).</li>
+                                            <li value="3">Prüfen Sie, ob das Start&#8209; und Endzeitfenster des Ladeauftrags mit den verfügbaren Ladepunkten
+            kompatibel ist. Bei Kollisionen schlägt das System alternative Zeitfenster vor.</li>
+                                            <li value="4">Ändern Sie bei Bedarf die Startzeit oder verschieben Sie den Auftrag manuell, um die verfügbare Ladeleistung
+            optimal auszunutzen.</li>
                                         </ol>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Automatische Sortierung und Vorschläge</h2>
-                                        <p xmlns="http://www.w3.org/1999/xhtml">PEAK.DMS kann die Prioritäten automatisch anhand der oben genannten Kriterien berechnen. In Kombination mit Route&#8209; und Telematikdaten wird so eine optimale Ladeplanung erstellt【736875587044737†L180-L186】. Fahrzeuge mit dringendem Abfahrtszeitpunkt und geringem SOC erhalten dadurch ein höheres Gewicht. Solche automatischen Vorschläge können vom Disponenten geprüft und bei Bedarf angepasst werden.</p>
+                                        <p xmlns="http://www.w3.org/1999/xhtml">PEAK.DMS kann die Prioritäten automatisch anhand der oben genannten Kriterien berechnen. In Kombination mit
+        Route&#8209; und Telematikdaten wird so eine optimale Ladeplanung erstellt【736875587044737†L180-L186】. Fahrzeuge
+        mit dringendem Abfahrtszeitpunkt und geringem SOC erhalten dadurch ein höheres Gewicht. Solche automatischen
+        Vorschläge können vom Disponenten geprüft und bei Bedarf angepasst werden.</p>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Hinweise</h2>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
-                                            <li>Definieren Sie klare Regeln, wann ein Ladeauftrag als <em>hoch</em> eingestuft wird (z.&#160;B. Abfahrt innerhalb der nächsten Stunde oder SOC ??? 30%).</li>
+                                            <li>Definieren Sie klare Regeln, wann ein Ladeauftrag als <em>hoch</em> eingestuft wird (z.&#160;B. Abfahrt
+            innerhalb der nächsten Stunde oder SOC ??? 30%).</li>
                                             <li>Nehmen Sie bei E&#8209;Bussen im Winter die Vorkonditionierungszeiten in die Planung auf (siehe
-        <a href="../060305_Parametrierung_E_Busse/06030501_Elektrostammdaten.htm" class="MCXref xref" xrefformat="{para}">Elektrostammdaten bearbeiten</a>).</li>
-                                            <li>Dokumentieren Sie Ausnahmen (z.&#160;B. spezielle Fahrten), damit sie im Priorisierungsprozess berücksichtigt werden.</li>
+            <a href="../060305_Parametrierung_E_Busse/06030501_Elektrostammdaten.htm" class="MCXref xref" xrefformat="{para}">Elektrostammdaten bearbeiten</a>).
+        </li>
+                                            <li>Dokumentieren Sie Ausnahmen (z.&#160;B. spezielle Fahrten), damit sie im Priorisierungsprozess
+            berücksichtigt werden.</li>
                                         </ul>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Siehe auch</h2>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">

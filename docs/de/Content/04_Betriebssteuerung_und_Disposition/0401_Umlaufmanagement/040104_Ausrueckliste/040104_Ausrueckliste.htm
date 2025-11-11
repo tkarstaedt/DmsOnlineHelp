@@ -118,16 +118,22 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1 id="titel">Sicht „Ausrückliste“</h1>
-                                        <p class="mc-shortdesc">Die Sicht <strong>Ausrückliste</strong> zeigt die geplanten, laufenden und abgeschlossenen Ausrückvorgänge je Betriebstag und Betriebshof; per Kontextmenü öffnen Sie die <em>Umlaufakte</em> zur Detailbearbeitung.</p>
+                                        <p class="mc-shortdesc">Die Sicht <strong>Ausrückliste</strong> zeigt die geplanten, laufenden und abgeschlossenen
+        Ausrückvorgänge je Betriebstag und Betriebshof; per Kontextmenü öffnen Sie die <em>Umlaufakte</em> zur
+        Detailbearbeitung.</p>
                                         <h2>Überblick</h2>
-                                        <p>Die <strong>Ausrückliste</strong> ist eine tabellarische Sicht im DMS&#8209;Client für die Disposition. Sie fokussiert auf Betriebshof&#8209;Ausfahrten (Ausrücken) und dient als <strong>Kontrollinstrument</strong> für einen reibungslosen Depot&#8209;Verkehr.</p>
+                                        <p>Die <strong>Ausrückliste</strong> ist eine tabellarische Sicht im DMS&#8209;Client für die Disposition. Sie
+        fokussiert auf Betriebshof&#8209;Ausfahrten (Ausrücken) und dient als <strong>Kontrollinstrument</strong> für
+        einen reibungslosen Depot&#8209;Verkehr.</p>
                                         <h2 id="aufruf">Aufruf</h2>
                                         <ul>
                                             <li>Menü: <em>Ansicht → Datensichten → Ausrückliste</em></li>
                                             <li>Symbolleiste: Schaltfläche <em>Ausrückliste</em></li>
                                         </ul>
                                         <h2>Zeitraum</h2>
-                                        <p>Stellen Sie in der Funktionsleiste den <strong>Betriebstag</strong> und unter <strong>Anz. Tage</strong> die Anzahl zusätzlicher Folgetage ein. Optional schaltet die Ansicht <em>automatisch</em> beim Betriebstagswechsel weiter.</p>
+                                        <p>Stellen Sie in der Funktionsleiste den <strong>Betriebstag</strong> und unter <strong>Anz. Tage</strong> die
+        Anzahl zusätzlicher Folgetage ein. Optional schaltet die Ansicht <em>automatisch</em> beim Betriebstagswechsel
+        weiter.</p>
                                         <h2 id="inhalt">Inhalt und Spalten</h2>
                                         <p class="intro">Standardspalten (kundenneutral) in der Ausrückliste:</p>
                                         <table class="TableStyle-Alternate-Row-Color" style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" cellspacing="21" data-mc-table-style="Alternate Row Color">
@@ -148,19 +154,23 @@
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Betriebshof</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Kürzel des Start&#8209;Betriebshofs des Umlaufstücks.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Kürzel des Start&#8209;Betriebshofs des
+                    Umlaufstücks.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Beginn (Soll)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Betriebstag und Uhrzeit, zu denen das Umlaufstück geplant beginnt (Ausrücken/Einsetzen).</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Betriebstag und Uhrzeit, zu denen das
+                    Umlaufstück geplant beginnt (Ausrücken/Einsetzen).</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Zustand</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Aktueller Zustand des Umlaufstücks; entspricht dem Zustand des zugehörigen Umlaufs.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Aktueller Zustand des Umlaufstücks;
+                    entspricht dem Zustand des zugehörigen Umlaufs.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Beginn (Ist)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Tatsächlicher Beginn (Ausrücken/Einsetzen); wird durch Ortung an der Ausfahrt gesetzt.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Tatsächlicher Beginn
+                    (Ausrücken/Einsetzen); wird durch Ortung an der Ausfahrt gesetzt.</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -168,23 +178,29 @@
                                         <ul data-mc-conditions="Customers.SSB">
                                             <li><strong>Betriebstag</strong>, <strong>Umlauftyp</strong></li>
                                             <li><strong>Ausrückzeit</strong> (Soll/Ist) und <strong>Abweichung</strong> [min]</li>
-                                            <li><strong>Kurs</strong>, <strong>Ausrück&#8209;Kurs</strong>, <strong>Nach</strong> (Ziel der ersten Fahrt)</li>
+                                            <li><strong>Kurs</strong>, <strong>Ausrück&#8209;Kurs</strong>, <strong>Nach</strong> (Ziel der ersten Fahrt)
+        </li>
                                             <li><strong>Startfahrzeug</strong>, <strong>Geplantes Fahrzeug</strong>, <strong>Wunschfahrzeug</strong></li>
-                                            <li><strong>Ausrück&#8209;Stellplatz (Soll)</strong>, <strong>Ausrück&#8209;Abschnitt (Soll)</strong>, <strong>Akt. Stellplatz</strong>, <strong>Akt. Abschnitt</strong></li>
+                                            <li><strong>Ausrück&#8209;Stellplatz (Soll)</strong>, <strong>Ausrück&#8209;Abschnitt (Soll)</strong>,
+            <strong>Akt. Stellplatz</strong>, <strong>Akt. Abschnitt</strong></li>
                                             <li><strong>Hinweis</strong>, <em>Wender</em>, <em>Tauschkurs</em></li>
                                         </ul>
                                         <h2>Verhalten und Logik</h2>
                                         <ul>
                                             <li>Die Ausrückliste zeigt <strong>alle Umlaufstücke, die in einem Betriebshof starten</strong>.</li>
-                                            <li>Nur das <strong>erste</strong> startende Umlaufstück eines Umlaufs hat <strong>kein</strong> Flag <em>Wender</em>; weitere startende Umlaufstücke des Umlaufs erhalten <em>Wender</em>.</li>
-                                            <li>Fährt ein Fahrzeug mehrere Umlaufstücke, wird die Zuordnung in die Zukunft propagiert; der Zustand <em>Wird durchgeführt</em> wird aus dem Umlauf auf die zugehörigen Umlaufstücke fortgeschrieben.</li>
+                                            <li>Nur das <strong>erste</strong> startende Umlaufstück eines Umlaufs hat <strong>kein</strong> Flag
+            <em>Wender</em>; weitere startende Umlaufstücke des Umlaufs erhalten <em>Wender</em>.</li>
+                                            <li>Fährt ein Fahrzeug mehrere Umlaufstücke, wird die Zuordnung in die Zukunft propagiert; der Zustand <em>Wird
+                durchgeführt</em> wird aus dem Umlauf auf die zugehörigen Umlaufstücke fortgeschrieben.</li>
                                         </ul>
                                         <h2>Typische Aktionen</h2>
                                         <ul>
-                                            <li><strong>Umlauf bearbeiten</strong>: Kontextmenü eines Eintrags im Zustand <em>Geplant</em> → <em>Bearbeiten</em> → Dialog <em>Umlaufakte</em>.</li>
+                                            <li><strong>Umlauf bearbeiten</strong>: Kontextmenü eines Eintrags im Zustand <em>Geplant</em> →
+            <em>Bearbeiten</em> → Dialog <em>Umlaufakte</em>.</li>
                                         </ul>
                                         <h2>Berichtsfunktion</h2>
-                                        <p>Der Bericht <em>Ausrückliste</em> fasst alle Betriebshof&#8209;Ausfahrten mit Soll&#8209; und Ist&#8209;Zeiten zusammen und gruppiert nach Betriebstag.</p>
+                                        <p>Der Bericht <em>Ausrückliste</em> fasst alle Betriebshof&#8209;Ausfahrten mit Soll&#8209; und Ist&#8209;Zeiten
+        zusammen und gruppiert nach Betriebstag.</p>
                                         <h2>Abbildungen</h2>
                                         <figure class="Figure" id="fig_ausrueckliste_overview">
                                             <img src="../../Resources/Images/Ausrueckliste.png" alt="Sicht Ausrückliste mit Spaltenübersicht und Zeitraumfilter." />
@@ -192,7 +208,7 @@
                                         </figure>
                                         <h2>Siehe auch</h2>
                                         <ul>
-                                            <li><a href="../040103_Umlaufliste/040103_Umlaufliste.htm" class="MCXref xref">Sicht „Umlaufliste“ </a>
+                                            <li><a href="../040103_Umlaufliste/040103_Umlaufliste.htm" class="MCXref xref">Sicht „Umlaufliste“</a>
                                             </li>
                                             <li><a href="../040101_Umlaufakte/040101_Umlaufakte.htm" class="MCXref xref">Dialog „Umlaufakte“</a>
                                             </li>
@@ -200,10 +216,10 @@
                                             </li>
                                             <li><a href="../../0402_Kursaufstellplanung/040202_Operativer_Kursaufstellplan.htm" class="MCXref xref">Operativer Kursaufstellplan</a>
                                             </li>
-                                            <li><a href="../040102_Planfahrten_Sonderfahrten/040102_Planfahrten_Sonderfahrten.htm" class="MCXref xref">Dialog „Sonderumlaufbestellung“ - Planfahrten &amp; Sonderfahrten </a>
+                                            <li><a href="../040102_Planfahrten_Sonderfahrten/040102_Planfahrten_Sonderfahrten.htm" class="MCXref xref">Dialog „Sonderumlaufbestellung“ - Planfahrten &amp; Sonderfahrten</a>
                                             </li>
                                             <li>
-                Einrückliste <!-- TODO: unresolved link (kein DE-Topic gefunden): 040104_Einrueckliste.htm --></li>
+            Einrückliste <!-- TODO: unresolved link (kein DE-Topic gefunden): 040104_Einrueckliste.htm --></li>
                                         </ul>
                                     </div>
                                 </div>

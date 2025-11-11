@@ -118,16 +118,22 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1 id="titel">Fahrzeugstörungen – Betriebsfälle von Anlegen bis Abschluss</h1>
-                                        <p class="mc-shortdesc">Diese Anleitung beschreibt den kompletten Workflow für Fahrzeugstörungen: vom Anlegen über Bearbeitung und Werkstattauftrag bis zum Abschluss.</p>
+                                        <p class="mc-shortdesc">Diese Anleitung beschreibt den kompletten Workflow für Fahrzeugstörungen: vom Anlegen über
+        Bearbeitung und Werkstattauftrag bis zum Abschluss.</p>
                                         <h2>Überblick über den Störungs-Workflow</h2>
                                         <p>Der Lifecycle einer Fahrzeugstörung umfasst folgende Schritte:</p>
                                         <ol>
-                                            <li value="1"><strong><a href="#anlegen">Störung anlegen</a>:</strong> Erfassung der Störung mit Störungsbaum, Grad und Beschreibung</li>
-                                            <li value="2"><strong><a href="#bearbeiten">Störung bearbeiten</a>:</strong> Nachträgliche Anpassung von Details (je nach Zustand)</li>
-                                            <li value="3"><strong><a href="#werkstattauftrag">Werkstattauftrag erstellen</a>:</strong> Verknüpfung mit Werkstattmanagement zur Behebung</li>
-                                            <li value="4"><strong><a href="#abschluss">Störung abschließen</a>:</strong> Erledigt melden oder „Kein Befund" setzen</li>
+                                            <li value="1"><strong><a href="#anlegen">Störung anlegen</a>:</strong> Erfassung der Störung mit Störungsbaum, Grad und
+            Beschreibung</li>
+                                            <li value="2"><strong><a href="#bearbeiten">Störung bearbeiten</a>:</strong> Nachträgliche Anpassung von Details (je nach
+            Zustand)</li>
+                                            <li value="3"><strong><a href="#werkstattauftrag">Werkstattauftrag erstellen</a>:</strong> Verknüpfung mit
+            Werkstattmanagement zur Behebung</li>
+                                            <li value="4"><strong><a href="#abschluss">Störung abschließen</a>:</strong> Erledigt melden oder „Kein Befund" setzen
+        </li>
                                         </ol>
-                                        <p>Nicht jede Störung durchläuft alle Schritte. Kleinere Störungen können direkt beim Anlegen als „Erledigt" markiert werden.</p><pre class="mermaid">
+                                        <p>Nicht jede Störung durchläuft alle Schritte. Kleinere Störungen können direkt beim Anlegen als „Erledigt"
+        markiert werden.</p><pre class="mermaid">
 			flowchart TD
 			Start([Störung wird bemerkt]) --&gt; Anlegen[1. Störung anlegen]
 			Anlegen --&gt; Entscheidung{Sofort<br />behebbar?}
@@ -153,7 +159,8 @@
 		</pre>
                                         <!-- STÖRUNG ANLEGEN -->
                                         <h2 id="anlegen">Störung anlegen</h2>
-                                        <p>Das Anlegen einer Störung erfolgt im Dialog <strong>Fahrzeugstörung</strong> und ist der erste Schritt im Workflow.</p>
+                                        <p>Das Anlegen einer Störung erfolgt im Dialog <strong>Fahrzeugstörung</strong> und ist der erste Schritt im
+        Workflow.</p>
                                         <h3>Voraussetzungen</h3>
                                         <ul>
                                             <li><strong>Berechtigung:</strong> Störungserfassung für das jeweilige Fahrzeug</li>
@@ -215,7 +222,8 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <p class="note"><strong>Tipp:</strong> Der schnellste Weg ist über die Fahrzeugakte, da alle bisherigen Störungen direkt einsehbar sind.</p>
+                                        <p class="note"><strong>Tipp:</strong> Der schnellste Weg ist über die Fahrzeugakte, da alle bisherigen Störungen
+        direkt einsehbar sind.</p>
                                         <h4>2. Fahrzeug identifizieren (falls nicht vorausgewählt)</h4>
                                         <p>Falls das Fahrzeug noch nicht ausgewählt ist:</p>
                                         <ol>
@@ -234,11 +242,11 @@
                                         <h5>Variante A: Navigation durch den Baum</h5>
                                         <ol>
                                             <li value="1"><strong>Kategorie</strong> auswählen (z.&#160;B. „Antrieb", „Fahrwerk", „Fahrgastraum", „Elektrik")
-				<p><img src="../../../Resources/Images/Placeholder_Screenshot_Stoerungsbaum_Kategorie.png" alt="Screenshot: Störungsbaum Kategorie-Ebene" /></p></li>
+            <p><img src="../../../Resources/Images/Placeholder_Screenshot_Stoerungsbaum_Kategorie.png" alt="Screenshot: Störungsbaum Kategorie-Ebene" /></p></li>
                                             <li value="2"><strong>System</strong> innerhalb der Kategorie auswählen (z.&#160;B. „Klimaanlage", „Türen", „Motor")
-				<p><img src="../../../Resources/Images/Placeholder_Screenshot_Stoerungsbaum_System.png" alt="Screenshot: Störungsbaum System-Ebene" /></p></li>
+            <p><img src="../../../Resources/Images/Placeholder_Screenshot_Stoerungsbaum_System.png" alt="Screenshot: Störungsbaum System-Ebene" /></p></li>
                                             <li value="3"><strong>Komponente</strong> auswählen (z.&#160;B. „Klimakompressor defekt", „Türöffner Tür 1")
-				<p><img src="../../../Resources/Images/Placeholder_Screenshot_Stoerungsbaum_Komponente.png" alt="Screenshot: Störungsbaum Komponente-Ebene" /></p></li>
+            <p><img src="../../../Resources/Images/Placeholder_Screenshot_Stoerungsbaum_Komponente.png" alt="Screenshot: Störungsbaum Komponente-Ebene" /></p></li>
                                         </ol>
                                         <h5>Variante B: Schnelleingabe über Störungsnummer</h5>
                                         <ol>
@@ -246,40 +254,48 @@
                                             <li value="2">Bekannte Störungsnummer eingeben (z.&#160;B. „425" für „Klimakompressor defekt")</li>
                                             <li value="3">System navigiert automatisch zum entsprechenden Eintrag</li>
                                         </ol>
-                                        <p class="note"><strong>Tipp:</strong> Häufig verwendete Störungsnummern können Sie sich notieren oder in einer Kurzübersicht hinterlegen.</p>
+                                        <p class="note"><strong>Tipp:</strong> Häufig verwendete Störungsnummern können Sie sich notieren oder in einer
+        Kurzübersicht hinterlegen.</p>
                                         <h5>Was passiert nach Auswahl?</h5>
                                         <p>Nach Auswahl einer Komponente werden automatisch übernommen (falls im Störungsbaum hinterlegt):</p>
                                         <ul>
                                             <li><strong>Störungsgrad:</strong> Vorschlagswert (kann überschrieben werden)</li>
                                             <li><strong>Störungstext:</strong> Standardbeschreibung (kann ergänzt werden)</li>
                                             <li><strong>Handlungshinweis:</strong> Hinweise für Werkstatt/Fahrer</li>
-                                            <li><strong>Leistungsmerkmal (negiert):</strong> Falls zutreffend (z.&#160;B. „Klimaanlage" bei Klimadefekt)</li>
+                                            <li><strong>Leistungsmerkmal (negiert):</strong> Falls zutreffend (z.&#160;B. „Klimaanlage" bei Klimadefekt)
+        </li>
                                         </ul>
                                         <h4>4. Störungsgrad festlegen</h4>
                                         <p>Der <strong>Störungsgrad</strong> (A–E) bewertet die Einsatzfähigkeit des Fahrzeugs.</p>
                                         <ol>
                                             <li value="1">Vorgeschlagenen Störungsgrad prüfen</li>
                                             <li value="2">Falls nötig, anpassen:
-				<ul><li><strong>A:</strong> Keine Einschränkung (kosmetische Mängel)</li><li><strong>B:</strong> Geringfügige Einschränkung (Fahrzeug voll einsetzbar)</li><li><strong>C:</strong> Eingeschränkt einsatzfähig (Fahrzeug nur für bestimmte Umläufe)</li><li><strong>D:</strong> Bedingt einsatzfähig (nur Notfall-Einsatz)</li><li><strong>E:</strong> Nicht einsatzfähig (Fahrzeug gesperrt)</li></ul></li>
+            <ul><li><strong>A:</strong> Keine Einschränkung (kosmetische Mängel)</li><li><strong>B:</strong> Geringfügige Einschränkung (Fahrzeug voll einsetzbar)</li><li><strong>C:</strong> Eingeschränkt einsatzfähig (Fahrzeug nur für bestimmte Umläufe)</li><li><strong>D:</strong> Bedingt einsatzfähig (nur Notfall-Einsatz)</li><li><strong>E:</strong> Nicht einsatzfähig (Fahrzeug gesperrt)</li></ul></li>
                                         </ol>
-                                        <p class="warning"><strong>Wichtig:</strong> Der Störungsgrad steuert die Verfügbarkeit in der Disposition. Bei Unsicherheit eher konservativ (höher) bewerten.</p>
-                                        <p>Weitere Details siehe Störungsgrade <!-- TODO: unresolved link (kein DE-Topic gefunden): ../../050102_Stoerungskonzept_Grundlagen.htm#stoerungsgrade -->.</p>
+                                        <p class="warning"><strong>Wichtig:</strong> Der Störungsgrad steuert die Verfügbarkeit in der Disposition. Bei
+        Unsicherheit eher konservativ (höher) bewerten.</p>
+                                        <p>Weitere Details siehe Störungsgrade
+        <!-- TODO: unresolved link (kein DE-Topic gefunden): ../../050102_Stoerungskonzept_Grundlagen.htm#stoerungsgrade -->.
+    </p>
                                         <h4>5. Beschreibung und Bemerkungen erfassen</h4>
                                         <ol>
                                             <li value="1">Feld <strong>Beschreibung:</strong> Standardtext aus Störungsbaum prüfen und ggf. ergänzen
-				<ul><li>Symptome präzise beschreiben</li><li>Wann ist die Störung aufgetreten? (z.&#160;B. „seit heute Morgen", „während Fahrt Linie 42")</li><li>Wurde bereits etwas unternommen?</li></ul></li>
+            <ul><li>Symptome präzise beschreiben</li><li>Wann ist die Störung aufgetreten? (z.&#160;B. „seit heute Morgen", „während Fahrt Linie 42")</li><li>Wurde bereits etwas unternommen?</li></ul></li>
                                             <li value="2">Feld <strong>Bemerkungen:</strong> Zusätzliche Informationen (optional)
-				<ul><li>Besondere Umstände</li><li>Hinweise für Werkstatt</li><li>Fahrermeldungen</li></ul></li>
+            <ul><li>Besondere Umstände</li><li>Hinweise für Werkstatt</li><li>Fahrermeldungen</li></ul></li>
                                         </ol>
-                                        <p class="note"><strong>Best Practice:</strong> Je präziser die Beschreibung, desto schneller kann die Werkstatt reagieren.</p>
+                                        <p class="note"><strong>Best Practice:</strong> Je präziser die Beschreibung, desto schneller kann die Werkstatt
+        reagieren.</p>
                                         <h4>6. Datum und Uhrzeit prüfen</h4>
                                         <ul>
-                                            <li>Felder <strong>Datum</strong> und <strong>Uhrzeit</strong> sind automatisch mit aktuellem Zeitstempel gefüllt</li>
+                                            <li>Felder <strong>Datum</strong> und <strong>Uhrzeit</strong> sind automatisch mit aktuellem Zeitstempel
+            gefüllt</li>
                                             <li>Falls die Störung zu einem früheren Zeitpunkt aufgetreten ist: Datum/Uhrzeit manuell anpassen</li>
                                         </ul>
                                         <h4>7. Melder erfassen (optional)</h4>
                                         <ul>
-                                            <li>Feld <strong>Melder:</strong> Name/Kürzel der Person, die die Störung gemeldet hat (z.&#160;B. Fahrer, Werkstattmitarbeiter)</li>
+                                            <li>Feld <strong>Melder:</strong> Name/Kürzel der Person, die die Störung gemeldet hat (z.&#160;B. Fahrer,
+            Werkstattmitarbeiter)</li>
                                             <li>Wird oft automatisch mit dem angemeldeten Benutzer gefüllt</li>
                                         </ul>
                                         <h4>8. Sofortbehebung (optional)</h4>
@@ -289,11 +305,13 @@
                                             <li value="2">Störung wird direkt im Zustand <strong>Erledigt</strong> gespeichert</li>
                                             <li value="3">Keine dispositive Wirkung</li>
                                         </ol>
-                                        <p><strong>Anwendungsfall:</strong> Störung wird beim Anlegen entdeckt und sofort behoben (z.&#160;B. „Lose Verkleidung befestigt", „Fahrzeug gereinigt").</p>
+                                        <p><strong>Anwendungsfall:</strong> Störung wird beim Anlegen entdeckt und sofort behoben (z.&#160;B. „Lose
+        Verkleidung befestigt", „Fahrzeug gereinigt").</p>
                                         <h4>9. Störung speichern</h4>
                                         <ol>
                                             <li value="1">Button <strong>OK</strong> oder <strong>Speichern</strong> klicken</li>
-                                            <li value="2">Störung wird gespeichert und erhält Zustand <strong>Gemeldet</strong> (oder <strong>Erledigt</strong>, falls Checkbox aktiv)</li>
+                                            <li value="2">Störung wird gespeichert und erhält Zustand <strong>Gemeldet</strong> (oder <strong>Erledigt</strong>, falls
+            Checkbox aktiv)</li>
                                             <li value="3">Störung erscheint in der Störungsliste und Fahrzeugakte</li>
                                             <li value="4">Störungsgrad wird aktiv und wirkt auf Disposition</li>
                                         </ol>
@@ -312,27 +330,32 @@
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>Störungsbaum:</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Fahrgastraum → Klimaanlage → Klimakompressor defekt</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Fahrgastraum → Klimaanlage →
+                    Klimakompressor defekt</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>Störungsgrad:</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">C (eingeschränkt einsatzfähig) – im Sommer ggf. D</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">C (eingeschränkt einsatzfähig) – im
+                    Sommer ggf. D</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>Beschreibung:</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">„Klimaanlage kühlt nicht. Seit gestern Mittag. Kompressor läuft nicht an."</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">„Klimaanlage kühlt nicht. Seit gestern
+                    Mittag. Kompressor läuft nicht an."</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>Leistungsmerkmal negiert:</strong>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>Leistungsmerkmal
+                        negiert:</strong>
                                                     </td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Klimaanlage</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2"><strong>Dispositive Wirkung:</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Fahrzeug gilt als „ohne Klimaanlage", nicht für klimatisierungspflichtige Umläufe</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Fahrzeug gilt als „ohne Klimaanlage",
+                    nicht für klimatisierungspflichtige Umläufe</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -347,7 +370,8 @@
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>Störungsbaum:</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Fahrgastraum → Türen → Türöffner Tür 3 defekt</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Fahrgastraum → Türen → Türöffner Tür 3
+                    defekt</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>Störungsgrad:</strong>
@@ -357,17 +381,20 @@
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>Beschreibung:</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">„Tür 3 öffnet nicht mehr. Manuell zu öffnen. Seit heute Morgen Linie 15."</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">„Tür 3 öffnet nicht mehr. Manuell zu
+                    öffnen. Seit heute Morgen Linie 15."</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>Leistungsmerkmal negiert:</strong>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>Leistungsmerkmal
+                        negiert:</strong>
                                                     </td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Vollständige Türfunktion</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2"><strong>Dispositive Wirkung:</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Fahrzeug nur für Linien mit geringer Fahrgastfrequenz</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Fahrzeug nur für Linien mit geringer
+                    Fahrgastfrequenz</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -392,12 +419,14 @@
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>Beschreibung:</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">„Motor springt nicht an. Startermotor dreht, Zündung erfolgt nicht. Fahrzeug steht am Betriebshof."</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">„Motor springt nicht an. Startermotor
+                    dreht, Zündung erfolgt nicht. Fahrzeug steht am Betriebshof."</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1"><strong>Dispositive Wirkung:</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Fahrzeug vollständig gesperrt, keine Disposition möglich</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Fahrzeug vollständig gesperrt, keine
+                    Disposition möglich</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -412,35 +441,47 @@
                                             </thead>
                                             <tbody>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störungsbaum nicht bis zur Komponente navigiert</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Ungenaue Kategorisierung, erschwert Auswertungen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Immer bis zur untersten Ebene (Komponente) navigieren</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störungsbaum nicht bis zur Komponente
+                    navigiert</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Ungenaue Kategorisierung, erschwert
+                    Auswertungen</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Immer bis zur untersten Ebene
+                    (Komponente) navigieren</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Störungsgrad zu niedrig bewertet</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Fahrzeug wird disponiert, obwohl nicht einsatzfähig</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Im Zweifelsfall konservativ (höher) bewerten</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Fahrzeug wird disponiert, obwohl nicht
+                    einsatzfähig</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Im Zweifelsfall konservativ (höher)
+                    bewerten</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Beschreibung leer oder unvollständig</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Werkstatt kann Störung nicht nachvollziehen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Symptome präzise beschreiben, Zeitpunkt und Umstände angeben</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Werkstatt kann Störung nicht
+                    nachvollziehen</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Symptome präzise beschreiben, Zeitpunkt
+                    und Umstände angeben</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Störung versehentlich doppelt angelegt</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Störung versehentlich doppelt angelegt
+                </td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Verwirrung, doppelte Bearbeitung</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Vor Anlegen Fahrzeugakte prüfen, ob Störung bereits existiert</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Vor Anlegen Fahrzeugakte prüfen, ob
+                    Störung bereits existiert</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Falsches Fahrzeug ausgewählt</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Störung am falschen Fahrzeug, echtes Fahrzeug ohne Störung</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Fahrzeugauswahl sorgfältig prüfen (Nummer, Kennzeichen)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Störung am falschen Fahrzeug, echtes
+                    Fahrzeug ohne Störung</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Fahrzeugauswahl sorgfältig prüfen
+                    (Nummer, Kennzeichen)</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                         <!-- STÖRUNG BEARBEITEN -->
                                         <h2 id="bearbeiten">Störung bearbeiten</h2>
-                                        <p>Bereits gespeicherte Störungen können nachträglich bearbeitet werden – allerdings mit Einschränkungen je nach Zustand.</p>
+                                        <p>Bereits gespeicherte Störungen können nachträglich bearbeitet werden – allerdings mit Einschränkungen je nach
+        Zustand.</p>
                                         <h3>Voraussetzungen</h3>
                                         <ul>
                                             <li><strong>Berechtigung:</strong> Störungsbearbeitung für das jeweilige Fahrzeug</li>
@@ -501,7 +542,8 @@
                                         <ul>
                                             <li>Fahrzeug (kann nicht geändert werden)</li>
                                         </ul>
-                                        <p class="note"><strong>Tipp:</strong> Im Zustand „Gemeldet" sind nahezu alle Felder bearbeitbar. Nutzen Sie diese Möglichkeit, um Fehler zu korrigieren oder Details zu ergänzen.</p>
+                                        <p class="note"><strong>Tipp:</strong> Im Zustand „Gemeldet" sind nahezu alle Felder bearbeitbar. Nutzen Sie diese
+        Möglichkeit, um Fehler zu korrigieren oder Details zu ergänzen.</p>
                                         <h5>Zustand: In Bearbeitung</h5>
                                         <p><strong>Editierbar:</strong>
                                         </p>
@@ -517,10 +559,13 @@
                                             <li>Störungsgrad</li>
                                             <li>Datum / Uhrzeit</li>
                                         </ul>
-                                        <p class="warning"><strong>Wichtig:</strong> Sobald ein Werkstattauftrag erstellt wurde (Zustand „In Bearbeitung"), sind zentrale Felder gesperrt. Änderungen am Störungsgrad oder der Kategorisierung sind dann nur noch über den Werkstattauftrag möglich.</p>
+                                        <p class="warning"><strong>Wichtig:</strong> Sobald ein Werkstattauftrag erstellt wurde (Zustand „In Bearbeitung"),
+        sind zentrale Felder gesperrt. Änderungen am Störungsgrad oder der Kategorisierung sind dann nur noch über den
+        Werkstattauftrag möglich.</p>
                                         <h5>Zustand: Erledigt / Kein Befund</h5>
                                         <p><strong>Alle Felder gesperrt.</strong> Abgeschlossene Störungen können nicht mehr bearbeitet werden.</p>
-                                        <p><strong>Ausnahme:</strong> Administrator-Berechtigung erlaubt ggf. nachträgliche Korrekturen (projektspezifisch).</p>
+                                        <p><strong>Ausnahme:</strong> Administrator-Berechtigung erlaubt ggf. nachträgliche Korrekturen (projektspezifisch).
+    </p>
                                         <h4>3. Änderungen vornehmen</h4>
                                         <ol>
                                             <li value="1">Gewünschte Felder bearbeiten (je nach Zustand)</li>
@@ -543,23 +588,28 @@
                                             </thead>
                                             <tbody>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störungsgrad hochsetzen (z.&#160;B. B → C)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störungsgrad hochsetzen (z.&#160;B. B →
+                    C)</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störung hat sich verschlimmert</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Gemeldet</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Störungsgrad heruntersetzen (z.&#160;B. C → B)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Provisorische Behebung, Fahrzeug wieder besser einsetzbar</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Störungsgrad heruntersetzen (z.&#160;B. C
+                    → B)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Provisorische Behebung, Fahrzeug wieder
+                    besser einsetzbar</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Gemeldet</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Beschreibung ergänzen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Zusätzliche Symptome aufgetreten oder bekannt geworden</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Zusätzliche Symptome aufgetreten oder
+                    bekannt geworden</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Gemeldet, In Bearbeitung</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Bemerkungen ergänzen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Werkstatt-Rückmeldung, Zwischenstatus</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Werkstatt-Rückmeldung, Zwischenstatus
+                </td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Gemeldet, In Bearbeitung</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
@@ -569,7 +619,8 @@
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Datum/Uhrzeit korrigieren</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Tatsächlicher Störungszeitpunkt war früher</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Tatsächlicher Störungszeitpunkt war
+                    früher</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Gemeldet</td>
                                                 </tr>
                                             </tbody>
@@ -584,16 +635,21 @@
                                             </thead>
                                             <tbody>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störung bearbeiten (Zustand: Gemeldet)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störung bearbeiten (Zustand: Gemeldet)
+                </td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Störungsbearbeitung (Standard)</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Störung bearbeiten (Zustand: In Bearbeitung)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Störungsbearbeitung (Standard) – nur Beschreibung/Bemerkungen</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Störung bearbeiten (Zustand: In
+                    Bearbeitung)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Störungsbearbeitung (Standard) – nur
+                    Beschreibung/Bemerkungen</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störungsgrad in Zustand „In Bearbeitung" ändern</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Erweiterte Berechtigungen oder über Werkstattauftrag</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störungsgrad in Zustand „In Bearbeitung"
+                    ändern</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Erweiterte Berechtigungen oder über
+                    Werkstattauftrag</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Abgeschlossene Störung bearbeiten</td>
@@ -613,7 +669,8 @@
                                         </p>
                                         <!-- WERKSTATTAUFTRAG ERSTELLEN -->
                                         <h2 id="werkstattauftrag">Werkstattauftrag zu Störung erstellen</h2>
-                                        <p>Die Verknüpfung einer Störung mit einem Werkstattauftrag ist der zentrale Schritt zur Behebung. Der Zustand wechselt automatisch von <strong>Gemeldet</strong> zu <strong>In Bearbeitung</strong>.</p>
+                                        <p>Die Verknüpfung einer Störung mit einem Werkstattauftrag ist der zentrale Schritt zur Behebung. Der Zustand
+        wechselt automatisch von <strong>Gemeldet</strong> zu <strong>In Bearbeitung</strong>.</p>
                                         <h3>Voraussetzungen</h3>
                                         <ul>
                                             <li><strong>Berechtigung:</strong> Werkstattauftrag erstellen</li>
@@ -625,7 +682,7 @@
                                             <li value="1">Störung öffnen (siehe <a href="#bearbeiten" class="MCXref xref">Fahrzeugstörungen – Betriebsfälle von Anlegen bis Abschluss</a>)</li>
                                             <li value="2">Button <strong>Werkstattauftrag erstellen</strong> oder <strong>Beauftragen</strong> klicken</li>
                                             <li value="3">Dialog <em>Werkstattauftrag</em> öffnet sich:
-				<ul><li>Fahrzeug ist bereits ausgewählt</li><li>Störung ist bereits verknüpft</li><li>Beschreibung der Störung ist übernommen</li></ul></li>
+            <ul><li>Fahrzeug ist bereits ausgewählt</li><li>Störung ist bereits verknüpft</li><li>Beschreibung der Störung ist übernommen</li></ul></li>
                                             <li value="4">Werkstattauftrag-Details ergänzen (siehe unten)</li>
                                             <li value="5">Werkstattauftrag speichern</li>
                                         </ol>
@@ -641,13 +698,15 @@
                                             <li value="4">Dialog <em>Werkstattauftrag</em> öffnet sich mit allen ausgewählten Störungen</li>
                                             <li value="5">Werkstattauftrag speichern</li>
                                         </ol>
-                                        <p class="note"><strong>Tipp:</strong> Dieser Weg eignet sich besonders, um mehrere Störungen eines Fahrzeugs auf einmal zu beauftragen.</p>
+                                        <p class="note"><strong>Tipp:</strong> Dieser Weg eignet sich besonders, um mehrere Störungen eines Fahrzeugs auf
+        einmal zu beauftragen.</p>
                                         <h4>Weg 3: Aus dem Dialog Werkstattauftrag</h4>
                                         <ol>
                                             <li value="1">Menü <em>Werkstatt</em> → <em>Werkstattaufträge</em></li>
                                             <li value="2">Button <strong>Neuer Werkstattauftrag</strong></li>
                                             <li value="3">Fahrzeug auswählen</li>
-                                            <li value="4">Im Dialog: Button <strong>Störungen hinzufügen</strong> oder <strong>Alle offenen Störungen hinzufügen</strong></li>
+                                            <li value="4">Im Dialog: Button <strong>Störungen hinzufügen</strong> oder <strong>Alle offenen Störungen
+                hinzufügen</strong></li>
                                             <li value="5">Störungen auswählen oder automatisch alle offenen Störungen übernehmen</li>
                                             <li value="6">Werkstattauftrag speichern</li>
                                         </ol>
@@ -676,13 +735,15 @@
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>Auftragsart</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Art der Wartung/Reparatur (z.&#160;B. „Störungsbehebung", „Reparatur", „Inspektion")</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Art der Wartung/Reparatur (z.&#160;B.
+                    „Störungsbehebung", „Reparatur", „Inspektion")</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Ja</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>Priorität</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Dringlichkeit (z.&#160;B. „Hoch", „Normal", „Niedrig")</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Dringlichkeit (z.&#160;B. „Hoch",
+                    „Normal", „Niedrig")</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Ja</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
@@ -694,7 +755,8 @@
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>Geplantes Ende</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Wann soll die Bearbeitung abgeschlossen sein?</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Wann soll die Bearbeitung abgeschlossen
+                    sein?</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Nein</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
@@ -706,7 +768,8 @@
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2"><strong>Beschreibung</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Wird aus Störungen übernommen, kann ergänzt werden</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Wird aus Störungen übernommen, kann
+                    ergänzt werden</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Nein</td>
                                                 </tr>
                                             </tbody>
@@ -737,21 +800,26 @@
                                             <li>Negierte Leistungsmerkmale werden wiederhergestellt</li>
                                             <li>Fahrzeug steht wieder voll zur Verfügung (sofern keine weiteren Störungen)</li>
                                         </ul>
-                                        <p class="note"><strong>Hinweis:</strong> Falls einzelne Störungen NICHT behoben wurden, können Sie diese vor Beendigung des Werkstattauftrags vom Auftrag entfernen. Diese Störungen bleiben dann im Zustand „Gemeldet".</p>
+                                        <p class="note"><strong>Hinweis:</strong> Falls einzelne Störungen NICHT behoben wurden, können Sie diese vor
+        Beendigung des Werkstattauftrags vom Auftrag entfernen. Diese Störungen bleiben dann im Zustand „Gemeldet".</p>
                                         <h3>Mehrere Werkstattaufträge für eine Störung?</h3>
                                         <p><strong>Nicht möglich.</strong> Eine Störung kann nur mit einem Werkstattauftrag verknüpft sein.</p>
-                                        <p><strong>Szenario:</strong> Störung wurde beauftragt, aber nicht behoben → Werkstattauftrag beenden → Störung bleibt „Gemeldet" → Neuen Werkstattauftrag erstellen.</p>
+                                        <p><strong>Szenario:</strong> Störung wurde beauftragt, aber nicht behoben → Werkstattauftrag beenden → Störung
+        bleibt „Gemeldet" → Neuen Werkstattauftrag erstellen.</p>
                                         <!-- STÖRUNG ABSCHLIESSEN -->
                                         <h2 id="abschluss">Störung abschließen (Erledigt / Kein Befund)</h2>
                                         <p>Der Abschluss einer Störung erfolgt entweder automatisch (bei Werkstattauftrag-Beendigung) oder manuell.</p>
                                         <h3>Voraussetzungen</h3>
                                         <ul>
-                                            <li><strong>Berechtigung:</strong> Störung abschließen (projektspezifisch: alle Benutzer oder nur Werkstatt/Disposition)</li>
-                                            <li><strong>Zustand:</strong> Störung muss im Zustand <strong>Gemeldet</strong> oder <strong>In Bearbeitung</strong> sein</li>
+                                            <li><strong>Berechtigung:</strong> Störung abschließen (projektspezifisch: alle Benutzer oder nur
+            Werkstatt/Disposition)</li>
+                                            <li><strong>Zustand:</strong> Störung muss im Zustand <strong>Gemeldet</strong> oder <strong>In
+                Bearbeitung</strong> sein</li>
                                         </ul>
                                         <h3>Zwei Abschluss-Optionen</h3>
                                         <h4>Option 1: Erledigt</h4>
-                                        <p><strong>Bedeutung:</strong> Die Störung wurde erfolgreich behoben. Das Fahrzeug ist bzgl. dieser Störung wieder voll einsatzfähig.</p>
+                                        <p><strong>Bedeutung:</strong> Die Störung wurde erfolgreich behoben. Das Fahrzeug ist bzgl. dieser Störung wieder
+        voll einsatzfähig.</p>
                                         <p><strong>Wann verwenden:</strong>
                                         </p>
                                         <ul>
@@ -760,7 +828,8 @@
                                             <li>Störung war bereits beim Anlegen behoben (Checkbox „Sofort erledigt")</li>
                                         </ul>
                                         <h4>Option 2: Kein Befund</h4>
-                                        <p><strong>Bedeutung:</strong> Die Störung wurde geprüft, konnte aber nicht nachvollzogen werden. Es wurde kein Defekt festgestellt.</p>
+                                        <p><strong>Bedeutung:</strong> Die Störung wurde geprüft, konnte aber nicht nachvollzogen werden. Es wurde kein
+        Defekt festgestellt.</p>
                                         <p><strong>Wann verwenden:</strong>
                                         </p>
                                         <ul>
@@ -769,7 +838,8 @@
                                             <li>Fehlermeldung konnte nicht nachvollzogen werden</li>
                                             <li>Störung war bereits von selbst behoben, bevor Werkstatt tätig wurde</li>
                                         </ul>
-                                        <p class="warning"><strong>Wichtig:</strong> „Kein Befund" bedeutet NICHT, dass die Störung ignoriert wird. Sie wird dokumentiert und kann bei erneutem Auftreten nachvollzogen werden.</p>
+                                        <p class="warning"><strong>Wichtig:</strong> „Kein Befund" bedeutet NICHT, dass die Störung ignoriert wird. Sie wird
+        dokumentiert und kann bei erneutem Auftreten nachvollzogen werden.</p>
                                         <h3>Manuelle Wege zum Abschluss</h3>
                                         <h4>Weg 1: Aus dem Dialog Fahrzeugstörung</h4>
                                         <ol>
@@ -788,14 +858,16 @@
                                             <li value="3">Rechtsklick → <em>Erledigt</em> oder <em>Kein Befund</em></li>
                                             <li value="4">Rückfrage bestätigen</li>
                                         </ol>
-                                        <p class="note"><strong>Tipp:</strong> Mehrfachauswahl ermöglicht das gleichzeitige Abschließen mehrerer Störungen (z.&#160;B. alle Kleinschäden nach Sammel-Werkstattauftrag).</p>
+                                        <p class="note"><strong>Tipp:</strong> Mehrfachauswahl ermöglicht das gleichzeitige Abschließen mehrerer Störungen
+        (z.&#160;B. alle Kleinschäden nach Sammel-Werkstattauftrag).</p>
                                         <h3>Automatische Erledigung</h3>
                                         <p>Störungen werden automatisch auf <strong>Erledigt</strong> gesetzt, wenn:</p>
                                         <ul>
                                             <li>Der verknüpfte Werkstattauftrag beendet wird (siehe <a href="#werkstattauftrag" class="MCXref xref">Fahrzeugstörungen – Betriebsfälle von Anlegen bis Abschluss</a>)</li>
                                             <li>Die verknüpfte Fahrzeugreservierung beendet wird (projektspezifisch)</li>
                                         </ul>
-                                        <p><strong>Vorteil:</strong> Kein manueller Schritt nötig. Die Störung wird automatisch mit dem Werkstattauftrag synchronisiert.</p>
+                                        <p><strong>Vorteil:</strong> Kein manueller Schritt nötig. Die Störung wird automatisch mit dem Werkstattauftrag
+        synchronisiert.</p>
                                         <h3>Auswirkungen des Abschlusses</h3>
                                         <h4>Bei „Erledigt"</h4>
                                         <ul>
@@ -823,24 +895,31 @@
                                             </thead>
                                             <tbody>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störung auf „Erledigt" setzen (Zustand: Gemeldet)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Störung abschließen (projektspezifisch: alle oder nur Werkstatt/Disposition)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störung auf „Erledigt" setzen (Zustand:
+                    Gemeldet)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Störung abschließen (projektspezifisch:
+                    alle oder nur Werkstatt/Disposition)</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Störung auf „Erledigt" setzen (Zustand: In Bearbeitung)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Störung abschließen (oft eingeschränkt auf Werkstatt)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Störung auf „Erledigt" setzen (Zustand:
+                    In Bearbeitung)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Störung abschließen (oft eingeschränkt
+                    auf Werkstatt)</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störung auf „Kein Befund" setzen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Kein Befund setzen (projektspezifisch: oft nur Werkstatt oder Werkstattleitung)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Kein Befund setzen (projektspezifisch:
+                    oft nur Werkstatt oder Werkstattleitung)</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Automatische Erledigung (via Werkstattauftrag)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Automatische Erledigung (via
+                    Werkstattauftrag)</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Werkstattauftrag beenden</td>
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <p class="note"><strong>Projektspezifisch:</strong> In manchen Projekten können Fahrer oder Disponenten kleinere Störungen direkt erledigen. In anderen ist dies der Werkstatt vorbehalten.</p>
+                                        <p class="note"><strong>Projektspezifisch:</strong> In manchen Projekten können Fahrer oder Disponenten kleinere
+        Störungen direkt erledigen. In anderen ist dies der Werkstatt vorbehalten.</p>
                                         <h3>Beispiele: Wann welche Option?</h3>
                                         <table class="TableStyle-Alternate-Row-Color" style="mc-table-style: url('../../Resources/TableStyles/Alternate-Row-Color.css');" cellspacing="21" data-mc-table-style="Alternate Row Color">
                                             <thead>
@@ -852,47 +931,62 @@
                                             </thead>
                                             <tbody>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Klimaanlage wurde repariert, funktioniert wieder</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Klimaanlage wurde repariert, funktioniert
+                    wieder</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>Erledigt</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Störung behoben, Fahrzeug voll einsatzfähig</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Störung behoben, Fahrzeug voll
+                    einsatzfähig</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Fahrer meldet Klappergeräusch, Werkstatt findet nichts</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Fahrer meldet Klappergeräusch, Werkstatt
+                    findet nichts</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>Kein Befund</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Störung konnte nicht reproduziert werden</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Störung konnte nicht reproduziert werden
+                </td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Warnleuchte war an, bei Prüfung nicht mehr aktiv</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Warnleuchte war an, bei Prüfung nicht
+                    mehr aktiv</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>Kein Befund</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Fehler sporadisch, aktuell nicht nachvollziehbar</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Fehler sporadisch, aktuell nicht
+                    nachvollziehbar</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Tür wurde provisorisch repariert, funktioniert wieder</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Tür wurde provisorisch repariert,
+                    funktioniert wieder</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>Erledigt</strong>
                                                     </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Provisorische Behebung ausreichend für Betrieb</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Provisorische Behebung ausreichend für
+                    Betrieb</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störung war bereits behoben, als Werkstatt das Fahrzeug prüfte</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>Kein Befund</strong> oder <strong>Erledigt</strong></td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Je nach Interpretation: Kein Befund (nicht reproduzierbar) oder Erledigt (selbst behoben)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störung war bereits behoben, als
+                    Werkstatt das Fahrzeug prüfte</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>Kein Befund</strong> oder
+                    <strong>Erledigt</strong></td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Je nach Interpretation: Kein Befund
+                    (nicht reproduzierbar) oder Erledigt (selbst behoben)</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Mehrere Störungen nach Werkstattauftrag behoben</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2"><strong>Erledigt</strong> (automatisch)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Werkstattauftrag-Beendigung löst automatische Erledigung aus</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Mehrere Störungen nach Werkstattauftrag
+                    behoben</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2"><strong>Erledigt</strong> (automatisch)
+                </td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Werkstattauftrag-Beendigung löst
+                    automatische Erledigung aus</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                         <h3>Was passiert nach dem Abschluss?</h3>
                                         <ol>
-                                            <li value="1"><strong>Sofort:</strong> Störungsgrad wird inaktiv, Fahrzeug wieder disponierbar (sofern keine weiteren Störungen)</li>
+                                            <li value="1"><strong>Sofort:</strong> Störungsgrad wird inaktiv, Fahrzeug wieder disponierbar (sofern keine weiteren
+            Störungen)</li>
                                             <li value="2"><strong>Kurzfristig:</strong> Störung bleibt in der Liste sichtbar (für Nachvollziehbarkeit)</li>
                                             <li value="3"><strong>Nach konfigurierter Zeit:</strong> Automatische Archivierung
-				<ul><li>Störung wird aus aktiver Liste entfernt</li><li>Bleibt in Archiv verfügbar für Auswertungen und Historie</li><li>Typische Archivierungszeiten: 30–90 Tage (projektspezifisch)</li></ul></li>
+            <ul><li>Störung wird aus aktiver Liste entfernt</li><li>Bleibt in Archiv verfügbar für Auswertungen und Historie</li><li>Typische Archivierungszeiten: 30–90 Tage (projektspezifisch)</li></ul></li>
                                         </ol>
                                         <!-- CHECKLISTE UND BEST PRACTICES -->
                                         <h2>Checkliste und Best Practices</h2>
@@ -928,28 +1022,36 @@
                                         <h3>Best Practices – Gesamtworkflow</h3>
                                         <h4>Beim Anlegen</h4>
                                         <ul>
-                                            <li><strong>So präzise wie möglich:</strong> Je genauer die Störung beschrieben ist, desto schneller kann die Werkstatt reagieren.</li>
+                                            <li><strong>So präzise wie möglich:</strong> Je genauer die Störung beschrieben ist, desto schneller kann die
+            Werkstatt reagieren.</li>
                                             <li><strong>Störungsbaum vollständig nutzen:</strong> Vermeiden Sie pauschale Kategorien wie „Sonstiges".</li>
-                                            <li><strong>Fotos anhängen:</strong> Nutzen Sie die Möglichkeit, Bilder oder Dokumente zur Störung zu hinterlegen (projektspezifisch).</li>
-                                            <li><strong>Sofortbehebung dokumentieren:</strong> Auch kleine, bereits behobene Störungen sollten dokumentiert werden (Checkbox „Sofort erledigt").</li>
+                                            <li><strong>Fotos anhängen:</strong> Nutzen Sie die Möglichkeit, Bilder oder Dokumente zur Störung zu
+            hinterlegen (projektspezifisch).</li>
+                                            <li><strong>Sofortbehebung dokumentieren:</strong> Auch kleine, bereits behobene Störungen sollten dokumentiert
+            werden (Checkbox „Sofort erledigt").</li>
                                         </ul>
                                         <h4>Bei der Bearbeitung</h4>
                                         <ul>
-                                            <li><strong>Störungsgrad aktuell halten:</strong> Wenn sich die Situation verschlechtert, Störungsgrad erhöhen.</li>
+                                            <li><strong>Störungsgrad aktuell halten:</strong> Wenn sich die Situation verschlechtert, Störungsgrad erhöhen.
+        </li>
                                             <li><strong>Bemerkungen nutzen:</strong> Zwischenstände, Werkstatt-Feedback und Erkenntnisse dokumentieren.</li>
                                             <li><strong>Kommunikation:</strong> Bei kritischen Störungen Werkstatt und Disposition abstimmen.</li>
                                         </ul>
                                         <h4>Beim Werkstattauftrag</h4>
                                         <ul>
-                                            <li><strong>Mehrere Störungen bündeln:</strong> Nutzen Sie „Alle offenen Störungen hinzufügen", um effizienter zu arbeiten.</li>
+                                            <li><strong>Mehrere Störungen bündeln:</strong> Nutzen Sie „Alle offenen Störungen hinzufügen", um effizienter
+            zu arbeiten.</li>
                                             <li><strong>Prioritäten setzen:</strong> Kennzeichnen Sie dringende Störungen entsprechend.</li>
-                                            <li><strong>Realistische Zeiten:</strong> Planen Sie geplantes Ende realistisch, um Disposition zu informieren.</li>
+                                            <li><strong>Realistische Zeiten:</strong> Planen Sie geplantes Ende realistisch, um Disposition zu informieren.
+        </li>
                                         </ul>
                                         <h4>Beim Abschluss</h4>
                                         <ul>
                                             <li><strong>Sorgfältig prüfen:</strong> Ist die Störung wirklich behoben? Testfahrt durchgeführt?</li>
-                                            <li><strong>„Kein Befund" dokumentieren:</strong> Bei sporadischen Problemen Hinweise hinterlassen für zukünftige Prüfungen.</li>
-                                            <li><strong>Disposition informieren:</strong> Bei kritischen Fahrzeugen Disposition aktiv informieren, dass Fahrzeug wieder verfügbar ist.</li>
+                                            <li><strong>„Kein Befund" dokumentieren:</strong> Bei sporadischen Problemen Hinweise hinterlassen für
+            zukünftige Prüfungen.</li>
+                                            <li><strong>Disposition informieren:</strong> Bei kritischen Fahrzeugen Disposition aktiv informieren, dass
+            Fahrzeug wieder verfügbar ist.</li>
                                         </ul>
                                         <h3>Häufige Fehler und Lösungen – Gesamtworkflow</h3>
                                         <table class="TableStyle-Alternate-Row-Color" style="mc-table-style: url('../../Resources/TableStyles/Alternate-Row-Color.css');" cellspacing="21" data-mc-table-style="Alternate Row Color">
@@ -962,34 +1064,52 @@
                                             </thead>
                                             <tbody>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störung wird angelegt, aber nie beauftragt</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störung bleibt „Gemeldet", Fahrzeug mit reduzierter Verfügbarkeit</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Regelmäßige Prüfung offener Störungen, ggf. automatische Erinnerung einrichten</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störung wird angelegt, aber nie
+                    beauftragt</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störung bleibt „Gemeldet", Fahrzeug mit
+                    reduzierter Verfügbarkeit</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Regelmäßige Prüfung offener Störungen,
+                    ggf. automatische Erinnerung einrichten</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Werkstattauftrag beendet, aber Störung bleibt „In Bearbeitung"</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Fahrzeug weiterhin eingeschränkt disponierbar</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Prüfen, ob automatische Erledigung aktiviert ist (Systemkonfiguration)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Werkstattauftrag beendet, aber Störung
+                    bleibt „In Bearbeitung"</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Fahrzeug weiterhin eingeschränkt
+                    disponierbar</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Prüfen, ob automatische Erledigung
+                    aktiviert ist (Systemkonfiguration)</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störungsgrad nicht angepasst nach Verschlechterung</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Fahrzeug wird disponiert, obwohl nicht einsatzfähig</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Regelmäßige Überprüfung von Störungen mit längerem Bearbeitungsstatus</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störungsgrad nicht angepasst nach
+                    Verschlechterung</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Fahrzeug wird disponiert, obwohl nicht
+                    einsatzfähig</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Regelmäßige Überprüfung von Störungen mit
+                    längerem Bearbeitungsstatus</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">„Kein Befund" wird verwendet, obwohl Störung behoben</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Verfälschte Statistiken, Werkstattleistung nicht korrekt erfasst</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Schulung: „Kein Befund" nur bei tatsächlich nicht nachvollziehbaren Störungen</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">„Kein Befund" wird verwendet, obwohl
+                    Störung behoben</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Verfälschte Statistiken,
+                    Werkstattleistung nicht korrekt erfasst</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Schulung: „Kein Befund" nur bei
+                    tatsächlich nicht nachvollziehbaren Störungen</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Mehrere Störungen für dasselbe Problem angelegt</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Doppelarbeit, verfälschte Auswertungen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Vor Anlegen Fahrzeugakte prüfen, ggf. vorhandene Störung bearbeiten</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Mehrere Störungen für dasselbe Problem
+                    angelegt</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Doppelarbeit, verfälschte Auswertungen
+                </td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Vor Anlegen Fahrzeugakte prüfen, ggf.
+                    vorhandene Störung bearbeiten</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Störungen werden zu früh auf „Erledigt" gesetzt</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Störung tritt erneut auf, muss neu angelegt werden</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Testfahrt oder gründliche Prüfung vor Abschluss durchführen</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Störungen werden zu früh auf „Erledigt"
+                    gesetzt</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Störung tritt erneut auf, muss neu
+                    angelegt werden</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Testfahrt oder gründliche Prüfung vor
+                    Abschluss durchführen</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -997,13 +1117,14 @@
                                         <h2>Siehe auch</h2>
                                         <ul>
                                             <li>
-                Störungskonzept – Grundlagen <!-- TODO: unresolved link (kein DE-Topic gefunden): ../../050102_Stoerungskonzept_Grundlagen.htm --> (Störungsgrade, Zustände, Leistungsmerkmale)</li>
+            Störungskonzept – Grundlagen
+            <!-- TODO: unresolved link (kein DE-Topic gefunden): ../../050102_Stoerungskonzept_Grundlagen.htm -->
+            (Störungsgrade, Zustände, Leistungsmerkmale)</li>
                                             <li><a href="050101_Liste_Fahrzeugstoerungen.htm" class="MCXref xref">Sicht „Fahrzeugstörungen“</a>
                                             </li>
-                                            <li><a href="050102_Dialog_Fahrzeugstoerung.htm" class="MCXref xref">Dialog Fahrzeugstörung</a> (Feldreferenz)</li>
-                                            <li><a href="../0502_Werkstattmanagement/050201_Werkstattauftraege/05020101_Liste_Werkstattauftraege.htm" class="MCXref xref">
-   Die Sicht â€žWerkstattauftrÃ¤geâ€œ
-  </a>
+                                            <li><a href="050102_Dialog_Fahrzeugstoerung.htm" class="MCXref xref">Dialog Fahrzeugstörung</a> (Feldreferenz)
+        </li>
+                                            <li><a href="../0502_Werkstattmanagement/050201_Werkstattauftraege/05020101_Liste_Werkstattauftraege.htm" class="MCXref xref">Die Sicht "Werkstattaufträge "</a>
                                             </li>
                                             <li><a href="../../03_Stammdaten_Verwaltung/0301_Fahrzeugmanagement/030101_Fahrzeugliste/030101_Fahrzeugliste.htm" class="MCXref xref">Fahrzeugliste</a>
                                             </li>

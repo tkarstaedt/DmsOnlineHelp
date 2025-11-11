@@ -118,13 +118,17 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1>Einschaltbereiche (SSB)</h1>
-                                        <p class="mc-shortdesc"><strong>Einschaltbereiche</strong> (Power-On Areas) begrenzen, wie viele Fahrzeuge in einem topologischen Bereich innerhalb eines
-			Zeitfensters gleichzeitig <em>eingeschaltet</em> sein dürfen. Die <strong>Umlaufdisposition</strong> berücksichtigt diese Grenze bei jeder Zuordnung.
-		</p>
+                                        <p class="mc-shortdesc"><strong>Einschaltbereiche</strong> (Power-On Areas) begrenzen, wie viele Fahrzeuge in einem
+        topologischen Bereich innerhalb eines
+        Zeitfensters gleichzeitig <em>eingeschaltet</em> sein dürfen. Die <strong>Umlaufdisposition</strong>
+        berücksichtigt diese Grenze bei jeder Zuordnung.
+    </p>
                                         <h2>Konzept &amp; Zweck</h2>
                                         <ul>
-                                            <li><strong>Einschaltbereich</strong> = topologischer Bereich (z. B. Spurgruppe/Track/Depot) mit einer <em>Maximalzahl</em> gleichzeitig eingeschalteter Fahrzeuge.</li>
-                                            <li>Steuert die <strong>Umlaufdisposition</strong>: Ein Umlauf darf nur zugewiesen werden, wenn die Maximalzahl im relevanten Zeitfenster nicht überschritten wird.</li>
+                                            <li><strong>Einschaltbereich</strong> = topologischer Bereich (z. B. Spurgruppe/Track/Depot) mit einer
+            <em>Maximalzahl</em> gleichzeitig eingeschalteter Fahrzeuge.</li>
+                                            <li>Steuert die <strong>Umlaufdisposition</strong>: Ein Umlauf darf nur zugewiesen werden, wenn die Maximalzahl
+            im relevanten Zeitfenster nicht überschritten wird.</li>
                                         </ul>
                                         <h2>Parameter pro Einschaltbereich</h2>
                                         <table style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" class="TableStyle-Alternate-Row-Color" cellspacing="21">
@@ -136,27 +140,37 @@
                                             </thead>
                                             <tbody>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>Einschaltzeit vor Umlaufstart</strong> (<code>ReferenceTime</code>)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Vorlaufzeit. Ab <code>Umlaufstart − Einschaltzeit</code> gilt das Fahrzeug als eingeschaltet.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>Einschaltzeit vor
+                        Umlaufstart</strong> (<code>ReferenceTime</code>)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Vorlaufzeit. Ab
+                    <code>Umlaufstart − Einschaltzeit</code> gilt das Fahrzeug als eingeschaltet.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>Pufferzeit nach Umlaufstart</strong> (<code>Duration</code>)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Nachlaufzeit. Bis <code>Umlaufstart + Puffer</code> zählt das Fahrzeug noch als eingeschaltet.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>Pufferzeit nach
+                        Umlaufstart</strong> (<code>Duration</code>)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Nachlaufzeit. Bis
+                    <code>Umlaufstart + Puffer</code> zählt das Fahrzeug noch als eingeschaltet.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1"><strong>Maximale Anzahl Fahrzeuge</strong> (<code>Count</code>)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Obergrenze gleichzeitig eingeschalteter Fahrzeuge im Bereich.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1"><strong>Maximale Anzahl
+                        Fahrzeuge</strong> (<code>Count</code>)</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Obergrenze gleichzeitig eingeschalteter
+                    Fahrzeuge im Bereich.</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                         <h2>Prüflogik der Umlaufdisposition</h2>
                                         <ol>
-                                            <li value="1"><strong>Einschaltzeitpunkt</strong> berechnen: <em>Einschaltzeitpunkt</em> = <code>Umlaufstart − Einschaltzeit</code>.</li>
+                                            <li value="1"><strong>Einschaltzeitpunkt</strong> berechnen: <em>Einschaltzeitpunkt</em> =
+            <code>Umlaufstart − Einschaltzeit</code>.</li>
                                             <li value="2"><strong>Einschaltzeitfenster</strong> des Umlaufs bilden:
-			<code>[Umlaufstart − Einschaltzeit, Umlaufstart + Puffer]</code>.</li>
-                                            <li value="3"><strong>Relevante Umläufe</strong> identifizieren: alle Umläufe im selben Einschaltbereich mit überlappendem Einschaltzeitfenster.</li>
+            <code>[Umlaufstart − Einschaltzeit, Umlaufstart + Puffer]</code>.
+        </li>
+                                            <li value="3"><strong>Relevante Umläufe</strong> identifizieren: alle Umläufe im selben Einschaltbereich mit überlappendem
+            Einschaltzeitfenster.</li>
                                             <li value="4"><strong>Zählen</strong>: Anzahl Fahrzeuge in der Überlappung (Traktionen zählen je Teilfahrzeug).</li>
-                                            <li value="5"><strong>Entscheiden</strong>: Ist die Summe &gt; <em>Maximale Anzahl</em> → Zuordnung <strong>nicht zulässig</strong>.</li>
+                                            <li value="5"><strong>Entscheiden</strong>: Ist die Summe &gt; <em>Maximale Anzahl</em> → Zuordnung <strong>nicht
+                zulässig</strong>.</li>
                                         </ol>
                                         <h2>&#160;</h2>
                                         <h2>Neuer Einschaltbereich</h2>
@@ -167,7 +181,8 @@
                                             <img src="../../../Resources/Images/dlg_add_topology_area.png" />
                                         </p>
                                         <h2>Beispiel</h2>
-                                        <p><strong>Einschaltbereich:</strong> Fahrzeuge 1001–1005, Max = 4, Einschaltzeit = 35 min, Puffer = 5 min → Fenster = 40 min.</p>
+                                        <p><strong>Einschaltbereich:</strong> Fahrzeuge 1001–1005, Max = 4, Einschaltzeit = 35 min, Puffer = 5 min → Fenster
+        = 40 min.</p>
                                         <table style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" class="TableStyle-Alternate-Row-Color" cellspacing="21">
                                             <thead>
                                                 <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
@@ -200,30 +215,40 @@
                                             </tbody>
                                         </table>
                                         <ul>
-                                            <li><strong>Prüfung für 1005 @ 04:12</strong> → Einschaltzeitpunkt 03:37 → bereits 4 Fahrzeuge eingeschaltet → <strong>nicht zulässig</strong>.</li>
-                                            <li><strong>Prüfung für 1005 @ 04:19</strong> → Einschaltzeitpunkt 03:44 → nur 3 Fahrzeuge eingeschaltet → <strong>zulässig</strong>.</li>
+                                            <li><strong>Prüfung für 1005 @ 04:12</strong> → Einschaltzeitpunkt 03:37 → bereits 4 Fahrzeuge eingeschaltet →
+            <strong>nicht zulässig</strong>.</li>
+                                            <li><strong>Prüfung für 1005 @ 04:19</strong> → Einschaltzeitpunkt 03:44 → nur 3 Fahrzeuge eingeschaltet →
+            <strong>zulässig</strong>.</li>
                                         </ul>
                                         <p>
                                             <img src="../../../Resources/Images/einschaltbereiche_beispiel.jpg" />
                                         </p>
                                         <h2>Optionale Dispositionskriterien</h2>
                                         <ul>
-                                            <li><strong>Eingeschaltete Fahrzeuge bevorzugt einsetzen</strong> (<code>UsePoweredOnVehicles</code>): Offene Umläufe werden bevorzugt auf bereits eingeschaltete, noch nicht fixierte Fahrzeuge disponiert. Sinnvoll nur in Kombination mit Einschaltbereichen.</li>
+                                            <li><strong>Eingeschaltete Fahrzeuge bevorzugt einsetzen</strong> (<code>UsePoweredOnVehicles</code>): Offene
+            Umläufe werden bevorzugt auf bereits eingeschaltete, noch nicht fixierte Fahrzeuge disponiert. Sinnvoll nur
+            in Kombination mit Einschaltbereichen.</li>
                                         </ul>
                                         <div class="note" data-mc-conditions="Customers.SSB">
-                                            <p><strong>Hinweis:</strong> Benennungen/Parameternamen folgen dem SSB-Customizing (Jira-Referenzen verfügbar).</p>
+                                            <p><strong>Hinweis:</strong> Benennungen/Parameternamen folgen dem SSB-Customizing (Jira-Referenzen verfügbar).
+        </p>
                                         </div>
                                         <h2>Bedienhinweise (Disposition)</h2>
                                         <ul>
-                                            <li>Bei <a href="04010602_Manuelle_Umlaufdisposition.htm" class="MCXref xref">Manuelle Umlaufdisposition</a> und <a href="04010603_Halbautomatische_Umlaufdisposition.htm" class="MCXref xref">Halbautomatische Umlaufdisposition</a> werden unzulässige Zuordnungen (Grenzwert überschritten) verworfen oder als Fehler gemeldet.</li>
-                                            <li>Wenn aktiv, kann die Option <em>Eingeschaltete Fahrzeuge bevorzugen</em> zu anderen Vorschlägen führen als ohne Einschaltbereiche.</li>
+                                            <li>Bei <a href="04010602_Manuelle_Umlaufdisposition.htm" class="MCXref xref">Manuelle Umlaufdisposition</a>
+            und <a href="04010603_Halbautomatische_Umlaufdisposition.htm" class="MCXref xref">Halbautomatische Umlaufdisposition</a> werden
+            unzulässige Zuordnungen (Grenzwert überschritten) verworfen oder als Fehler gemeldet.</li>
+                                            <li>Wenn aktiv, kann die Option <em>Eingeschaltete Fahrzeuge bevorzugen</em> zu anderen Vorschlägen führen als
+            ohne Einschaltbereiche.</li>
                                             <li>Bei Ablehnung einer Zuordnung: Startzeiten anpassen oder Fahrzeuge zeitlich entzerren.</li>
                                         </ul>
                                         <h2>Fehlermeldungen &amp; Troubleshooting</h2>
                                         <ul>
-                                            <li><strong>„Max. Zahl eingeschalteter Fahrzeuge überschritten“</strong> – Fenster prüfen: <code>Start − Einschaltzeit</code> bis <code>Start + Puffer</code>.</li>
+                                            <li><strong>„Max. Zahl eingeschalteter Fahrzeuge überschritten“</strong> – Fenster prüfen:
+            <code>Start − Einschaltzeit</code> bis <code>Start + Puffer</code>.</li>
                                             <li><strong>Traktionskonflikt</strong> – Doppeltraktion zählt doppelt; ggf. Aufteilungen/Start versetzen.</li>
-                                            <li><strong>Unerwartete Vorschläge</strong> – Prüfen, ob <em>Eingeschaltete Fahrzeuge bevorzugen</em> aktiv ist.</li>
+                                            <li><strong>Unerwartete Vorschläge</strong> – Prüfen, ob <em>Eingeschaltete Fahrzeuge bevorzugen</em> aktiv ist.
+        </li>
                                         </ul>
                                         <h2>Verwandte Themen</h2>
                                         <ul>

@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Versorgungsspur – E-Bus-Logik</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Versorgungsspur - E-Bus-Logik</title>
         <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
@@ -117,7 +117,8 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1>Versorgungsspur – E-Bus-Logik</h1>
-                                        <p class="intro">Für Elektrofahrzeuge berücksichtigt die Versorgungsspur SOC, Ladefenster, Balancing und Vorkonditionierung. Ziel ist eine betriebsstabile, energieoptimierte Ausfahrt.</p>
+                                        <p class="intro">Für Elektrofahrzeuge berücksichtigt die Versorgungsspur SOC, Ladefenster, Balancing und
+        Vorkonditionierung. Ziel ist eine betriebsstabile, energieoptimierte Ausfahrt.</p>
                                         <h2>Dispositionale Zielgrößen</h2>
                                         <p class="intro">Diese Kenngrößen bestimmen Einreihung und Dauer von Ladeschritten.</p>
                                         <ul>
@@ -137,27 +138,33 @@
                                             <tbody>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Aktueller SOC [%/kWh]</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Bestimmt Startpriorität des Ladevorgangs.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Bestimmt Startpriorität des Ladevorgangs.
+                </td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Ziel-SOC [%]</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Abbruchkriterium für Ladeschritt, Freigabe zur Ausfahrt.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Abbruchkriterium für Ladeschritt,
+                    Freigabe zur Ausfahrt.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">K-Wert / Ladecharakteristik</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Prognose der Ladedauer; beeinflusst Reihenfolge.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Prognose der Ladedauer; beeinflusst
+                    Reihenfolge.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Balancing (Verfahren/Dauer)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Ergänzender Schritt nach Ladevorgang; ggf. Pflicht.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Ergänzender Schritt nach Ladevorgang;
+                    ggf. Pflicht.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Heizung/Klima-Bedarfe</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Zusatzenergie vor Ausfahrt; kann Ladeziel anheben.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Zusatzenergie vor Ausfahrt; kann Ladeziel
+                    anheben.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Energiesparmodus</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Begrenzt Leistungsabrufe; kann Wartezeit verlängern.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Begrenzt Leistungsabrufe; kann Wartezeit
+                    verlängern.</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -190,14 +197,12 @@
                                         </ul>
                                         <h2 data-mc-conditions="Customers.SSB">Status &amp; Ereignisse</h2>
                                         <p data-mc-conditions="Customers.SSB">
-			VSP zeigt Statuswechsel (zugeteilt, in Versorgung, abgeschlossen) und technische Ereignisse (Fehler/Abbruch). 
-			Relevante Änderungen fließen in Disposition und Betriebsbild ein.
-		</p>
+        VSP zeigt Statuswechsel (zugeteilt, in Versorgung, abgeschlossen) und technische Ereignisse (Fehler/Abbruch).
+        Relevante Änderungen fließen in Disposition und Betriebsbild ein.
+    </p>
                                         <h2 data-mc-conditions="Customers.SSB">Siehe auch</h2>
                                         <ul data-mc-conditions="Customers.SSB">
-                                            <li><a href="../050301_Versorgungsauftraege/05030102_Dialog_Versorgungsauftrag.htm" class="MCXref xref">
-   Der Dialog "Versorgungsauftrag"
-  </a>
+                                            <li><a href="../050301_Versorgungsauftraege/05030102_Dialog_Versorgungsauftrag.htm" class="MCXref xref">Der Dialog "Versorgungsauftrag"</a>
                                             </li>
                                             <li><a href="../../../06_Betriebshof/0603_Lademanagement_E_Busse/060300_Lademanagement_E_Busse_Intro.htm" class="MCXref xref">Lademanagement für E&#8209;Busse</a>
                                             </li>
@@ -205,7 +210,7 @@
                                         <h2>Verwandte Themen</h2>
                                         <ul>
                                             <li>
-                E-Bus-Datenfelder <!-- TODO: unresolved link (kein DE-Topic gefunden): E-Bus_Datenfelder.htm --></li>
+            E-Bus-Datenfelder <!-- TODO: unresolved link (kein DE-Topic gefunden): E-Bus_Datenfelder.htm --></li>
                                             <li><a href="../../../03_Stammdaten_Verwaltung/0301_Fahrzeugmanagement/030102_Dialog_Fahrzeugakte/030102_Fahrzeugakte.htm" class="MCXref xref">Die Fahrzeugakte</a>
                                             </li>
                                             <li><a href="05030201_VSP_Ablaufsteuerung.htm" class="MCXref xref">Versorgungsspur – Ablaufsteuerung</a>

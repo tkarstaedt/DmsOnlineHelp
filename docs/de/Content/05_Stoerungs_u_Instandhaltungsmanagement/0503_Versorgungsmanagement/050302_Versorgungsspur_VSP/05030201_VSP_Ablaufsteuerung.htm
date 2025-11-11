@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Versorgungsspur – Ablaufsteuerung</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Versorgungsspur - Ablaufsteuerung</title>
         <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
@@ -117,14 +117,19 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1>Versorgungsspur – Ablaufsteuerung</h1>
-                                        <p class="intro">Die Versorgungsspur (VSP) steuert Versorgungsvorgänge sequenziell nach der Einfahrt. Ziel ist eine priorisierte, konfliktfreie Abarbeitung von Tanken, Reinigen, Laden und weiteren Prozessen.</p>
+                                        <p class="intro">Die Versorgungsspur (VSP) steuert Versorgungsvorgänge sequenziell nach der Einfahrt. Ziel ist eine
+        priorisierte, konfliktfreie Abarbeitung von Tanken, Reinigen, Laden und weiteren Prozessen.</p>
                                         <h2>Grundprinzip</h2>
-                                        <p class="intro">Vorgänge werden in der VSP als Schritte in einer Warteschlange geführt. Regeln und Sperren bestimmen Reihenfolge und Parallelisierbarkeit.</p>
+                                        <p class="intro">Vorgänge werden in der VSP als Schritte in einer Warteschlange geführt. Regeln und Sperren
+        bestimmen Reihenfolge und Parallelisierbarkeit.</p>
                                         <ul>
                                             <li><strong>Sequenz</strong>: Einfahrkontrolle &gt; Erstversorgung Folgeprozesse &gt; Abschlussprüfung.</li>
-                                            <li><strong>Priorität</strong>: Sicherheitskritisches vor Komfort (z.&#160;B. technische Sperren vor Innenreinigung).</li>
-                                            <li><strong>Ressourcenbindung</strong>: Schritte blockieren Stationen nur während der tatsächlichen Bearbeitung.</li>
-                                            <li><strong>Automatik/Manuell</strong>: Automatische Einreihung mit manueller Übersteuerung durch Berechtigte.</li>
+                                            <li><strong>Priorität</strong>: Sicherheitskritisches vor Komfort (z.&#160;B. technische Sperren vor
+            Innenreinigung).</li>
+                                            <li><strong>Ressourcenbindung</strong>: Schritte blockieren Stationen nur während der tatsächlichen Bearbeitung.
+        </li>
+                                            <li><strong>Automatik/Manuell</strong>: Automatische Einreihung mit manueller Übersteuerung durch Berechtigte.
+        </li>
                                         </ul>
                                         <h2>Statusmodell &amp; Übergänge</h2>
                                         <table style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" class="TableStyle-Alternate-Row-Color" cellspacing="21">
@@ -137,11 +142,13 @@
                                             <tbody>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Eingereiht</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Schritt ist der Versorgungsspur zugeordnet.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Schritt ist der Versorgungsspur
+                    zugeordnet.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Wartet</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Voraussetzungen/Ressourcen noch nicht erfüllt/frei.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Voraussetzungen/Ressourcen noch nicht
+                    erfüllt/frei.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">In Bearbeitung</td>
@@ -149,24 +156,29 @@
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Pausiert</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Unterbrechung, späterer Wiederanlauf ohne Neu-Einreihung.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Unterbrechung, späterer Wiederanlauf ohne
+                    Neu-Einreihung.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Abgeschlossen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Schritt erfüllt; nächste Stufe wird freigegeben.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Schritt erfüllt; nächste Stufe wird
+                    freigegeben.</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
                                                     <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Abgebrochen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Beendet ohne Erfolg; Wiedereinreihung nach Regelwerk möglich.</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Beendet ohne Erfolg; Wiedereinreihung
+                    nach Regelwerk möglich.</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                         <h2>Voraussetzungen &amp; Sperren</h2>
                                         <p class="intro">Schritte starten nur, wenn alle Startbedingungen erfüllt sind.</p>
                                         <ul>
-                                            <li><strong>Technische Sperren</strong> (z.&#160;B. Störung am Fahrzeug) verhindern Start oder erzwingen Umreihung.</li>
+                                            <li><strong>Technische Sperren</strong> (z.&#160;B. Störung am Fahrzeug) verhindern Start oder erzwingen
+            Umreihung.</li>
                                             <li><strong>Abhängigkeiten</strong> (z.&#160;B. „Tanken vor Reinigen“) erzwingen Reihenfolgen.</li>
-                                            <li><strong>Ressourcen</strong> (z.&#160;B. Ladesäule, Tankplatz) müssen frei und passend dimensioniert sein.</li>
+                                            <li><strong>Ressourcen</strong> (z.&#160;B. Ladesäule, Tankplatz) müssen frei und passend dimensioniert sein.
+        </li>
                                         </ul>
                                         <h2>Prioritätslogik</h2>
                                         <p class="intro">Die Einreihung berücksichtigt Kriterien, die Sie gewichten können.</p>
@@ -196,9 +208,7 @@
                                             </li>
                                             <li><a href="../../../03_Stammdaten_Verwaltung/0301_Fahrzeugmanagement/030102_Dialog_Fahrzeugakte/030102_Fahrzeugakte.htm" class="MCXref xref">Die Fahrzeugakte</a>
                                             </li>
-                                            <li><a href="../050301_Versorgungsauftraege/05030101_Liste_Versorgungsauftraege.htm" class="MCXref xref">
-   Die Sicht "VersorgungsauftrÃ¤ge"
-  </a>
+                                            <li><a href="../050301_Versorgungsauftraege/05030101_Liste_Versorgungsauftraege.htm" class="MCXref xref">Die Sicht "Versorgungsaufträge"</a>
                                             </li>
                                         </ul>
                                     </div>

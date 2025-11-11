@@ -118,13 +118,19 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1 id="titel">Export &amp; Nachweis</h1>
-                                        <p class="mc-shortdesc">Dieses Topic beschreibt, wie Sie Daten zu <strong>Kuppel&#8209; und Trennvorgängen</strong> für <strong>KPIs</strong>, <strong>Audits</strong> und <strong>Nachweise</strong> exportieren &#160;– inkl. Datenumfang, Formaten, Arbeitsschritten und Empfehlungen zur Reproduzierbarkeit.</p>
+                                        <p class="mc-shortdesc">Dieses Topic beschreibt, wie Sie Daten zu <strong>Kuppel&#8209; und Trennvorgängen</strong>
+        für <strong>KPIs</strong>, <strong>Audits</strong> und <strong>Nachweise</strong> exportieren &#160;– inkl.
+        Datenumfang, Formaten, Arbeitsschritten und Empfehlungen zur Reproduzierbarkeit.</p>
                                         <h2 id="datenumfang">Datenumfang</h2>
                                         <ul>
-                                            <li><strong>Kuppelaufträge</strong>: ID, Typ (Kuppeln/Trennen), Status, Zeitstempel <em>Erzeugt/Bestätigt/Storniert</em>, Quelle (manuell/automatisch/Import), Fahrzeuge (A/B), Traktion, Hof/Gleis, Umlauf/Kurs, Kommentar.</li>
-                                            <li><strong>Signalisierung</strong>: Traktionszustand (besteht/aufgelöst), Zeit, Quelle, Fahrzeuge, optional Ort.</li>
+                                            <li><strong>Kuppelaufträge</strong>: ID, Typ (Kuppeln/Trennen), Status, Zeitstempel
+            <em>Erzeugt/Bestätigt/Storniert</em>, Quelle (manuell/automatisch/Import), Fahrzeuge (A/B), Traktion,
+            Hof/Gleis, Umlauf/Kurs, Kommentar.</li>
+                                            <li><strong>Signalisierung</strong>: Traktionszustand (besteht/aufgelöst), Zeit, Quelle, Fahrzeuge, optional
+            Ort.</li>
                                             <li><strong>Konflikt-/Prüfereignisse</strong>: Kompatibilität, Sperren, Versorgungsslots, Prüfresultat.</li>
-                                            <li><strong>Folgeeffekte</strong> (optional): gesetzte Flags <em>Nicht kuppeln</em>/<em>Nicht trennen</em>, Dauer, Aufhebungsgrund.</li>
+                                            <li><strong>Folgeeffekte</strong> (optional): gesetzte Flags <em>Nicht kuppeln</em>/<em>Nicht trennen</em>,
+            Dauer, Aufhebungsgrund.</li>
                                         </ul>
                                         <h2 id="formate">Formate</h2>
                                         <ul>
@@ -135,9 +141,11 @@
                                         <h2 id="schritte">Vorgehen (Export)</h2>
                                         <ol>
                                             <li value="1">Öffnen Sie <a href="../../../04_Betriebssteuerung_und_Disposition/0405_Dispositionsstatistiken/040501_Statistiken_erstellen.htm" class="MCXref xref">Statistiken erstellen</a> und wählen Sie das Schema <em>Kuppelmanagement</em>.</li>
-                                            <li value="2">Setzen Sie Filter (Zeitraum, Typ, Quelle, Hof/Gleis, Fahrzeugklasse, Linie/Umlauf) und bestätigen Sie die Auswahl.</li>
+                                            <li value="2">Setzen Sie Filter (Zeitraum, Typ, Quelle, Hof/Gleis, Fahrzeugklasse, Linie/Umlauf) und bestätigen Sie die
+            Auswahl.</li>
                                             <li value="3">Prüfen Sie die Vorschau und wählen Sie <em>Exportieren</em> &#160;→&#160; <a href="../../../04_Betriebssteuerung_und_Disposition/0405_Dispositionsstatistiken/040502_Statistiken_exportieren.htm" class="MCXref xref">Statistiken exportieren</a> (CSV/Excel/PDF).</li>
-                                            <li value="4">Vergaben Sie <em>Dateiname, Stichtag</em> und optional <em>Berichtsprofil</em> (wiederverwendbare Filter).</li>
+                                            <li value="4">Vergaben Sie <em>Dateiname, Stichtag</em> und optional <em>Berichtsprofil</em> (wiederverwendbare Filter).
+        </li>
                                             <li value="5">Speichern und Ablageort dokumentieren (Share/Archiv).</li>
                                         </ol>
                                         <h2 id="felder">Feldmapping (Beispiel)</h2>
@@ -166,7 +174,8 @@
                                                     <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Geplant | Bestätigt | Storniert</td>
                                                 </tr>
                                                 <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">created_at / confirmed_at / canceled_at</td>
+                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">created_at / confirmed_at / canceled_at
+                </td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Zeitstempel</td>
                                                     <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">2025-03-18T04:12:00</td>
                                                 </tr>
@@ -194,7 +203,8 @@
                                         </table>
                                         <h2 id="nachweis">Nachweis &amp; Reproduzierbarkeit</h2>
                                         <ul>
-                                            <li><strong>Berichtsprofil</strong> speichern (Filter/Spalten) &#160;→&#160; identische Auswertung bei Wiederholung.</li>
+                                            <li><strong>Berichtsprofil</strong> speichern (Filter/Spalten) &#160;→&#160; identische Auswertung bei
+            Wiederholung.</li>
                                             <li><strong>Stichtag</strong> dokumentieren (Zeitraum, Zeitzone, Version der Regeln/Kompatibilitätsmatrix).</li>
                                             <li><strong>Quellen</strong> angeben (Signalisierung vs. Aufträge) und Abweichungen protokollieren.</li>
                                             <li><strong>Ablage</strong>: Exportdateien revisionssicher speichern (Pfad/Share, Berechtigungen).</li>
