@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- File: 06_Betriebshof\0603_Lademanagement_E_Busse\060304_Ladezustaende_ueberwachen\06030403_Alarmierung_Schwellenwerte.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="de"
+  xml:space="preserve">
+
+<head>
+  <title>Alarming &amp; Thresholds</title>
+</head>
+
+<body>
+  <h1>Configure Alarming &amp; Thresholds</h1>
+
+  <p class="intro">To detect critical states of charge early, you can define thresholds in <strong>PEAK.DMS</strong>.
+    When these are reached or undershot, the system generates alarms or notices that are displayed in the monitoring
+    views or output as messages.</p>
+
+  <h2>Define thresholds</h2>
+  <ol>
+    <li>Open the administration or system settings and select the <em>Alarming/Thresholds</em> area (project-specific
+      menu item).</li>
+    <li>Set a limit for each parameter. Examples:</li>
+  </ol>
+  <table>
+    <thead>
+      <tr>
+        <th>Parameter</th>
+        <th>Example threshold</th>
+        <th>Reaction</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Low SOC</td>
+        <td>30&nbsp;%</td>
+        <td>Issue warning; suggest charging order with high priority</td>
+      </tr>
+      <tr>
+        <td>Remaining range</td>
+        <td>20&nbsp;km</td>
+        <td>Alarm; optionally take vehicle out of service</td>
+      </tr>
+      <tr>
+        <td>Charging phase overdue</td>
+        <td>10&nbsp;min over planned end</td>
+        <td>Notice to dispatch; check the charging point</td>
+      </tr>
+      <tr>
+        <td>Battery temperature (optional)</td>
+        <td>50&nbsp;°C</td>
+        <td>Alarm; reduce charging power or abort session</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Types of alarming</h2>
+  <p class="intro">You can define different alarm types and actions:</p>
+  <ul>
+    <li><strong>Visual warning:</strong> Colored highlighting in monitoring views (e.g., red for critical SOC).</li>
+    <li><strong>Acoustic/pop-up message:</strong> In the Control Center, a message with a recommended action appears.
+    </li>
+    <li><strong>Automatic order:</strong> The system creates a charging order or transfer order with high priority.</li>
+    <li><strong>Notification by email/SMS:</strong> Optional, to responsible parties (e.g., garage manager).</li>
+  </ul>
+
+  <h2>Best practices</h2>
+  <ul>
+    <li>Set thresholds so that sufficient reaction time remains; thresholds that are too low lead to hasty actions.</li>
+    <li>Test alarming processes regularly to ensure that all notification channels work.</li>
+    <li>Consider seasonal differences (winter/summer), as energy demand can fluctuate — adjust thresholds accordingly.
+    </li>
+    <li>Use the capacities and reserve values stored in the electrical master data as the basis for your calculations
+      (see
+      <MadCap:xref href="../../060305_Parametrierung_E_Busse/06030501_Elektrostammdaten.htm">Electrical master data
+      </MadCap:xref>).
+    </li>
+  </ul>
+
+  <h2>See also</h2>
+  <ul>
+    <li>
+      <MadCap:xref href="060304_Ladezustaende_ueberwachen/06030401_Sicht_SOC_Dashboard.htm">View "SOC-Dashboard"
+      </MadCap:xref>
+    </li>
+    <li>
+      <MadCap:xref href="../06030402_Sicht_Ladevorgaenge.htm">View "Charging Sessions"</MadCap:xref>
+    </li>
+    <li>
+      <MadCap:xref href="../060303_Ladeauftraege_planen/06030304_Notfallregeln_und_Umschaltung.htm">Emergency Rules and
+        Switching</MadCap:xref>
+    </li>
+  </ul>
+</body>
+
+</html>

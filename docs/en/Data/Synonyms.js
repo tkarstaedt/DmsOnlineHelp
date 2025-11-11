@@ -1,6 +1,6 @@
 var xmlSynonymsData = "";
 xmlSynonymsData += '<?xml version=\"1.0\" encoding=\"utf-8\"?>';
-xmlSynonymsData += '<MadCapSynonyms xml:lang=\"de\">';
+xmlSynonymsData += '<MadCapSynonyms xml:lang=\"en\">';
 xmlSynonymsData += '    <Groups />';
 xmlSynonymsData += '    <Directional />';
 xmlSynonymsData += '</MadCapSynonyms>';
