@@ -1,236 +1,332 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="de" xml:lang="de" class="_Skins_Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="utf-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Kennzahlen für Kuppel- und Trennvorgänge in PEAK.DMS: Definitionen, Formeln, Filter und Best Practices für Auswertung und Nachweis." /><title>KPIs Kuppelmanagement</title>
-        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Resources/Branding/Branding.css" rel="stylesheet" type="text/css" />
-        <link href="../../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
-        <link href="../../../Resources/TableStyles/Alternate-Row-Color.css" rel="stylesheet" data-mc-stylesheet-type="table" />
-        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
-        </script>
-        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
-        </script>
-    </head>
-    <body>
-        <div class="foundation-wrap off-canvas-wrapper">
-            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
-                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
-                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Zurück" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
-                    </ul>
-                </aside>
-                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
-                    <div data-sticky-container="" class="title-bar-container">
-                        <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Zu Hauptinhalt springen</a>
-                            <div class="middle title-bar-section outer-row clearfix">
-                                <div class="menu-icon-container relative clearfix">
-                                    <div class="central-account-wrapper">
-                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Konto</span></a>
-                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Einstellungen</a>
-                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="menu-icon" aria-label="Navigationsbereich anzeigen" data-toggle="offCanvas"><span></span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="title-bar-layout outer-row">
-                                <div class="logo-wrapper"><a class="logo" href="../../../0000_Einleitung.htm" alt="Logo"></a>
-                                </div>
-                                <div class="navigation-wrapper nocontent">
-                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
-                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
-                                        </li>
-                                    </ul>
-                                </div>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:space="preserve" lang="en" xml:lang="en"
+    class="_Skins_Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml"
+    data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True"
+    data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2"
+    data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description"
+        content="Key performance indicators for coupling and decoupling procedures in PEAK.DMS: definitions, formulas, filters, and best practices for evaluation and documentation." />
+    <title>KPIs Coupling Management</title>
+    <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../Resources/Branding/Branding.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Resources/TableStyles/Alternate-Row-Color.css" rel="stylesheet"
+        data-mc-stylesheet-type="table" />
+    <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript"></script>
+    <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer"></script>
+    <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer"></script>
+    <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer"></script>
+    <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript"
+        defer="defer"></script>
+    <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer"></script>
+    <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer"></script>
+</head>
+
+<body>
+    <div class="foundation-wrap off-canvas-wrapper">
+        <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+            <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas=""
+                data-position="right" data-mc-ignore="true">
+                <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu=""
+                    data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent"
+                    data-mc-css-tree-node-collapsed="is-accordion-submenu-parent"
+                    data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False"
+                    data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False"
+                    data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu"
+                    data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True"></ul>
+            </aside>
+            <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                <div data-sticky-container="" class="title-bar-container">
+                    <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky=""
+                        data-options="marginTop:0" style="width:100%"
+                        data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a
+                            class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                        <div class="middle title-bar-section outer-row clearfix">
+                            <div class="menu-icon-container relative clearfix">
                                 <div class="central-account-wrapper">
-                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Konto</span></a>
-                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Einstellungen</a>
-                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                    <div class="central-dropdown"><a class="central-account-drop"><span
+                                                class="central-account-image"></span><span
+                                                class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a
+                                                class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a
+                                                class="MCCentralLink central-dropdown-content-logout">Logout</a>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="nav-search-wrapper">
-                                    <div class="nav-search row">
-                                        <form class="search" action="#">
-                                            <div class="search-bar search-bar-container needs-pie">
-                                                <input class="search-field needs-pie" type="search" aria-label="Suchfeld" placeholder="Suchen" />
-                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter:</span>
-                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Suchfilter" title="Alle Dateien" role="button" tabindex="0">
-                                                    </div>
-                                                    <div class="search-filter-content" id="sf-content">
-                                                        <ul>
-                                                            <li>
-                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">Alle Dateien</span>
-                                                                </button>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="search-submit-wrapper" dir="ltr">
-                                                    <div class="search-submit" title="Suchen" role="button" tabindex="0"><span class="invisible-label">Suche absenden</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
+                                </div><button class="menu-icon" aria-label="Show Navigation Panel"
+                                    data-toggle="offCanvas"><span></span></button>
+                            </div>
+                        </div>
+                        <div class="title-bar-layout outer-row">
+                            <div class="logo-wrapper"><a class="logo" href="../../../0000_Einleitung.htm"
+                                    alt="Logo"></a></div>
+                            <div class="navigation-wrapper nocontent">
+                                <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children"
+                                    data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter"
+                                    data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False"
+                                    data-mc-include-indicator="False" data-mc-include-children="True"
+                                    data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                    <li class="placeholder" style="visibility:hidden"><a>placeholder</a></li>
+                                </ul>
+                            </div>
+                            <div class="central-account-wrapper">
+                                <div class="central-dropdown"><a class="central-account-drop"><span
+                                            class="central-account-image"></span><span
+                                            class="central-account-text">Account</span></a>
+                                    <div class="central-dropdown-content"><a
+                                            class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                        <hr class="central-separator" /><a
+                                            class="MCCentralLink central-dropdown-content-logout">Logout</a>
                                     </div>
                                 </div>
                             </div>
-                        </nav>
-                    </div>
-                    <div class="main-section">
-                        <div class="row outer-row sidenav-layout">
-                            <nav class="sidenav-wrapper">
-                                <div class="sidenav-container">
-                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
-                                    </ul>
-                                </div>
-                            </nav>
-                            <div class="body-container">
-                                <div data-mc-content-body="True">
-                                    <div class="nocontent">
-                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Sie sind hier:</span>
+                            <div class="nav-search-wrapper">
+                                <div class="nav-search row">
+                                    <form class="search" action="#">
+                                        <div class="search-bar search-bar-container needs-pie"><input
+                                                class="search-field needs-pie" type="search" aria-label="Search Field"
+                                                placeholder="Search" />
+                                            <div class="search-filter-wrapper"><span class="invisible-label"
+                                                    id="search-filters-label">Filter: </span>
+                                                <div class="search-filter" aria-haspopup="true"
+                                                    aria-controls="sf-content" aria-expanded="false"
+                                                    aria-label="Search Filter" title="All Files" role="button"
+                                                    tabindex="0"></div>
+                                                <div class="search-filter-content" id="sf-content">
+                                                    <ul>
+                                                        <li><button class="mc-dropdown-item"
+                                                                aria-labelledby="search-filters-label filterSelectorLabel-00001"><span
+                                                                    id="filterSelectorLabel-00001">All
+                                                                    Files</span></button></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="search-submit-wrapper" dir="ltr">
+                                                <div class="search-submit" title="Search" role="button" tabindex="0">
+                                                    <span class="invisible-label">Submit Search</span></div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div role="main" id="mc-main-content">
-                                        <h1 id="titel">KPIs Kuppelmanagement</h1>
-                                        <p class="mc-shortdesc">Auswertung der wichtigsten Kennzahlen für Kuppel- und Trennvorgänge in PEAK.DMS – inklusive Definitionen, Formeln, Filter und Verweise auf Export/Nachweis.</p>
-                                        <h2 id="ziele">Ziele der Auswertung</h2>
-                                        <ul>
-                                            <li>Transparenz über Menge, Qualität und Timing von Kuppel&#8209;/Trennvorgängen schaffen.</li>
-                                            <li>Konflikte und Engpässe erkennen (Kompatibilität, Sperren, Zeitfenster).</li>
-                                            <li>Wirkung von Prozessänderungen messen (z.&#160;B. Automatik&#8209;Regeln, Hoflogistik).</li>
-                                        </ul>
-                                        <h2 id="datenbasis">Datenbasis</h2>
-                                        <ul>
-                                            <li><strong>Kuppelaufträge</strong>: Statuswechsel (Geplant → Bestätigt/Storniert), Zeitstempel, Quelle, Kommentar.</li>
-                                            <li><strong>Signalisierung</strong>: gemeldeter Traktionszustand (besteht/aufgelöst) inkl. Zeit, Quelle.</li>
-                                            <li><strong>Konflikt-/Prüfereignisse</strong>: Kompatibilität, Sperren, Versorgungsslots.</li>
-                                        </ul>
-                                        <h2 id="standard-kpis">Standard-KPIs (Definitionen &amp; Formeln)</h2>
-                                        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" class="TableStyle-Alternate-Row-Color" cellspacing="21" data-mc-stylesheet-type="table">
-                                            <thead>
-                                                <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">KPI</th>
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Definition</th>
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Formel</th>
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Hinweise</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>Bestätigungsquote</strong>
-                                                    </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Anteil bestätigter Aufträge an allen erledigten Aufträgen.</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Bestätigt ÷ (Bestätigt + Storniert)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Optional nach Typ (Kuppeln/Trennen) und Quelle (manuell/automatisch) splitten.</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>Stornoquote</strong>
-                                                    </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Anteil stornierter Aufträge an allen erledigten Aufträgen.</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Storniert ÷ (Bestätigt + Storniert)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Hohe Werte deuten auf Regelkonflikte oder falsche Vorgaben hin.</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>Durchlaufzeit Auftrag</strong>
-                                                    </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Zeit von Auftragserzeugung bis Bestätigung/Storno.</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">t(Bestätigt|Storniert) − t(Erzeugt)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Median statt Mittelwert verwenden, Ausreißer trennen.</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>Konfliktquote</strong>
-                                                    </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Anteil der Aufträge mit mindestens einem Konflikt (Kompatibilität/Sperre/Slot).</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Anz. Aufträge mit Konflikt ÷ Anz. aller Aufträge</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Konfliktklassen gesondert ausweisen.</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>Zeit bis Wirksamkeit (Signalisierung)</strong>
-                                                    </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Zeit zwischen Signalisierung und operativer Darstellung in Sichten/Kalendern.</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">t(Darstellung) − t(Signalisierung)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Sollte nahe 0 sein; Abweichungen prüfen (Schnittstellen/Refresh).</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>Flag-Nutzung nach Storno</strong>
-                                                    </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Häufigkeit gesetzter Flags <em>Nicht kuppeln</em>/<em>Nicht trennen</em> nach Storno.</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Anz. gesetzter Flags ÷ Anz. stornierter Aufträge</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Zeigt, ob Stornogründe korrekt abgesichert werden.</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1"><strong>Re-Öffnungsrate</strong>
-                                                    </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Anteil von Aufträgen, die nach Storno neu angelegt werden.</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Anz. Neuauflagen nach Storno ÷ Anz. stornierter Aufträge</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Hinweis auf unklare Regeln oder wechselnde Betriebslage.</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <h2 id="filter">Filter &amp; Dimensionen</h2>
-                                        <ul>
-                                            <li><strong>Zeitraum</strong> (Tag/Woche/Monat, Schichtfenster)</li>
-                                            <li><strong>Typ</strong> (Kuppeln | Trennen)</li>
-                                            <li><strong>Quelle</strong> (manuell | automatisch | Import)</li>
-                                            <li><strong>Depot/Hof</strong>, <strong>Gleis</strong>, <strong>Linie/Umlauf</strong></li>
-                                            <li><strong>Fahrzeugklasse</strong>, <strong>Traktionstyp</strong></li>
-                                        </ul>
-                                        <h2 id="best-practice">Best Practices</h2>
-                                        <ul>
-                                            <li>KPIs immer mit <strong>Definition</strong> einblenden (Tooltip oder Legende), um Missverständnisse zu vermeiden.</li>
-                                            <li><strong>Median</strong> und <strong>Perzentile</strong> für Zeit-KPIs verwenden; Ausreißer separat darstellen.</li>
-                                            <li>Konfliktklassen <strong>separat ausweisen</strong> (Kompatibilität, Sperre, Slot), um Maßnahmen abzuleiten.</li>
-                                            <li><strong>Signalisierung vs. Auftrag</strong> abgleichen: Bei Abweichung dominiert die gemeldete Signalisierung; widersprechende Aufträge prüfen.</li>
-                                        </ul>
-                                        <h2 id="export">Export &amp; Nachweis</h2>
-                                        <p>Nutzen Sie die Funktionen aus <a href="../../../04_Betriebssteuerung_und_Disposition/05_Dispositionsstatistiken/0502_Statistiken_exportieren.htm" class="MCXref xref">Statistiken exportieren</a>, um KPI&#8209;Daten (CSV/Excel) für Audits oder weiterführende Analysen zu sichern.</p>
-                                        <h2 id="siehe-auch">Siehe auch</h2>
-                                        <ul>
-                                            <li><a href="../050402_Kuppelauftraege/050402_Kuppelauftraege.htm" class="MCXref xref">Kuppelaufträge</a>
-                                            </li>
-                                            <li>
-                Dialog Kuppelauftrag <!-- TODO: unresolved link (kein DE-Topic gefunden): ../050402_Kuppelauftraege/05040201_Dialog_Kuppelauftrag.htm --></li>
-                                            <li>
-                Kuppeln &amp; Trennen: Signalisierung <!-- TODO: unresolved link (kein DE-Topic gefunden): ../050405_Kuppeln_und_Trennen_Signalisierung.htm --></li>
-                                            <li><a href="../../../04_Betriebssteuerung_und_Disposition/0405_Dispositionsstatistiken/040501_Statistiken_erstellen.htm" class="MCXref xref">Statistiken erstellen</a>
-                                            </li>
-                                            <li><a href="../../../04_Betriebssteuerung_und_Disposition/0406_Bereichskalender/040601_Kalender_Umlauf.htm" class="MCXref xref">Kalender: Umläufe</a>
-                                            </li>
-                                        </ul>
-                                        <!-- Metadaten / Platzhalter -->
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
-                    </div><a data-close="true"></a>
+                    </nav>
                 </div>
+                <div class="main-section">
+                    <div class="row outer-row sidenav-layout">
+                        <nav class="sidenav-wrapper">
+                            <div class="sidenav-container">
+                                <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu=""
+                                    data-mc-css-tree-node-expanded="is-accordion-submenu-parent"
+                                    data-mc-css-tree-node-collapsed="is-accordion-submenu-parent"
+                                    data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested"
+                                    data-mc-include-indicator="False" data-mc-include-icon="False"
+                                    data-mc-include-parent-link="False" data-mc-include-back="False"
+                                    data-mc-defer-expand-event="True"
+                                    data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu"
+                                    data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True"
+                                    data-mc-side-nav-menu="True"></ul>
+                            </div>
+                        </nav>
+                        <div class="body-container">
+                            <div data-mc-content-body="True">
+                                <div class="nocontent">
+                                    <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation"
+                                        aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; "
+                                        data-mc-breadcrumbs-count="3" data-mc-toc="True"><span
+                                            class="MCBreadcrumbsPrefix">You are here: </span></div>
+                                </div>
+                                <div role="main" id="mc-main-content">
+                                    <h1 id="titel">KPIs Coupling Management</h1>
+                                    <p class="mc-shortdesc">Evaluation of the most important key figures for coupling
+                                        and decoupling procedures in PEAK.DMS – including definitions, formulas,
+                                        filters, and references to export/documentation.</p>
+                                    <h2 id="ziele">Goals of the Evaluation</h2>
+                                    <ul>
+                                        <li>Create transparency regarding the quantity, quality, and timing of
+                                            coupling/decoupling procedures.</li>
+                                        <li>Identify conflicts and bottlenecks (compatibility, blocks, time windows).
+                                        </li>
+                                        <li>Measure the effect of process changes (e.g., automatic rules, depot
+                                            logistics).</li>
+                                    </ul>
+                                    <h2 id="datenbasis">Data Basis</h2>
+                                    <ul>
+                                        <li><strong><a name="kanchor295"></a></strong>: Status changes (Planned →
+                                            Confirmed/Canceled), timestamp, source, comment.</li>
+                                        <li><strong>Signaling</strong>: Reported traction status (exists/resolved)
+                                            including time, source.</li>
+                                        <li><strong>Conflict/Check Events</strong>: Compatibility, blocks, supply slots.
+                                        </li>
+                                    </ul>
+                                    <h2 id="standard-kpis">Standard KPIs (Definitions &amp; Formulas)</h2>
+                                    <table
+                                        style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');"
+                                        class="TableStyle-Alternate-Row-Color" cellspacing="21"
+                                        data-mc-stylesheet-type="table">
+                                        <thead>
+                                            <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
+                                                <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">KPI
+                                                </th>
+                                                <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">
+                                                    Definition</th>
+                                                <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Formula
+                                                </th>
+                                                <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Notes
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                                                <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">
+                                                    <strong>Confirmation Rate</strong></td>
+                                                <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">
+                                                    Proportion of confirmed orders out of all completed orders.</td>
+                                                <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Confirmed
+                                                    ÷ (Confirmed + Canceled)</td>
+                                                <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">
+                                                    Optionally split by type (Couple/Decouple) and source
+                                                    (manual/automatic).</td>
+                                            </tr>
+                                            <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                                                <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">
+                                                    <strong>Cancellation Rate</strong></td>
+                                                <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">
+                                                    Proportion of canceled orders out of all completed orders.</td>
+                                                <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Canceled
+                                                    ÷ (Confirmed + Canceled)</td>
+                                                <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">High
+                                                    values indicate rule conflicts or incorrect specifications.</td>
+                                            </tr>
+                                            <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                                                <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">
+                                                    <strong>Order Processing Time</strong></td>
+                                                <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Time from
+                                                    order creation to confirmation/cancellation.</td>
+                                                <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">
+                                                    t(Confirmed|Canceled) − t(Created)</td>
+                                                <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Use
+                                                    median instead of mean, separate outliers.</td>
+                                            </tr>
+                                            <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                                                <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">
+                                                    <strong>Conflict Rate</strong></td>
+                                                <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">
+                                                    Proportion of orders with at least one conflict
+                                                    (compatibility/block/slot).</td>
+                                                <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">No. of
+                                                    orders with conflict ÷ No. of all orders</td>
+                                                <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Report
+                                                    conflict classes separately.</td>
+                                            </tr>
+                                            <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                                                <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">
+                                                    <strong>Time to Effectiveness (Signaling)</strong></td>
+                                                <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Time
+                                                    between signaling and operational display in <a
+                                                        name="kanchor296"></a>/calendars.</td>
+                                                <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">
+                                                    t(Display) − t(Signaling)</td>
+                                                <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Should be
+                                                    close to 0; check deviations (interfaces/refresh).</td>
+                                            </tr>
+                                            <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                                                <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">
+                                                    <strong>Flag Usage After Cancellation</strong></td>
+                                                <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Frequency
+                                                    of set flags <em>Do not couple</em>/<em>Do not decouple</em> after
+                                                    cancellation.</td>
+                                                <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">No. of
+                                                    set flags ÷ No. of canceled orders</td>
+                                                <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Shows
+                                                    whether cancellation reasons are correctly secured.</td>
+                                            </tr>
+                                            <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                                                <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">
+                                                    <strong>Re-opening Rate</strong></td>
+                                                <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">
+                                                    Proportion of orders that are newly created after cancellation.</td>
+                                                <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">No. of
+                                                    new creations after cancellation ÷ No. of canceled orders</td>
+                                                <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Indicates
+                                                    unclear rules or changing operational situation.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h2 id="filter">Filters &amp; Dimensions</h2>
+                                    <ul>
+                                        <li><strong>Time Period</strong> (Day/Week/Month, Shift Window)</li>
+                                        <li><strong>Type</strong> (Couple | Decouple)</li>
+                                        <li><strong>Source</strong> (manual | automatic | Import)</li>
+                                        <li><strong>Depot/Yard</strong>, <strong>Track</strong>,
+                                            <strong>Line/Block</strong></li>
+                                        <li><strong>Vehicle Class</strong>, <strong>Traction Type</strong></li>
+                                    </ul>
+                                    <h2 id="best-practice">Best Practices</h2>
+                                    <ul>
+                                        <li>Always display KPIs with <strong>Definition</strong> (tooltip or legend) to
+                                            avoid misunderstandings.</li>
+                                        <li>Use <strong>Median</strong> and <strong>Percentiles</strong> for
+                                            time-related KPIs; display outliers separately.</li>
+                                        <li><strong>Report conflict classes separately</strong> (Compatibility, Block,
+                                            Slot) to derive measures.</li>
+                                        <li><strong>Reconcile Signaling vs. Order</strong>: In case of deviation, the
+                                            reported signaling dominates; check contradictory orders.</li>
+                                    </ul>
+                                    <h2 id="export">Export &amp; Documentation</h2>
+                                    <p>Use the functions from <a
+                                            href="../../../../04_Betriebssteuerung_und_Disposition/0405_Dispositionsstatistiken/040502_Statistiken_exportieren.htm"
+                                            class="MCXref xref">Export Statistics</a> to secure KPI data (CSV/Excel) for
+                                        audits or further analyses.</p>
+                                    <h2 id="siehe-auch">See also</h2>
+                                    <ul>
+                                        <li><a href="../050402_Kuppelauftraege/050402_Kuppelauftraege.htm"
+                                                class="MCXref xref">Coupling Orders</a></li>
+                                        <li><a href="../050402_Kuppelauftraege/05040201_Dialog_Kuppelauftrag.htm"
+                                                class="MCXref xref">“Coupling Order” Dialog</a></li>
+                                        <li><a href="../050401_Grundlagen_Kuppeln_Trennen/050401_Kuppeln_Trennen.htm"
+                                                class="MCXref xref">Couple &amp; Decouple</a></li>
+                                        <li><a href="../../../04_Betriebssteuerung_und_Disposition/0405_Dispositionsstatistiken/040501_Statistiken_erstellen.htm"
+                                                class="MCXref xref">Create Statistics</a></li>
+                                        <li><a href="../../../04_Betriebssteuerung_und_Disposition/0406_Bereichskalender/040601_Kalender_Umlauf.htm"
+                                                class="MCXref xref">Calendar: Blocks</a></li>
+                                    </ul><!-- Metadaten / Platzhalter -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><a data-close="true"></a>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

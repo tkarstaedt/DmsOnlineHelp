@@ -1,214 +1,317 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="de" xml:lang="de" class="_Skins_Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="utf-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Dispositive Sicht zur Planung der Stellplatzbelegung mit Umläufen: Szenarien je Ausrückphase, zulässige Fahrzeugtypen je Kursaufstellplatz, Workflows und Kopplung zur Umlaufdisposition." /><title>Kursaufstellplan</title>
-        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../Resources/Branding/Branding.css" rel="stylesheet" type="text/css" />
-        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
-        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
-        </script>
-        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
-        </script>
-    </head>
-    <body>
-        <div class="foundation-wrap off-canvas-wrapper">
-            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
-                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
-                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Zurück" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
-                    </ul>
-                </aside>
-                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
-                    <div data-sticky-container="" class="title-bar-container">
-                        <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Zu Hauptinhalt springen</a>
-                            <div class="middle title-bar-section outer-row clearfix">
-                                <div class="menu-icon-container relative clearfix">
-                                    <div class="central-account-wrapper">
-                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Konto</span></a>
-                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Einstellungen</a>
-                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="menu-icon" aria-label="Navigationsbereich anzeigen" data-toggle="offCanvas"><span></span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="title-bar-layout outer-row">
-                                <div class="logo-wrapper"><a class="logo" href="../../0000_Einleitung.htm" alt="Logo"></a>
-                                </div>
-                                <div class="navigation-wrapper nocontent">
-                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
-                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
-                                        </li>
-                                    </ul>
-                                </div>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:space="preserve" lang="en" xml:lang="en"
+    class="_Skins_Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml"
+    data-mc-path-to-help-system="../../../" data-mc-has-content-body="True"
+    data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2"
+    data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description"
+        content="Dispatching view for planning the stabling position assignment with blocks: scenarios per pull-out phase, permissible vehicle types per duty lineup position, workflows, and coupling to block dispatching." />
+    <title>Duty Lineup Plan</title>
+    <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+    <link href="../../Resources/Branding/Branding.css" rel="stylesheet" type="text/css" />
+    <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript"></script>
+    <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer"></script>
+    <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer"></script>
+    <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer"></script>
+    <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer"></script>
+    <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer"></script>
+    <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer"></script>
+</head>
+
+<body>
+    <div class="foundation-wrap off-canvas-wrapper">
+        <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+            <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas=""
+                data-position="right" data-mc-ignore="true">
+                <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu=""
+                    data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent"
+                    data-mc-css-tree-node-collapsed="is-accordion-submenu-parent"
+                    data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False"
+                    data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False"
+                    data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu"
+                    data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True"></ul>
+            </aside>
+            <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                <div data-sticky-container="" class="title-bar-container">
+                    <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky=""
+                        data-options="marginTop:0" style="width:100%"
+                        data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a
+                            class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                        <div class="middle title-bar-section outer-row clearfix">
+                            <div class="menu-icon-container relative clearfix">
                                 <div class="central-account-wrapper">
-                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Konto</span></a>
-                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Einstellungen</a>
-                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                    <div class="central-dropdown"><a class="central-account-drop"><span
+                                                class="central-account-image"></span><span
+                                                class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a
+                                                class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a
+                                                class="MCCentralLink central-dropdown-content-logout">Logout</a>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="nav-search-wrapper">
-                                    <div class="nav-search row">
-                                        <form class="search" action="#">
-                                            <div class="search-bar search-bar-container needs-pie">
-                                                <input class="search-field needs-pie" type="search" aria-label="Suchfeld" placeholder="Suchen" />
-                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter:</span>
-                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Suchfilter" title="Alle Dateien" role="button" tabindex="0">
-                                                    </div>
-                                                    <div class="search-filter-content" id="sf-content">
-                                                        <ul>
-                                                            <li>
-                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">Alle Dateien</span>
-                                                                </button>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="search-submit-wrapper" dir="ltr">
-                                                    <div class="search-submit" title="Suchen" role="button" tabindex="0"><span class="invisible-label">Suche absenden</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
+                                </div><button class="menu-icon" aria-label="Show Navigation Panel"
+                                    data-toggle="offCanvas"><span></span></button>
+                            </div>
+                        </div>
+                        <div class="title-bar-layout outer-row">
+                            <div class="logo-wrapper"><a class="logo" href="../../0000_Einleitung.htm" alt="Logo"></a>
+                            </div>
+                            <div class="navigation-wrapper nocontent">
+                                <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children"
+                                    data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter"
+                                    data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False"
+                                    data-mc-include-indicator="False" data-mc-include-children="True"
+                                    data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                    <li class="placeholder" style="visibility:hidden"><a>placeholder</a></li>
+                                </ul>
+                            </div>
+                            <div class="central-account-wrapper">
+                                <div class="central-dropdown"><a class="central-account-drop"><span
+                                            class="central-account-image"></span><span
+                                            class="central-account-text">Account</span></a>
+                                    <div class="central-dropdown-content"><a
+                                            class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                        <hr class="central-separator" /><a
+                                            class="MCCentralLink central-dropdown-content-logout">Logout</a>
                                     </div>
                                 </div>
                             </div>
-                        </nav>
-                    </div>
-                    <div class="main-section">
-                        <div class="row outer-row sidenav-layout">
-                            <nav class="sidenav-wrapper">
-                                <div class="sidenav-container">
-                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
-                                    </ul>
-                                </div>
-                            </nav>
-                            <div class="body-container">
-                                <div data-mc-content-body="True">
-                                    <div class="nocontent">
-                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Sie sind hier:</span>
+                            <div class="nav-search-wrapper">
+                                <div class="nav-search row">
+                                    <form class="search" action="#">
+                                        <div class="search-bar search-bar-container needs-pie"><input
+                                                class="search-field needs-pie" type="search" aria-label="Search Field"
+                                                placeholder="Search" />
+                                            <div class="search-filter-wrapper"><span class="invisible-label"
+                                                    id="search-filters-label">Filter: </span>
+                                                <div class="search-filter" aria-haspopup="true"
+                                                    aria-controls="sf-content" aria-expanded="false"
+                                                    aria-label="Search Filter" title="All Files" role="button"
+                                                    tabindex="0"></div>
+                                                <div class="search-filter-content" id="sf-content">
+                                                    <ul>
+                                                        <li><button class="mc-dropdown-item"
+                                                                aria-labelledby="search-filters-label filterSelectorLabel-00001"><span
+                                                                    id="filterSelectorLabel-00001">All
+                                                                    Files</span></button></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="search-submit-wrapper" dir="ltr">
+                                                <div class="search-submit" title="Search" role="button" tabindex="0">
+                                                    <span class="invisible-label">Submit Search</span></div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div role="main" id="mc-main-content">
-                                        <h1 id="titel">Dialog „Kursaufstellplan“ </h1>
-                                        <p class="mc-shortdesc">Planen Sie die Stellplatzbelegung mit Umläufen pro Ausrückphase und definieren Sie zulässige Fahrzeugtypen je Kursaufstellplatz. Verwenden Sie Szenarien zur Variantenbildung und Freigabe für den operativen Einsatz.</p>
-                                        <h2>Überblick</h2>
-                                        <p>Der <strong>Kursaufstellplan</strong> ist die dispositive Sicht für die Planung der Stellplatzbelegung mit Umläufen im Depot. Er dient als Grundlage für <strong>Szenarien je Ausrückphase</strong> und legt die <strong>zulässigen Fahrzeugtypen je Kursaufstellplatz</strong> fest. Die Planung ist unabhängig vom Kalendertag; Änderungen wirken auf die daraus erzeugten operativen Pläne der betreffenden Tagesart.</p>
-                                        <h2>Aufruf und Filter</h2>
-                                        <ul>
-                                            <li>Symbolleiste <em>Dialog</em> &#160;→&#160; <strong>Kursaufstellplan</strong></li>
-                                            <li>Menü <em>Bearbeiten</em> &#160;→&#160; <strong>Kursaufstellplan</strong></li>
-                                            <li>Filterzeile: <strong>Betriebshof</strong>, <strong>BMS&#8209;Tagesart</strong>, <strong>Ausrückphase</strong> sowie ggf. <strong>Szenario</strong> wählen.</li>
-                                        </ul>
-                                        <h2>Bestandteile und Begriffe</h2>
-                                        <ul>
-                                            <li><strong>Ausrückphase</strong>: Unterteilung der Tagesart; pro Ausrückphase wird je Stellplatz maximal ein Umlauf geplant.</li>
-                                            <li><strong>Szenario</strong>: Variantenstand des Kursaufstellplans für Betriebshof, Tagesart und Ausrückphase; Lebenszyklus <em>Entwurf</em> &#160;→&#160; <em>Prüfung</em> &#160;→&#160; <em>Freigabe</em>. Pro Tripel <em>Betriebshof/Tagesart/Ausrückphase</em> ist genau ein Szenario freigegeben.</li>
-                                            <li><strong>Kursaufstellplatz</strong>: Verknüpfung von Umlauf und Stellplatz (Spur) mit Regeln zu <em>zulässigen Fahrzeugtypen</em> und <em>Prioritäten</em>.</li>
-                                        </ul>
-                                        <h2>Szenarien erstellen und verwalten</h2>
-                                        <ul>
-                                            <li><strong>Neu</strong>: Szenario erzeugen (leer oder Kopie) für gewählten Betriebshof/Tagesart/Ausrückphase.</li>
-                                            <li><strong>Automatisch belegen</strong>: weist nicht disponierten Umläufen Stellplätze zu.</li>
-                                            <li><strong>Prüfen</strong>: Konsistenz/Plausibilität, Kennzeichnung mit Symbolen <em>erfolgreich</em>/<em>Fehler</em>.</li>
-                                            <li><strong>Freigeben</strong>: fehlerfreie Belegung freigeben; das freigegebene Szenario ist Vorlage für den operativen Kursaufstellplan.</li>
-                                            <li><strong>Anordnen</strong>: Umläufe innerhalb der Spuren nach Zeit/Reihenfolge platzieren (links/rechts) mit projektiertem Minimalabstand.</li>
-                                            <li><strong>Alle zurücksetzen</strong>: entfernt Stellplätze aller Umläufe im Szenario; Umläufe erscheinen wieder in der Umlaufliste.</li>
-                                            <li><strong>Seite einrichten/Drucken</strong>: Druckeinstellungen und Ausgabe des Kursaufstellplans.</li>
-                                        </ul>
-                                        <h2>Umlaufliste im Kursaufstellplan</h2>
-                                        <p>Die Umlaufliste enthält für die gewählte Ausrückphase die Umlaufkopien (Nummer, Linie/Kurs, Typmuster, zulässige Fahrzeugtypen, planmäßige Ausrückzeit). Fahrplanänderungen wirken nicht rückwirkend auf bestehende Szenarien; erstellen Sie bei Bedarf ein neues Szenario auf Basis der geänderten Fahrplandaten.</p>
-                                        <h2>Spurenschema</h2>
-                                        <ul>
-                                            <li>Angezeigt werden nur Spuren, die für den Zeitraum der Ausrückphase die Nutzungsart <em>Umlauf</em> aufweisen.</li>
-                                            <li>Spurlängen werden maßstabsgetreu dargestellt (projektiert pro Betriebshof).</li>
-                                            <li>Tooltips informieren über Nutzungsart, zulässige Fahrzeugtypen und Spurdetails; Anzeige per Kontextmenü ein/aus.</li>
-                                            <li>Zuordnung ist zulässig, wenn <strong>Nutzungsart = Umlauf</strong> und <strong>Schnittmenge zulässiger Fahrzeugtypen</strong> gegeben ist.</li>
-                                        </ul>
-                                        <h2>Stellplatzbelegung durchführen</h2>
-                                        <ol>
-                                            <li value="1">Dialog <strong>Kursaufstellplan</strong> öffnen und <strong>Betriebshof</strong>, <strong>Tagesart</strong>, <strong>Ausrückphase</strong> sowie <strong>Szenario</strong> wählen.</li>
-                                            <li value="2">Umlauf(e) in der <strong>Umlaufliste</strong> markieren.</li>
-                                            <li value="3">Per <strong>Drag&#8209;and&#8209;Drop</strong> in die gewünschte Spur ziehen; das Ablagesymbol zeigt die Platzierbarkeit am linken Rand.</li>
-                                            <li value="4">Umläufe innerhalb/zwischen Spuren verschieben und per <strong>Anordnen</strong> automatisch sortieren (nach Zeit/Reihenfolge, links/rechts).</li>
-                                            <li value="5">Achtungssymbol auf Umlaufkachel weist auf Typinkonsistenzen hin (z.&#160;B. nicht zugelassene Fahrzeugtypen).</li>
-                                        </ol>
-                                        <h2>Disposition und Automatisierung</h2>
-                                        <p>Der Kursaufstellplan ist eng mit der <strong>Umlaufdisposition</strong> gekoppelt. In der <em>freien Aufstellung</em> können Umläufe automatisch auf verfügbare Stellplätze und geeignete Fahrzeuge verteilt werden.</p>
-                                        <h2>Validierung</h2>
-                                        <p>Mit <strong>Kursaufstellplan validieren</strong> vergleichen Sie die im Kursaufstellplan hinterlegte Fahrplanversion mit dem Fahrplan eines frei wählbaren Betriebstags. Differenzen werden zusammengefasst und zeilenweise ausgegeben.</p>
-                                        <h2>Sonderfahrten</h2>
-                                        <p><strong>Sonderfahrten</strong> sind im Kursaufstellplan nicht enthalten. Ihre Stellplatzbelegung erfolgt im operativen Kursaufstellplan automatisch durch die Disposition oder manuell aus der Umlaufliste.</p>
-                                        <h2 data-mc-conditions="Customers.SSB">SSB&#160;–&#160;Hinweise</h2>
-                                        <ul data-mc-conditions="Customers.SSB">
-                                            <li>Erstellung basiert auf temporärem Abgleich von DIVA&#160;–&#160; und BMS&#8209;Kalender (Tagesarten); Vorschauzeitraum für DIVA ist projektierbar.</li>
-                                            <li>Pro Tripel <em>Betriebshof/Tagesart/Ausrückphase</em> wird genau ein Szenario freigegeben; Freigabe kennzeichnet das Szenario für die operative Erzeugung.</li>
-                                        </ul>
-                                        <h2>Abbildungen</h2>
-                                        <figure class="Figure" id="fig_kap_overview">
-                                            <img src="../../Resources/Images/Kursaufstellplan_Uebersicht.png" alt="Kursaufstellplan mit Umläufen je Ausrückphase und konfigurierten Kursaufstellplätzen." />
-                                            <figcaption>Kursaufstellplan &#160;–&#160; Übersicht über Umläufe, Ausrückphasen und Kursaufstellplätze.</figcaption>
-                                        </figure>
-                                        <figure class="Figure" id="fig_kap_places">
-                                            <img src="../../Resources/Images/Dialog-Kursaufstellplatz-Fahrzeugtypen.png" alt="Dialog zur Pflege zulässiger Fahrzeugtypen und Prioritäten je Kursaufstellplatz." />
-                                            <figcaption>Kursaufstellplatz konfigurieren &#160;–&#160; zulässige Fahrzeugtypen und Prioritäten.</figcaption>
-                                        </figure>
-                                        <figure class="Figure" id="fig_kap_belegung">
-                                            <img src="media_Benutzerhandbuch/media/image257.png" alt="Stellplatzbelegung per Drag-and-Drop im Kursaufstellplan mit Platzierhinweis." />
-                                            <figcaption>Stellplatzbelegung durchführen &#160;–&#160; Drag&#8209;and&#8209;Drop und Platzierhinweis.</figcaption>
-                                        </figure>
-                                        <figure class="Figure" id="fig_kap_dialog">
-                                            <img src="media_Benutzerhandbuch/media/image250.png" alt="Dialog Kursaufstellplan mit Menüzeile, Filter, Szenarioauswahl, Umlaufliste und Spurschema." />
-                                            <figcaption>Dialogbereiche im Kursaufstellplan &#160;–&#160; Menü, Filter und Spurschema.</figcaption>
-                                        </figure>
-                                        <h2>Siehe auch</h2>
-                                        <ul>
-                                            <li><a href="040202_Operativer_Kursaufstellplan.htm" class="MCXref xref" xrefformat="{para}">Operativer Kursaufstellplan</a>
-                                            </li>
-                                            <li><a href="040204_Kursaufstellplatz_bearbeiten.htm" class="MCXref xref" xrefformat="{para}">Dialog „Kursaufstellplatz“ - Kursaufstellplatz bearbeiten</a>
-                                            </li>
-                                            <li><a href="040205_Kursaufstellplan_validieren.htm" class="MCXref xref" xrefformat="{para}">Kursaufstellplan validieren</a>
-                                            </li>
-                                            <li><a href="040203_Aufstellplan.htm" class="MCXref xref" xrefformat="{para}">Grafische Sicht „Aufstellplan“</a>
-                                            </li>
-                                            <li><a href="../../03_Stammdaten_Verwaltung/0301_Fahrzeugmanagement/030104_Fahrzeugtypmuster/030104_Fahrzeugtypmuster.htm" class="MCXref xref" xrefformat="{para}">Fahrzeugtypmuster</a>
-                                            </li>
-                                            <li><a href="../0403_Fahrzeugdisposition/040300_Fahrzeugdisposition_INTRO.htm" class="MCXref xref" xrefformat="{para}">Fahrzeugdisposition &#160;–&#160; Einführung</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
-                    </div><a data-close="true"></a>
+                    </nav>
                 </div>
+                <div class="main-section">
+                    <div class="row outer-row sidenav-layout">
+                        <nav class="sidenav-wrapper">
+                            <div class="sidenav-container">
+                                <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu=""
+                                    data-mc-css-tree-node-expanded="is-accordion-submenu-parent"
+                                    data-mc-css-tree-node-collapsed="is-accordion-submenu-parent"
+                                    data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested"
+                                    data-mc-include-indicator="False" data-mc-include-icon="False"
+                                    data-mc-include-parent-link="False" data-mc-include-back="False"
+                                    data-mc-defer-expand-event="True"
+                                    data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu"
+                                    data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True"
+                                    data-mc-side-nav-menu="True"></ul>
+                            </div>
+                        </nav>
+                        <div class="body-container">
+                            <div data-mc-content-body="True">
+                                <div class="nocontent">
+                                    <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation"
+                                        aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; "
+                                        data-mc-breadcrumbs-count="3" data-mc-toc="True"><span
+                                            class="MCBreadcrumbsPrefix">You are here: </span></div>
+                                </div>
+                                <div role="main" id="mc-main-content">
+                                    <h1 id="titel">"Duty Lineup Plan" Dialog </h1>
+                                    <p class="mc-shortdesc">Plan the stabling position assignment with blocks per
+                                        pull-out phase and define permissible vehicle types je duty lineup position. Use
+                                        scenarios to create variants and release them for operational use.</p>
+                                    <h2>Overview</h2>
+                                    <p>Der <strong>Duty Lineup Plan</strong> is the dispatching view for planning the
+                                        stabling position assignment with blocks in the depot. It serves as the basis
+                                        for <strong>scenarios per pull-out phase</strong> and defines the
+                                        <strong>permissible vehicle types per duty lineup position</strong>. Planning is
+                                        independent of the calendar day; changes affect the resulting operational plans
+                                        for the relevant day type.</p>
+                                    <h2>Call and Filter</h2>
+                                    <ul>
+                                        <li>Symbolleiste <em>Dialog</em> &#160;→&#160; <strong>Duty Lineup Plan</strong>
+                                        </li>
+                                        <li>Menü <em>Bearbeiten</em> &#160;→&#160; <strong>Duty Lineup Plan</strong>
+                                        </li>
+                                        <li>Filterzeile: <strong>depot</strong>, <strong>BMS&#8209;Tagesart</strong>,
+                                            <strong>pull-out phase</strong> as well as, if necessary,
+                                            <strong>scenario</strong> wählen.</li>
+                                    </ul>
+                                    <h2>Components and Terms</h2>
+                                    <ul>
+                                        <li><strong>pull-out phase</strong>: Subdivision of the day type; a maximum of
+                                            one block is planned per stabling position per pull-out phase.</li>
+                                        <li><strong>Scenario</strong>: Variant status of the duty lineup plan for depot,
+                                            day type, and pull-out phase; lifecycle <em>Entwurf</em> &#160;→&#160;
+                                            <em>Prüfung</em> &#160;→&#160; <em>Freigabe</em>. Exactly one scenario is
+                                            released per triple <em>depot/day type/pull-out phase</em>.</li>
+                                        <li><strong>duty lineup position</strong>: Link between block and stabling
+                                            position (track) with rules for <em>permissible vehicle types</em> and
+                                            <em>Priorities</em>.</li>
+                                    </ul>
+                                    <h2>Create and Manage Scenarios</h2>
+                                    <ul>
+                                        <li><strong>New</strong>: Create scenario (empty or copy) for the selected
+                                            depot/day type/pull-out phase.</li>
+                                        <li><strong>Automatically assign</strong>: assigns stabling positions to blocks
+                                            that have not been dispatched.</li>
+                                        <li><strong>Prüfen</strong>: Consistency/plausibility check, marked with symbols
+                                            <em>erfolgreich</em>/<em>Fehler</em>.</li>
+                                        <li><strong>Freigeben</strong>: release error-free assignment; the released
+                                            scenario is the template for the operational duty lineup plan.</li>
+                                        <li><strong>Anordnen</strong>: place blocks within the tracks by time/sequence
+                                            (links/rechts) with a projected minimum distance.</li>
+                                        <li><strong>Alle zurücksetzen</strong>: removes stabling positions of all blocks
+                                            in the scenario; blocks reappear in the block list.</li>
+                                        <li><strong>Seite einrichten/Drucken</strong>: Print settings and output of the
+                                            duty lineup plan.</li>
+                                    </ul>
+                                    <h2>Block List in the Duty Lineup Plan</h2>
+                                    <p>The block list contains the block copies for the selected pull-out phase (Nummer,
+                                        Linie/Kurs, Vehicle Type Pattern, permissible vehicle types, planmäßige pull-out
+                                        time). Fahrplanänderungen do not retroactively affect existing scenarios; if
+                                        necessary, create a new scenario based on the changed Fahrplandaten.</p>
+                                    <h2>Track Scheme</h2>
+                                    <ul>
+                                        <li>Only tracks that have the usage type <em>block</em> for the period of the
+                                            pull-out phase are displayed.</li>
+                                        <li>Track lengths are shown to scale (projected per depot).</li>
+                                        <li>Tooltips inform about usage type, permissible vehicle types, and track
+                                            details; display per Kontextmenü ein/aus.</li>
+                                        <li>Assignment is permissible if <strong>Nutzungsart = block</strong> and
+                                            <strong>intersection of permissible vehicle types</strong> is given.</li>
+                                    </ul>
+                                    <h2>Perform Stabling Position Assignment</h2>
+                                    <ol>
+                                        <li value="1">Dialog <strong>Duty Lineup Plan</strong> öffnen and select
+                                            <strong>depot</strong>, <strong>Tagesart</strong>, <strong>pull-out
+                                                phase</strong> as well as <strong>scenario</strong>.</li>
+                                        <li value="2">Mark block(s) in the <strong>block list</strong>.</li>
+                                        <li value="3">Per <strong>Drag&#8209;and&#8209;Drop</strong> into the desired
+                                            Spur ziehen; the Ablagesymbol shows the placement possibility at the linken
+                                            Rand.</li>
+                                        <li value="4">Move blocks within/between tracks and automatically sort them per
+                                            <strong>Anordnen</strong> (by time/sequence, links/rechts).</li>
+                                        <li value="5">Achtungssymbol on block tile weist auf Typinkonsistenzen hin
+                                            (z.&#160;B. not approved vehicle types).</li>
+                                    </ol>
+                                    <h2>Dispatching and Automation</h2>
+                                    <p>The duty lineup plan is closely coupled with the <strong>block
+                                            dispatching</strong>. In the <em>freien Aufstellung</em>, blocks can be
+                                        automatically distributed to available stabling positions and suitable vehicles.
+                                    </p>
+                                    <h2>Validation</h2>
+                                    <p>With <strong>Validate Duty Lineup Plan</strong>, you compare the Fahrplanversion
+                                        stored in the duty lineup plan with the Fahrplan eines freely selectable
+                                        operating day. Differences are summarized and displayed line by line.</p>
+                                    <h2>Special Services</h2>
+                                    <p><strong>Special services</strong> are not included in the duty lineup plan. Their
+                                        stabling position assignment takes place in the operational duty lineup plan
+                                        automatically by the block dispatching or manually from the block list.</p>
+                                    <h2 data-mc-conditions="Customers.SSB">SSB&#160;–&#160;Notes</h2>
+                                    <ul data-mc-conditions="Customers.SSB">
+                                        <li>Creation is based on temporary Abgleich von DIVA&#160;–&#160; and
+                                            BMS&#8209;Kalender (Tagesarten); Vorschauzeitraum für DIVA is projectable.
+                                        </li>
+                                        <li>Per Tripel <em>depot/Tagesart/pull-out phase</em> wird exactly one scenario
+                                            is released; Freigabe kennzeichnet das scenario for the operative Erzeugung.
+                                        </li>
+                                    </ul>
+                                    <h2>Figures</h2>
+                                    <figure class="Figure" id="fig_kap_overview"><img
+                                            src="../../Resources/Images/Kursaufstellplan_Uebersicht.png"
+                                            alt="Duty Lineup Plan with blocks per pull-out phase and configured duty lineup positions." />
+                                        <figcaption>Duty Lineup Plan &#160;–&#160; Overview über blocks, pull-out
+                                            phases, and duty lineup positions.</figcaption>
+                                    </figure>
+                                    <figure class="Figure" id="fig_kap_places"><img
+                                            src="../../Resources/Images/Dialog-Kursaufstellplatz-Fahrzeugtypen.png"
+                                            alt="Dialog zur Pflege zulässiger Fahrzeugtypen und Prioritäten je duty lineup position." />
+                                        <figcaption>Configure duty lineup position &#160;–&#160; permissible vehicle
+                                            types and Prioritäten.</figcaption>
+                                    </figure>
+                                    <figure class="Figure" id="fig_kap_belegung"><img
+                                            src="media_Benutzerhandbuch/media/image257.png"
+                                            alt="Stabling position assignment per Drag-and-Drop im Duty Lineup Plan mit placement hint." />
+                                        <figcaption>Perform Stabling Position Assignment &#160;–&#160;
+                                            Drag&#8209;and&#8209;Drop and placement hint.</figcaption>
+                                    </figure>
+                                    <figure class="Figure" id="fig_kap_dialog"><img
+                                            src="media_Benutzerhandbuch/media/image250.png"
+                                            alt="Dialog Duty Lineup Plan with Menüzeile, Filter, Szenarioauswahl, block list and Spurschema." />
+                                        <figcaption>Dialog Areas im Duty Lineup Plan &#160;–&#160; Menü, Filter and
+                                            Spurschema.</figcaption>
+                                    </figure>
+                                    <h2>Related Topics</h2>
+                                    <ul>
+                                        <li><a href="040202_Operativer_Kursaufstellplan.htm" class="MCXref xref"
+                                                xrefformat="{para}">Operational Duty Lineup Plan</a></li>
+                                        <li><a href="040204_Kursaufstellplatz_bearbeiten.htm" class="MCXref xref"
+                                                xrefformat="{para}">Dialog "Duty Lineup Position" - Edit Duty Lineup
+                                                Position</a></li>
+                                        <li><a href="040205_Kursaufstellplan_validieren.htm" class="MCXref xref"
+                                                xrefformat="{para}">Validate Duty Lineup Plan</a></li>
+                                        <li><a href="040203_Aufstellplan.htm" class="MCXref xref"
+                                                xrefformat="{para}">Graphical View "Stabling Lineup Plan"</a></li>
+                                        <li><a href="../../03_Stammdaten_Verwaltung/0301_Fahrzeugmanagement/030104_Fahrzeugtypmuster/030104_Fahrzeugtypmuster.htm"
+                                                class="MCXref xref" xrefformat="{para}">Vehicle type patterns</a></li>
+                                        <li><a href="../0403_Fahrzeugdisposition/040300_Fahrzeugdisposition_INTRO.htm"
+                                                class="MCXref xref" xrefformat="{para}">Vehicle Dispatching –
+                                                Introduction</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><a data-close="true"></a>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

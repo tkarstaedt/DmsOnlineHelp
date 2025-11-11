@@ -1,799 +1,1093 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="de" xml:lang="de" class="_Skins_Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="utf-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Konzeptionelle Grundlagen des Störungsmanagements: Störungsgrade, Zustandsmodell, Störungsbaum und Leistungsmerkmale. Detaillierte Erklärung der Kategorisierung und Auswirkungen auf die Disposition." /><title>Störungskonzept – Grundlagen</title>
-        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../Resources/Branding/Branding.css" rel="stylesheet" type="text/css" />
-        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
-        <link href="../../Resources/TableStyles/Alternate-Row-Color.css" rel="stylesheet" data-mc-stylesheet-type="table" />
-        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
-        </script>
-        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
-        </script>
-    </head>
-    <body>
-        <div class="foundation-wrap off-canvas-wrapper">
-            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
-                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
-                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Zurück" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
-                    </ul>
-                </aside>
-                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
-                    <div data-sticky-container="" class="title-bar-container">
-                        <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Zu Hauptinhalt springen</a>
-                            <div class="middle title-bar-section outer-row clearfix">
-                                <div class="menu-icon-container relative clearfix">
-                                    <div class="central-account-wrapper">
-                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Konto</span></a>
-                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Einstellungen</a>
-                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="menu-icon" aria-label="Navigationsbereich anzeigen" data-toggle="offCanvas"><span></span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="title-bar-layout outer-row">
-                                <div class="logo-wrapper"><a class="logo" href="../../0000_Einleitung.htm" alt="Logo"></a>
-                                </div>
-                                <div class="navigation-wrapper nocontent">
-                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
-                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="central-account-wrapper">
-                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Konto</span></a>
-                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Einstellungen</a>
-                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="nav-search-wrapper">
-                                    <div class="nav-search row">
-                                        <form class="search" action="#">
-                                            <div class="search-bar search-bar-container needs-pie">
-                                                <input class="search-field needs-pie" type="search" aria-label="Suchfeld" placeholder="Suchen" />
-                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter:</span>
-                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Suchfilter" title="Alle Dateien" role="button" tabindex="0">
-                                                    </div>
-                                                    <div class="search-filter-content" id="sf-content">
-                                                        <ul>
-                                                            <li>
-                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">Alle Dateien</span>
-                                                                </button>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="search-submit-wrapper" dir="ltr">
-                                                    <div class="search-submit" title="Suchen" role="button" tabindex="0"><span class="invisible-label">Suche absenden</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </nav>
-                    </div>
-                    <div class="main-section">
-                        <div class="row outer-row sidenav-layout">
-                            <nav class="sidenav-wrapper">
-                                <div class="sidenav-container">
-                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
-                                    </ul>
-                                </div>
-                            </nav>
-                            <div class="body-container">
-                                <div data-mc-content-body="True">
-                                    <div class="nocontent">
-                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Sie sind hier:</span>
-                                        </div>
-                                    </div>
-                                    <div role="main" id="mc-main-content">
-                                        <h1 id="titel">Störungskonzept – Grundlagen</h1>
-                                        <p class="mc-shortdesc">Das Störungsmanagement in PEAK.DMS erfasst, kategorisiert und bewertet Fahrzeugdefekte über ein strukturiertes System aus Störungsgraden, Zuständen, Störungsbaum und Leistungsmerkmalen.</p>
-                                        <h2>Überblick</h2>
-                                        <p>Das Störungskonzept in PEAK.DMS umfasst vier zentrale Komponenten:</p>
-                                        <ul>
-                                            <li><strong>Störungsgrade (A–E):</strong> Bewerten die betriebliche Einsatzfähigkeit des Fahrzeugs</li>
-                                            <li><strong>Störungszustände:</strong> Steuern den Bearbeitungsworkflow von der Meldung bis zur Behebung</li>
-                                            <li><strong>Störungsbaum:</strong> Strukturiert die Kategorisierung über Kategorie / System / Komponente</li>
-                                            <li><strong>Leistungsmerkmale:</strong> Definieren negierte Ausstattungsmerkmale und deren Auswirkung auf die Disposition</li>
-                                        </ul>
-                                        <p>Zusammen bilden diese Komponenten ein vollständiges System zur Erfassung, Bewertung und dispositiven Integration von Fahrzeugstörungen.</p>
-                                        <!-- STÖRUNGSGRADE -->
-                                        <h2 id="stoerungsgrade">Störungsgrade</h2>
-                                        <p>Der <strong>Störungsgrad</strong> bewertet die betriebliche Einsatzfähigkeit eines Fahrzeugs. Er steuert die Verfügbarkeit in der Disposition und ist entscheidend für die automatische und manuelle Umlaufplanung.</p>
-                                        <h3>Übersicht der Störungsgrade</h3>
-                                        <p>PEAK.DMS unterscheidet fünf Störungsgrade von A (keine Einschränkung) bis E (nicht einsatzfähig):</p>
-                                        <table class="TableStyle-Alternate-Row-Color" style="mc-table-style: url('../../Resources/TableStyles/Alternate-Row-Color.css');" cellspacing="21" data-mc-table-style="Alternate Row Color">
-                                            <thead>
-                                                <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Grad</th>
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Bezeichnung</th>
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Einsatzfähigkeit</th>
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Dispositive Wirkung</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>A</strong>
-                                                    </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Keine Einschränkung</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Voll einsatzfähig</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Fahrzeug ohne Einschränkung disponierbar</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>B</strong>
-                                                    </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Geringfügige Einschränkung</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Einsatzfähig mit leichten Einschränkungen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Fahrzeug disponierbar, ggf. mit Hinweis an Fahrer</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>C</strong>
-                                                    </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Eingeschränkt einsatzfähig</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Eingeschränkt einsatzfähig</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Fahrzeug eingeschränkt disponierbar (z.&#160;B. nur für bestimmte Linien/Umläufe)</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>D</strong>
-                                                    </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Bedingt einsatzfähig</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Nur in Notfällen einsetzbar</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Fahrzeug für automatische Disposition gesperrt, nur manuelle Zuweisung in Ausnahmefällen</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1"><strong>E</strong>
-                                                    </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Nicht einsatzfähig</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Nicht einsatzfähig</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Fahrzeug vollständig gesperrt, keine Disposition möglich</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <h3>Detaillierte Beschreibung der Störungsgrade</h3>
-                                        <h4>Störungsgrad A – Keine Einschränkung</h4>
-                                        <p><strong>Einsatzfähigkeit:</strong> Das Fahrzeug ist voll einsatzfähig und kann ohne Einschränkungen disponiert werden.</p>
-                                        <p><strong>Typische Störungen:</strong>
-                                        </p>
-                                        <ul>
-                                            <li>Optische Mängel ohne Auswirkung auf den Betrieb (z.&#160;B. Kratzer, Lackschäden)</li>
-                                            <li>Geringfügige Verschmutzungen</li>
-                                            <li>Nicht sicherheitsrelevante Kleinschäden</li>
-                                        </ul>
-                                        <p><strong>Dispositive Wirkung:</strong> Keine. Das Fahrzeug steht uneingeschränkt zur Verfügung.</p>
-                                        <h4>Störungsgrad B – Geringfügige Einschränkung</h4>
-                                        <p><strong>Einsatzfähigkeit:</strong> Das Fahrzeug ist einsatzfähig, die Störung sollte jedoch zeitnah behoben werden.</p>
-                                        <p><strong>Typische Störungen:</strong>
-                                        </p>
-                                        <ul>
-                                            <li>Defekte Innenbeleuchtung (einzelne Leuchten)</li>
-                                            <li>Ausgefallene Fahrgastinformation (einzelne Anzeigen)</li>
-                                            <li>Geringfügige Fahrkomforteinschränkungen</li>
-                                            <li>Warnleuchten ohne unmittelbare Betriebsauswirkung</li>
-                                        </ul>
-                                        <p><strong>Dispositive Wirkung:</strong> Das Fahrzeug wird normal disponiert. Optional kann ein Hinweis an den Fahrer ausgegeben werden (projektspezifisch).</p>
-                                        <h4>Störungsgrad C – Eingeschränkt einsatzfähig</h4>
-                                        <p><strong>Einsatzfähigkeit:</strong> Das Fahrzeug ist mit Einschränkungen einsetzbar. Der Einsatz ist ggf. auf bestimmte Linien oder Umläufe beschränkt.</p>
-                                        <p><strong>Typische Störungen:</strong>
-                                        </p>
-                                        <ul>
-                                            <li>Ausfall der Klimaanlage (je nach Jahreszeit und Projekt unterschiedlich bewertet)</li>
-                                            <li>Eingeschränkte Türfunktion (z.&#160;B. eine Tür ausgefallen)</li>
-                                            <li>Reduzierte Sitzplatzkapazität</li>
-                                            <li>Defekte Rampe/Hubeinrichtung (Fahrzeug nicht barrierefrei)</li>
-                                            <li>Defektes Fahrgast-WLAN</li>
-                                        </ul>
-                                        <p><strong>Dispositive Wirkung:</strong>
-                                        </p>
-                                        <ul>
-                                            <li>Fahrzeug wird als <em>Ersatz-Fahrzeugtyp</em> behandelt (z.&#160;B. „Bus ohne Klimaanlage")</li>
-                                            <li>Eingeschränkte Verfügbarkeit in der automatischen Disposition</li>
-                                            <li>Manuelle Disposition unter Berücksichtigung der Einschränkung möglich</li>
-                                            <li>Negierung von Leistungsmerkmalen wird wirksam (siehe <a href="#leistungsmerkmale" class="MCXref xref">Störungskonzept – Grundlagen</a>)</li>
-                                        </ul>
-                                        <h4>Störungsgrad D – Bedingt einsatzfähig</h4>
-                                        <p><strong>Einsatzfähigkeit:</strong> Das Fahrzeug sollte nur in Notfällen und Ausnahmesituationen eingesetzt werden.</p>
-                                        <p><strong>Typische Störungen:</strong>
-                                        </p>
-                                        <ul>
-                                            <li>Stark eingeschränkte Fahrzeugsicherheit (z.&#160;B. Bremsleistung reduziert, aber noch ausreichend)</li>
-                                            <li>Mehrere ausgefallene Türen</li>
-                                            <li>Erhebliche Fahrwerksschäden</li>
-                                            <li>Starke Geräusch- oder Geruchsbelästigung</li>
-                                            <li>Defekte, die eine baldige Stilllegung erfordern</li>
-                                        </ul>
-                                        <p><strong>Dispositive Wirkung:</strong>
-                                        </p>
-                                        <ul>
-                                            <li>Fahrzeug ist für die <strong>automatische Disposition vollständig gesperrt</strong></li>
-                                            <li>Manuelle Zuweisung nur in begründeten Ausnahmefällen durch berechtigte Disponenten</li>
-                                            <li>Fahrzeug wird in Fahrzeugliste und Disposition-Übersichten mit Warnhinweis dargestellt</li>
-                                        </ul>
-                                        <h4>Störungsgrad E – Nicht einsatzfähig</h4>
-                                        <p><strong>Einsatzfähigkeit:</strong> Das Fahrzeug ist nicht einsatzfähig und darf nicht im Fahrgastbetrieb eingesetzt werden.</p>
-                                        <p><strong>Typische Störungen:</strong>
-                                        </p>
-                                        <ul>
-                                            <li>Sicherheitsrelevante Schäden (z.&#160;B. Bremsausfall, Lenkungsprobleme)</li>
-                                            <li>Motorschaden</li>
-                                            <li>Getriebeschaden</li>
-                                            <li>Fehlende Betriebserlaubnis</li>
-                                            <li>Unfallschäden</li>
-                                            <li>TÜV/HU überfällig</li>
-                                        </ul>
-                                        <p><strong>Dispositive Wirkung:</strong>
-                                        </p>
-                                        <ul>
-                                            <li>Fahrzeug ist <strong>vollständig gesperrt</strong> für jede Art von Disposition</li>
-                                            <li>Keine automatische oder manuelle Zuweisung möglich</li>
-                                            <li>Fahrzeug erscheint in Disposition-Sichten als „gesperrt" oder „außer Betrieb"</li>
-                                        </ul>
-                                        <h3>Aggregationslogik bei mehreren Störungen</h3>
-                                        <p>Ein Fahrzeug kann mehrere Störungen gleichzeitig aufweisen. In diesem Fall gilt folgende Logik:</p>
-                                        <ul>
-                                            <li><strong>Höchster Störungsgrad dominiert:</strong> Die Einsatzfähigkeit des Fahrzeugs richtet sich nach dem kritischsten (höchsten) Störungsgrad.</li>
-                                            <li><strong>Beispiel:</strong> Fahrzeug hat Störung mit Grad B (defekte Innenbeleuchtung) und Störung mit Grad D (eingeschränkte Bremsfunktion) → Fahrzeug gilt als „bedingt einsatzfähig" (Grad D).</li>
-                                            <li><strong>Anzeige in Sichten:</strong> In der Spalte <em>Störungsgrad</em> der Fahrzeugstörungen-Liste wird der höchste Grad des Fahrzeugs angezeigt.</li>
-                                            <li><strong>Disposition:</strong> Die Disposition verwendet automatisch den höchsten Störungsgrad zur Bewertung der Verfügbarkeit.</li>
-                                        </ul>
-                                        <h3>Best Practices für Störungsgrad-Auswahl</h3>
-                                        <table class="TableStyle-Alternate-Row-Color" style="mc-table-style: url('../../Resources/TableStyles/Alternate-Row-Color.css');" cellspacing="21" data-mc-table-style="Alternate Row Color">
-                                            <thead>
-                                                <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Empfehlung</th>
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Begründung</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störungsgrad konservativ bewerten</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Im Zweifelsfall eher einen höheren Grad wählen, um Risiken zu minimieren.</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Jahreszeit und Einsatzprofil berücksichtigen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Klimaanlagenausfall im Hochsommer: Grad C oder D. Im Winter: ggf. nur Grad B.</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störungsbaum nutzen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Störungsbaum enthält oft Vorschläge für Störungsgrad je Komponente.</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Mit Disposition abstimmen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Bei kritischen Störungen (D/E) Disposition informieren, um Ausfälle zu kompensieren.</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Regelmäßige Überprüfung</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Störungsgrade bei langfristigen Störungen regelmäßig neu bewerten.</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <!-- STÖRUNGSZUSTÄNDE -->
-                                        <h2 id="stoerungszustaende">Störungszustände und Zustandsmodell</h2>
-                                        <p>Jede Fahrzeugstörung durchläuft einen definierten Lebenszyklus vom Anlegen bis zur Behebung oder Archivierung. Der <strong>Zustand</strong> steuert die Sichtbarkeit, Bearbeitbarkeit und dispositive Wirkung der Störung.</p>
-                                        <h3>Zustandsdiagramm</h3><pre class="mermaid">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:space="preserve" lang="en" xml:lang="en"
+	class="_Skins_Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml"
+	data-mc-path-to-help-system="../../../" data-mc-has-content-body="True"
+	data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2"
+	data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description"
+		content="Conceptual basics of fault management: Fault levels, state model, vehicle fault tree, and capabilities. Detailed explanation of categorization and effects on dispatching." />
+	<title>Fault Concept – Basics</title>
+	<link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css"
+		data-mc-generated="True" />
+	<link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css"
+		data-mc-generated="True" />
+	<link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css"
+		data-mc-generated="True" />
+	<link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css"
+		data-mc-generated="True" />
+	<link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css"
+		data-mc-generated="True" />
+	<link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css"
+		data-mc-generated="True" />
+	<link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css"
+		data-mc-generated="True" />
+	<link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css"
+		data-mc-generated="True" />
+	<link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css"
+		data-mc-generated="True" />
+	<link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css"
+		data-mc-generated="True" />
+	<link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css"
+		data-mc-generated="True" />
+	<link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+	<link href="../../Resources/Branding/Branding.css" rel="stylesheet" type="text/css" />
+	<link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+	<link href="../../Resources/TableStyles/Alternate-Row-Color.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+	<script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript"></script>
+	<script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer"></script>
+	<script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer"></script>
+	<script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer"></script>
+	<script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer"></script>
+	<script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer"></script>
+	<script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer"></script>
+</head>
+
+<body>
+	<div class="foundation-wrap off-canvas-wrapper">
+		<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+			<aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas=""
+				data-position="right" data-mc-ignore="true">
+				<ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu=""
+					data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent"
+					data-mc-css-tree-node-collapsed="is-accordion-submenu-parent"
+					data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False"
+					data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False"
+					data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu"
+					data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True"></ul>
+			</aside>
+			<div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+				<div data-sticky-container="" class="title-bar-container">
+					<nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky=""
+						data-options="marginTop:0" style="width:100%"
+						data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a
+							class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+						<div class="middle title-bar-section outer-row clearfix">
+							<div class="menu-icon-container relative clearfix">
+								<div class="central-account-wrapper">
+									<div class="central-dropdown"><a class="central-account-drop"><span
+												class="central-account-image"></span><span
+												class="central-account-text">Account</span></a>
+										<div class="central-dropdown-content"><a
+												class="MCCentralLink central-dropdown-content-settings">Settings</a>
+											<hr class="central-separator" /><a
+												class="MCCentralLink central-dropdown-content-logout">Logout</a>
+										</div>
+									</div>
+								</div><button class="menu-icon" aria-label="Show Navigation Panel"
+									data-toggle="offCanvas"><span></span></button>
+							</div>
+						</div>
+						<div class="title-bar-layout outer-row">
+							<div class="logo-wrapper"><a class="logo" href="../../0000_Einleitung.htm" alt="Logo"></a>
+							</div>
+							<div class="navigation-wrapper nocontent">
+								<ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children"
+									data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter"
+									data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False"
+									data-mc-include-indicator="False" data-mc-include-children="True"
+									data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+									<li class="placeholder" style="visibility:hidden"><a>placeholder</a></li>
+								</ul>
+							</div>
+							<div class="central-account-wrapper">
+								<div class="central-dropdown"><a class="central-account-drop"><span
+											class="central-account-image"></span><span
+											class="central-account-text">Account</span></a>
+									<div class="central-dropdown-content"><a
+											class="MCCentralLink central-dropdown-content-settings">Settings</a>
+										<hr class="central-separator" /><a
+											class="MCCentralLink central-dropdown-content-logout">Logout</a>
+									</div>
+								</div>
+							</div>
+							<div class="nav-search-wrapper">
+								<div class="nav-search row">
+									<form class="search" action="#">
+										<div class="search-bar search-bar-container needs-pie"><input
+												class="search-field needs-pie" type="search" aria-label="Search Field"
+												placeholder="Search" />
+											<div class="search-filter-wrapper"><span class="invisible-label"
+													id="search-filters-label">Filter: </span>
+												<div class="search-filter" aria-haspopup="true"
+													aria-controls="sf-content" aria-expanded="false"
+													aria-label="Search Filter" title="All Files" role="button"
+													tabindex="0"></div>
+												<div class="search-filter-content" id="sf-content">
+													<ul>
+														<li><button class="mc-dropdown-item"
+																aria-labelledby="search-filters-label filterSelectorLabel-00001"><span
+																	id="filterSelectorLabel-00001">All
+																	Files</span></button></li>
+													</ul>
+												</div>
+											</div>
+											<div class="search-submit-wrapper" dir="ltr">
+												<div class="search-submit" title="Search" role="button" tabindex="0">
+													<span class="invisible-label">Submit Search</span></div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</nav>
+				</div>
+				<div class="main-section">
+					<div class="row outer-row sidenav-layout">
+						<nav class="sidenav-wrapper">
+							<div class="sidenav-container">
+								<ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu=""
+									data-mc-css-tree-node-expanded="is-accordion-submenu-parent"
+									data-mc-css-tree-node-collapsed="is-accordion-submenu-parent"
+									data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested"
+									data-mc-include-indicator="False" data-mc-include-icon="False"
+									data-mc-include-parent-link="False" data-mc-include-back="False"
+									data-mc-defer-expand-event="True"
+									data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu"
+									data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True"
+									data-mc-side-nav-menu="True"></ul>
+							</div>
+						</nav>
+						<div class="body-container">
+							<div data-mc-content-body="True">
+								<div class="nocontent">
+									<div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation"
+										aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; "
+										data-mc-breadcrumbs-count="3" data-mc-toc="True"><span
+											class="MCBreadcrumbsPrefix">You are here: </span></div>
+								</div>
+								<div role="main" id="mc-main-content">
+									<h1 id="titel">Fault Concept – Basics</h1>
+									<p class="mc-shortdesc">Fault management in PEAK.DMS records, categorizes, and
+										evaluates vehicle defects using a structured system of fault levels, states, a
+										vehicle fault tree, and capabilities.</p>
+									<h2>Overview</h2>
+									<p>The fault concept in PEAK.DMS comprises four central components:</p>
+									<ul>
+										<li><strong>Fault Levels (A–E):</strong> Assess the operational fault service
+											level of the vehicle</li>
+										<li><strong>Fault States:</strong> Control the processing workflow from
+											reporting to resolution</li>
+										<li><strong>Vehicle Fault Tree:</strong> Structures the categorization via
+											Category / System / Component</li>
+										<li><strong>Capabilities:</strong> Define negated equipment features and their
+											effect on dispatching</li>
+									</ul>
+									<p>Together, these components form a complete system for recording, evaluating, and
+										integrating vehicle faults into dispatching.</p><!-- FAULT LEVELS -->
+									<h2 id="stoerungsgrade">Fault Levels</h2>
+									<p>The <strong>fault level</strong> assesses the operational fault service level of
+										a vehicle. It controls the availability in dispatching and is crucial for
+										automatic and manual block planning.</p>
+									<h3>Overview of Fault Levels</h3>
+									<p>PEAK.DMS distinguishes five fault levels from A (no restriction) to E (not
+										serviceable):</p>
+									<table class="TableStyle-Alternate-Row-Color"
+										style="mc-table-style: url('../../Resources/TableStyles/Alternate-Row-Color.css');"
+										cellspacing="21" data-mc-table-style="Alternate Row Color">
+										<thead>
+											<tr class="TableStyle-Alternate-Row-Color-Head-Header1">
+												<th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Level
+												</th>
+												<th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">
+													Designation</th>
+												<th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Fault
+													Service Level</th>
+												<th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Effect
+													on Dispatching</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">
+													<strong>A</strong></td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">No
+													restriction</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Fully
+													serviceable</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Vehicle
+													can be dispatched without restriction</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">
+													<strong>B</strong></td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Minor
+													restriction</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">
+													Serviceable with minor restrictions</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Vehicle
+													can be dispatched, possibly with a note to the driver</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">
+													<strong>C</strong></td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Limited
+													service level</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Limited
+													service level</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Vehicle
+													can be dispatched with limitations (e.g., only for specific
+													lines/blocks)</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">
+													<strong>D</strong></td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">
+													Conditionally serviceable</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Only
+													usable in emergencies</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Vehicle
+													blocked for automatic dispatching, manual assignment only in
+													exceptional cases</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+												<td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">
+													<strong>E</strong></td>
+												<td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Not
+													serviceable</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Not
+													serviceable</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Vehicle
+													completely blocked, no dispatching possible</td>
+											</tr>
+										</tbody>
+									</table>
+									<h3>Detailed Description of Fault Levels</h3>
+									<h4>Fault Level A – No Restriction</h4>
+									<p><strong>Fault Service Level:</strong> The vehicle is fully serviceable and can be
+										dispatched without restrictions.</p>
+									<p><strong>Typical Faults:</strong></p>
+									<ul>
+										<li>Visual defects with no impact on operation (e.g., scratches, paint damage)
+										</li>
+										<li>Minor soiling</li>
+										<li>Non-safety-relevant minor damages</li>
+									</ul>
+									<p><strong>Effect on Dispatching:</strong> None. The vehicle is fully available.</p>
+									<h4>Fault Level B – Minor Restriction</h4>
+									<p><strong>Fault Service Level:</strong> The vehicle is serviceable, but the fault
+										should be rectified soon.</p>
+									<p><strong>Typical Faults:</strong></p>
+									<ul>
+										<li>Defective interior lighting (individual lights)</li>
+										<li>Failed passenger information (individual displays)</li>
+										<li>Minor ride comfort restrictions</li>
+										<li>Warning lights without immediate operational impact</li>
+									</ul>
+									<p><strong>Effect on Dispatching:</strong> The vehicle is dispatched normally.
+										Optionally, a note can be issued to the driver (project-specific).</p>
+									<h4>Fault Level C – Limited Service Level</h4>
+									<p><strong>Fault Service Level:</strong> The vehicle is serviceable with
+										restrictions. Operation may be limited to specific lines or blocks.</p>
+									<p><strong>Typical Faults:</strong></p>
+									<ul>
+										<li>Air conditioning failure (rated differently depending on the season and
+											project)</li>
+										<li>Limited door function (e.g., one door failed)</li>
+										<li>Reduced seating capacity</li>
+										<li>Defective ramp/lift equipment (vehicle not accessible)</li>
+										<li>Defective passenger Wi-Fi</li>
+									</ul>
+									<p><strong>Effect on Dispatching:</strong></p>
+									<ul>
+										<li>Vehicle is treated as a <em>replacement vehicle type</em> (e.g., "Bus
+											without A/C")</li>
+										<li>Limited availability in automatic dispatching</li>
+										<li>Manual dispatching possible, considering the restriction</li>
+										<li>Negation of capabilities becomes effective (see <a href="#leistungsmerkmale"
+												class="MCXref xref">Fault Concept – Basics</a>)</li>
+									</ul>
+									<h4>Fault Level D – Conditionally Serviceable</h4>
+									<p><strong>Fault Service Level:</strong> The vehicle should only be used in
+										emergencies and exceptional situations.</p>
+									<p><strong>Typical Faults:</strong></p>
+									<ul>
+										<li>Severely impaired vehicle safety (e.g., braking power reduced, but still
+											sufficient)</li>
+										<li>Multiple failed doors</li>
+										<li>Significant chassis damage</li>
+										<li>Strong noise or odor nuisance</li>
+										<li>Defects requiring imminent decommissioning</li>
+									</ul>
+									<p><strong>Effect on Dispatching:</strong></p>
+									<ul>
+										<li>Vehicle is <strong>completely blocked for automatic dispatching</strong>
+										</li>
+										<li>Manual assignment only in justified exceptional cases by authorized
+											dispatchers</li>
+										<li>Vehicle is displayed in vehicle list and dispatching overviews with a
+											warning</li>
+									</ul>
+									<h4>Fault Level E – Not Serviceable</h4>
+									<p><strong>Fault Service Level:</strong> The vehicle is not serviceable and must not
+										be used in passenger service.</p>
+									<p><strong>Typical Faults:</strong></p>
+									<ul>
+										<li>Safety-relevant damages (e.g., brake failure, steering problems)</li>
+										<li>Engine damage</li>
+										<li>Transmission damage</li>
+										<li>Missing operating permit</li>
+										<li>Accident damage</li>
+										<li>General inspection overdue</li>
+									</ul>
+									<p><strong>Effect on Dispatching:</strong></p>
+									<ul>
+										<li>Vehicle is <strong>completely blocked</strong> for any type of dispatching
+										</li>
+										<li>No automatic or manual assignment possible</li>
+										<li>Vehicle appears in dispatching views as "blocked" or "out of service"</li>
+									</ul>
+									<h3>Aggregation Logic for Multiple Faults</h3>
+									<p>A vehicle can have multiple faults at the same time. In this case, the following
+										logic applies:</p>
+									<ul>
+										<li><strong>Highest Fault Level Dominates:</strong> The vehicle's service level
+											is determined by the most critical (highest) fault level.</li>
+										<li><strong>Example:</strong> Vehicle has a Level B fault (defective interior
+											lighting) and a Level D fault (limited brake function) → Vehicle is
+											considered "conditionally serviceable" (Level D).</li>
+										<li><strong>Display in Views:</strong> The <em>Fault level</em> column in the
+											vehicle faults list shows the highest level for the vehicle.</li>
+										<li><strong>Dispatching:</strong> Dispatching automatically uses the highest
+											fault level to assess availability.</li>
+									</ul>
+									<h3>Best Practices for Fault Level Selection</h3>
+									<table class="TableStyle-Alternate-Row-Color"
+										style="mc-table-style: url('../../Resources/TableStyles/Alternate-Row-Color.css');"
+										cellspacing="21" data-mc-table-style="Alternate Row Color">
+										<thead>
+											<tr class="TableStyle-Alternate-Row-Color-Head-Header1">
+												<th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">
+													Recommendation</th>
+												<th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Reason
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Rate
+													fault level conservatively</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">When in
+													doubt, choose a higher level to minimize risks.</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Consider
+													season and operational profile</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">A/C
+													failure in mid-summer: Level C or D. In winter: possibly only Level
+													B.</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Use
+													vehicle fault tree</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">The
+													vehicle fault tree often contains suggestions for the fault level
+													per component.</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">
+													Coordinate with dispatching</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Inform
+													dispatching about critical faults (D/E) to compensate for downtimes.
+												</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+												<td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Regular
+													review</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">
+													Re-evaluate fault levels for long-term faults regularly.</td>
+											</tr>
+										</tbody>
+									</table><!-- FAULT STATES -->
+									<h2 id="stoerungszustaende">Fault States and State Model</h2>
+									<p>Each vehicle fault goes through a defined lifecycle from creation to resolution
+										or archiving. The <strong>state</strong> controls the visibility, editability,
+										and dispatching effect of the fault.</p>
+									<h3>State Diagram</h3>
+									<pre class="mermaid">
 			stateDiagram-v2
-			[*] --&gt; Angelegt: Störung wird erfasst
-			Angelegt --&gt; Gemeldet: Dialog mit OK abgeschlossen
-			Angelegt --&gt; [*]: Abbruch
-			Gemeldet --&gt; InBearbeitung: Werkstattauftrag erstellt / Fahrzeugreservierung erstellt
-			Gemeldet --&gt; Erledigt: Direkt fertig gemeldet
-			Gemeldet --&gt; KeinBefund: Störung konnte nicht nachvollzogen werden
-			InBearbeitung --&gt; Erledigt: Behebung erfolgreich / Werkstattauftrag beendet
-			InBearbeitung --&gt; KeinBefund: Nach Prüfung kein Befund
-			Erledigt --&gt; [*]: Archivierung
-			KeinBefund --&gt; [*]: Archivierung
+			[*] --&gt; Created: Fault is being recorded
+			Created --&gt; Reported: Dialog completed with OK
+			Created --&gt; [*]: Canceled
+			Reported --&gt; InProgress: Garage order created / Vehicle reservation created
+			Reported --&gt; Completed: Directly reported as finished
+			Reported --&gt; NoFaultFound: Fault could not be reproduced
+			InProgress --&gt; Completed: Resolution successful / Garage order finished
+			InProgress --&gt; NoFaultFound: No fault found after inspection
+			Completed --&gt; [*]: Archiving
+			NoFaultFound --&gt; [*]: Archiving
     
-			note right of Gemeldet
-			Störung wirkt dispositiv
-			(Störungsgrad aktiv)
+			note right of Reported
+			Fault affects dispatching
+			(Fault level active)
 			end note
     
-			note right of InBearbeitung
-			Fahrzeug ggf. reserviert
-			(Werkstatt/Betriebshof)
+			note right of InProgress
+			Vehicle possibly reserved
+			(Garage/Depot)
 			end note
     
-			note right of Erledigt
-			Störung behoben,
-			keine dispositive Wirkung mehr
+			note right of Completed
+			Fault resolved,
+			no more effect on dispatching
 			end note
 		</pre>
-                                        <h3>Beschreibung der Störungszustände</h3>
-                                        <h4>Zustand: Angelegt (Neu)</h4>
-                                        <p><strong>Bedeutung:</strong> Die Störung wird gerade im Dialog erfasst. Die Erfassung wurde noch nicht mit „OK" abgeschlossen.</p>
-                                        <p><strong>Sichtbarkeit:</strong> Nur für den erfassenden Benutzer im Dialog sichtbar. Erscheint <strong>nicht</strong> in der Störungsliste.</p>
-                                        <p><strong>Dispositive Wirkung:</strong> Keine. Die Störung ist noch nicht aktiv.</p>
-                                        <p><strong>Mögliche Aktionen:</strong>
-                                        </p>
-                                        <ul>
-                                            <li>Erfassung abschließen → Zustand wechselt zu <strong>Gemeldet</strong></li>
-                                            <li>Abbrechen → Störung wird verworfen</li>
-                                        </ul>
-                                        <h4>Zustand: Gemeldet</h4>
-                                        <p><strong>Bedeutung:</strong> Die Störung wurde erfasst, gespeichert und ist aktiv. Sie ist noch unbearbeitet und wartet auf Maßnahmen.</p>
-                                        <p><strong>Sichtbarkeit:</strong> In allen Störungs-Sichten sichtbar. Erscheint in Fahrzeugakte und ggf. in Fahrerinformation.</p>
-                                        <p><strong>Dispositive Wirkung:</strong> <strong>Störungsgrad ist aktiv.</strong> Die Störung wirkt sich auf die Verfügbarkeit des Fahrzeugs in der Disposition aus.</p>
-                                        <p><strong>Mögliche Aktionen:</strong>
-                                        </p>
-                                        <ul>
-                                            <li><strong>Werkstattauftrag erstellen / Beauftragen:</strong> → Zustand wechselt zu <strong>In Bearbeitung</strong></li>
-                                            <li><strong>Fahrzeugreservierung erstellen:</strong> → Zustand wechselt zu <strong>In Bearbeitung</strong></li>
-                                            <li><strong>Fertig melden / Erledigt:</strong> → Zustand wechselt zu <strong>Erledigt</strong> (bei sofortiger Behebung)</li>
-                                            <li><strong>Kein Befund:</strong> → Zustand wechselt zu <strong>Kein Befund</strong> (wenn Störung nicht nachvollziehbar)</li>
-                                        </ul>
-                                        <p><strong>Berechtigungen:</strong> Alle berechtigten Benutzer (Disposition, Betriebshof, Werkstatt) können gemeldete Störungen bearbeiten.</p>
-                                        <h4>Zustand: In Bearbeitung</h4>
-                                        <p><strong>Bedeutung:</strong> Die Störung wurde in einen Werkstattauftrag oder eine Fahrzeugreservierung überführt und wird aktiv bearbeitet.</p>
-                                        <p><strong>Sichtbarkeit:</strong> Weiterhin in Störungs-Sichten sichtbar. Verknüpfung zum Werkstattauftrag / zur Fahrzeugreservierung wird angezeigt.</p>
-                                        <p><strong>Dispositive Wirkung:</strong> <strong>Störungsgrad ist aktiv.</strong> Fahrzeug ist ggf. zusätzlich durch Werkstattauftrag / Fahrzeugreservierung gesperrt.</p>
-                                        <p><strong>Mögliche Aktionen:</strong>
-                                        </p>
-                                        <ul>
-                                            <li><strong>Werkstattauftrag beenden:</strong> → Störung wechselt <strong>automatisch</strong> zu <strong>Erledigt</strong></li>
-                                            <li><strong>Fahrzeugreservierung beenden:</strong> → Störung wechselt <strong>automatisch</strong> zu <strong>Erledigt</strong></li>
-                                            <li><strong>Manuell auf Erledigt setzen:</strong> → Zustand wechselt zu <strong>Erledigt</strong> (bei vorzeitiger Behebung)</li>
-                                            <li><strong>Kein Befund:</strong> → Zustand wechselt zu <strong>Kein Befund</strong> (wenn nach Prüfung kein Defekt festgestellt)</li>
-                                        </ul>
-                                        <p><strong>Berechtigungen:</strong> Werkstatt-Benutzer und berechtigte Disponenten können den Zustand ändern.</p>
-                                        <h4>Zustand: Erledigt (Beendet)</h4>
-                                        <p><strong>Bedeutung:</strong> Die Störung wurde erfolgreich behoben. Das Fahrzeug ist wieder voll einsatzfähig (bzgl. dieser Störung).</p>
-                                        <p><strong>Sichtbarkeit:</strong> Erscheint weiterhin in der Störungsliste (bis zur Archivierung). Kann durch Filter ausgeblendet werden.</p>
-                                        <p><strong>Dispositive Wirkung:</strong> <strong>Keine.</strong> Der Störungsgrad dieser Störung wird nicht mehr berücksichtigt.</p>
-                                        <p><strong>Mögliche Aktionen:</strong>
-                                        </p>
-                                        <ul>
-                                            <li>Anzeigen / Nachvollziehen</li>
-                                            <li>Nach konfigurierter Zeit: Automatische Archivierung</li>
-                                        </ul>
-                                        <p class="note"><strong>Hinweis:</strong> Bei mehreren Störungen wird der Störungsgrad des Fahrzeugs aus den verbleibenden <em>nicht erledigten</em> Störungen berechnet.</p>
-                                        <h4>Zustand: Kein Befund</h4>
-                                        <p><strong>Bedeutung:</strong> Die Störung wurde geprüft, konnte aber nicht nachvollzogen werden. Es wurde kein Defekt festgestellt.</p>
-                                        <p><strong>Sichtbarkeit:</strong> Erscheint in der Störungsliste mit Kennzeichnung „Kein Befund".</p>
-                                        <p><strong>Dispositive Wirkung:</strong> <strong>Keine.</strong> Der Störungsgrad wird nicht mehr berücksichtigt.</p>
-                                        <p><strong>Typische Szenarien:</strong>
-                                        </p>
-                                        <ul>
-                                            <li>Fahrer meldet Geräusch, Werkstatt kann es nicht reproduzieren</li>
-                                            <li>Warnleuchte war aktiv, tritt bei Prüfung nicht mehr auf</li>
-                                            <li>Fehlermeldung konnte nicht nachvollzogen werden</li>
-                                        </ul>
-                                        <p><strong>Mögliche Aktionen:</strong>
-                                        </p>
-                                        <ul>
-                                            <li>Anzeigen / Nachvollziehen</li>
-                                            <li>Nach konfigurierter Zeit: Automatische Archivierung</li>
-                                        </ul>
-                                        <h3>Zustandsübergänge</h3>
-                                        <table class="TableStyle-Alternate-Row-Color" style="mc-table-style: url('../../Resources/TableStyles/Alternate-Row-Color.css');" cellspacing="21" data-mc-table-style="Alternate Row Color">
-                                            <thead>
-                                                <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Von Zustand</th>
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Nach Zustand</th>
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Auslöser</th>
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Art</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Angelegt</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Gemeldet</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Dialog mit „OK" abschließen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Manuell</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Angelegt</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">–</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Dialog abbrechen (Störung wird verworfen)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Manuell</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Gemeldet</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">In Bearbeitung</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Werkstattauftrag / Fahrzeugreservierung erstellen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Automatisch</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Gemeldet</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Erledigt</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Aktion „Fertig melden" / „Erledigt"</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Manuell</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Gemeldet</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Kein Befund</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Aktion „Kein Befund"</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Manuell</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">In Bearbeitung</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Erledigt</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Werkstattauftrag / Fahrzeugreservierung beenden</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Automatisch</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">In Bearbeitung</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Erledigt</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Aktion „Fertig melden" / „Erledigt"</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Manuell</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">In Bearbeitung</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Kein Befund</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Aktion „Kein Befund" nach Prüfung</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Manuell</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Erledigt</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">–</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Archivierung (nach konfigurierter Zeit)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Automatisch</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Kein Befund</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">–</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Archivierung (nach konfigurierter Zeit)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Automatisch</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <h3>Berechtigungen für Zustandswechsel</h3>
-                                        <table class="TableStyle-Alternate-Row-Color" style="mc-table-style: url('../../Resources/TableStyles/Alternate-Row-Color.css');" cellspacing="21" data-mc-table-style="Alternate Row Color">
-                                            <thead>
-                                                <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Zustandswechsel</th>
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Berechtigung erforderlich</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störung anlegen (Angelegt → Gemeldet)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Alle Benutzer mit Störungserfassung</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Werkstattauftrag erstellen (Gemeldet → In Bearbeitung)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Disposition, Werkstatt</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Störung fertig melden (→ Erledigt)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Je nach Projekt: Alle oder nur Werkstatt/Disposition</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Kein Befund setzen (→ Kein Befund)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Werkstatt, ggf. eingeschränkt auf Werkstattleitung</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <p class="note"><strong>Hinweis:</strong> Berechtigungen sind projektspezifisch konfigurierbar und können vom Administrator angepasst werden.</p>
-                                        <h3>Automatische vs. manuelle Zustandswechsel</h3>
-                                        <p><strong>Automatische Zustandswechsel:</strong>
-                                        </p>
-                                        <ul>
-                                            <li>Werkstattauftrag erstellen → <em>In Bearbeitung</em></li>
-                                            <li>Werkstattauftrag beenden → <em>Erledigt</em></li>
-                                            <li>Fahrzeugreservierung erstellen → <em>In Bearbeitung</em></li>
-                                            <li>Fahrzeugreservierung beenden → <em>Erledigt</em></li>
-                                            <li>Archivierung nach konfigurierter Zeit</li>
-                                        </ul>
-                                        <p><strong>Manuelle Zustandswechsel:</strong>
-                                        </p>
-                                        <ul>
-                                            <li>Dialog abschließen → <em>Gemeldet</em></li>
-                                            <li>Fertig melden → <em>Erledigt</em></li>
-                                            <li>Kein Befund setzen → <em>Kein Befund</em></li>
-                                        </ul>
-                                        <!-- STÖRUNGSBAUM -->
-                                        <h2 id="stoerungsbaum">Störungsbaum und Störungskatalog</h2>
-                                        <p>Der <strong>Störungsbaum</strong> (auch <em>Störungskatalog</em>) ist eine hierarchische Struktur zur systematischen Kategorisierung von Fahrzeugstörungen. Er ermöglicht eine schnelle, strukturierte Erfassung und erleichtert Auswertungen und Statistiken.</p>
-                                        <h3>Hierarchische Struktur</h3>
-                                        <p>Der Störungsbaum ist dreistufig aufgebaut:</p>
-                                        <ol>
-                                            <li value="1"><strong>Kategorie</strong> (oberste Ebene): Grobe Einteilung (z.&#160;B. „Antrieb", „Fahrwerk", „Fahrgastraum", „Elektrik")</li>
-                                            <li value="2"><strong>System</strong> (mittlere Ebene): Funktionale Systeme innerhalb der Kategorie (z.&#160;B. „Motor", „Getriebe", „Lenkung", „Klimaanlage")</li>
-                                            <li value="3"><strong>Komponente</strong> (unterste Ebene): Konkrete Bauteile oder Einzelstörungen (z.&#160;B. „Zündkerze", „Einspritzdüse", „Türöffner Tür 1")</li>
-                                        </ol>
-                                        <h4>Beispiel: Störungsbaum-Pfad</h4><pre>
-			Kategorie:    Fahrgastraum
-			System:       Klimaanlage
-			Komponente:   Klimakompressor defekt
-			Komponente:   Lüftung ausgefallen
-			Komponente:   Heizung defekt
-			System:       Türen
-			Komponente:   Türöffner Tür 1
-			Komponente:   Türschließer Tür 2
-			Komponente:   Türsensor defekt
+									<h3>Description of Fault States</h3>
+									<h4>State: Created (New)</h4>
+									<p><strong>Meaning:</strong> The fault is currently being recorded in the dialog.
+										The recording has not yet been completed with "OK".</p>
+									<p><strong>Visibility:</strong> Only visible to the recording user in the dialog.
+										Does <strong>not</strong> appear in the fault list.</p>
+									<p><strong>Effect on Dispatching:</strong> None. The fault is not yet active.</p>
+									<p><strong>Possible Actions:</strong></p>
+									<ul>
+										<li>Complete recording → State changes to <strong>Reported</strong></li>
+										<li>Cancel → Fault is discarded</li>
+									</ul>
+									<h4>State: Reported</h4>
+									<p><strong>Meaning:</strong> The fault has been recorded, saved, and is active. It
+										is still unprocessed and awaiting action.</p>
+									<p><strong>Visibility:</strong> Visible in all fault views. Appears in vehicle
+										dossier and possibly in driver information.</p>
+									<p><strong>Effect on Dispatching:</strong> <strong>Fault level is active.</strong>
+										The fault affects the vehicle's availability in dispatching.</p>
+									<p><strong>Possible Actions:</strong></p>
+									<ul>
+										<li><strong>Create garage order / Assign:</strong> → State changes to <strong>In
+												Progress</strong></li>
+										<li><strong>Create vehicle reservation:</strong> → State changes to <strong>In
+												Progress</strong></li>
+										<li><strong>Report finished / Completed:</strong> → State changes to
+											<strong>Completed</strong> (for immediate resolution)</li>
+										<li><strong>No Fault Found:</strong> → State changes to <strong>No Fault
+												Found</strong> (if fault is not reproducible)</li>
+									</ul>
+									<p><strong>Permissions:</strong> All authorized users (dispatching, depot, garage)
+										can process reported faults.</p>
+									<h4>State: In Progress</h4>
+									<p><strong>Meaning:</strong> The fault has been converted into a garage order or
+										vehicle reservation and is being actively processed.</p>
+									<p><strong>Visibility:</strong> Still visible in fault views. Link to the garage
+										order / vehicle reservation is displayed.</p>
+									<p><strong>Effect on Dispatching:</strong> <strong>Fault level is active.</strong>
+										Vehicle may also be blocked by the garage order / vehicle reservation.</p>
+									<p><strong>Possible Actions:</strong></p>
+									<ul>
+										<li><strong>Finish garage order:</strong> → Fault <strong>automatically</strong>
+											changes to <strong>Completed</strong></li>
+										<li><strong>Finish vehicle reservation:</strong> → Fault
+											<strong>automatically</strong> changes to <strong>Completed</strong></li>
+										<li><strong>Set to Completed manually:</strong> → State changes to
+											<strong>Completed</strong> (for early resolution)</li>
+										<li><strong>No Fault Found:</strong> → State changes to <strong>No Fault
+												Found</strong> (if no defect is found after inspection)</li>
+									</ul>
+									<p><strong>Permissions:</strong> Garage users and authorized dispatchers can change
+										the state.</p>
+									<h4>State: Completed (Finished)</h4>
+									<p><strong>Meaning:</strong> The fault was successfully resolved. The vehicle is
+										fully serviceable again (regarding this fault).</p>
+									<p><strong>Visibility:</strong> Still appears in the fault list (until archiving).
+										Can be hidden by filters.</p>
+									<p><strong>Effect on Dispatching:</strong> <strong>None.</strong> The fault level of
+										this fault is no longer considered.</p>
+									<p><strong>Possible Actions:</strong></p>
+									<ul>
+										<li>View / Trace</li>
+										<li>After configured time: Automatic archiving</li>
+									</ul>
+									<p class="note"><strong>Note:</strong> If there are multiple faults, the vehicle's
+										fault level is calculated from the remaining <em>uncompleted</em> faults.</p>
+									<h4>State: No Fault Found</h4>
+									<p><strong>Meaning:</strong> The fault was inspected but could not be reproduced. No
+										defect was found.</p>
+									<p><strong>Visibility:</strong> Appears in the fault list marked as "No Fault
+										Found".</p>
+									<p><strong>Effect on Dispatching:</strong> <strong>None.</strong> The fault level is
+										no longer considered.</p>
+									<p><strong>Typical Scenarios:</strong></p>
+									<ul>
+										<li>Driver reports noise, garage cannot reproduce it</li>
+										<li>Warning light was active, does not appear during inspection</li>
+										<li>Error message could not be reproduced</li>
+									</ul>
+									<p><strong>Possible Actions:</strong></p>
+									<ul>
+										<li>View / Trace</li>
+										<li>After configured time: Automatic archiving</li>
+									</ul>
+									<h3>State Transitions</h3>
+									<table class="TableStyle-Alternate-Row-Color"
+										style="mc-table-style: url('../../Resources/TableStyles/Alternate-Row-Color.css');"
+										cellspacing="21" data-mc-table-style="Alternate Row Color">
+										<thead>
+											<tr class="TableStyle-Alternate-Row-Color-Head-Header1">
+												<th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">From
+													State</th>
+												<th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">To
+													State</th>
+												<th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Trigger
+												</th>
+												<th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Type
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Created
+												</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Reported
+												</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Complete
+													dialog with "OK"</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Manual
+												</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Created
+												</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">–</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Cancel
+													dialog (fault is discarded)</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Manual
+												</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Reported
+												</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">In
+													Progress</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Create
+													garage order / vehicle reservation</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Automatic
+												</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Reported
+												</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Completed
+												</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Action
+													"Report finished" / "Completed"</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Manual
+												</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Reported
+												</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">No Fault
+													Found</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Action
+													"No Fault Found"</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Manual
+												</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">In
+													Progress</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Completed
+												</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Finish
+													garage order / vehicle reservation</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Automatic
+												</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">In
+													Progress</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Completed
+												</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Action
+													"Report finished" / "Completed"</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Manual
+												</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">In
+													Progress</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">No Fault
+													Found</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Action
+													"No Fault Found" after inspection</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Manual
+												</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Completed
+												</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">–</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Archiving
+													(after configured time)</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Automatic
+												</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+												<td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">No Fault
+													Found</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">–</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Archiving
+													(after configured time)</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Automatic
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<h3>Permissions for State Changes</h3>
+									<table class="TableStyle-Alternate-Row-Color"
+										style="mc-table-style: url('../../Resources/TableStyles/Alternate-Row-Color.css');"
+										cellspacing="21" data-mc-table-style="Alternate Row Color">
+										<thead>
+											<tr class="TableStyle-Alternate-Row-Color-Head-Header1">
+												<th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">State
+													Change</th>
+												<th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">
+													Permission Required</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Create
+													fault (Created → Reported)</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">All users
+													with fault recording permission</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Create
+													garage order (Reported → In Progress)</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">
+													Dispatching, Garage</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Report
+													fault as finished (→ Completed)</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Depending
+													on project: All or only Garage/Dispatching</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+												<td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Set to No
+													Fault Found (→ No Fault Found)</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Garage,
+													possibly restricted to garage management</td>
+											</tr>
+										</tbody>
+									</table>
+									<p class="note"><strong>Note:</strong> Permissions are project-specifically
+										configurable and can be adjusted by the administrator.</p>
+									<h3>Automatic vs. Manual State Changes</h3>
+									<p><strong>Automatic State Changes:</strong></p>
+									<ul>
+										<li>Create garage order → <em>In Progress</em></li>
+										<li>Finish garage order → <em>Completed</em></li>
+										<li>Create vehicle reservation → <em>In Progress</em></li>
+										<li>Finish vehicle reservation → <em>Completed</em></li>
+										<li>Archiving after configured time</li>
+									</ul>
+									<p><strong>Manual State Changes:</strong></p>
+									<ul>
+										<li>Complete dialog → <em>Reported</em></li>
+										<li>Report finished → <em>Completed</em></li>
+										<li>Set to No Fault Found → <em>No Fault Found</em></li>
+									</ul><!-- VEHICLE FAULT TREE -->
+									<h2 id="stoerungsbaum">Vehicle Fault Tree and Fault Catalog</h2>
+									<p>The <strong>vehicle fault tree</strong> (also <em>fault catalog</em>) is a
+										hierarchical structure for the systematic categorization of vehicle faults. It
+										enables quick, structured recording and facilitates evaluations and statistics.
+									</p>
+									<h3>Hierarchical Structure</h3>
+									<p>The vehicle fault tree has a three-level structure:</p>
+									<ol>
+										<li value="1"><strong>Category</strong> (top level): Broad classification (e.g.,
+											"Powertrain", "Chassis", "Passenger Area", "Electrics")</li>
+										<li value="2"><strong>System</strong> (middle level): Functional systems within
+											the category (e.g., "Engine", "Transmission", "Steering", "Air
+											Conditioning")</li>
+										<li value="3"><strong>Component</strong> (lowest level): Specific parts or
+											individual faults (e.g., "Spark plug", "Injection nozzle", "Door opener Door
+											1")</li>
+									</ol>
+									<h4>Example: Vehicle Fault Tree Path</h4>
+									<pre>
+			Category:     Passenger Area
+			System:       Air Conditioning
+			Component:    A/C compressor defective
+			Component:    Ventilation failed
+			Component:    Heating defective
+			System:       Doors
+			Component:    Door opener Door 1
+			Component:    Door closer Door 2
+			Component:    Door sensor defective
 		</pre>
-                                        <h3>Fahrzeugtypspezifische Konfiguration</h3>
-                                        <p>Der Störungsbaum wird <strong>je Fahrzeugtyp</strong> konfiguriert. Das bedeutet:</p>
-                                        <ul>
-                                            <li>Unterschiedliche Fahrzeugtypen können unterschiedliche Störungsbäume haben</li>
-                                            <li>Bei der Störungserfassung wird automatisch der zum Fahrzeugtyp passende Störungsbaum geladen</li>
-                                            <li>Beispiel: Ein Gelenkbus hat andere Komponenten als ein Standardbus (z.&#160;B. zusätzliche Türen, Gelenkeinrichtung)</li>
-                                        </ul>
-                                        <p class="note"><strong>Hinweis:</strong> Die Störungsbaum-Konfiguration wird vom <strong>Administrator</strong> über die Systemkonfiguration vorgenommen.</p>
-                                        <h3>Störungsnummern und Schnelleingabe</h3>
-                                        <p>Jeder Eintrag im Störungsbaum kann mit einer <strong>Störungsnummer</strong> versehen werden. Diese ermöglicht eine beschleunigte Erfassung:</p>
-                                        <ul>
-                                            <li><strong>Eingabe der Störungsnummer</strong> im Feld „Störungsnr." oder „Schnelleingabe"</li>
-                                            <li>System navigiert automatisch zum entsprechenden Eintrag im Störungsbaum</li>
-                                            <li>Alle hinterlegten Informationen (Störungsgrad, Text, etc.) werden übernommen</li>
-                                        </ul>
-                                        <p><strong>Einsatzszenario:</strong> Werkstatt-Mitarbeiter kennen häufige Störungsnummern auswendig und können diese direkt eingeben, ohne durch den Baum zu navigieren.</p>
-                                        <h3>Hinterlegte Informationen im Störungsbaum</h3>
-                                        <p>Für jeden Eintrag (insbesondere auf Komponenten-Ebene) können folgende Informationen hinterlegt werden:</p>
-                                        <table class="TableStyle-Alternate-Row-Color" style="mc-table-style: url('../../Resources/TableStyles/Alternate-Row-Color.css');" cellspacing="21" data-mc-table-style="Alternate Row Color">
-                                            <thead>
-                                                <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Information</th>
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Beschreibung</th>
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Verwendung</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>Störungsgrad (Vorschlag)</strong>
-                                                    </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Empfohlener Störungsgrad für diese Störung (A–E)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Wird bei Auswahl automatisch vorgeschlagen, kann vom Benutzer überschrieben werden</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>Störungstext</strong>
-                                                    </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Standardisierte Beschreibung der Störung</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Wird in das Feld „Beschreibung" übernommen, kann ergänzt werden</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1"><strong>Handlungshinweis</strong>
-                                                    </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Hinweise für Werkstatt oder Fahrer (z.&#160;B. „Ersatzteil im Lager vorhanden")</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Wird im Dialog angezeigt und in Werkstattauftrag übernommen</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2"><strong>Leistungsmerkmal (negiert)</strong>
-                                                    </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Ausstattungsmerkmal, das durch die Störung ausfällt</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Steuert Berechnung des Dispo-Fahrzeugtyps (siehe <a href="#leistungsmerkmale" class="MCXref xref">Störungskonzept – Grundlagen</a>)</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1"><strong>Dokumente / Bilder</strong>
-                                                    </td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Referenzen zu Reparaturanleitungen, Schaltplänen, Fotos</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Werden im Dialog verlinkt und können geöffnet werden</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <h3>Administration und Anpassung</h3>
-                                        <p>Der Störungsbaum wird über die <strong>Systemkonfiguration</strong> gepflegt:</p>
-                                        <ul>
-                                            <li><strong>Zugriff:</strong> Nur Administratoren oder berechtigte Konfigurationsbenutzer</li>
-                                            <li><strong>Menü:</strong> <em>Konfiguration</em> → <em>Stammdaten</em> → <em>Störungsbaum</em> (projektspezifisch)</li>
-                                            <li><strong>Funktionen:</strong> Kategorien / Systeme / Komponenten hinzufügen, bearbeiten, löschen; Störungsnummern vergeben; Leistungsmerkmale zuordnen</li>
-                                        </ul>
-                                        <p class="note"><strong>Best Practice:</strong> Änderungen am Störungsbaum sollten dokumentiert und mit Werkstatt sowie Disposition abgestimmt werden.</p>
-                                        <h3>Dokumentenanbindung</h3>
-                                        <p>Für Störungsbaum-Einträge können <strong>Dokumente</strong> hinterlegt werden:</p>
-                                        <ul>
-                                            <li>Reparaturanleitungen (PDF)</li>
-                                            <li>Schaltpläne, technische Zeichnungen</li>
-                                            <li>Fotos typischer Schäden</li>
-                                            <li>Checklisten für Prüfung und Behebung</li>
-                                        </ul>
-                                        <p>Diese Dokumente werden im Dialog <em>Fahrzeugstörung</em> angezeigt und können direkt geöffnet werden.</p>
-                                        <!-- LEISTUNGSMERKMALE -->
-                                        <h2 id="leistungsmerkmale">Leistungsmerkmale und deren Negierung</h2>
-                                        <p>Leistungsmerkmale beschreiben die <strong>Ausstattung</strong> eines Fahrzeugs (z.&#160;B. Klimaanlage, Niederflurtechnik, WLAN). Bei Störungen können Leistungsmerkmale <strong>negiert</strong> werden, um die reduzierte Einsatzfähigkeit abzubilden.</p>
-                                        <h3>Was sind Leistungsmerkmale?</h3>
-                                        <p>Leistungsmerkmale sind konfigurierbare Attribute, die die funktionale Ausstattung eines Fahrzeugs beschreiben. Sie werden verwendet, um:</p>
-                                        <ul>
-                                            <li>Fahrzeuge nach Ausstattung zu filtern und zu suchen</li>
-                                            <li>Fahrzeugtypen zu differenzieren (z.&#160;B. „Standardbus" vs. „Standardbus mit Klimaanlage")</li>
-                                            <li>Dispositionsanforderungen zu erfüllen (z.&#160;B. „Umlauf benötigt Fahrzeug mit Niederflur")</li>
-                                        </ul>
-                                        <h4>Typische Leistungsmerkmale</h4>
-                                        <table class="TableStyle-Alternate-Row-Color" style="mc-table-style: url('../../Resources/TableStyles/Alternate-Row-Color.css');" cellspacing="21" data-mc-table-style="Alternate Row Color">
-                                            <thead>
-                                                <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Leistungsmerkmal</th>
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Beschreibung</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Klimaanlage</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Fahrzeug verfügt über funktionierende Klimaanlage</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Niederflur</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Fahrzeug ist niederflurig und barrierefrei</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Rampe / Hubeinrichtung</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Fahrzeug hat Rampe oder Hublift für Rollstuhlfahrer</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">WLAN</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Fahrgast-WLAN verfügbar</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">USB-Ladestationen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Lademöglichkeiten für Fahrgäste vorhanden</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Videoüberwachung</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Kameraüberwachung aktiv</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Fahrgast-Information</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Dynamische Fahrgastinformation (Anzeigen, Ansagen)</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <h3>Negierte Leistungsmerkmale bei Störungen</h3>
-                                        <p>Wenn eine Störung ein Leistungsmerkmal beeinträchtigt, kann dieses <strong>negiert</strong> werden:</p>
-                                        <ul>
-                                            <li>Im Störungsbaum wird dem Störungseintrag ein <strong>Leistungsmerkmal</strong> zugeordnet</li>
-                                            <li>Bei Erfassung einer Störung mit diesem Eintrag wird das Leistungsmerkmal automatisch <strong>für dieses Fahrzeug negiert</strong></li>
-                                            <li>Das Fahrzeug gilt nun als „ohne dieses Leistungsmerkmal"</li>
-                                        </ul>
-                                        <h4>Beispiel: Klimaanlage defekt</h4>
-                                        <ol>
-                                            <li value="1">Störung wird erfasst: „Klimakompressor defekt" (aus Störungsbaum)</li>
-                                            <li value="2">Im Störungsbaum ist für diesen Eintrag das Leistungsmerkmal <strong>„Klimaanlage"</strong> hinterlegt</li>
-                                            <li value="3">Bei Speichern der Störung wird das Leistungsmerkmal „Klimaanlage" für das Fahrzeug <strong>negiert</strong></li>
-                                            <li value="4">Das Fahrzeug gilt nun als „Bus ohne Klimaanlage"</li>
-                                        </ol>
-                                        <h3>Auswirkung auf Dispo-Fahrzeugtyp</h3>
-                                        <p>Die Negierung von Leistungsmerkmalen führt zur Berechnung eines <strong>Dispo-Fahrzeugtyps</strong> (auch <em>Ersatz-Fahrzeugtyp</em>):</p>
-                                        <ul>
-                                            <li><strong>Ursprünglicher Fahrzeugtyp:</strong> „Standardbus mit Klimaanlage"</li>
-                                            <li><strong>Negiertes Leistungsmerkmal:</strong> „Klimaanlage"</li>
-                                            <li><strong>Berechneter Dispo-Fahrzeugtyp:</strong> „Standardbus ohne Klimaanlage"</li>
-                                        </ul>
-                                        <p>Die Disposition verwendet den <strong>Dispo-Fahrzeugtyp</strong> für Verfügbarkeitsberechnung und Zuweisung:</p>
-                                        <ul>
-                                            <li>Umläufe, die explizit „Fahrzeug mit Klimaanlage" erfordern, können diesem Fahrzeug <strong>nicht zugewiesen</strong> werden</li>
-                                            <li>Umläufe ohne diese Anforderung können das Fahrzeug weiterhin nutzen</li>
-                                        </ul>
-                                        <h3>Beispiele für Leistungsmerkmal-Negierung</h3>
-                                        <table class="TableStyle-Alternate-Row-Color" style="mc-table-style: url('../../Resources/TableStyles/Alternate-Row-Color.css');" cellspacing="21" data-mc-table-style="Alternate Row Color">
-                                            <thead>
-                                                <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Störung</th>
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Negiertes Leistungsmerkmal</th>
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Auswirkung</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Klimaanlage ausgefallen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Klimaanlage</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Fahrzeug für klimatisierungspflichtige Umläufe nicht verfügbar</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Rampe defekt</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Barrierefreiheit / Rampe</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Fahrzeug für barrierefreie Umläufe gesperrt</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">WLAN-Router ausgefallen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">WLAN</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Fahrzeug für WLAN-pflichtige Linien nicht verfügbar (projektspezifisch)</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Tür 3 defekt</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Vollständige Türfunktion</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Fahrzeug nur für Linien mit geringer Fahrgastfrequenz einsetzbar</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Videoüberwachung defekt</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Videoüberwachung</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Fahrzeug ggf. für Nachtlinien gesperrt (projektspezifisch)</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <h3>Mehrfach-Negierung</h3>
-                                        <p>Ein Fahrzeug kann mehrere Störungen mit unterschiedlichen negierten Leistungsmerkmalen haben:</p>
-                                        <ul>
-                                            <li><strong>Beispiel:</strong> Störung 1 negiert „Klimaanlage", Störung 2 negiert „WLAN"</li>
-                                            <li><strong>Ergebnis:</strong> Fahrzeug gilt als „ohne Klimaanlage" UND „ohne WLAN"</li>
-                                            <li><strong>Dispo-Fahrzeugtyp:</strong> „Standardbus ohne Klimaanlage und WLAN"</li>
-                                        </ul>
-                                        <h3>Wiederherstellung von Leistungsmerkmalen</h3>
-                                        <p>Sobald eine Störung auf <strong>Erledigt</strong> oder <strong>Kein Befund</strong> gesetzt wird:</p>
-                                        <ul>
-                                            <li>Das negierte Leistungsmerkmal wird <strong>automatisch wiederhergestellt</strong></li>
-                                            <li>Der Dispo-Fahrzeugtyp wird <strong>neu berechnet</strong></li>
-                                            <li>Das Fahrzeug steht wieder mit vollem Leistungsumfang zur Verfügung (sofern keine weiteren Störungen vorliegen)</li>
-                                        </ul>
-                                        <h3>Konfiguration von Leistungsmerkmalen</h3>
-                                        <p>Leistungsmerkmale werden vom <strong>Administrator</strong> konfiguriert:</p>
-                                        <ul>
-                                            <li><strong>Definition:</strong> Welche Leistungsmerkmale gibt es im System?</li>
-                                            <li><strong>Zuordnung zu Fahrzeugtypen:</strong> Welche Fahrzeugtypen haben welche Leistungsmerkmale standardmäßig?</li>
-                                            <li><strong>Zuordnung im Störungsbaum:</strong> Welche Störung negiert welches Leistungsmerkmal?</li>
-                                            <li><strong>Dispositionsregeln:</strong> Welche Umläufe/Linien erfordern welche Leistungsmerkmale?</li>
-                                        </ul>
-                                        <!-- BEST PRACTICES -->
-                                        <h2>Best Practices – Gesamtüberblick</h2>
-                                        <h3>Störungserfassung</h3>
-                                        <ul>
-                                            <li><strong>Störungsbaum vollständig nutzen:</strong> Navigieren Sie bis zur Komponenten-Ebene für präzise Kategorisierung</li>
-                                            <li><strong>Störungsgrad sorgfältig wählen:</strong> Berücksichtigen Sie dispositive Auswirkungen</li>
-                                            <li><strong>Vollständige Beschreibung:</strong> Erfassen Sie Symptome, Handlungshinweise und Bemerkungen</li>
-                                            <li><strong>Leistungsmerkmale beachten:</strong> Prüfen Sie, ob negierte Leistungsmerkmale korrekt sind</li>
-                                        </ul>
-                                        <h3>Störungsbearbeitung</h3>
-                                        <ul>
-                                            <li><strong>Schnelle Störungen direkt fertig melden:</strong> Vermeiden Sie unnötige Werkstattaufträge</li>
-                                            <li><strong>Mehrere Störungen bündeln:</strong> Nutzen Sie „Alle offenen Störungen hinzufügen" beim Werkstattauftrag</li>
-                                            <li><strong>Kein Befund dokumentieren:</strong> Erfassen Sie, warum keine Störung gefunden wurde</li>
-                                            <li><strong>Zustand aktuell halten:</strong> Vermeiden Sie veraltete Zustände</li>
-                                        </ul>
-                                        <h3>Disposition</h3>
-                                        <ul>
-                                            <li><strong>Störungsgrade überwachen:</strong> Prüfen Sie regelmäßig Fahrzeuge mit Grad C/D/E</li>
-                                            <li><strong>Dispo-Fahrzeugtyp berücksichtigen:</strong> Achten Sie auf negierte Leistungsmerkmale bei Umlaufzuweisung</li>
-                                            <li><strong>Kommunikation mit Werkstatt:</strong> Stimmen Sie kritische Störungen ab</li>
-                                        </ul>
-                                        <h3>Administration</h3>
-                                        <ul>
-                                            <li><strong>Störungsbaum aktuell halten:</strong> Passen Sie Kategorien an neue Fahrzeugtypen an</li>
-                                            <li><strong>Leistungsmerkmale konsistent definieren:</strong> Vermeiden Sie Widersprüche in Dispositionsregeln</li>
-                                            <li><strong>Berechtigungen regelmäßig prüfen:</strong> Stellen Sie sicher, dass nur berechtigte Benutzer kritische Aktionen ausführen</li>
-                                            <li><strong>Archivierungszeiten optimieren:</strong> Balancieren Sie zwischen Nachvollziehbarkeit und Performance</li>
-                                        </ul>
-                                        <!-- SIEHE AUCH -->
-                                        <h2>Siehe auch</h2>
-                                        <ul>
-                                            <li><a href="050101_Liste_Fahrzeugstoerungen.htm" class="MCXref xref">Sicht „Fahrzeugstörungen“</a>
-                                            </li>
-                                            <li><a href="050102_Dialog_Fahrzeugstoerung.htm" class="MCXref xref">Dialog Fahrzeugstörung</a>
-                                            </li>
-                                            <li><a href="../0502_Werkstattmanagement/050201_Werkstattauftraege/05020101_Liste_Werkstattauftraege.htm" class="MCXref xref">
-   Die Sicht â€žWerkstattauftrÃ¤geâ€œ
-  </a>
-                                            </li>
-                                            <li><a href="../../03_Stammdaten_Verwaltung/0301_Fahrzeugmanagement/030101_Fahrzeugliste/030101_Fahrzeugliste.htm" class="MCXref xref">Fahrzeugliste</a>
-                                            </li>
-                                            <li><a href="../../03_Stammdaten_Verwaltung/0301_Fahrzeugmanagement/030102_Dialog_Fahrzeugakte/030102_Fahrzeugakte.htm" class="MCXref xref">Die Fahrzeugakte</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><a data-close="true"></a>
-                </div>
-            </div>
-        </div>
-    </body>
+									<h3>Vehicle Type-Specific Configuration</h3>
+									<p>The vehicle fault tree is configured <strong>per vehicle type</strong>. This
+										means:</p>
+									<ul>
+										<li>Different vehicle types can have different vehicle fault trees</li>
+										<li>When recording a fault, the vehicle fault tree matching the vehicle type is
+											loaded automatically</li>
+										<li>Example: An articulated bus has different components than a standard bus
+											(e.g., additional doors, articulation joint)</li>
+									</ul>
+									<p class="note"><strong>Note:</strong> The vehicle fault tree configuration is done
+										by the <strong>administrator</strong> via the system configuration.</p>
+									<h3>Fault Numbers and Quick Entry</h3>
+									<p>Each entry in the vehicle fault tree can be assigned a <strong>fault
+											number</strong>. This allows for accelerated recording:</p>
+									<ul>
+										<li><strong>Enter the fault number</strong> in the "Fault No." or "Quick Entry"
+											field</li>
+										<li>System automatically navigates to the corresponding entry in the vehicle
+											fault tree</li>
+										<li>All stored information (fault level, text, etc.) is adopted</li>
+									</ul>
+									<p><strong>Use Scenario:</strong> Garage staff often know common fault numbers by
+										heart and can enter them directly without navigating through the tree.</p>
+									<h3>Stored Information in the Vehicle Fault Tree</h3>
+									<p>The following information can be stored for each entry (especially at the
+										component level):</p>
+									<table class="TableStyle-Alternate-Row-Color"
+										style="mc-table-style: url('../../Resources/TableStyles/Alternate-Row-Color.css');"
+										cellspacing="21" data-mc-table-style="Alternate Row Color">
+										<thead>
+											<tr class="TableStyle-Alternate-Row-Color-Head-Header1">
+												<th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">
+													Information</th>
+												<th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">
+													Description</th>
+												<th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Usage
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">
+													<strong>Fault Level (Suggestion)</strong></td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">
+													Recommended fault level for this fault (A–E)</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Is
+													automatically suggested upon selection, can be overridden by the
+													user</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">
+													<strong>Fault Text</strong></td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">
+													Standardized description of the fault</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Is copied
+													to the "Description" field, can be supplemented</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">
+													<strong>Action Note</strong></td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Notes for
+													garage or driver (e.g., "Spare part in stock")</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Is
+													displayed in the dialog and copied to the garage order</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">
+													<strong>Capability (negated)</strong></td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Equipment
+													feature that fails due to the fault</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Controls
+													calculation of the dispatch vehicle type (see <a
+														href="#leistungsmerkmale" class="MCXref xref">Fault Concept –
+														Basics</a>)</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+												<td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">
+													<strong>Documents / Images</strong></td>
+												<td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">
+													References to repair manuals, circuit diagrams, photos</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Are
+													linked in the dialog and can be opened</td>
+											</tr>
+										</tbody>
+									</table>
+									<h3>Administration and Customization</h3>
+									<p>The vehicle fault tree is maintained via the <strong>System
+											Configuration</strong>:</p>
+									<ul>
+										<li><strong>Access:</strong> Only administrators or authorized configuration
+											users</li>
+										<li><strong>Menu:</strong> <em>Configuration</em> → <em>Master Data</em> →
+											<em>Vehicle Fault Tree</em> (project-specific)</li>
+										<li><strong>Functions:</strong> Add, edit, delete categories / systems /
+											components; assign fault numbers; associate capabilities</li>
+									</ul>
+									<p class="note"><strong>Best Practice:</strong> Changes to the vehicle fault tree
+										should be documented and coordinated with the garage and dispatching.</p>
+									<h3>Document Linking</h3>
+									<p><strong>Documents</strong> can be linked to vehicle fault tree entries:</p>
+									<ul>
+										<li>Repair manuals (PDF)</li>
+										<li>Circuit diagrams, technical drawings</li>
+										<li>Photos of typical damages</li>
+										<li>Checklists for inspection and resolution</li>
+									</ul>
+									<p>These documents are displayed in the <em>Vehicle Fault</em> dialog and can be
+										opened directly.</p><!-- CAPABILITIES -->
+									<h2 id="leistungsmerkmale">Capabilities and their Negation</h2>
+									<p>Capabilities describe the <strong>equipment</strong> of a vehicle (e.g., air
+										conditioning, low-floor technology, Wi-Fi). In case of faults, capabilities can
+										be <strong>negated</strong> to reflect the reduced service level.</p>
+									<h3>What are Capabilities?</h3>
+									<p>Capabilities are configurable attributes that describe the functional equipment
+										of a vehicle. They are used to:</p>
+									<ul>
+										<li>Filter and search for vehicles by equipment</li>
+										<li>Differentiate vehicle types (e.g., "Standard Bus" vs. "Standard Bus with
+											A/C")</li>
+										<li>Meet dispatching requirements (e.g., "Block requires vehicle with
+											low-floor")</li>
+									</ul>
+									<h4>Typical Capabilities</h4>
+									<table class="TableStyle-Alternate-Row-Color"
+										style="mc-table-style: url('../../Resources/TableStyles/Alternate-Row-Color.css');"
+										cellspacing="21" data-mc-table-style="Alternate Row Color">
+										<thead>
+											<tr class="TableStyle-Alternate-Row-Color-Head-Header1">
+												<th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">
+													Capability</th>
+												<th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">
+													Description</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Air
+													Conditioning</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Vehicle
+													has functioning air conditioning</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Low-Floor
+												</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Vehicle
+													is low-floor and accessible</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Ramp /
+													Lift Equipment</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Vehicle
+													has a ramp or lift for wheelchair users</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Wi-Fi
+												</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Passenger
+													Wi-Fi available</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">USB
+													Charging Stations</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Charging
+													options for passengers available</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Video
+													Surveillance</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Camera
+													surveillance active</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+												<td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Passenger
+													Information</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Dynamic
+													passenger information (displays, announcements)</td>
+											</tr>
+										</tbody>
+									</table>
+									<h3>Negated Capabilities in Faults</h3>
+									<p>If a fault impairs a capability, it can be <strong>negated</strong>:</p>
+									<ul>
+										<li>In the vehicle fault tree, a <strong>capability</strong> is associated with
+											the fault entry</li>
+										<li>When recording a fault with this entry, the capability is automatically
+											<strong>negated for this vehicle</strong></li>
+										<li>The vehicle is now considered "without this capability"</li>
+									</ul>
+									<h4>Example: Air Conditioning Defective</h4>
+									<ol>
+										<li value="1">Fault is recorded: "A/C compressor defective" (from vehicle fault
+											tree)</li>
+										<li value="2">In the vehicle fault tree, the capability <strong>"Air
+												Conditioning"</strong> is stored for this entry</li>
+										<li value="3">When saving the fault, the capability "Air Conditioning" is
+											<strong>negated</strong> for the vehicle</li>
+										<li value="4">The vehicle is now considered a "Bus without A/C"</li>
+									</ol>
+									<h3>Effect on Dispatch Vehicle Type</h3>
+									<p>The negation of capabilities leads to the calculation of a <strong>dispatch
+											vehicle type</strong> (also <em>replacement vehicle type</em>):</p>
+									<ul>
+										<li><strong>Original vehicle type:</strong> "Standard Bus with A/C"</li>
+										<li><strong>Negated capability:</strong> "Air Conditioning"</li>
+										<li><strong>Calculated dispatch vehicle type:</strong> "Standard Bus without
+											A/C"</li>
+									</ul>
+									<p>Dispatching uses the <strong>dispatch vehicle type</strong> for availability
+										calculation and assignment:</p>
+									<ul>
+										<li>Blocks that explicitly require "Vehicle with A/C" <strong>cannot be
+												assigned</strong> to this vehicle</li>
+										<li>Blocks without this requirement can still use the vehicle</li>
+									</ul>
+									<h3>Examples of Capability Negation</h3>
+									<table class="TableStyle-Alternate-Row-Color"
+										style="mc-table-style: url('../../Resources/TableStyles/Alternate-Row-Color.css');"
+										cellspacing="21" data-mc-table-style="Alternate Row Color">
+										<thead>
+											<tr class="TableStyle-Alternate-Row-Color-Head-Header1">
+												<th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Fault
+												</th>
+												<th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Negated
+													Capability</th>
+												<th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Effect
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Air
+													conditioning failed</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Air
+													Conditioning</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Vehicle
+													not available for blocks requiring air conditioning</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Ramp
+													defective</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">
+													Accessibility / Ramp</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Vehicle
+													blocked for accessible blocks</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Wi-Fi
+													router failed</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Wi-Fi
+												</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Vehicle
+													not available for lines requiring Wi-Fi (project-specific)</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Door 3
+													defective</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Full door
+													function</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Vehicle
+													only usable for lines with low passenger frequency</td>
+											</tr>
+											<tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+												<td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Video
+													surveillance defective</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Video
+													Surveillance</td>
+												<td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Vehicle
+													possibly blocked for night lines (project-specific)</td>
+											</tr>
+										</tbody>
+									</table>
+									<h3>Multiple Negations</h3>
+									<p>A vehicle can have multiple faults with different negated capabilities:</p>
+									<ul>
+										<li><strong>Example:</strong> Fault 1 negates "Air Conditioning", Fault 2
+											negates "Wi-Fi"</li>
+										<li><strong>Result:</strong> Vehicle is considered "without A/C" AND "without
+											Wi-Fi"</li>
+										<li><strong>Dispatch vehicle type:</strong> "Standard Bus without A/C and Wi-Fi"
+										</li>
+									</ul>
+									<h3>Restoration of Capabilities</h3>
+									<p>As soon as a fault is set to <strong>Completed</strong> or <strong>No Fault
+											Found</strong>:</p>
+									<ul>
+										<li>The negated capability is <strong>automatically restored</strong></li>
+										<li>The dispatch vehicle type is <strong>recalculated</strong></li>
+										<li>The vehicle is available again with its full range of capabilities (provided
+											no other faults are present)</li>
+									</ul>
+									<h3>Configuration of Capabilities</h3>
+									<p>Capabilities are configured by the <strong>administrator</strong>:</p>
+									<ul>
+										<li><strong>Definition:</strong> What capabilities exist in the system?</li>
+										<li><strong>Association with Vehicle Types:</strong> Which vehicle types have
+											which capabilities by default?</li>
+										<li><strong>Association in Vehicle Fault Tree:</strong> Which fault negates
+											which capability?</li>
+										<li><strong>Dispatching Rules:</strong> Which blocks/lines require which
+											capabilities?</li>
+									</ul><!-- BEST PRACTICES -->
+									<h2>Best Practices – Overall Overview</h2>
+									<h3>Fault Recording</h3>
+									<ul>
+										<li><strong>Use vehicle fault tree completely:</strong> Navigate to the
+											component level for precise categorization</li>
+										<li><strong>Choose fault level carefully:</strong> Consider dispatching impacts
+										</li>
+										<li><strong>Complete description:</strong> Record symptoms, action notes, and
+											remarks</li>
+										<li><strong>Check capabilities:</strong> Verify if negated capabilities are
+											correct</li>
+									</ul>
+									<h3>Fault Processing</h3>
+									<ul>
+										<li><strong>Report quick faults as finished directly:</strong> Avoid unnecessary
+											garage orders</li>
+										<li><strong>Bundle multiple faults:</strong> Use "Add all open faults" when
+											creating a garage order</li>
+										<li><strong>Document "No Fault Found":</strong> Record why no fault was found
+										</li>
+										<li><strong>Keep state up-to-date:</strong> Avoid outdated states</li>
+									</ul>
+									<h3>Dispatching</h3>
+									<ul>
+										<li><strong>Monitor fault levels:</strong> Regularly check vehicles with Level
+											C/D/E</li>
+										<li><strong>Consider dispatch vehicle type:</strong> Pay attention to negated
+											capabilities during block assignment</li>
+										<li><strong>Communicate with garage:</strong> Coordinate critical faults</li>
+									</ul>
+									<h3>Administration</h3>
+									<ul>
+										<li><strong>Keep vehicle fault tree up-to-date:</strong> Adapt categories to new
+											vehicle types</li>
+										<li><strong>Define capabilities consistently:</strong> Avoid contradictions in
+											dispatching rules</li>
+										<li><strong>Check permissions regularly:</strong> Ensure only authorized users
+											perform critical actions</li>
+										<li><strong>Optimize archiving times:</strong> Balance between traceability and
+											performance</li>
+									</ul><!-- SEE ALSO -->
+									<h2>See Also</h2>
+									<ul>
+										<li><a href="050101_Liste_Fahrzeugstoerungen.htm" class="MCXref xref">"Vehicle
+												Faults" View</a></li>
+										<li><a href="050102_Dialog_Fahrzeugstoerung.htm" class="MCXref xref">Vehicle
+												Fault Dialog</a></li>
+										<li><a href="../0502_Werkstattmanagement/050201_Werkstattauftraege/05020101_Liste_Werkstattauftraege.htm"
+												class="MCXref xref">
+												The "Garage Orders" View
+											</a></li>
+										<li><a href="../../03_Stammdaten_Verwaltung/0301_Fahrzeugmanagement/030101_Fahrzeugliste/030101_Fahrzeugliste.htm"
+												class="MCXref xref">Vehicle list</a></li>
+										<li><a href="../../03_Stammdaten_Verwaltung/0301_Fahrzeugmanagement/030102_Dialog_Fahrzeugakte/030102_Fahrzeugakte.htm"
+												class="MCXref xref">Vehicle dossier</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><a data-close="true"></a>
+			</div>
+		</div>
+	</div>
+</body>
+
 </html>

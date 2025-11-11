@@ -1,332 +1,221 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="de" xml:lang="de" class="_Skins_Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="utf-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Grafische Live&#8209;Übersicht des Betriebshofs mit Stellplätzen, Fahrzeugen und Zuständen; Farblogik, Interaktionen und Schrittfolgen für Standort setzen/löschen." /><title>Das Betriebsbild</title>
-        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Resources/Branding/Branding.css" rel="stylesheet" type="text/css" />
-        <link href="../../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
-        <link href="../../../Resources/TableStyles/Alternate-Row-Color.css" rel="stylesheet" data-mc-stylesheet-type="table" />
-        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
-        </script>
-        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
-        </script>
-    </head>
-    <body>
-        <div class="foundation-wrap off-canvas-wrapper">
-            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
-                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
-                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Zurück" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
-                    </ul>
-                </aside>
-                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
-                    <div data-sticky-container="" class="title-bar-container">
-                        <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Zu Hauptinhalt springen</a>
-                            <div class="middle title-bar-section outer-row clearfix">
-                                <div class="menu-icon-container relative clearfix">
-                                    <div class="central-account-wrapper">
-                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Konto</span></a>
-                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Einstellungen</a>
-                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="menu-icon" aria-label="Navigationsbereich anzeigen" data-toggle="offCanvas"><span></span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="title-bar-layout outer-row">
-                                <div class="logo-wrapper"><a class="logo" href="../../../0000_Einleitung.htm" alt="Logo"></a>
-                                </div>
-                                <div class="navigation-wrapper nocontent">
-                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
-                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="central-account-wrapper">
-                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Konto</span></a>
-                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Einstellungen</a>
-                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="nav-search-wrapper">
-                                    <div class="nav-search row">
-                                        <form class="search" action="#">
-                                            <div class="search-bar search-bar-container needs-pie">
-                                                <input class="search-field needs-pie" type="search" aria-label="Suchfeld" placeholder="Suchen" />
-                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter:</span>
-                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Suchfilter" title="Alle Dateien" role="button" tabindex="0">
-                                                    </div>
-                                                    <div class="search-filter-content" id="sf-content">
-                                                        <ul>
-                                                            <li>
-                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">Alle Dateien</span>
-                                                                </button>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="search-submit-wrapper" dir="ltr">
-                                                    <div class="search-submit" title="Suchen" role="button" tabindex="0"><span class="invisible-label">Suche absenden</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </nav>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:space="preserve" lang="en" xml:lang="en"
+  class="_Skins_Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml"
+  data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True"
+  data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2"
+  data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description"
+    content="Graphical live overview of the depot with parking positions, vehicles, and states; color logic, interactions, and steps to set/clear locations." />
+  <title>The depot view</title>
+  <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css"
+    data-mc-generated="True" />
+  <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css"
+    data-mc-generated="True" />
+  <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css"
+    data-mc-generated="True" />
+  <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css"
+    data-mc-generated="True" />
+  <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css"
+    data-mc-generated="True" />
+  <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css"
+    data-mc-generated="True" />
+  <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css"
+    data-mc-generated="True" />
+  <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css"
+    data-mc-generated="True" />
+  <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css"
+    data-mc-generated="True" />
+  <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css"
+    data-mc-generated="True" />
+  <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css"
+    data-mc-generated="True" />
+  <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css"
+    data-mc-generated="True" />
+  <link href="../../../Resources/Branding/Branding.css" rel="stylesheet" type="text/css" />
+  <link href="../../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+  <link href="../../../Resources/TableStyles/Alternate-Row-Color.css" rel="stylesheet"
+    data-mc-stylesheet-type="table" />
+  <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript"></script>
+  <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer"></script>
+  <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer"></script>
+  <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer"></script>
+  <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer"></script>
+  <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer"></script>
+  <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer"></script>
+</head>
+
+<body>
+  <div class="foundation-wrap off-canvas-wrapper">
+    <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+      <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas=""
+        data-position="right" data-mc-ignore="true">
+        <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back"
+          data-mc-css-tree-node-expanded="is-accordion-submenu-parent"
+          data-mc-css-tree-node-collapsed="is-accordion-submenu-parent"
+          data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False"
+          data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False"
+          data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu"
+          data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True"></ul>
+      </aside>
+      <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+        <div data-sticky-container="" class="title-bar-container">
+          <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky=""
+            data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)"
+            data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+            <div class="middle title-bar-section outer-row clearfix">
+              <div class="menu-icon-container relative clearfix">
+                <div class="central-account-wrapper">
+                  <div class="central-dropdown"><a class="central-account-drop"><span
+                        class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                    <div class="central-dropdown-content"><a
+                        class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                      <hr class="central-separator" /><a
+                        class="MCCentralLink central-dropdown-content-logout">Logout</a>
                     </div>
-                    <div class="main-section">
-                        <div class="row outer-row sidenav-layout">
-                            <nav class="sidenav-wrapper">
-                                <div class="sidenav-container">
-                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
-                                    </ul>
-                                </div>
-                            </nav>
-                            <div class="body-container">
-                                <div data-mc-content-body="True">
-                                    <div class="nocontent">
-                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Sie sind hier:</span>
-                                        </div>
-                                    </div>
-                                    <div role="main" id="mc-main-content">
-                                        <h1 id="titel">Das Betriebsbild</h1>
-                                        <p class="mc-shortdesc">Zentrale grafische Live&#8209;Übersicht des Betriebshofs: Stellplätze, Fahrzeuge und Zustände in Echtzeit bzw. planbezogen; Farblogik für Nutzungsarten und Fahrzeugzustände sowie schnelle Interaktionen.</p>
-                                        <h2>Überblick</h2>
-                                        <p>Die Sicht <strong>Betriebsbild</strong> stellt Betriebshöfe zweidimensional dar und aktualisiert sich automatisch. Sie zeigt <strong>Stellplätze</strong> (mit Bezeichnung), <strong>Fahrzeuge/Traktionen</strong> (schematisch mit Nummer und Länge) sowie optionale Anlagen wie Ladepunkte, Werkstatt&#8209;/Versorgungsbereiche und Stauraum. Farben und Markierungen kennzeichnen Nutzungsarten, Fahrzeugeigenschaften und Standortzustände.</p>
-                                        <h2>Grafische Elemente</h2>
-                                        <ul>
-                                            <li>Umriss des Betriebshofs, Ein&#8209;/Ausfahrten (zur Übersicht ggf. verzerrt).</li>
-                                            <li>Stellplätze (einzeln, Spurabschnitte, Stauraum) mit Bezeichnung; Füllfarbe zeigt die Nutzungsart mit höchster Priorität.</li>
-                                            <li>Fahrzeuge/Traktionen als Symbole, positioniert auf Stellplätzen; Reihenfolge in Traktionen wird berücksichtigt.</li>
-                                            <li>Gebäude und charakteristische Anlagen (z.&#160;B. Abstellhallen, Ladepunkte).</li>
-                                        </ul>
-                                        <h2>Farbcodierung Stellplatz&#8209;Nutzungsarten (Standard)</h2>
-                                        <table class="TableStyle-Alternate-Row-Color" style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" cellspacing="21" data-mc-table-style="Alternate Row Color">
-                                            <thead>
-                                                <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Nutzungsart</th>
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Füllfarbe (Standard)</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Frei (keine betriebliche Nutzung)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">weiß</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Gesperrt (keine betriebliche Nutzung)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">rot&#160;schraffiert</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Stauraum</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">hellgrau</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Umlauf (Aufstellplatz für Kurs/Umlauf)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">hellgrün</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Werkstatt (Abstellplatz für Schadfahrzeuge)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">rosa</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Versorgung</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">hellblau</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Reserve (Aufstellplatz für Reservefahrzeuge)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">hellgelb</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Abstellung defekter Fahrzeuge</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">rot</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <p><em>Hinweis</em>: Farbzuordnungen und Prioritäten sind projektspezifisch konfigurierbar.</p>
-                                        <h2>Fahrzeugeigenschaften: Füllfarbe (Standard)</h2>
-                                        <table class="TableStyle-Alternate-Row-Color" style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" cellspacing="21" data-mc-table-style="Alternate Row Color">
-                                            <thead>
-                                                <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Eigenschaft</th>
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Füllfarbe</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Gestört</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">rot</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Bedingt einsatzfähig</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">rosa</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Disponiert für Umlauf, Ausrückzeit überschritten</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">hellgrün</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Disponiert für Umlauf</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">grün</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Werkstattreservierung (heute)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">orange</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Versorgungsauftrag (heute)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">blau</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Wender im Betriebshof</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">grau</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Betriebsreserve</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">gelb</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Sonderfahrzeug</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">weiß</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Stillgelegt/außer Betrieb</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">schwarze Fläche mit weißer Fahrzeugnummer</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <h2>Fahrzeugeigenschaften: Streifen (Zusatzindikatoren)</h2>
-                                        <table class="TableStyle-Alternate-Row-Color" style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" cellspacing="21" data-mc-table-style="Alternate Row Color">
-                                            <thead>
-                                                <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Streifen</th>
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Bedeutung</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">1.&#160;Streifen (Fahrtrichtung)</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Vollgetankt/Unbetankt (Bus); nicht verwendet (Schiene)</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">2.&#160;Streifen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Nächste anstehende Versorgung geplant</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">3.&#160;Streifen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Nächste anstehende Werkstattarbeit geplant</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <h2>Standortstatus: Rahmen</h2>
-                                        <table class="TableStyle-Alternate-Row-Color" style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" cellspacing="21" data-mc-table-style="Alternate Row Color">
-                                            <thead>
-                                                <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Zustand des Fahrzeugstandorts</th>
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Rahmen</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Geplant</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">schwarz, gestrichelt</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Aktuell</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">schwarz, durchgezogen</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <h2>Interaktionen und Optionen</h2>
-                                        <ul>
-                                            <li><strong>Zoom &amp; Schieben</strong>: stufenlos/Schrittweise; Mausrad&#160;+&#160;Strg; Scrollleisten.</li>
-                                            <li><strong>Kontextmenü/Doppelklick</strong>: z.&#160;B. Fahrzeugakte öffnen; Stellplatz bearbeiten.</li>
-                                            <li><strong>Beschriftungen</strong>: Sichtbarkeit von Nummer/ Linie/ Kurs pro Arbeitsplatz umschaltbar.</li>
-                                            <li><strong>Betriebstag &amp; Ausrückphasen</strong>: Anzeige/Filter entlang Betriebstag und Phasen.</li>
-                                            <li><strong>Automatische Aktualisierung</strong>: zeitgesteuerte Updates.</li>
-                                            <li><strong>Konfiguration</strong>: Traktionsmarkierungen, Vorschauzeiten, Reihenfolge von Statusfeldern (projektabhängig).</li>
-                                        </ul>
-                                        <h2>Bedienhandlungen</h2>
-                                        <h3>Aktuellen Standort setzen (Dialog)</h3>
-                                        <ol>
-                                            <li value="1">Kontextmenü am Fahrzeug öffnen &#160;→&#160; <strong>Aktuellen Standort setzen</strong>.</li>
-                                            <li value="2">Im Dialog <em>Standort setzen</em>: <strong>Fahrzeug</strong>, <strong>Betriebshof</strong>, <strong>Ort</strong> (Stellplatz) wählen.</li>
-                                            <li value="3"><em>Übernehmen</em> klicken &#160;→&#160; der Stellplatz wird für das Fahrzeug reserviert.</li>
-                                        </ol>
-                                        <p><strong>Hinweis</strong>: Ist die gewählte Spur für den Fahrzeugtyp unzulässig, erscheint ein Hinweis im Dialog.</p>
-                                        <h3>Aktuellen Standort setzen (Drag&#8209;and&#8209;Drop)</h3>
-                                        <ol>
-                                            <li value="1">Sicht <em>Fahrzeuge</em>: Fahrzeugzeile markieren.</li>
-                                            <li value="2">Mit gedrückter Maustaste in die Sicht <em>Betriebsbild</em> auf die gewünschte Spur ziehen.</li>
-                                            <li value="3">Maustaste loslassen &#160;→&#160; das Fahrzeugsymbol wird auf dem Stellplatz angezeigt.</li>
-                                        </ol>
-                                        <h3>Geplanten/aktuellen Standort löschen</h3>
-                                        <ul>
-                                            <li><strong>Geplanten Standort löschen</strong>: Kontextmenü am Fahrzeug &#160;→&#160; <em>Geplanten Standort löschen</em> &#160;→&#160; Sicherheitsabfrage bestätigen.</li>
-                                            <li><strong>Aktuellen Standort löschen</strong>: Kontextmenü am Fahrzeug &#160;→&#160; <em>Aktuellen Standort löschen</em> &#160;→&#160; der Standort wird entfernt (Status: &lt;Netz&gt;).</li>
-                                        </ul>
-                                        <h2 data-mc-conditions="Customers.SSB">SSB&#160;–&#160;Farbkennungen, Identifikation &amp; Parkraumlogik</h2>
-                                        <p data-mc-conditions="Customers.SSB">Farbkennungen und Bezeichnungen sind projektspezifisch parametriert. Ortung/Identifikation (z.&#160;B. RFID, Checkpoints, Telemetrie) und Parkraum&#8209;/Fahrwege&#8209;Planung (Rangierfreigaben, Depotzonen, Sperrflächen) folgen SSB&#8209;Vorgaben.</p>
-                                        <h2>Abbildungen</h2>
-                                        <figure class="Figure" id="fig_betriebsbild_overview">
-                                            <img src="../../../Resources/Images/sicht_betriebsbild.png" alt="Betriebsbild mit Stellplätzen, Fahrzeugen und Statusfarben sowie Betriebshof&#8209;Umriss und Anlagen." />
-                                            <figcaption>Betriebsbild &#160;–&#160; Gesamtüberblick und Farbcodierung.</figcaption>
-                                        </figure>
-                                        <figure class="Figure" id="fig_betriebsbild_interaction">
-                                            <img src="../../../Resources/Images/sicht_betriebsbild_kontext.png" />
-                                            <img src="../../../Resources/Images/sicht_betriebsbild_kontext.png" alt="Interaktionen im Betriebsbild: Zoom, Kontextmenü, Drag&#8209;and&#8209;Drop und Beschriftungen." />
-                                            <figcaption>Interaktionen im Betriebsbild &#160;–&#160; Zoom, Kontextmenü.</figcaption>
-                                        </figure>
-                                        <h2>Siehe auch</h2>
-                                        <ul>
-                                            <li><a href="../../../06_Betriebshof/01_Betriebsbild_Stellplatzverwaltung/0104_Sicht_Stellplaetze.htm" class="MCXref xref">Sicht Stellplätze</a>
-                                            </li>
-                                            <li><a href="../030301_Betriebshofliste/0301_Betriebshofliste.htm" class="MCXref xref">Betriebshofliste</a>
-                                            </li>
-                                            <li><a href="../../../04_Betriebssteuerung_und_Disposition/02_Kursaufstellplanung/0203_Aufstellplan.htm" class="MCXref xref">Aufstellplan</a>
-                                            </li>
-                                            <li><a href="../../../04_Betriebssteuerung_und_Disposition/02_Kursaufstellplanung/0202_Operativer_Kursaufstellplan.htm" class="MCXref xref">Operativer Kursaufstellplan</a>
-                                            </li>
-                                            <li><a href="../../../06_Betriebshof/03_Lademanagement_E_Busse/0300_Lademanagement_E_Busse_Intro.htm" class="MCXref xref">Lademanagement für E&#8209;Busse</a>
-                                            </li>
-                                            <li><a href="../../0301_Fahrzeugmanagement/0102_Dialog_Fahrzeugakte/0102_Fahrzeugakte.htm" class="MCXref xref">Fahrzeugakte</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><a data-close="true"></a>
-                </div>
+                  </div>
+                </div><button class="menu-icon" aria-label="Show Navigation Panel"
+                  data-toggle="offCanvas"><span></span></button>
+              </div>
             </div>
+            <div class="title-bar-layout outer-row">
+              <div class="logo-wrapper"><a class="logo" href="../../../0000_Einleitung.htm" alt="Logo"></a></div>
+              <div class="navigation-wrapper nocontent">
+                <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children"
+                  data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True"
+                  data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False"
+                  data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True"
+                  data-mc-toc="True">
+                  <li class="placeholder" style="visibility:hidden"><a>placeholder</a></li>
+                </ul>
+              </div>
+              <div class="central-account-wrapper">
+                <div class="central-dropdown"><a class="central-account-drop"><span
+                      class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                  <div class="central-dropdown-content"><a
+                      class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                    <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                  </div>
+                </div>
+              </div>
+              <div class="nav-search-wrapper">
+                <div class="nav-search row">
+                  <form class="search" action="#">
+                    <div class="search-bar search-bar-container needs-pie"><input class="search-field needs-pie"
+                        type="search" aria-label="Search Field" placeholder="Search" />
+                      <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter:
+                        </span>
+                        <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false"
+                          aria-label="Search Filter" title="All Files" role="button" tabindex="0"></div>
+                        <div class="search-filter-content" id="sf-content">
+                          <ul>
+                            <li><button class="mc-dropdown-item"
+                                aria-labelledby="search-filters-label filterSelectorLabel-00001"><span
+                                  id="filterSelectorLabel-00001">All Files</span></button></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="search-submit-wrapper" dir="ltr">
+                        <div class="search-submit" title="Search" role="button" tabindex="0"><span
+                            class="invisible-label">Submit Search</span></div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </nav>
         </div>
-    </body>
+        <div class="main-section">
+          <div class="row outer-row sidenav-layout">
+            <nav class="sidenav-wrapper">
+              <div class="sidenav-container">
+                <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu=""
+                  data-mc-css-tree-node-expanded="is-accordion-submenu-parent"
+                  data-mc-css-tree-node-collapsed="is-accordion-submenu-parent"
+                  data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested"
+                  data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False"
+                  data-mc-include-back="False" data-mc-defer-expand-event="True"
+                  data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu"
+                  data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True"></ul>
+              </div>
+            </nav>
+            <div class="body-container">
+              <div data-mc-content-body="True">
+                <div class="nocontent">
+                  <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs"
+                    data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span
+                      class="MCBreadcrumbsPrefix">You are here: </span></div>
+                </div>
+                <div role="main" id="mc-main-content">
+                  <h1 id="titel">The depot view</h1>
+                  <p class="mc-shortdesc">Central graphical live overview of the depot: parking positions, vehicles, and
+                    states in real time or plan&#8209;based; color logic for usage types and vehicle states plus quick
+                    interactions.</p>
+
+                  <h2>Overview</h2>
+                  <p>The <strong>depot view</strong> shows depots in two dimensions and updates automatically. It shows
+                    <strong>parking positions</strong> (with designation), <strong>vehicles/trains</strong> (schematic
+                    with number and length), and optional assets such as charging points, workshop/supply areas, and
+                    staging. Colors and markers indicate usage types, vehicle properties, and location states.</p>
+
+                  <h2>Graphical elements</h2>
+                  <ul>
+                    <li>Depot outline, entries/exits (distorted for readability if needed).</li>
+                    <li>Parking positions (single, track segments, staging) with designation; fill color shows the
+                      highest&#8209;priority usage type.</li>
+                    <li>Vehicles/trains as symbols positioned on parking positions; order within trains is respected.
+                    </li>
+                    <li>Buildings and characteristic assets (e.g., sheds, charging points).</li>
+                  </ul>
+
+                  <h2>Color coding of parking usage types (standard)</h2>
+                  <table class="TableStyle-Alternate-Row-Color"
+                    style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');"
+                    cellspacing="21" data-mc-table-style="Alternate Row Color">
+                    <thead>
+                      <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
+                        <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Usage type</th>
+                        <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Fill color (standard)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                        <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Available (no operational use)
+                        </td>
+                        <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">white</td>
+                      </tr>
+                      <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                        <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Blocked (no operational use)</td>
+                        <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">red hatched</td>
+                      </tr>
+                      <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                        <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Staging</td>
+                        <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">light gray</td>
+                      </tr>
+                      <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                        <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Block (duty lineup position)</td>
+                        <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">light green</td>
+                      </tr>
+                      <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                        <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Workshop (parking for faulty
+                          vehicles)</td>
+                        <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">pink</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><a data-close="true"></a>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>

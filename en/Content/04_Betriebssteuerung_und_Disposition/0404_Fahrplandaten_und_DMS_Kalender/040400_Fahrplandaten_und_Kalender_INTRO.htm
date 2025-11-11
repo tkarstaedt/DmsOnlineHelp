@@ -1,178 +1,249 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="de" xml:lang="de" class="_Skins_Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="utf-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Einführung in das Thema Fahrplandaten und DMS&#8209;Kalender in PEAK.DMS: Datenfluss von Planung bis Operativ, zentrale Begriffe und Zusammenhänge mit Disposition und Kursaufstellplanung." /><title>Fahrplandaten und DMS&#8209;Kalender</title>
-        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../Resources/Branding/Branding.css" rel="stylesheet" type="text/css" />
-        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
-        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
-        </script>
-        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
-        </script>
-    </head>
-    <body>
-        <div class="foundation-wrap off-canvas-wrapper">
-            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
-                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
-                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Zurück" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
-                    </ul>
-                </aside>
-                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
-                    <div data-sticky-container="" class="title-bar-container">
-                        <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Zu Hauptinhalt springen</a>
-                            <div class="middle title-bar-section outer-row clearfix">
-                                <div class="menu-icon-container relative clearfix">
-                                    <div class="central-account-wrapper">
-                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Konto</span></a>
-                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Einstellungen</a>
-                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="menu-icon" aria-label="Navigationsbereich anzeigen" data-toggle="offCanvas"><span></span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="title-bar-layout outer-row">
-                                <div class="logo-wrapper"><a class="logo" href="../../0000_Einleitung.htm" alt="Logo"></a>
-                                </div>
-                                <div class="navigation-wrapper nocontent">
-                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
-                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
-                                        </li>
-                                    </ul>
-                                </div>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:space="preserve" lang="en" xml:lang="en"
+    class="_Skins_Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml"
+    data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedTitle%]"
+    data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false"
+    data-mc-in-preview-mode="false">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description"
+        content="Introduction to the topic of timetable data and DMS&#8209;Calendar in PEAK.DMS: Data flow from planning to operations, central terms, and connections with dispatching and duty lineup planning." />
+    <title>Timetable Data and DMS&#8209;Calendar</title>
+    <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css"
+        data-mc-generated="True" />
+    <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+    <link href="../../Resources/Branding/Branding.css" rel="stylesheet" type="text/css" />
+    <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript"></script>
+    <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer"></script>
+    <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer"></script>
+    <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer"></script>
+    <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer"></script>
+    <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer"></script>
+    <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer"></script>
+</head>
+
+<body>
+    <div class="foundation-wrap off-canvas-wrapper">
+        <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+            <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas=""
+                data-position="right" data-mc-ignore="true">
+                <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu=""
+                    data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent"
+                    data-mc-css-tree-node-collapsed="is-accordion-submenu-parent"
+                    data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False"
+                    data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False"
+                    data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu"
+                    data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True"></ul>
+            </aside>
+            <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                <div data-sticky-container="" class="title-bar-container">
+                    <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky=""
+                        data-options="marginTop:0" style="width:100%"
+                        data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a
+                            class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                        <div class="middle title-bar-section outer-row clearfix">
+                            <div class="menu-icon-container relative clearfix">
                                 <div class="central-account-wrapper">
-                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Konto</span></a>
-                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Einstellungen</a>
-                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                    <div class="central-dropdown"><a class="central-account-drop"><span
+                                                class="central-account-image"></span><span
+                                                class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a
+                                                class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a
+                                                class="MCCentralLink central-dropdown-content-logout">Logout</a>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="nav-search-wrapper">
-                                    <div class="nav-search row">
-                                        <form class="search" action="#">
-                                            <div class="search-bar search-bar-container needs-pie">
-                                                <input class="search-field needs-pie" type="search" aria-label="Suchfeld" placeholder="Suchen" />
-                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter:</span>
-                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Suchfilter" title="Alle Dateien" role="button" tabindex="0">
-                                                    </div>
-                                                    <div class="search-filter-content" id="sf-content">
-                                                        <ul>
-                                                            <li>
-                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">Alle Dateien</span>
-                                                                </button>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="search-submit-wrapper" dir="ltr">
-                                                    <div class="search-submit" title="Suchen" role="button" tabindex="0"><span class="invisible-label">Suche absenden</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
+                                </div><button class="menu-icon" aria-label="Show Navigation Panel"
+                                    data-toggle="offCanvas"><span></span></button>
+                            </div>
+                        </div>
+                        <div class="title-bar-layout outer-row">
+                            <div class="logo-wrapper"><a class="logo" href="../../0000_Einleitung.htm" alt="Logo"></a>
+                            </div>
+                            <div class="navigation-wrapper nocontent">
+                                <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children"
+                                    data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter"
+                                    data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False"
+                                    data-mc-include-indicator="False" data-mc-include-children="True"
+                                    data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                    <li class="placeholder" style="visibility:hidden"><a>placeholder</a></li>
+                                </ul>
+                            </div>
+                            <div class="central-account-wrapper">
+                                <div class="central-dropdown"><a class="central-account-drop"><span
+                                            class="central-account-image"></span><span
+                                            class="central-account-text">Account</span></a>
+                                    <div class="central-dropdown-content"><a
+                                            class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                        <hr class="central-separator" /><a
+                                            class="MCCentralLink central-dropdown-content-logout">Logout</a>
                                     </div>
                                 </div>
                             </div>
-                        </nav>
-                    </div>
-                    <div class="main-section">
-                        <div class="row outer-row sidenav-layout">
-                            <nav class="sidenav-wrapper">
-                                <div class="sidenav-container">
-                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
-                                    </ul>
-                                </div>
-                            </nav>
-                            <div class="body-container">
-                                <div data-mc-content-body="True">
-                                    <div class="nocontent">
-                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Sie sind hier:</span>
+                            <div class="nav-search-wrapper">
+                                <div class="nav-search row">
+                                    <form class="search" action="#">
+                                        <div class="search-bar search-bar-container needs-pie"><input
+                                                class="search-field needs-pie" type="search" aria-label="Search Field"
+                                                placeholder="Search" />
+                                            <div class="search-filter-wrapper"><span class="invisible-label"
+                                                    id="search-filters-label">Filter: </span>
+                                                <div class="search-filter" aria-haspopup="true"
+                                                    aria-controls="sf-content" aria-expanded="false"
+                                                    aria-label="Search Filter" title="All Files" role="button"
+                                                    tabindex="0"></div>
+                                                <div class="search-filter-content" id="sf-content">
+                                                    <ul>
+                                                        <li><button class="mc-dropdown-item"
+                                                                aria-labelledby="search-filters-label filterSelectorLabel-00001"><span
+                                                                    id="filterSelectorLabel-00001">All
+                                                                    Files</span></button></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="search-submit-wrapper" dir="ltr">
+                                                <div class="search-submit" title="Search" role="button" tabindex="0">
+                                                    <span class="invisible-label">Submit Search</span></div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div role="main" id="mc-main-content">
-                                        <h1 id="titel">Fahrplandaten und DMS&#8209;Kalender</h1>
-                                        <p class="mc-shortdesc">
-			Dieses Kapitel beschreibt, wie Fahrplandaten aus der Planung nach <strong>PEAK.DMS</strong> übernommen werden und welche Rolle der <strong>DMS&#8209;Kalender</strong> für die Disposition spielt.
-		</p>
-                                        <h2 id="einordnung">Einordnung</h2>
-                                        <p>
-			Fahrplandaten bilden die Grundlage für nahezu alle betrieblichen Planungs&#8209; und Steuerungsprozesse im DMS. Sie werden typischerweise über die Schnittstelle <strong>VDV&#8209;452</strong> (z.&#160;B. aus <em>DIVA</em>) importiert und als <strong>Basisversion</strong> abgelegt. Nach inhaltlicher Prüfung und Freigabe gelangen sie in die operative Datenbasis.
-		</p>
-                                        <h2 id="datenfluss">Datenfluss Überblick</h2>
-                                        <ol>
-                                            <li value="1"><strong>Planungssystem</strong>: Erzeugt Export (z.&#160;B. VDV&#8209;452).</li>
-                                            <li value="2"><strong>Import</strong> nach DMS: Anlage einer Basisversion.</li>
-                                            <li value="3"><strong>Prüfung &amp; Freigabe</strong>: Disponent/Fachadmin kontrolliert Daten.</li>
-                                            <li value="4"><strong>Übernahme in Operativ</strong>: Freigegebene Version wird wirksam.</li>
-                                            <li value="5"><strong>DMS&#8209;Kalender</strong>: Ordnet Betriebstage den Tagesarten zu und wirkt als Schaltstelle für Kursaufstellung und Disposition.</li>
-                                        </ol>
-                                        <h2 id="begriffe">Zentrale Begriffe</h2>
-                                        <ul>
-                                            <li><strong>Betriebstag</strong>: Ein Kalendertag, ggf. verschoben durch betrieblichen Tageswechsel.</li>
-                                            <li><strong>Tagesart</strong>: Klassifikation (z.&#160;B. Werktag, Samstag, Feiertag, Ferien).</li>
-                                            <li><strong>VDV&#8209;Kalender</strong>: Zuordnung Betriebstag&#160;↔&#160;Tagesart, i.&#160;d.&#160;R. importiert.</li>
-                                            <li><strong>DMS&#8209;Kalender</strong>: Operative Kalenderbasis mit allen Betriebstagen und Tagesarten.</li>
-                                            <li><strong>Basisversion</strong>: Importierte Fahrplandatenlieferung vor Freigabe.</li>
-                                        </ul>
-                                        <h2 id="zusammenhaenge">Zusammenhänge</h2>
-                                        <p>
-			Der DMS&#8209;Kalender ist Dreh&#8209; und Angelpunkt zwischen importierten Fahrplandaten und operativen Anwendungen:
-		</p>
-                                        <ul>
-                                            <li><strong>Kursaufstellplanung</strong> (siehe <a href="../0402_Kursaufstellplanung/040201_Kursaufstellplan.htm" class="MCXref xref" xrefformat="{para}">Dialog „Kursaufstellplan“ </a>) nutzt Tagesarten, um Umläufe und Kurse korrekt zu bilden.</li>
-                                            <li><strong>Fahrzeugdisposition</strong> (siehe <a href="../0403_Fahrzeugdisposition/040300_Fahrzeugdisposition_INTRO.htm" class="MCXref xref" xrefformat="{para}">Fahrzeugdisposition &#160;–&#160; Einführung</a>) orientiert sich an den aktiven Betriebstagen.</li>
-                                            <li><strong>Bereichskalender</strong> (siehe <a href="../0406_Bereichskalender/040601_Kalender_Umlauf.htm" class="MCXref xref" xrefformat="{para}">Kalender: Umläufe</a>) spiegeln die operative Umsetzung je Funktionsbereich wider.</li>
-                                        </ul>
-                                        <h2 id="struktur">Kapitelstruktur</h2>
-                                        <p>Das Kapitel gliedert sich in folgende Themen:</p>
-                                        <ul>
-                                            <li><a href="040401_Fahrplandaten_anzeigen.htm" class="MCXref xref" xrefformat="{para}">Fahrplandaten anzeigen</a>
-                                            </li>
-                                            <li><a href="040402_VDV_Kalender.htm" class="MCXref xref" xrefformat="{para}">VDV&#8209;Kalender</a>
-                                            </li>
-                                            <li><a href="040403_DMS_Tagesarten.htm" class="MCXref xref" xrefformat="{para}">DMS-Tagesarten</a>
-                                            </li>
-                                            <li><a href="040404_DMS_Kalender_pflegen.htm" class="MCXref xref" xrefformat="{para}">Dialog „DMS-Kalender pflegen“</a>
-                                            </li>
-                                            <li><a href="040405_Prozess_Import_bis_Operativ.htm" class="MCXref xref" xrefformat="{para}">Prozess: Import bis Operativ</a>
-                                            </li>
-                                            <li><a href="040406_Troubleshooting.htm" class="MCXref xref" xrefformat="{para}">Troubleshooting Fahrplandaten &amp; Kalender</a>
-                                            </li>
-                                        </ul>
-                                        <!-- Metadaten / Platzhalter -->
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
-                    </div><a data-close="true"></a>
+                    </nav>
                 </div>
+                <div class="main-section">
+                    <div class="row outer-row sidenav-layout">
+                        <nav class="sidenav-wrapper">
+                            <div class="sidenav-container">
+                                <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu=""
+                                    data-mc-css-tree-node-expanded="is-accordion-submenu-parent"
+                                    data-mc-css-tree-node-collapsed="is-accordion-submenu-parent"
+                                    data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested"
+                                    data-mc-include-indicator="False" data-mc-include-icon="False"
+                                    data-mc-include-parent-link="False" data-mc-include-back="False"
+                                    data-mc-defer-expand-event="True"
+                                    data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu"
+                                    data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True"
+                                    data-mc-side-nav-menu="True"></ul>
+                            </div>
+                        </nav>
+                        <div class="body-container">
+                            <div data-mc-content-body="True">
+                                <div class="nocontent">
+                                    <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation"
+                                        aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; "
+                                        data-mc-breadcrumbs-count="3" data-mc-toc="True"><span
+                                            class="MCBreadcrumbsPrefix">You are here: </span></div>
+                                </div>
+                                <div role="main" id="mc-main-content">
+                                    <h1 id="titel">Timetable Data and DMS&#8209;Calendar</h1>
+                                    <p class="mc-shortdesc">
+                                        This chapter describes how timetable data from planning is adopted into
+                                        <strong>PEAK.DMS</strong> and the role the <strong>DMS&#8209;calendar</strong>
+                                        plays in dispatching.
+                                    </p>
+                                    <h2 id="einordnung">Overview</h2>
+                                    <p>
+                                        Timetable data forms the foundation for nearly all operational planning and
+                                        control processes in the DMS. They are typically imported via the
+                                        <strong>VDV&#8209;452</strong> interface (e.g., from <em>DIVA</em>) and stored
+                                        as a <strong>base version</strong>. After content review and approval, they are
+                                        transferred to the operational data foundation.
+                                    </p>
+                                    <h2 id="datenfluss">Data Flow Overview</h2>
+                                    <ol>
+                                        <li value="1"><strong>Planning System</strong>: Generates export (e.g.,
+                                            VDV-452).</li>
+                                        <li value="2"><strong>Import</strong> into DMS: Creation of a base version.</li>
+                                        <li value="3"><strong>Review &amp; Approval</strong>: Dispatcher/Technical admin
+                                            checks data.</li>
+                                        <li value="4"><strong>Transfer to Operations</strong>: Approved version becomes
+                                            effective.</li>
+                                        <li value="5"><strong>DMS&#8209;Calendar</strong>: Assigns operating days to day
+                                            types and acts as a control point for duty lineup and dispatching.</li>
+                                    </ol>
+                                    <h2 id="begriffe">Central Terms</h2>
+                                    <ul>
+                                        <li><strong>Operating Day</strong>: A calendar day, possibly shifted by the
+                                            operational day change.</li>
+                                        <li><strong>Day Type</strong>: Classification (e.g., Weekday, Saturday, Holiday,
+                                            Vacation).</li>
+                                        <li><strong>VDV&#8209;Calendar</strong>: Assignment Operating
+                                            Day&#160;↔&#160;Day Type, usually imported.</li>
+                                        <li><strong>DMS&#8209;Calendar</strong>: Operational calendar basis with all
+                                            operating days and day types.</li>
+                                        <li><strong>Base Version</strong>: Imported timetable data delivery before
+                                            approval.</li>
+                                    </ul>
+                                    <h2 id="zusammenhaenge">Relationships</h2>
+                                    <p>
+                                        The DMS&#8209;calendar is the central hub between imported timetable data and
+                                        operational applications:
+                                    </p>
+                                    <ul>
+                                        <li><strong>Duty lineup planning</strong> (see <a
+                                                href="../0402_Kursaufstellplanung/040201_Kursaufstellplan.htm"
+                                                class="MCXref xref" xrefformat="{para}">"Duty Lineup Plan" Dialog </a>)
+                                            uses day types to correctly form blocks and duties.</li>
+                                        <li><strong>Vehicle dispatching</strong> (see <a
+                                                href="../0403_Fahrzeugdisposition/040300_Fahrzeugdisposition_INTRO.htm"
+                                                class="MCXref xref" xrefformat="{para}">Vehicle Dispatching –
+                                                Introduction</a>) is based on the active operating days.</li>
+                                        <li><strong>Area calendar</strong> (see <a
+                                                href="../0406_Bereichskalender/040601_Kalender_Umlauf.htm"
+                                                class="MCXref xref" xrefformat="{para}">Calendar: Blocks</a>) reflect
+                                            the operational implementation for each functional area.</li>
+                                    </ul>
+                                    <h2 id="struktur">Chapter Structure</h2>
+                                    <p>The chapter is divided into the following topics:</p>
+                                    <ul>
+                                        <li><a href="040401_Fahrplandaten_anzeigen.htm" class="MCXref xref"
+                                                xrefformat="{para}">Fahrplandaten anzeigen</a></li>
+                                        <li><a href="040402_VDV_Kalender.htm" class="MCXref xref"
+                                                xrefformat="{para}">VDV&#8209;Calendar</a></li>
+                                        <li><a href="040403_DMS_Tagesarten.htm" class="MCXref xref"
+                                                xrefformat="{para}">DMS Day Types</a></li>
+                                        <li><a href="040404_DMS_Kalender_pflegen.htm" class="MCXref xref"
+                                                xrefformat="{para}">Dialog "Maintain DMS Calendar"</a></li>
+                                        <li><a href="040405_Prozess_Import_bis_Operativ.htm" class="MCXref xref"
+                                                xrefformat="{para}">Process: Import to Operational</a></li>
+                                        <li><a href="040406_Troubleshooting.htm" class="MCXref xref"
+                                                xrefformat="{para}">Troubleshooting Timetable Data &amp; Calendars</a>
+                                        </li>
+                                    </ul><!-- Metadata / Placeholders -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><a data-close="true"></a>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

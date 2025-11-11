@@ -1,392 +1,525 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="de" xml:lang="de" class="_Skins_Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="utf-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Zentrale Darstellung und Bearbeitung eines Umlaufs: Basisdaten, Umlaufstücke, zulässige Fahrzeugtypen und Meldungen. Öffnen über Symbolleiste oder Doppelklick in der Umlaufliste." /><title>Dialog „Umlaufakte“</title>
-        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../../Resources/Branding/Branding.css" rel="stylesheet" type="text/css" />
-        <link href="../../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
-        <link href="../../../Resources/TableStyles/Alternate-Row-Color.css" rel="stylesheet" data-mc-stylesheet-type="table" />
-        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
-        </script>
-        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
-        </script>
-        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
-        </script>
-    </head>
-    <body>
-        <div class="foundation-wrap off-canvas-wrapper">
-            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
-                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
-                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Zurück" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
-                    </ul>
-                </aside>
-                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
-                    <div data-sticky-container="" class="title-bar-container">
-                        <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Zu Hauptinhalt springen</a>
-                            <div class="middle title-bar-section outer-row clearfix">
-                                <div class="menu-icon-container relative clearfix">
-                                    <div class="central-account-wrapper">
-                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Konto</span></a>
-                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Einstellungen</a>
-                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="menu-icon" aria-label="Navigationsbereich anzeigen" data-toggle="offCanvas"><span></span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="title-bar-layout outer-row">
-                                <div class="logo-wrapper"><a class="logo" href="../../../0000_Einleitung.htm" alt="Logo"></a>
-                                </div>
-                                <div class="navigation-wrapper nocontent">
-                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
-                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="central-account-wrapper">
-                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Konto</span></a>
-                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Einstellungen</a>
-                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="nav-search-wrapper">
-                                    <div class="nav-search row">
-                                        <form class="search" action="#">
-                                            <div class="search-bar search-bar-container needs-pie">
-                                                <input class="search-field needs-pie" type="search" aria-label="Suchfeld" placeholder="Suchen" />
-                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter:</span>
-                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Suchfilter" title="Alle Dateien" role="button" tabindex="0">
-                                                    </div>
-                                                    <div class="search-filter-content" id="sf-content">
-                                                        <ul>
-                                                            <li>
-                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">Alle Dateien</span>
-                                                                </button>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="search-submit-wrapper" dir="ltr">
-                                                    <div class="search-submit" title="Suchen" role="button" tabindex="0"><span class="invisible-label">Suche absenden</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </nav>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:space="preserve" lang="en" xml:lang="en"
+  class="_Skins_Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml"
+  data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True"
+  data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2"
+  data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description"
+    content="Central view and editing of a block: basic data, block segments, permitted vehicle types, and messages. Open via toolbar button or double-click in the block list." />
+  <title>Block dossier dialog</title>
+  <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css"
+    data-mc-generated="True" />
+  <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css"
+    data-mc-generated="True" />
+  <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css"
+    data-mc-generated="True" />
+  <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css"
+    data-mc-generated="True" />
+  <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css"
+    data-mc-generated="True" />
+  <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css"
+    data-mc-generated="True" />
+  <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css"
+    data-mc-generated="True" />
+  <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css"
+    data-mc-generated="True" />
+  <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css"
+    data-mc-generated="True" />
+  <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css"
+    data-mc-generated="True" />
+  <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css"
+    data-mc-generated="True" />
+  <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css"
+    data-mc-generated="True" />
+  <link href="../../../Resources/Branding/Branding.css" rel="stylesheet" type="text/css" />
+  <link href="../../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+  <link href="../../../Resources/TableStyles/Alternate-Row-Color.css" rel="stylesheet"
+    data-mc-stylesheet-type="table" />
+  <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript"></script>
+  <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer"></script>
+  <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer"></script>
+  <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer"></script>
+  <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer"></script>
+  <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer"></script>
+  <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer"></script>
+</head>
+
+<body>
+  <div class="foundation-wrap off-canvas-wrapper">
+    <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+      <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas=""
+        data-position="right" data-mc-ignore="true">
+        <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back"
+          data-mc-css-tree-node-expanded="is-accordion-submenu-parent"
+          data-mc-css-tree-node-collapsed="is-accordion-submenu-parent"
+          data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False"
+          data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False"
+          data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu"
+          data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True"></ul>
+      </aside>
+      <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+        <div data-sticky-container="" class="title-bar-container">
+          <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky=""
+            data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)"
+            data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+            <div class="middle title-bar-section outer-row clearfix">
+              <div class="menu-icon-container relative clearfix">
+                <div class="central-account-wrapper">
+                  <div class="central-dropdown"><a class="central-account-drop"><span
+                        class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                    <div class="central-dropdown-content"><a
+                        class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                      <hr class="central-separator" /><a
+                        class="MCCentralLink central-dropdown-content-logout">Logout</a>
                     </div>
-                    <div class="main-section">
-                        <div class="row outer-row sidenav-layout">
-                            <nav class="sidenav-wrapper">
-                                <div class="sidenav-container">
-                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
-                                    </ul>
-                                </div>
-                            </nav>
-                            <div class="body-container">
-                                <div data-mc-content-body="True">
-                                    <div class="nocontent">
-                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Sie sind hier:</span>
-                                        </div>
-                                    </div>
-                                    <div role="main" id="mc-main-content">
-                                        <h1>Dialog „Umlaufakte“</h1>
-                                        <p class="intro">Der Dialog <strong>„Umlaufakte“</strong> dient der zentralen Darstellung und Bearbeitung aller Informationen zu einem Umlauf.</p>
-                                        <h2>Dialog öffnen</h2>
-                                        <ul>
-                                            <li>Linksklick auf die Schaltfläche <strong>„Umlaufakte“</strong> in der Symbolleiste.</li>
-                                            <li>Doppelklick auf den Umlauf in der tabellarischen Sicht <em>„Umläufe“</em>.</li>
-                                        </ul>
-                                        <p>Die Dialogfelder sind in Reitern gruppiert. Die Reiter sind horizontal hintereinander angeordnet und mit einem Linksklick anwählbar.</p>
-                                        <!-- Übersicht: Reiter -->
-                                        <table style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" class="TableStyle-Alternate-Row-Color" cellspacing="21">
-                                            <thead>
-                                                <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Reiter</th>
-                                                    <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Beschreibung</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Basisdaten</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Informiert über die Eigenschaften eines ausgewählten Umlaufs und dient der Bearbeitung dieser.</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Umlaufstücke</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Zeigt die Umlaufstücke des ausgewählten Umlaufs an.</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Fahrzeugtypen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Anzeige und Zuweisung jener Fahrzeugtypen, die für den ausgewählten Umlauf zugelassen sind.</td>
-                                                </tr>
-                                                <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Meldungen</td>
-                                                    <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Zeigt die Meldungen zum ausgewählten Umlauf an.</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <p><em>Tabelle 65: Dialog „Umlaufakte“ &#160;—&#160; Übersicht aller Reiter</em>
-                                        </p>
-                                        <!-- Oberhalb der Reiter: Datum/Umlauf -->
-                                        <h3>Kontextfelder oberhalb der Reiter</h3>
-                                        <ul>
-                                            <li><strong>Datum</strong> &#160;—&#160; Betriebstag, an dem der Umlauf durchgeführt wird.</li>
-                                            <li><strong>Umlauf</strong> &#160;—&#160; Nummer des Umlaufs.</li>
-                                        </ul>
-                                        <!-- Reiter: Basisdaten -->
-                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Geschlossen" data-mc-alt2="Offen" /><h2>Reiter „Basisdaten“</h2></a></span>
-                                            <div class="MCDropDownBody dropDownBody">
-                                                <p>Der Reiter „Basisdaten“ informiert über die Eigenschaften des ausgewählten Umlaufs.</p>
-                                                <img src="../../../Resources/Images/dlg_umlaufakte_umlaufdaten_605x423.png" alt="Dialog Umlaufakte — Reiter Basisdaten (Beispiel)" style="width: 605;height: 423;" />
-                                                <p><em>Abbildung: Dialog „Umlaufakte“ &#160;—&#160; Reiter „Basisdaten“ (Beispiel)</em>
-                                                </p>
-                                                <table style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" class="TableStyle-Alternate-Row-Color" cellspacing="21">
-                                                    <thead>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
-                                                            <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Feld</th>
-                                                            <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Beschreibung</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Umlauftyp</td>
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Umlauftyp zum Fahrzeug.</td>
-                                                        </tr>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Zustand</td>
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Aktueller Zustand des Umlaufs.</td>
-                                                        </tr>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Start</td>
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Kürzel des Betriebshofs, an dem die erste Fahrt des Umlaufs geplant beginnt.</td>
-                                                        </tr>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Beginn</td>
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Uhrzeit, zu der das Fahrzeug geplant ausrückt und die erste Fahrt des Umlaufs beginnt.</td>
-                                                        </tr>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Ziel</td>
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Kürzel des Betriebshofs, an dem die letzte Fahrt des Umlaufs geplant endet.</td>
-                                                        </tr>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Ende</td>
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Uhrzeit, zu der das Fahrzeug geplant einrückt und die letzte Fahrt des Umlaufs endet.</td>
-                                                        </tr>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Länge</td>
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Länge des Umlaufs in Kilometern.</td>
-                                                        </tr>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Aktuelles Fahrzeug</td>
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">
-                                                                <p><a href="#Umlaufmanagement_Aktuelles_FahrzFD9D7932"><u>Aktuelles Fahrzeug</u></a>
-                                                                </p>
-                                                                <p>Die Schaltfläche <img src="media_Benutzerhandbuch/media/image225.png" alt="Button Aktuelles Fahrzeug" style="width: 0.16667in;height: 0.14583in;" /> öffnet den Dialog „Aktuelles Fahrzeug“.</p>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Geplantes Fahrzeug</td>
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">
-                                                                <p><a href="#Umlaufmanagement_Geplantes_FahrzB1E94C5F"><u>Geplantes Fahrzeug</u></a>
-                                                                </p>
-                                                                <p>Diese Information dient der Protokollierung in PSI<em>traffic</em>.</p>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Wunschfahrzeug</td>
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">
-                                                                <p>Fahrzeug, welches von dem berechtigten Benutzer dem zukünftigen Umlauf zugewiesen ist.</p>
-                                                                <p>Das Wunschfahrzeug ist Vorgabe an die automatisierte Umlaufdisposition; der Umlauf ist mit diesem Fahrzeug zu besetzen.</p>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Ausführungshinweis</td>
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">
-                                                                <p>Freitext.</p>
-                                                                <p>Der eingegebene Text ist Information an den Fahrer und wird an der Abfahrtstafel angezeigt.</p>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <p><em>Tabelle: Dialog „Umlaufakte“ &#160;—&#160; Reiter „Basisdaten“</em>
-                                                </p>
-                                                <p class="Note">Wird das <strong>aktuelle Fahrzeug</strong> vor planmäßigem Beginn (innerhalb einer Parametrik) gesetzt, passt das System das <em>geplante Fahrzeug</em> entsprechend an.</p>
-                                                <p class="Note">Sind Einzelfahrzeug <em>und</em> Traktion zulässig, bietet der Dialog Umschalter für die Eingabe.</p>
-                                            </div>
-                                        </div>
-                                        <!-- Reiter: Umlaufstücke -->
-                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Geschlossen" data-mc-alt2="Offen" /><h2>Reiter „Umlaufstücke“</h2></a></span>
-                                            <div class="MCDropDownBody dropDownBody">
-                                                <p>In der integrierten Sicht werden, entsprechend der konfigurierten Datenhaltung im operativen System, die vergangenen, aktuellen und geplanten Umlaufstücke des ausgewählten Umlaufs angezeigt.</p>
-                                                <img src="media_Benutzerhandbuch/media/image226.png" alt="Dialog Umlaufakte — Reiter Umlaufstücke (Beispiel)" style="width: 6.30208in;height: 4.40625in;" />
-                                                <p><em>Abbildung: Dialog „Umlaufakte“ &#160;—&#160; Reiter „Umlaufstücke“ (Beispiel)</em>
-                                                </p>
-                                                <table style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" class="TableStyle-Alternate-Row-Color" cellspacing="21">
-                                                    <thead>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
-                                                            <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Feld</th>
-                                                            <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Beschreibung</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Fahrzeug</td>
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1"><a href="#Umlaufmanagement_Aktuelles_FahrzFD9D7932"><u>Aktuelles Fahrzeug</u></a>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Startpunkt</td>
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Betriebshof / Haltepunkt, an dem das Umlaufstück beginnt.</td>
-                                                        </tr>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Endpunkt</td>
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Betriebshof / Haltepunkt, an dem das Umlaufstück endet.</td>
-                                                        </tr>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Beginn (Soll)</td>
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Geplante Startzeit am Startpunkt.</td>
-                                                        </tr>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Beginn (Ist)</td>
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Tatsächliche Startzeit am Startpunkt.</td>
-                                                        </tr>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Ende (Soll)</td>
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Geplante Endzeit am Endpunkt.</td>
-                                                        </tr>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Ende (Ist)</td>
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Tatsächliche Endzeit am Endpunkt.</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <p><em>Tabelle: Dialog „Umlaufakte“ &#160;—&#160; Reiter „Umlaufstücke“ (Standardkonfiguration)</em>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <!-- Reiter: Fahrzeugtypen -->
-                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Geschlossen" data-mc-alt2="Offen" /><h2>Reiter „Fahrzeugtypen“</h2></a></span>
-                                            <div class="MCDropDownBody dropDownBody">
-                                                <p>Der Reiter „Fahrzeugtypen“ zeigt für den ausgewählten Umlauf jene Fahrzeugtypen an, die, entsprechend ihrer Priorität, von der automatisierten Umlaufdisposition berücksichtigt werden.</p>
-                                                <img src="media_Benutzerhandbuch/media/image227.png" alt="Dialog Umlaufakte — Reiter Fahrzeugtypen (Beispiel)" style="width: 6.30208in;height: 4.40625in;" />
-                                                <p><em>Abbildung: Dialog „Umlaufakte“ &#160;—&#160; Reiter „Fahrzeugtypen“ (Beispiel)</em>
-                                                </p>
-                                                <ul>
-                                                    <li>Zuweisung <strong>zulässiger Fahrzeugtypen</strong> inkl. <strong>Priorität</strong> als Vorgabe für die Umlaufdisposition.</li>
-                                                    <li>Alternativ <strong>Fahrzeugtypmuster</strong> wählen und übernehmen; danach Typen/Präferenzen bei Bedarf anpassen.</li>
-                                                </ul>
-                                                <p class="Important">Beim erneuten Übernehmen eines <strong>Fahrzeugtypmusters</strong> werden zuvor manuell geänderte Einträge in der Liste <em>überschrieben</em>.</p>
-                                            </div>
-                                        </div>
-                                        <!-- Reiter: Meldungen -->
-                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Geschlossen" data-mc-alt2="Offen" /><h2>Reiter „Meldungen“</h2></a></span>
-                                            <div class="MCDropDownBody dropDownBody">
-                                                <p>In der integrierten Sicht werden entsprechend der konfigurierten Datenhaltung im operativen System die vergangenen und aktuellen Meldungen, den ausgewählten Umlauf betreffend, angezeigt.</p>
-                                                <img src="media_Benutzerhandbuch/media/image228.png" alt="Dialog Umlaufakte — Reiter Meldungen (Beispiel)" style="width: 6.30208in;height: 2.21875in;" />
-                                                <p><em>Abbildung : Dialog „Umlaufakte“ &#160;—&#160; Reiter „Meldungen“ (Beispiel)</em>
-                                                </p>
-                                                <table style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" class="TableStyle-Alternate-Row-Color" cellspacing="21">
-                                                    <thead>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
-                                                            <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Feld</th>
-                                                            <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Beschreibung</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Zeitpunkt</td>
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Datum und Uhrzeit der Generierung.</td>
-                                                        </tr>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Typ</td>
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Meldungstyp.</td>
-                                                        </tr>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Zustand</td>
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Aktueller Bearbeitungsstatus der Meldung.</td>
-                                                        </tr>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Betriebshof</td>
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Betriebshof, auf den sich die Meldung bezieht.</td>
-                                                        </tr>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Fahrzeug</td>
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Nummer des Fahrzeugs, auf das sich die Meldung bezieht.</td>
-                                                        </tr>
-                                                        <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Erstellt von</td>
-                                                            <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Benutzer, der die Meldung erstellt hat.</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <p><em>Tabelle: Dialog „Umlaufakte“ &#160;—&#160; Reiter „Meldungen“ (Standardkonfiguration)</em>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <h2>Zustandsabhängige Bearbeitung</h2>
-                                        <ul>
-                                            <li><strong>Geplant</strong>: Volle Bearbeitung aller relevanten Felder möglich.</li>
-                                            <li><strong>Wird durchgeführt</strong>: Nur <em>Ziel</em>, <em>Ende</em> und <em>aktuelles Fahrzeug</em> editierbar.</li>
-                                            <li><strong>Beendet</strong>: Anzeige, keine Bearbeitung mehr möglich.</li>
-                                        </ul>
-                                        <h2>Typische Aktionen</h2>
-                                        <ul>
-                                            <li><strong>Fahrzeug zuweisen/tauschen</strong>: Aktuelles Fahrzeug setzen; erweiterten Tauschdialog nutzen (zeitabhängige Unterscheidung Tausch/Wechsel).</li>
-                                            <li><strong>Fahrzeugtypen pflegen</strong>: Typen mit Priorität hinzufügen/entfernen… oder Muster übernehmen.</li>
-                                            <li><strong>Umlauf ausfallen lassen/reaktivieren</strong>: Statuswechsel; bei Reaktivierung wird eine Meldung erzeugt.</li>
-                                            <li><strong>Alternative Zuweisung</strong> über den <em>Aufstellplan</em>: Fahrzeug per <em>Standort setzen</em> auf den vorgesehenen Stellplatz setzen; das System ordnet den Umlauf zu.</li>
-                                        </ul>
-                                        <h2 data-mc-conditions="Customers.SSB">SSB&#160;–&#160;projektspezifischer Hinweis</h2>
-                                        <p data-mc-conditions="Customers.SSB">Grundlage der <strong>automatischen Disposition</strong> ist der <em>Aufstellplan</em> (Kurskacheln), <em>nicht</em> die Umlaufdaten der Sicht „Umlauf“.</p>
-                                        <h2>Siehe auch</h2>
-                                        <ul>
-                                            <li><a href="../040103_Umlaufliste/040103_Umlaufliste.htm" class="MCXref xref">Sicht „Umlaufliste“ </a>
-                                            </li>
-                                            <li><a href="../040106_Umlaufdisposition/04010601_Umlaufdisposition_INTRO.htm" class="MCXref xref">Umlaufdisposition &#160;–&#160; Einführung</a>
-                                            </li>
-                                            <li><a href="../../0402_Kursaufstellplanung/040200_Kursaufstellplanung_INTRO.htm" class="MCXref xref">
-   Kursaufstellplanung
-  </a>
-                                            </li>
-                                            <li><a href="../../0402_Kursaufstellplanung/040203_Aufstellplan.htm" class="MCXref xref">Grafische Sicht „Aufstellplan“</a>
-                                            </li>
-                                            <li><a href="04010101_Umlauf_bearbeiten.htm" class="MCXref xref">Umlauf bearbeiten</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><a data-close="true"></a>
-                </div>
+                  </div>
+                </div><button class="menu-icon" aria-label="Show Navigation Panel"
+                  data-toggle="offCanvas"><span></span></button>
+              </div>
             </div>
+            <div class="title-bar-layout outer-row">
+              <div class="logo-wrapper"><a class="logo" href="../../../0000_Einleitung.htm" alt="Logo"></a></div>
+              <div class="navigation-wrapper nocontent">
+                <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children"
+                  data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True"
+                  data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False"
+                  data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True"
+                  data-mc-toc="True">
+                  <li class="placeholder" style="visibility:hidden"><a>placeholder</a></li>
+                </ul>
+              </div>
+              <div class="central-account-wrapper">
+                <div class="central-dropdown"><a class="central-account-drop"><span
+                      class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                  <div class="central-dropdown-content"><a
+                      class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                    <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                  </div>
+                </div>
+              </div>
+              <div class="nav-search-wrapper">
+                <div class="nav-search row">
+                  <form class="search" action="#">
+                    <div class="search-bar search-bar-container needs-pie"><input class="search-field needs-pie"
+                        type="search" aria-label="Search Field" placeholder="Search" />
+                      <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter:
+                        </span>
+                        <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false"
+                          aria-label="Search Filter" title="All Files" role="button" tabindex="0"></div>
+                        <div class="search-filter-content" id="sf-content">
+                          <ul>
+                            <li><button class="mc-dropdown-item"
+                                aria-labelledby="search-filters-label filterSelectorLabel-00001"><span
+                                  id="filterSelectorLabel-00001">All Files</span></button></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="search-submit-wrapper" dir="ltr">
+                        <div class="search-submit" title="Search" role="button" tabindex="0"><span
+                            class="invisible-label">Submit Search</span></div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </nav>
         </div>
-    </body>
+        <div class="main-section">
+          <div class="row outer-row sidenav-layout">
+            <nav class="sidenav-wrapper">
+              <div class="sidenav-container">
+                <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu=""
+                  data-mc-css-tree-node-expanded="is-accordion-submenu-parent"
+                  data-mc-css-tree-node-collapsed="is-accordion-submenu-parent"
+                  data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested"
+                  data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False"
+                  data-mc-include-back="False" data-mc-defer-expand-event="True"
+                  data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu"
+                  data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True"></ul>
+              </div>
+            </nav>
+            <div class="body-container">
+              <div data-mc-content-body="True">
+                <div class="nocontent">
+                  <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs"
+                    data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span
+                      class="MCBreadcrumbsPrefix">You are here: </span></div>
+                </div>
+                <div role="main" id="mc-main-content">
+                  <h1>Block dossier dialog</h1>
+                  <p class="intro">Use the <strong>block dossier</strong> dialog to centrally display and edit all
+                    information about a block.</p>
+
+                  <h2>Open the dialog</h2>
+                  <ul>
+                    <li>Click the <strong>Block dossier</strong> toolbar button.</li>
+                    <li>Double-click the block in the tabular <em>Blocks</em> view.</li>
+                  </ul>
+                  <p>The dialog fields are grouped into tabs. The tabs are arranged horizontally and can be selected
+                    with a click.</p>
+
+                  <!-- Overview: tabs -->
+                  <table style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');"
+                    class="TableStyle-Alternate-Row-Color" cellspacing="21">
+                    <thead>
+                      <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
+                        <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Tab</th>
+                        <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                        <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Basic data</td>
+                        <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Shows the properties of the
+                          selected block and allows editing them.</td>
+                      </tr>
+                      <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                        <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Block segments</td>
+                        <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Displays the segments of the
+                          selected block.</td>
+                      </tr>
+                      <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                        <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Vehicle types</td>
+                        <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Display and assignment of vehicle
+                          types permitted for the selected block.</td>
+                      </tr>
+                      <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                        <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Messages</td>
+                        <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">Shows the messages for the
+                          selected block.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p><em>Table 65: Block dossier dialog — overview of all tabs</em></p>
+
+                  <!-- Above the tabs: date/block -->
+                  <h3>Context fields above the tabs</h3>
+                  <ul>
+                    <li><strong>Date</strong> — operating day on which the block is performed.</li>
+                    <li><strong>Block</strong> — number of the block.</li>
+                  </ul>
+
+                  <!-- Tab: Basic data -->
+                  <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead">
+                      <a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"
+                        aria-expanded="false"><img class="MCDropDown_Image_Icon"
+                          src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18"
+                          alt="Closed" data-mc-alt2="Open" />
+                        <h2>Tab “Basic data”</h2>
+                      </a>
+                    </span>
+                    <div class="MCDropDownBody dropDownBody">
+                      <p>The <em>Basic data</em> tab shows the properties of the selected block.</p>
+                      <img src="../../../Resources/Images/dlg_umlaufakte_umlaufdaten_605x423.png"
+                        alt="Block dossier — Basic data tab (example)" style="width: 605;height: 423;" />
+                      <p><em>Figure: Block dossier — Basic data tab (example)</em></p>
+                      <table style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');"
+                        class="TableStyle-Alternate-Row-Color" cellspacing="21">
+                        <thead>
+                          <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
+                            <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Field</th>
+                            <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Block type</td>
+                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Block type related to the
+                              vehicle.</td>
+                          </tr>
+                          <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">State</td>
+                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Current state of the block.
+                            </td>
+                          </tr>
+                          <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Start</td>
+                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Code of the depot where the
+                              first duty of the block is planned to begin.</td>
+                          </tr>
+                          <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Start time</td>
+                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Time when the vehicle is
+                              planned to pull out and the first duty of the block begins.</td>
+                          </tr>
+                          <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Target</td>
+                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Code of the depot where the
+                              last duty of the block is planned to end.</td>
+                          </tr>
+                          <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">End time</td>
+                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Time when the vehicle is
+                              planned to pull in and the last duty of the block ends.</td>
+                          </tr>
+                          <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Length</td>
+                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Length of the block in
+                              kilometers.</td>
+                          </tr>
+                          <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Current vehicle</td>
+                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">
+                              <p><a href="#Umlaufmanagement_Aktuelles_FahrzFD9D7932"><u>Current vehicle</u></a></p>
+                              <p>The button <img src="media_Benutzerhandbuch/media/image225.png"
+                                  alt="Button Current vehicle" style="width: 0.16667in;height: 0.14583in;" /> opens the
+                                <em>Current vehicle</em> dialog.</p>
+                            </td>
+                          </tr>
+                          <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Planned vehicle</td>
+                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">
+                              <p><a href="#Umlaufmanagement_Geplantes_FahrzB1E94C5F"><u>Planned vehicle</u></a></p>
+                              <p>This information is used for logging in PSI<em>traffic</em>.</p>
+                            </td>
+                          </tr>
+                          <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">User-scheduled vehicle</td>
+                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">
+                              <p>Vehicle assigned to the future block by an authorized user.</p>
+                              <p>The user-scheduled vehicle is an input to automated block dispatching; the block is to
+                                be assigned with this vehicle.</p>
+                            </td>
+                          </tr>
+                          <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                            <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">Execution note</td>
+                            <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">
+                              <p>Free text.</p>
+                              <p>The entered text informs the driver and is shown on the departure board.</p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <p><em>Table: Block dossier — Basic data tab</em></p>
+                    </div>
+                  </div>
+
+                  <h3>Tabs Current vehicle and Planned vehicle</h3>
+                  <p>
+                    <a name="Umlaufmanagement_Aktuelles_FahrzFD9D7932"></a>
+                    <strong>Current vehicle</strong>
+                  </p>
+                  <p>Information about the vehicle configured to carry out the block.</p>
+                  <ul>
+                    <li><em>Block</em> — number of the block for which the vehicle is configured.</li>
+                    <li><em>Vehicle</em> — identifier of the vehicle used to perform the current block.</li>
+                    <li><em>Assignment type</em> — process used to assign the vehicle to the block.</li>
+                    <li><em>Valid from</em> — point in time when the assignment becomes valid.</li>
+                    <li><em>Cancellation</em> — point in time when the assignment ceases to be valid.</li>
+                  </ul>
+                  <p>
+                    <a name="Umlaufmanagement_Geplantes_FahrzB1E94C5F"></a>
+                    <strong>Planned vehicle</strong>
+                  </p>
+                  <p>The planned vehicle is set during pre-planning and can be used during the operational phase.</p>
+                  <ul>
+                    <li><em>Block</em> — number of the block for which the vehicle is configured.</li>
+                    <li><em>Vehicle</em> — identifier of the planned vehicle intended for this block.</li>
+                    <li><em>Valid from</em> — point in time when the assignment becomes valid.</li>
+                    <li><em>Cancellation</em> — point in time when the assignment ceases to be valid.</li>
+                  </ul>
+
+                  <!-- Tab: Block segments -->
+                  <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead">
+                      <a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"
+                        aria-expanded="false"><img class="MCDropDown_Image_Icon"
+                          src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18"
+                          alt="Closed" data-mc-alt2="Open" />
+                        <h2>Tab “Block segments”</h2>
+                      </a>
+                    </span>
+                    <div class="MCDropDownBody dropDownBody">
+                      <p>The integrated view shows past, current, and planned block segments of the selected block
+                        according to the configured data retention in the operational system.</p>
+                      <img src="media_Benutzerhandbuch/media/image226.png"
+                        alt="Block dossier — Block segments tab (example)"
+                        style="width: 6.30208in;height: 4.40625in;" />
+                      <p><em>Figure: Block dossier — Block segments tab (example)</em></p>
+                      <table style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');"
+                        class="TableStyle-Alternate-Row-Color" cellspacing="21">
+                        <thead>
+                          <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
+                            <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Field</th>
+                            <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Vehicle</td>
+                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1"><a
+                                href="#Umlaufmanagement_Aktuelles_FahrzFD9D7932"><u>Current vehicle</u></a></td>
+                          </tr>
+                          <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Start point</td>
+                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Depot / stop where the
+                              segment begins.</td>
+                          </tr>
+                          <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">End point</td>
+                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Depot / stop where the
+                              segment ends.</td>
+                          </tr>
+                          <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Start (planned)</td>
+                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Planned start time at the
+                              start point.</td>
+                          </tr>
+                          <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Start (actual)</td>
+                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Actual start time at the
+                              start point.</td>
+                          </tr>
+                          <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">End (planned)</td>
+                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Planned end time at the end
+                              point.</td>
+                          </tr>
+                          <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                            <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body1">End (actual)</td>
+                            <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body1">Actual end time at the end
+                              point.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <p><em>Table: Block dossier — Block segments tab (default configuration)</em></p>
+                    </div>
+                  </div>
+
+                  <!-- Tab: Vehicle types -->
+                  <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead">
+                      <a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"
+                        aria-expanded="false"><img class="MCDropDown_Image_Icon"
+                          src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18"
+                          alt="Closed" data-mc-alt2="Open" />
+                        <h2>Tab “Vehicle types”</h2>
+                      </a>
+                    </span>
+                    <div class="MCDropDownBody dropDownBody">
+                      <p>The <em>Vehicle types</em> tab lists the vehicle types for the selected block that automated
+                        <em>block dispatching</em> considers according to their priority.</p>
+                      <img src="media_Benutzerhandbuch/media/image227.png"
+                        alt="Block dossier — Vehicle types tab (example)" style="width: 6.30208in;height: 4.40625in;" />
+                      <p><em>Figure: Block dossier — Vehicle types tab (example)</em></p>
+                      <ul>
+                        <li>Assign <strong>permitted vehicle types</strong> including <strong>priority</strong> as input
+                          for block dispatching.</li>
+                        <li>Alternatively select and apply a <strong>vehicle type pattern</strong>; then adjust
+                          types/preferences as needed.</li>
+                      </ul>
+                      <p class="Important">If you reapply a <strong>vehicle type pattern</strong>, previously edited
+                        entries in the list are <em>overwritten</em>.</p>
+                    </div>
+                  </div>
+
+                  <!-- Tab: Messages -->
+                  <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead">
+                      <a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"
+                        aria-expanded="false"><img class="MCDropDown_Image_Icon"
+                          src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18"
+                          alt="Closed" data-mc-alt2="Open" />
+                        <h2>Tab “Messages”</h2>
+                      </a>
+                    </span>
+                    <div class="MCDropDownBody dropDownBody">
+                      <p>The integrated view shows past and current messages related to the selected block according to
+                        the configured data retention.</p>
+                      <img src="media_Benutzerhandbuch/media/image228.png" alt="Block dossier — Messages tab (example)"
+                        style="width: 6.30208in;height: 2.21875in;" />
+                      <p><em>Figure: Block dossier — Messages tab (example)</em></p>
+                      <table style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');"
+                        class="TableStyle-Alternate-Row-Color" cellspacing="21">
+                        <thead>
+                          <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
+                            <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Field</th>
+                            <th class="TableStyle-Alternate-Row-Color-HeadD-Column1-Header1">Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Timestamp</td>
+                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Date and time of creation.
+                            </td>
+                          </tr>
+                          <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Type</td>
+                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Message type.</td>
+                          </tr>
+                          <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">State</td>
+                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Current processing status of
+                              the message.</td>
+                          </tr>
+                          <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body2">Depot</td>
+                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body2">Depot to which the message
+                              refers.</td>
+                          </tr>
+                          <tr class="TableStyle-Alternate-Row-Color-Body-Body1">
+                            <td class="TableStyle-Alternate-Row-Color-BodyE-Column1-Body1">Vehicle</td>
+                            <td class="TableStyle-Alternate-Row-Color-BodyD-Column1-Body1">Number of the vehicle
+                              referenced by the message.</td>
+                          </tr>
+                          <tr class="TableStyle-Alternate-Row-Color-Body-Body2">
+                            <td class="TableStyle-Alternate-Row-Color-BodyB-Column1-Body2">Created by</td>
+                            <td class="TableStyle-Alternate-Row-Color-BodyA-Column1-Body2">User who created the message.
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <p><em>Table: Block dossier — Messages tab (default configuration)</em></p>
+                    </div>
+                  </div>
+
+                  <h2>State-dependent editing</h2>
+                  <ul>
+                    <li><strong>Planned</strong>: Full editing of all relevant fields possible.</li>
+                    <li><strong>In progress</strong>: Only <em>Target</em>, <em>End time</em>, and <em>Current
+                        vehicle</em> are editable.</li>
+                    <li><strong>Finished</strong>: Read-only; no further editing.</li>
+                  </ul>
+
+                  <h2>Typical actions</h2>
+                  <ul>
+                    <li><strong>Assign/swap vehicle</strong>: Set the current vehicle; use the advanced swap dialog
+                      (time-based distinction between swap/change).</li>
+                    <li><strong>Maintain vehicle types</strong>: Add/remove types with priority or apply a pattern.</li>
+                    <li><strong>Cancel/reactivate block</strong>: Change status; reactivation generates a message.</li>
+                    <li><strong>Alternative assignment</strong> via the <em>stabling lineup plan</em>: use <em>Set
+                        location</em> to place the vehicle at the intended parking position; the system assigns the
+                      block.</li>
+                  </ul>
+
+                  <h2 data-mc-conditions="Customers.SSB">SSB — project-specific note</h2>
+                  <p data-mc-conditions="Customers.SSB">The basis of <strong>automatic dispatching</strong> is the
+                    <em>stabling lineup plan</em> (duty tiles), <em>not</em> the block data shown in the <em>Blocks</em>
+                    view.</p>
+
+                  <h2>See also</h2>
+                  <ul>
+                    <li><a href="../040103_Umlaufliste/040103_Umlaufliste.htm" class="MCXref xref">View “Block list”</a>
+                    </li>
+                    <li><a href="../040106_Umlaufdisposition/04010601_Umlaufdisposition_INTRO.htm"
+                        class="MCXref xref">Block Dispatching &#160;–&#160; Introduction</a></li>
+                    <li><a href="../../0402_Kursaufstellplanung/040200_Kursaufstellplanung_INTRO.htm"
+                        class="MCXref xref">Duty lineup planning</a></li>
+                    <li><a href="../../0402_Kursaufstellplanung/040203_Aufstellplan.htm" class="MCXref xref">Graphical
+                        View "Stabling Lineup Plan"</a></li>
+                    <li><a href="04010101_Umlauf_bearbeiten.htm" class="MCXref xref">Edit block</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><a data-close="true"></a>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
