@@ -117,32 +117,36 @@
                                     <div role="main" id="mc-main-content">
                                         <h1>Fahrzeugtausch auf Strecke</h1>
                                         <p xmlns="http://www.w3.org/1999/xhtml">Der erweiterte Dialog für den <b>Fahrzeugtausch / Fahrzeugwechsel</b> wird verwendet, um eine Änderung der
-		Fahrzeugzuordnung zu einem Umlauf zu erfassen. Dies ist insbesondere relevant, um Tauschvorgänge zu
-		dokumentieren, die <b>auf Strecke</b> stattgefunden haben und nicht über das RBL/ITCS mitgeteilt wurden.</p>
+        Fahrzeugzuordnung zu einem Umlauf zu erfassen. Dies ist insbesondere relevant, um Tauschvorgänge zu
+        dokumentieren, die <b>auf Strecke</b> stattgefunden haben und nicht über das RBL/ITCS mitgeteilt wurden.</p>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Aufruf des Dialogs</h2>
                                         <p xmlns="http://www.w3.org/1999/xhtml">Der Dialog für den erweiterten Fahrzeugtausch/Fahrzeugwechsel kann über die Schaltfläche neben dem Feld
-		<b>„Aktuelles Fahrzeug“</b> in der <a href="040101_Umlaufakte.htm" class="MCXref xref" xrefformat="{para}">Dialog „Umlaufakte“</a> aufgerufen
-		werden.
-	</p>
+        <b>„Aktuelles Fahrzeug“</b> in der <a href="040101_Umlaufakte.htm" class="MCXref xref" xrefformat="{para}">Dialog „Umlaufakte“</a> aufgerufen
+        werden.
+    </p>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Unterscheidung: Wechsel vs. Tausch</h2>
                                         <p xmlns="http://www.w3.org/1999/xhtml">In Abhängigkeit eines Zeit-Parameters, der ab Umlaufbeginn zählt (derzeit auf <b>30 Minuten</b> eingestellt),
-		unterscheidet das System zwischen zwei Szenarien:</p>
+        unterscheidet das System zwischen zwei Szenarien:</p>
                                         <ol xmlns="http://www.w3.org/1999/xhtml">
                                             <li value="1">
                                                 <p><b>Fahrzeugauswechselung (Innerhalb von 30 Minuten nach Umlaufstart)</b>
-                                                    <br />Handelt es sich um eine <b>Fahrzeugauswechselung</b> (innerhalb des Zeitraums), erhält der betreffende
-				Umlauf das neue Fahrzeug als <b>aktuelles Fahrzeug</b> und als <b>geplantes (verheiratetes) Fahrzeug</b>
-				[1].<br /><br /><b>Ziel:</b> Dies dient dazu, Korrekturen im DMS vorzunehmen, falls ein anderes Fahrzeug als das vom DMS
-				geplante Fahrzeug aus dem Betriebshof gefahren ist (z.B. aufgrund eines Fahrzeugdefekts).
-			</p>
+                                                    <br />Handelt es sich um eine <b>Fahrzeugauswechselung</b> (innerhalb des Zeitraums), erhält der
+                betreffende
+                Umlauf das neue Fahrzeug als <b>aktuelles Fahrzeug</b> und als <b>geplantes (verheiratetes) Fahrzeug</b>
+                .<br /><br /><b>Ziel:</b> Dies dient dazu, Korrekturen im DMS vorzunehmen, falls ein anderes Fahrzeug
+                als das vom DMS
+                geplante Fahrzeug aus dem Betriebshof gefahren ist (z. B. aufgrund eines Fahrzeugdefekts).
+            </p>
                                             </li>
                                             <li value="2">
                                                 <p><b>Fahrzeugtausch (Mehr als 30 Minuten nach Umlaufstart)</b>
-                                                    <br />				Handelt es sich um einen <b>Fahrzeugtausch</b> (außerhalb des Zeitraums), erhält der betreffende Umlauf
-				das neue Fahrzeug als <b>aktuelles Fahrzeug</b>, aber das <b>geplante (verheiratete) Fahrzeug bleibt
-					unverändert</b>.<br /><br /><b>Ziel:</b> Dies wird genutzt, um einen auf Strecke erfolgten Fahrzeugtausch, der nicht vom RBL/ITCS
-				mitgeteilt wurde, im DMS zu erfassen.
-			</p>
+                                                    <br />Handelt es sich um einen <b>Fahrzeugtausch</b> (außerhalb des Zeitraums), erhält der betreffende
+                Umlauf
+                das neue Fahrzeug als <b>aktuelles Fahrzeug</b>, aber das <b>geplante (verheiratete) Fahrzeug bleibt
+                    unverändert</b>.<br /><br /><b>Ziel:</b> Dies wird genutzt, um einen auf Strecke erfolgten
+                Fahrzeugtausch, der nicht vom RBL/ITCS
+                mitgeteilt wurde, im DMS zu erfassen.
+            </p>
                                             </li>
                                         </ol>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Vorgehen beim Tausch</h2>
@@ -154,15 +158,15 @@
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Wirkung und Einschränkungen</h2>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li>Der Tauschdialog kann nur verwendet werden, wenn ein <b>aktuelles Fahrzeug</b> am Umlauf hinterlegt ist und
-			der Umlauf noch <b>nicht</b> im Zustand <b>„beendet“</b> ist.</li>
+            der Umlauf noch <b>nicht</b> im Zustand <b>„beendet“</b> ist.</li>
                                             <li>Als Tauschfahrzeuge können <b>Einzelfahrzeuge oder Doppeltraktionen</b> ausgewählt werden, jedoch keine
-			Einzelfahrzeuge von Doppeltraktionen.</li>
+            Einzelfahrzeuge von Doppeltraktionen.</li>
                                             <li>Beim Bestätigen wird das aktuelle Fahrzeug des Umlaufs durch das neu gewählte Fahrzeug ausgewechselt.
-		</li>
+        </li>
                                             <li>Das ursprüngliche aktuelle Fahrzeug verliert seinen Umlauf, und das neue Fahrzeug verliert einen
-			möglicherweise vorhandenen aktuellen Umlauf im Tausch.</li>
+            möglicherweise vorhandenen aktuellen Umlauf im Tausch.</li>
                                             <li>Der Umlauf, dessen aktuelles Fahrzeug durch den Tausch verloren ging, ist anschließend <b>ohne aktuelles
-				Fahrzeug</b>.</li>
+                Fahrzeug</b>.</li>
                                         </ul>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Verwandte Themen</h2>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
