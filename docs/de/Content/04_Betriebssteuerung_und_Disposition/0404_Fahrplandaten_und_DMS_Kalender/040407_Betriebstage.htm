@@ -131,7 +131,7 @@
                                         <h3>Dauer und Betriebstagswechsel</h3>
                                         <p>Ein DMS&#8209;Betriebstag hat immer die Dauer von <strong>24 Stunden</strong>. Der Zeitpunkt des Wechsels eines
         Betriebstags kann pro Betriebshof konfiguriert werden (Standard: 00:00 Uhr).</p>
-                                        <p class="note"><strong>Best Practice:</strong> Das BMS sollte den gleichen Zeitpunkt für den Betriebstagswechsel
+                                        <p class="note"><strong>Best Practice:</strong> Das DMS sollte den gleichen Zeitpunkt für den Betriebstagswechsel
         haben wie DIVA.</p>
                                         <h2>Einordnung</h2>
                                         <ul>
@@ -178,7 +178,7 @@
                                         </ol>
                                         <p class="note"><strong>Hinweis:</strong> Ist ein kommender Tag (z.&#160;B. ein Dienstag) ein Feiertag, kann im
         Dialog <em>DMS&#8209;Kalender</em> die Zuweisung manuell angepasst werden (z.&#160;B. auf
-        Sonntag&#8209;Tagesart). Manuell angepasste BMS&#8209;Kalendertage werden nicht überschrieben.</p>
+        Sonntag&#8209;Tagesart). Manuell angepasste DMS&#8209;Kalendertage werden nicht überschrieben.</p>
                                         <h2>Erzeugung von Betriebstagen</h2>
                                         <h3>Datenübernahme aus Tagesart</h3>
                                         <p>Bei der Erzeugung des DMS&#8209;Betriebstages werden die Daten aus der zugrunde liegenden Tagesart kopiert:</p>
@@ -190,10 +190,10 @@
                                         <p><strong>Voraussetzung:</strong> Im DMS&#8209;Kalender muss dem Kalendertag bereits eine Tagesart zugeordnet sein.
     </p>
                                         <h3>Automatische Erzeugung</h3>
-                                        <p>Der BMS/DMS&#8209;Kalender muss immer mindestens für die <strong>Vorschauzeit der operativen Daten</strong>
+                                        <p>Der DMS/DMS&#8209;Kalender muss immer mindestens für die <strong>Vorschauzeit der operativen Daten</strong>
         definiert sein. Als Rückfallebene ist ein geplanter Service eingerichtet:</p>
                                         <ul>
-                                            <li>Ein Service erzeugt automatisch BMS&#8209;Depot&#8209;Kalendertage bis einschließlich X Tage
+                                            <li>Ein Service erzeugt automatisch DMS&#8209;Depot&#8209;Kalendertage bis einschließlich X Tage
             (Service&#8209;Parameter) in der Zukunft</li>
                                             <li>Im Falle eines unvollständigen Kalenders werden die fehlenden Betriebstage automatisch erstellt</li>
                                             <li>Als Standard wird die zuletzt verwendete Tagesart zugewiesen</li>
@@ -218,10 +218,10 @@
                                             <li>Müssen für dauerhafte Gültigkeit in der entsprechenden Tagesart durchgeführt/wiederholt werden</li>
                                         </ul>
                                         <p class="warning"><strong>Achtung:</strong> Änderungen, die <strong>ab sofort</strong> gelten sollen, müssen sowohl
-        für alle bereits erzeugten BMS/DMS&#8209;Betriebstage als auch für die entsprechenden BMS/DMS&#8209;Tagesarten
+        für alle bereits erzeugten BMS/DMS&#8209;Betriebstage als auch für die entsprechenden DMS/DMS&#8209;Tagesarten
         eingepflegt werden.</p>
                                         <h3>Beispiel: Änderung für einen einzelnen Betriebstag</h3>
-                                        <p>Der 25.11.2008 ist in einem konkreten Betriebshof der BMS&#8209;Tagesart „Mo&#8209;Do" zugeordnet.</p>
+                                        <p>Der 25.11.2008 ist in einem konkreten Betriebshof der DMS&#8209;Tagesart „Mo&#8209;Do" zugeordnet.</p>
                                         <ul>
                                             <li><strong>Tagesart&#8209;Regel:</strong> Spur 26 hat Nutzungsart Umlauf, nur Niederflurbusse erlaubt</li>
                                             <li><strong>Betriebstag&#8209;Änderung:</strong> Am 25.11.2025 werden für Spur 26 auch Niederflurgelenkbusse
@@ -230,16 +230,16 @@
             Tagesart werden geändert</li>
                                         </ul>
                                         <h2>Listen und Sichten</h2>
-                                        <h3>BMS&#8209;Tagesarten</h3>
-                                        <p>Die Sicht <em>BMS&#8209;Tagesarten</em> listet die definierten Tagesarten pro Betriebshof mit folgenden
+                                        <h3>DMS&#8209;Tagesarten</h3>
+                                        <p>Die Sicht <em>DMS&#8209;Tagesarten</em> listet die definierten Tagesarten pro Betriebshof mit folgenden
         Informationen:</p>
                                         <ul>
                                             <li>Bezeichnung der Tagesart</li>
                                             <li>Betriebshof</li>
                                             <li>Anzahl verknüpfter Kalendertage</li>
                                         </ul>
-                                        <h3>BMS&#8209;Betriebstage</h3>
-                                        <p>Die Sicht <em>BMS&#8209;Betriebstage</em> zeigt die erzeugten Betriebstage je Betriebshof und deren
+                                        <h3>DMS&#8209;Betriebstage</h3>
+                                        <p>Die Sicht <em>DMS&#8209;Betriebstage</em> zeigt die erzeugten Betriebstage je Betriebshof und deren
         Gültigkeitsdatum. Änderungen an Stellplatzregeln für einen Betriebstag wirken nur tagesbezogen.</p>
                                         <p>Die Datensicht hat folgende <strong>Spalten</strong>:</p>
                                         <ul>
@@ -256,7 +256,7 @@
                                         <p><strong>So rufen Sie die Stellplätze für einen Betriebstag auf:</strong>
                                         </p>
                                         <ol>
-                                            <li value="1">Wählen Sie in der Datensicht <em>BMS&#8209;Betriebstage</em> einen Betriebstag aus</li>
+                                            <li value="1">Wählen Sie in der Datensicht <em>DMS&#8209;Betriebstage</em> einen Betriebstag aus</li>
                                             <li value="2">Rufen Sie die Kontextfunktion <strong>Stellplätze</strong> auf</li>
                                         </ol>
                                         <p>Der Dialog „Stellplätze" zeigt folgende <strong>Felder</strong>:</p>
@@ -336,16 +336,16 @@
                                         </ul>
                                         <h2>Abbildungen</h2>
                                         <figure class="Figure" id="fig_bms_calendar">
-                                            <img src="../../Resources/Images/image275.png" alt="Dialog BMS&#8209;Kalender: Tagesarten je Datum und Betriebshof zuweisen." />
+                                            <img src="../../Resources/Images/image275.png" alt="Dialog DMS&#8209;Kalender: Tagesarten je Datum und Betriebshof zuweisen." />
                                             <figcaption>Dialog <em>DMS&#160;Kalender</em> &#160;–&#160; Tagesarten zuweisen und Betriebstage erzeugen.
         </figcaption>
                                         </figure>
                                         <figure class="Figure" id="fig_bms_tagesarten">
-                                            <img src="../../Resources/Images/image276.png" alt="Sicht BMS&#8209;Tagesarten mit Bezeichnung, Betriebshof und Anzahl verknüpfter Kalendertage." />
+                                            <img src="../../Resources/Images/image276.png" alt="Sicht DMS&#8209;Tagesarten mit Bezeichnung, Betriebshof und Anzahl verknüpfter Kalendertage." />
                                             <figcaption>Sicht <em>DMS&#8209;Tagesarten</em> &#160;–&#160; Tagesarten pro Betriebshof.</figcaption>
                                         </figure>
                                         <figure class="Figure" id="fig_bms_betriebstage">
-                                            <img src="../../Resources/Images/image277.png" alt="Sicht BMS&#8209;Betriebstage mit Datum und Betriebshof." />
+                                            <img src="../../Resources/Images/image277.png" alt="Sicht DMS&#8209;Betriebstage mit Datum und Betriebshof." />
                                             <figcaption>Sicht <em>DMS&#8209;Betriebstage</em> &#160;–&#160; erzeugte Tage je Betriebshof.</figcaption>
                                         </figure>
                                         <figure class="Figure" id="fig_stellplaetze">

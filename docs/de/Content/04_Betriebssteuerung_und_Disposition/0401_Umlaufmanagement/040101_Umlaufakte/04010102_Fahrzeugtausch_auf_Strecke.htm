@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="de" xml:lang="de" class="_Skins_Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="de" xml:lang="de" class="_Skins_Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
@@ -110,11 +110,15 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Sie sind hier:</span>
+                                        </div>
+                                    </div>
                                     <div role="main" id="mc-main-content">
                                         <h1>Fahrzeugtausch auf Strecke</h1>
                                         <p xmlns="http://www.w3.org/1999/xhtml">Der erweiterte Dialog für den <b>Fahrzeugtausch / Fahrzeugwechsel</b> wird verwendet, um eine Änderung der
 		Fahrzeugzuordnung zu einem Umlauf zu erfassen. Dies ist insbesondere relevant, um Tauschvorgänge zu
-		dokumentieren, die <b>auf Strecke</b> stattgefunden haben und nicht über das RBL mitgeteilt wurden.</p>
+		dokumentieren, die <b>auf Strecke</b> stattgefunden haben und nicht über das RBL/ITCS mitgeteilt wurden.</p>
                                         <h2 xmlns="http://www.w3.org/1999/xhtml">Aufruf des Dialogs</h2>
                                         <p xmlns="http://www.w3.org/1999/xhtml">Der Dialog für den erweiterten Fahrzeugtausch/Fahrzeugwechsel kann über die Schaltfläche neben dem Feld
 		<b>„Aktuelles Fahrzeug“</b> in der <a href="040101_Umlaufakte.htm" class="MCXref xref" xrefformat="{para}">Dialog „Umlaufakte“</a> aufgerufen
@@ -126,20 +130,18 @@
                                         <ol xmlns="http://www.w3.org/1999/xhtml">
                                             <li value="1">
                                                 <p><b>Fahrzeugauswechselung (Innerhalb von 30 Minuten nach Umlaufstart)</b>
-                                                    <br />
-				Handelt es sich um eine <b>Fahrzeugauswechselung</b> (innerhalb des Zeitraums), erhält der betreffende
+                                                    <br />Handelt es sich um eine <b>Fahrzeugauswechselung</b> (innerhalb des Zeitraums), erhält der betreffende
 				Umlauf das neue Fahrzeug als <b>aktuelles Fahrzeug</b> und als <b>geplantes (verheiratetes) Fahrzeug</b>
-				[1].<br /><br /><b>Ziel:</b> Dies dient dazu, Korrekturen im BMS vorzunehmen, falls ein anderes Fahrzeug als das vom BMS
+				[1].<br /><br /><b>Ziel:</b> Dies dient dazu, Korrekturen im DMS vorzunehmen, falls ein anderes Fahrzeug als das vom DMS
 				geplante Fahrzeug aus dem Betriebshof gefahren ist (z.B. aufgrund eines Fahrzeugdefekts).
 			</p>
                                             </li>
                                             <li value="2">
                                                 <p><b>Fahrzeugtausch (Mehr als 30 Minuten nach Umlaufstart)</b>
-                                                    <br />
-				Handelt es sich um einen <b>Fahrzeugtausch</b> (außerhalb des Zeitraums), erhält der betreffende Umlauf
+                                                    <br />				Handelt es sich um einen <b>Fahrzeugtausch</b> (außerhalb des Zeitraums), erhält der betreffende Umlauf
 				das neue Fahrzeug als <b>aktuelles Fahrzeug</b>, aber das <b>geplante (verheiratete) Fahrzeug bleibt
-					unverändert</b>.<br /><br /><b>Ziel:</b> Dies wird genutzt, um einen auf Strecke erfolgten Fahrzeugtausch, der nicht vom RBL
-				mitgeteilt wurde, im BMS zu erfassen.
+					unverändert</b>.<br /><br /><b>Ziel:</b> Dies wird genutzt, um einen auf Strecke erfolgten Fahrzeugtausch, der nicht vom RBL/ITCS
+				mitgeteilt wurde, im DMS zu erfassen.
 			</p>
                                             </li>
                                         </ol>
