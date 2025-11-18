@@ -430,13 +430,6 @@ a.glossaryTerm
 	opacity: 0;
 }
 
-.xref
-{
-	font-weight: bold;
-	text-decoration: underline;
-	color: #f84e2b;
-}
-
 div.MCBreadcrumbsBox_0
 {
 	border-bottom-width: 0;
@@ -445,6 +438,13 @@ div.MCBreadcrumbsBox_0
 	border-bottom-color: black;
 	padding-bottom: 10px;
 	margin-bottom: 10px;
+}
+
+.xref
+{
+	font-weight: bold;
+	text-decoration: underline;
+	color: #f84e2b;
 }
 
 .dropDown

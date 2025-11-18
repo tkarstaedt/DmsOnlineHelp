@@ -430,13 +430,6 @@
 	opacity: 0;
 }
 
-.micro-response1231845038 .xref
-{
-	font-weight: bold;
-	text-decoration: underline;
-	color: #f84e2b;
-}
-
 .micro-response1231845038 div.MCBreadcrumbsBox_0
 {
 	border-bottom-width: 0;
@@ -445,6 +438,13 @@
 	border-bottom-color: black;
 	padding-bottom: 10px;
 	margin-bottom: 10px;
+}
+
+.micro-response1231845038 .xref
+{
+	font-weight: bold;
+	text-decoration: underline;
+	color: #f84e2b;
 }
 
 .micro-response1231845038 .dropDown
