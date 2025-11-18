@@ -117,12 +117,12 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1>Versorgungsspur – Ablaufsteuerung</h1>
-                                        <p class="intro">Die Versorgungsspur (VSP) steuert Versorgungsvorgänge sequenziell nach der Einfahrt. Ziel ist eine
+                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Die Versorgungsspur (VSP) steuert Versorgungsvorgänge sequenziell nach der Einfahrt. Ziel ist eine
         priorisierte, konfliktfreie Abarbeitung von Tanken, Reinigen, Laden und weiteren Prozessen.</p>
-                                        <h2>Grundprinzip</h2>
-                                        <p class="intro">Vorgänge werden in der VSP als Schritte in einer Warteschlange geführt. Regeln und Sperren
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Grundprinzip</h2>
+                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Vorgänge werden in der VSP als Schritte in einer Warteschlange geführt. Regeln und Sperren
         bestimmen Reihenfolge und Parallelisierbarkeit.</p>
-                                        <ul>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li><strong>Sequenz</strong>: Einfahrkontrolle &gt; Erstversorgung Folgeprozesse &gt; Abschlussprüfung.</li>
                                             <li><strong>Priorität</strong>: Sicherheitskritisches vor Komfort (z.&#160;B. technische Sperren vor
             Innenreinigung).</li>
@@ -131,8 +131,8 @@
                                             <li><strong>Automatik/Manuell</strong>: Automatische Einreihung mit manueller Übersteuerung durch Berechtigte.
         </li>
                                         </ul>
-                                        <h2>Statusmodell &amp; Übergänge</h2>
-                                        <table style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" class="TableStyle-Alternate-Row-Color" cellspacing="21">
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Statusmodell &amp; Übergänge</h2>
+                                        <table style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" class="TableStyle-Alternate-Row-Color" cellspacing="21" xmlns="http://www.w3.org/1999/xhtml">
                                             <thead>
                                                 <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
                                                     <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Status</th>
@@ -171,37 +171,37 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <h2>Voraussetzungen &amp; Sperren</h2>
-                                        <p class="intro">Schritte starten nur, wenn alle Startbedingungen erfüllt sind.</p>
-                                        <ul>
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Voraussetzungen &amp; Sperren</h2>
+                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Schritte starten nur, wenn alle Startbedingungen erfüllt sind.</p>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li><strong>Technische Sperren</strong> (z.&#160;B. Störung am Fahrzeug) verhindern Start oder erzwingen
             Umreihung.</li>
                                             <li><strong>Abhängigkeiten</strong> (z.&#160;B. „Tanken vor Reinigen“) erzwingen Reihenfolgen.</li>
                                             <li><strong>Ressourcen</strong> (z.&#160;B. Ladesäule, Tankplatz) müssen frei und passend dimensioniert sein.
         </li>
                                         </ul>
-                                        <h2>Prioritätslogik</h2>
-                                        <p class="intro">Die Einreihung berücksichtigt Kriterien, die Sie gewichten können.</p>
-                                        <ul>
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Prioritätslogik</h2>
+                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Die Einreihung berücksichtigt Kriterien, die Sie gewichten können.</p>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li>Betriebsvorzug (z.&#160;B. Umlauf mit früherem Ausrücken).</li>
                                             <li>Schrittpriorität (Sicherheitsprüfung &gt; Reinigung).</li>
                                             <li>Fahrzeugzustand (z.&#160;B. geringer SOC, Tankreserve unterschritten).</li>
                                         </ul>
-                                        <h2>Manuelle Eingriffe</h2>
-                                        <p class="intro">Berechtigte können die Automatik situativ übersteuern.</p>
-                                        <ul>
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Manuelle Eingriffe</h2>
+                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Berechtigte können die Automatik situativ übersteuern.</p>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li>Schritt vorziehen/zurückstellen.</li>
                                             <li>Schritt überspringen (mit Begründungspflicht).</li>
                                             <li>Neu einreihen nach Abbruch oder Pausierung.</li>
                                         </ul>
-                                        <h2>Ausnahmen &amp; Wiederanlauf</h2>
-                                        <p class="intro">Bei Unterbrechungen sorgt die VSP für einen kontrollierten Wiederanlauf.</p>
-                                        <ul>
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Ausnahmen &amp; Wiederanlauf</h2>
+                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Bei Unterbrechungen sorgt die VSP für einen kontrollierten Wiederanlauf.</p>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li>Rückkehr in „Wartet“ mit Erhalt der Restdauer (sofern messbar).</li>
                                             <li>Bei Ressourcenausfall automatische Umverteilung, falls konfiguriert.</li>
                                         </ul>
-                                        <h2>Verwandte Themen</h2>
-                                        <ul>
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Verwandte Themen</h2>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li><a href="05030202_VSP_Terminals_und_Anzeiger.htm" class="MCXref xref">Versorgungsspur – Terminals &amp; Anzeiger</a>
                                             </li>
                                             <li><a href="05030203_VSP_E_Bus_Logik.htm" class="MCXref xref">Versorgungsspur – E-Bus-Logik</a>

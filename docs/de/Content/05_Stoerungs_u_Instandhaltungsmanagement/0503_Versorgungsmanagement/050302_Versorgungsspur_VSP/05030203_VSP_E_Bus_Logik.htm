@@ -117,18 +117,18 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1>Versorgungsspur – E-Bus-Logik</h1>
-                                        <p class="intro">Für Elektrofahrzeuge berücksichtigt die Versorgungsspur SOC, Ladefenster, Balancing und
+                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Für Elektrofahrzeuge berücksichtigt die Versorgungsspur SOC, Ladefenster, Balancing und
         Vorkonditionierung. Ziel ist eine betriebsstabile, energieoptimierte Ausfahrt.</p>
-                                        <h2>Dispositionale Zielgrößen</h2>
-                                        <p class="intro">Diese Kenngrößen bestimmen Einreihung und Dauer von Ladeschritten.</p>
-                                        <ul>
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Dispositionale Zielgrößen</h2>
+                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Diese Kenngrößen bestimmen Einreihung und Dauer von Ladeschritten.</p>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li><strong>SOC-Ziel</strong>: Mindest-SOC für den nächsten Umlauf (inkl. Reserve).</li>
                                             <li><strong>Restreichweite</strong>: Prognose mit/ohne Umlaufbezug.</li>
                                             <li><strong>Balancingbedarf</strong>: Erforderliche Balancingdauer vor Vollladung.</li>
                                             <li><strong>Vorkonditionierung</strong>: Bedarf und Dauer für System/Klima.</li>
                                         </ul>
-                                        <h2>Parameter &amp; Wirkung</h2>
-                                        <table style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" class="TableStyle-Alternate-Row-Color" cellspacing="21">
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Parameter &amp; Wirkung</h2>
+                                        <table style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" class="TableStyle-Alternate-Row-Color" cellspacing="21" xmlns="http://www.w3.org/1999/xhtml">
                                             <thead>
                                                 <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
                                                     <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Parameter</th>
@@ -168,47 +168,47 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <h2>Typische Schrittfolge (E-Bus)</h2>
-                                        <p class="intro">Die konkrete Abfolge hängt von Stationen, Parametern und Prioritäten ab.</p>
-                                        <ul>
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Typische Schrittfolge (E-Bus)</h2>
+                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Die konkrete Abfolge hängt von Stationen, Parametern und Prioritäten ab.</p>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li>Anschluss an Ladesäule &gt; Ladefreigabe &gt; Laden bis Ziel-SOC.</li>
                                             <li>Balancing (falls erforderlich).</li>
                                             <li>Vorkonditionierung (System/Klima) zeitlich vor Ausfahrt.</li>
                                         </ul>
-                                        <h2>Konfliktlösung &amp; Fallbacks</h2>
-                                        <p class="intro">Bei Engpässen sorgt die VSP für steuerbare Alternativen.</p>
-                                        <ul>
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Konfliktlösung &amp; Fallbacks</h2>
+                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Bei Engpässen sorgt die VSP für steuerbare Alternativen.</p>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li>Umreihung an freie Ladesäule gleicher Klasse.</li>
                                             <li>Teilziel (z.&#160;B. Zwischen-SOC) mit späterer Nachladung.</li>
                                             <li>Manuelle Übersteuerung durch Berechtigte.</li>
                                         </ul>
-                                        <h2>Datenherkunft</h2>
-                                        <p class="intro">E-Parameter stammen aus der Fahrzeugakte und Prozessdatenströmen.</p>
-                                        <ul>
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Datenherkunft</h2>
+                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">E-Parameter stammen aus der Fahrzeugakte und Prozessdatenströmen.</p>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li>Stammdaten: Kapazitäten, K-Wert, Schwellen, Heizöl/Heizleistung.</li>
                                             <li>Prozessdaten: aktueller SOC, Ladephase, Restreichweite, Termininformationen.</li>
                                         </ul>
-                                        <h2 id="ssb-vsp-regeln" data-mc-conditions="Customers.SSB">SSB-Regeln für E-Bus-VSP</h2>
-                                        <ul data-mc-conditions="Customers.SSB">
+                                        <h2 id="ssb-vsp-regeln" xmlns="http://www.w3.org/1999/xhtml" data-mc-conditions="Customers.SSB">SSB-Regeln für E-Bus-VSP</h2>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml" data-mc-conditions="Customers.SSB">
                                             <li><strong>Queue-Policy</strong> (Ankunfts- vs. Prioritätssteuerung; Reserveplätze)</li>
                                             <li><strong>Ladestrategie</strong> (opportunistisch vs. fensterbasiert; Mindest-SOC vor Ausrücken)</li>
                                             <li><strong>Konfliktauflösung</strong> (Parallelbelegung, Umsteuerung auf Alternativen)</li>
                                             <li><strong>Vorkonditionierung</strong> (sofern projektiert; zeit-/SOC-gesteuerte Auslösung)</li>
                                         </ul>
-                                        <h2 data-mc-conditions="Customers.SSB">Status &amp; Ereignisse</h2>
-                                        <p data-mc-conditions="Customers.SSB">
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml" data-mc-conditions="Customers.SSB">Status &amp; Ereignisse</h2>
+                                        <p xmlns="http://www.w3.org/1999/xhtml" data-mc-conditions="Customers.SSB">
         VSP zeigt Statuswechsel (zugeteilt, in Versorgung, abgeschlossen) und technische Ereignisse (Fehler/Abbruch).
         Relevante Änderungen fließen in Disposition und Betriebsbild ein.
     </p>
-                                        <h2 data-mc-conditions="Customers.SSB">Siehe auch</h2>
-                                        <ul data-mc-conditions="Customers.SSB">
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml" data-mc-conditions="Customers.SSB">Siehe auch</h2>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml" data-mc-conditions="Customers.SSB">
                                             <li><a href="../050301_Versorgungsauftraege/05030102_Dialog_Versorgungsauftrag.htm" class="MCXref xref">Der Dialog "Versorgungsauftrag"</a>
                                             </li>
                                             <li><a href="../../../06_Betriebshof/0603_Lademanagement_E_Busse/060300_Lademanagement_E_Busse_Intro.htm" class="MCXref xref">Lademanagement für E&#8209;Busse</a>
                                             </li>
                                         </ul>
-                                        <h2>Verwandte Themen</h2>
-                                        <ul>
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Verwandte Themen</h2>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li>
             E-Bus-Datenfelder <!-- TODO: unresolved link (kein DE-Topic gefunden): E-Bus_Datenfelder.htm --></li>
                                             <li><a href="../../../03_Stammdaten_Verwaltung/0301_Fahrzeugmanagement/030102_Dialog_Fahrzeugakte/030102_Fahrzeugakte.htm" class="MCXref xref">Die Fahrzeugakte</a>

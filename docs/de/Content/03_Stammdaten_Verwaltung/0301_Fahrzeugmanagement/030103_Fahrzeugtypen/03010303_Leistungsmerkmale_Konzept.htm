@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="de" xml:lang="de" class="_Skins_Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedTitle%]|Lademanagement für E&#8209;Busse – Kapitelüberblick" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="de" xml:lang="de" class="_Skins_Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Parametrierung E&#8209;Busse – Überblick</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Zentrales Konzeptdokument für Leistungsmerkmale in PEAK.DMS: statische Zuordnung in Stammdaten, dynamische Negierung durch Störungen und anforderungsbasierte Verwendung in Disposition und Kursaufstellung." xmlns="http://www.w3.org/1999/xhtml" /><title>Leistungsmerkmale &#160;–&#160; Konzept und Anwendung</title>
         <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
@@ -115,32 +116,87 @@
                                         </div>
                                     </div>
                                     <div role="main" id="mc-main-content">
-                                        <h1>Parametrierung von Elektrofahrzeugen</h1>
-                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Dieses Unterkapitel erläutert, wie Sie Stammdaten und dynamische Parameter für Elektrobusse pflegen. Mit Hilfe der Elektrostammdaten, Elektroprozessdaten und speziellen Parametern für Balancing und Reservekapazität legen Sie fest, wie das System mit Batteriekapazitäten, Reichweiten und Ladeprozessen umgeht.</p>
-                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Was Sie hier tun</h2>
+                                        <h1 id="titel">Leistungsmerkmale &#160;–&#160; Konzept und Anwendung</h1>
+                                        <p class="mc-shortdesc" xmlns="http://www.w3.org/1999/xhtml">Leistungsmerkmale steuern die Eignung von Fahrzeugen für Umläufe und Stellplätze: statisch
+        in Stammdaten, dynamisch über Störungen und anforderungsbasiert in der Disposition.</p>
+                                        <h2 id="grundlagen" xmlns="http://www.w3.org/1999/xhtml">1. Grundlagen und Statische Zuordnung (Stammdaten)</h2>
+                                        <p xmlns="http://www.w3.org/1999/xhtml">Leistungsmerkmale sind <strong>disposition&#8209;relevante</strong> Eigenschaften, die die Eignung eines
+        Fahrzeugs für bestimmte Umläufe, Kurse oder Stellplätze definieren.</p>
+                                        <p xmlns="http://www.w3.org/1999/xhtml"><strong>Primäre Zuordnung</strong> erfolgt statisch im Dialog <em>Fahrzeugtyp</em> (Reiter <em>Basisdaten</em>):
+        Die Leistungsmerkmale werden als Markierungen (Checkboxen) aktiviert und beschreiben Fähigkeiten wie Energieart,
+        Reichweite oder Tunnel&#8209;Eignung.</p>
+                                        <p xmlns="http://www.w3.org/1999/xhtml"><strong>Wirkung</strong>: Die zugewiesenen Leistungsmerkmale bilden Vorgaben für Planung und Disposition
+        (Typzulässigkeiten, Stellplatznutzungen, Auswahl geeigneter Fahrzeuge).</p>
+                                        <h2 id="dynamik" xmlns="http://www.w3.org/1999/xhtml">2. Dynamische Zuordnung (Negierung durch Störungen)</h2>
+                                        <p xmlns="http://www.w3.org/1999/xhtml">Leistungsmerkmale können ihre Gültigkeit verlieren, wenn eine Fahrzeugstörung die entsprechende Funktion außer
+        Kraft setzt. Diese Negierung erfolgt über den projektierten <strong>Störungsbaum</strong> im Dialog
+        <em>Fahrzeugstörung</em>.
+    </p>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
-                                            <li>Grundlegende Batterie&#8209; und Fahrzeugparameter wie nutzbare Kapazität, Reichweite und Balancingverfahren verwalten (siehe
-        <a href="06030501_Elektrostammdaten.htm" class="MCXref xref" xrefformat="{para}">Elektrostammdaten bearbeiten</a>).</li>
-                                            <li>Dynamische Prozessdaten wie aktueller SOC, Restreichweite und Ladephasen einsehen (siehe
-        <a href="06030502_Elektroprozessdaten.htm" class="MCXref xref" xrefformat="{para}">Elektroprozessdaten anzeigen</a>).</li>
-                                            <li>Parameter zur Reservekapazität und Balancingdauer definieren und anpassen (siehe
-        <a href="06030503_Balancing_Reservekapazitaet.htm" class="MCXref xref" xrefformat="{para}">Balancing und Reservekapazität konfigurieren</a>).</li>
+                                            <li><strong>Auslöser</strong>: Bei der Erfassung einer Störung wird über den Störungsbaum eine
+            Kategorie/System/Komponente gewählt; der Störungseintrag kann ein <em>negiertes Leistungsmerkmal</em>
+            hinterlegen.</li>
+                                            <li><strong>Negiertes Leistungsmerkmal</strong>: Ist der Störungskategorie ein Leistungsmerkmal zugeordnet
+            (z.&#160;B. <em>Klimaanlage</em>), wird dieses beim Speichern der Störung für das Fahrzeug automatisch
+            negiert und im Dialog angezeigt.</li>
+                                            <li><strong>Dispo&#8209;Fahrzeugtyp</strong>: Die Negierung steuert die Berechnung eines
+            <em>Dispo&#8209;Fahrzeugtyps</em> (Ersatztyp), den die Disposition für die weitere Zuweisung nutzt.
+        </li>
                                         </ul>
-                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Warum parametrisieren?</h2>
-                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">Korrekte Stammdaten sind die Grundlage für eine zuverlässige Ladeplanung und Reichweitenprognose. Batterieparameter wie nutzbare Kapazität, maximale Reichweite und Balancingverfahren bestimmen, wie viel Energie im Betrieb zur Verfügung steht und wie lange Ladevorgänge dauern. Prozessdaten liefern einen aktuellen Einblick in den Ladezustand und die Performance des Fahrzeugs und können nicht bearbeitet, sondern nur angezeigt werden. Durch gezielte Reservekapazitätseinstellungen und Balancingparameter stellen Sie sicher, dass die Batterie langfristig geschont wird und immer genügend Energie zur Verfügung steht.</p>
-                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Voraussetzungen</h2>
+                                        <p xmlns="http://www.w3.org/1999/xhtml"><strong>Beispiel</strong>: „Klimaanlage defekt“ negiert das Leistungsmerkmal „Klimaanlage“; das Fahrzeug gilt
+        dispositiv als „ohne Klimaanlage“ und ist für klimatisierungspflichtige Umläufe nicht verfügbar.</p>
+                                        <p xmlns="http://www.w3.org/1999/xhtml"><em>Wiederherstellung</em>: Wird die Störung auf <em>Erledigt</em> oder <em>Kein Befund</em> gesetzt, werden
+        negierte Leistungsmerkmale automatisch wiederhergestellt und der Dispo&#8209;Fahrzeugtyp neu berechnet.</p>
+                                        <h2 id="anforderung" xmlns="http://www.w3.org/1999/xhtml">3. Anforderungsbasierte Zuordnung (Restriktion)</h2>
+                                        <p xmlns="http://www.w3.org/1999/xhtml">Leistungsmerkmale werden als Anforderungen an Umläufe genutzt, um festzulegen, welche Fähigkeiten das
+        einzusetzende Fahrzeug zwingend erfüllen muss.</p>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
-                                            <li>Das Fahrzeug muss im System als Elektrofahrzeug angelegt sein.</li>
-                                            <li>Benutzer benötigen Schreibrechte für Stammdaten (Fahrzeugakte).</li>
-                                            <li>Die Felder und Bereiche können projektspezifisch angepasst sein.</li>
+                                            <li><strong>Sonderumläufe</strong>: Im Dialog <em>Sonderumlaufbestellung</em> (Reiter
+            <em>Fahrzeuganforderungen</em>) wählen Sie Leistungsmerkmale als Kriterium oder Restriktion für die
+            automatisierte Umlauf&#8209;disposition.
+        </li>
+                                            <li><strong>Regel&#8209;Umläufe/Kursaufstellplan</strong>: In der Pflege der Kursaufstellplätze werden zulässige
+            Fahrzeugtypen oder <em>Fahrzeugtypmuster</em> mit Prioritäten zugewiesen; deren Eignung basiert auf in den
+            Stammdaten definierten Leistungsmerkmalen.</li>
                                         </ul>
-                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Siehe auch</h2>
+                                        <h2 id="kontrolle" xmlns="http://www.w3.org/1999/xhtml">4. Dispositive Kontrolle und Prüfung</h2>
+                                        <p xmlns="http://www.w3.org/1999/xhtml">Die zugewiesenen und negierten Leistungsmerkmale wirken in folgenden operativen Prozessen und werden dort
+        geprüft:</p>
                                         <ul xmlns="http://www.w3.org/1999/xhtml">
-                                            <li><a href="06030501_Elektrostammdaten.htm" class="MCXref xref" xrefformat="{para}">Elektrostammdaten bearbeiten</a>
+                                            <li><strong>Fahrzeugdisposition</strong>: Die automatische Stellplatzzuweisung berücksichtigt, ob der
+            Dispo&#8209;Fahrzeugtyp eines Fahrzeugs mit Nutzungsarten und Typzulassungen des Zielstellplatzes kompatibel
+            ist.</li>
+                                            <li><strong>Kursaufstellplanung</strong>: Die Zuordnung eines Umlaufs zu einer Spur/einem Gleis ist nur
+            zulässig, wenn die Schnittmenge der zulässigen Fahrzeugtypen gegeben ist; Pflege der Typzulassungen und
+            Prioritäten je Kursaufstellplatz erfolgt im Dialog <em>Kursaufstellplatz</em>.</li>
+                                            <li><strong>Umlaufdisposition</strong>: Bei manuellen Zuweisungen weist ein Symbol/Fehlermarker auf
+            Typinkonsistenzen oder nicht erfüllte Anforderungen hin (z.&#160;B. nicht zugelassene Typen im
+            Kursaufstellplan).</li>
+                                        </ul>
+                                        <h2 id="hinweise" xmlns="http://www.w3.org/1999/xhtml">Hinweise zur Administration</h2>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
+                                            <li><strong>Konfiguration der Leistungsmerkmale</strong>: Pflege der Merkmale und ihrer Zuordnung zu
+            Fahrzeugtypen im Dialog <em>Fahrzeugtyp</em>.</li>
+                                            <li><strong>Störungskatalog/Störungsbaum</strong>: Pflege der Störungseinträge inkl. negierter Leistungsmerkmale
+            durch berechtigte Administratoren; wirkt unmittelbar auf Dispo&#8209;Fahrzeugtyp und Verfügbarkeit.</li>
+                                            <li><strong>Fahrzeugtypmuster</strong>: Priorisierte Typlisten für automatisierte Auswahl in Umlauf&#8209; und
+            Stellplatzdisposition.</li>
+                                        </ul>
+                                        <h2 id="see-also" xmlns="http://www.w3.org/1999/xhtml">Siehe auch</h2>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
+                                            <li><a href="../030100_Fahrzeugmanagement_INTRO.htm" class="MCXref xref" xrefformat="{para}">Fahrzeugmanagement</a>
                                             </li>
-                                            <li><a href="06030502_Elektroprozessdaten.htm" class="MCXref xref" xrefformat="{para}">Elektroprozessdaten anzeigen</a>
+                                            <li><a href="03010301_Dialog_Fahrzeugtyp.htm" class="MCXref xref" xrefformat="{para}">Dialog „Fahrzeugtyp“</a>
                                             </li>
-                                            <li><a href="06030503_Balancing_Reservekapazitaet.htm" class="MCXref xref" xrefformat="{para}">Balancing und Reservekapazität konfigurieren</a>
+                                            <li><a href="../030104_Fahrzeugtypmuster/03010402_Fahrzeugtypmuster_anlegen.htm" class="MCXref xref" xrefformat="{para}">„Fahrzeugtypmuster“ anlegen</a>
+                                            </li>
+                                            <li><a href="../../../04_Betriebssteuerung_und_Disposition/0401_Umlaufmanagement/040102_Planfahrten_Sonderfahrten/040102_Planfahrten_Sonderfahrten.htm" class="MCXref xref" xrefformat="{para}">Dialog „Sonderumlaufbestellung“ - Planfahrten &amp; Sonderfahrten</a>
+                                            </li>
+                                            <li><a href="../../../04_Betriebssteuerung_und_Disposition/0402_Kursaufstellplanung/040201_Kursaufstellplan.htm" class="MCXref xref" xrefformat="{para}">Dialog „Kursaufstellplan“</a>
+                                            </li>
+                                            <li><a href="../../../04_Betriebssteuerung_und_Disposition/0403_Fahrzeugdisposition/040300_Fahrzeugdisposition_INTRO.htm" class="MCXref xref" xrefformat="{para}">Fahrzeugdisposition &#160;–&#160; Einführung</a>
+                                            </li>
+                                            <li><a href="../../../05_Stoerungs_u_Instandhaltungsmanagement/0500_Stoerungs_u_Instandhaltungsmanagement_INTRO.htm" class="MCXref xref" xrefformat="{para}">Störungs- &amp; Instandhaltungsmanagement</a>
                                             </li>
                                         </ul>
                                     </div>

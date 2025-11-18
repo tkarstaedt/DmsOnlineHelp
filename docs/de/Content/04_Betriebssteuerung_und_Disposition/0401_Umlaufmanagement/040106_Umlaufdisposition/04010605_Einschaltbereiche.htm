@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="SSB-spezifische Restriktion für die Umlaufdisposition: Einschaltbereiche begrenzen die Anzahl gleichzeitig eingeschalteter Fahrzeuge in einem topologischen Bereich über ein konfigurierbares Zeitfenster." /><title>Einschaltbereiche (SSB)</title>
+        <meta name="description" content="SSB-spezifische Restriktion für die Umlaufdisposition: Einschaltbereiche begrenzen die Anzahl gleichzeitig eingeschalteter Fahrzeuge in einem topologischen Bereich über ein konfigurierbares Zeitfenster." xmlns="http://www.w3.org/1999/xhtml" /><title>Einschaltbereiche (SSB)</title>
         <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
@@ -118,20 +118,20 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1>Einschaltbereiche (SSB)</h1>
-                                        <p class="mc-shortdesc"><strong>Einschaltbereiche</strong> (Power-On Areas) begrenzen, wie viele Fahrzeuge in einem
+                                        <p class="mc-shortdesc" xmlns="http://www.w3.org/1999/xhtml"><strong>Einschaltbereiche</strong> (Power-On Areas) begrenzen, wie viele Fahrzeuge in einem
         topologischen Bereich innerhalb eines
         Zeitfensters gleichzeitig <em>eingeschaltet</em> sein dürfen. Die <strong>Umlaufdisposition</strong>
         berücksichtigt diese Grenze bei jeder Zuordnung.
     </p>
-                                        <h2>Konzept &amp; Zweck</h2>
-                                        <ul>
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Konzept &amp; Zweck</h2>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li><strong>Einschaltbereich</strong> = topologischer Bereich (z. B. Spurgruppe/Track/Depot) mit einer
             <em>Maximalzahl</em> gleichzeitig eingeschalteter Fahrzeuge.</li>
                                             <li>Steuert die <strong>Umlaufdisposition</strong>: Ein Umlauf darf nur zugewiesen werden, wenn die Maximalzahl
             im relevanten Zeitfenster nicht überschritten wird.</li>
                                         </ul>
-                                        <h2>Parameter pro Einschaltbereich</h2>
-                                        <table style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" class="TableStyle-Alternate-Row-Color" cellspacing="21">
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Parameter pro Einschaltbereich</h2>
+                                        <table style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" class="TableStyle-Alternate-Row-Color" cellspacing="21" xmlns="http://www.w3.org/1999/xhtml">
                                             <thead>
                                                 <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
                                                     <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Parameter</th>
@@ -159,8 +159,8 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <h2>Prüflogik der Umlaufdisposition</h2>
-                                        <ol>
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Prüflogik der Umlaufdisposition</h2>
+                                        <ol xmlns="http://www.w3.org/1999/xhtml">
                                             <li value="1"><strong>Einschaltzeitpunkt</strong> berechnen: <em>Einschaltzeitpunkt</em> =
             <code>Umlaufstart − Einschaltzeit</code>.</li>
                                             <li value="2"><strong>Einschaltzeitfenster</strong> des Umlaufs bilden:
@@ -172,18 +172,18 @@
                                             <li value="5"><strong>Entscheiden</strong>: Ist die Summe &gt; <em>Maximale Anzahl</em> → Zuordnung <strong>nicht
                 zulässig</strong>.</li>
                                         </ol>
-                                        <h2>&#160;</h2>
-                                        <h2>Neuer Einschaltbereich</h2>
-                                        <p>
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">&#160;</h2>
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Neuer Einschaltbereich</h2>
+                                        <p xmlns="http://www.w3.org/1999/xhtml">
                                             <img src="../../../Resources/Images/button_power_on_area.png" />
                                         </p>
-                                        <p>
+                                        <p xmlns="http://www.w3.org/1999/xhtml">
                                             <img src="../../../Resources/Images/dlg_add_topology_area.png" />
                                         </p>
-                                        <h2>Beispiel</h2>
-                                        <p><strong>Einschaltbereich:</strong> Fahrzeuge 1001–1005, Max = 4, Einschaltzeit = 35 min, Puffer = 5 min → Fenster
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Beispiel</h2>
+                                        <p xmlns="http://www.w3.org/1999/xhtml"><strong>Einschaltbereich:</strong> Fahrzeuge 1001–1005, Max = 4, Einschaltzeit = 35 min, Puffer = 5 min → Fenster
         = 40 min.</p>
-                                        <table style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" class="TableStyle-Alternate-Row-Color" cellspacing="21">
+                                        <table style="mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" class="TableStyle-Alternate-Row-Color" cellspacing="21" xmlns="http://www.w3.org/1999/xhtml">
                                             <thead>
                                                 <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
                                                     <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Fahrzeug</th>
@@ -214,27 +214,27 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <ul>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li><strong>Prüfung für 1005 @ 04:12</strong> → Einschaltzeitpunkt 03:37 → bereits 4 Fahrzeuge eingeschaltet →
             <strong>nicht zulässig</strong>.</li>
                                             <li><strong>Prüfung für 1005 @ 04:19</strong> → Einschaltzeitpunkt 03:44 → nur 3 Fahrzeuge eingeschaltet →
             <strong>zulässig</strong>.</li>
                                         </ul>
-                                        <p>
+                                        <p xmlns="http://www.w3.org/1999/xhtml">
                                             <img src="../../../Resources/Images/einschaltbereiche_beispiel.jpg" />
                                         </p>
-                                        <h2>Optionale Dispositionskriterien</h2>
-                                        <ul>
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Optionale Dispositionskriterien</h2>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li><strong>Eingeschaltete Fahrzeuge bevorzugt einsetzen</strong> (<code>UsePoweredOnVehicles</code>): Offene
             Umläufe werden bevorzugt auf bereits eingeschaltete, noch nicht fixierte Fahrzeuge disponiert. Sinnvoll nur
             in Kombination mit Einschaltbereichen.</li>
                                         </ul>
-                                        <div class="note" data-mc-conditions="Customers.SSB">
+                                        <div class="note" xmlns="http://www.w3.org/1999/xhtml" data-mc-conditions="Customers.SSB">
                                             <p><strong>Hinweis:</strong> Benennungen/Parameternamen folgen dem SSB-Customizing (Jira-Referenzen verfügbar).
         </p>
                                         </div>
-                                        <h2>Bedienhinweise (Disposition)</h2>
-                                        <ul>
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Bedienhinweise (Disposition)</h2>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li>Bei <a href="04010602_Manuelle_Umlaufdisposition.htm" class="MCXref xref">Manuelle Umlaufdisposition</a>
             und <a href="04010603_Halbautomatische_Umlaufdisposition.htm" class="MCXref xref">Halbautomatische Umlaufdisposition</a> werden
             unzulässige Zuordnungen (Grenzwert überschritten) verworfen oder als Fehler gemeldet.</li>
@@ -242,16 +242,16 @@
             ohne Einschaltbereiche.</li>
                                             <li>Bei Ablehnung einer Zuordnung: Startzeiten anpassen oder Fahrzeuge zeitlich entzerren.</li>
                                         </ul>
-                                        <h2>Fehlermeldungen &amp; Troubleshooting</h2>
-                                        <ul>
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Fehlermeldungen &amp; Troubleshooting</h2>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li><strong>„Max. Zahl eingeschalteter Fahrzeuge überschritten“</strong> – Fenster prüfen:
             <code>Start − Einschaltzeit</code> bis <code>Start + Puffer</code>.</li>
                                             <li><strong>Traktionskonflikt</strong> – Doppeltraktion zählt doppelt; ggf. Aufteilungen/Start versetzen.</li>
                                             <li><strong>Unerwartete Vorschläge</strong> – Prüfen, ob <em>Eingeschaltete Fahrzeuge bevorzugen</em> aktiv ist.
         </li>
                                         </ul>
-                                        <h2>Verwandte Themen</h2>
-                                        <ul>
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml">Verwandte Themen</h2>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li><a href="04010601_Umlaufdisposition_INTRO.htm" class="MCXref xref">Umlaufdisposition &#160;–&#160; Einführung</a>
                                             </li>
                                             <li><a href="04010602_Manuelle_Umlaufdisposition.htm" class="MCXref xref">Manuelle Umlaufdisposition</a>

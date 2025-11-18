@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Zuordnung von Betriebstagen zu Tagesarten im VDV&#8209;Kalender: Bedeutung, Anzeige, Pflege, Validierung und typische Fehlerbilder in PEAK.DMS." /><title>VDV&#8209;Kalender</title>
+        <meta name="description" content="Zuordnung von Betriebstagen zu Tagesarten im VDV&#8209;Kalender: Bedeutung, Anzeige, Pflege, Validierung und typische Fehlerbilder in PEAK.DMS." xmlns="http://www.w3.org/1999/xhtml" /><title>VDV&#8209;Kalender</title>
         <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
@@ -117,66 +117,66 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1 id="titel">VDV&#8209;Kalender</h1>
-                                        <p class="mc-shortdesc">
+                                        <p class="mc-shortdesc" xmlns="http://www.w3.org/1999/xhtml">
         Der <strong>VDV&#8209;Kalender</strong> ordnet für <strong>PEAK.DMS</strong> jeden <strong>Betriebstag</strong>
         einer <strong>Tagesart</strong> zu (z.&#160;B. Werktag, Samstag, Feiertag). Die Zuordnung wirkt sich auf
         Kursaufstellung, Fahrzeugdisposition und Bereichskalender aus.
     </p>
-                                        <h2 id="ziel">Ziel</h2>
-                                        <p>Sie verstehen die Bedeutung des VDV&#8209;Kalenders und können die Zuordnung Betriebstag ↔ Tagesart anzeigen,
+                                        <h2 id="ziel" xmlns="http://www.w3.org/1999/xhtml">Ziel</h2>
+                                        <p xmlns="http://www.w3.org/1999/xhtml">Sie verstehen die Bedeutung des VDV&#8209;Kalenders und können die Zuordnung Betriebstag ↔ Tagesart anzeigen,
         prüfen und bei Bedarf anpassen.</p>
-                                        <h2 id="kontext">Kontext</h2>
-                                        <p>
+                                        <h2 id="kontext" xmlns="http://www.w3.org/1999/xhtml">Kontext</h2>
+                                        <p xmlns="http://www.w3.org/1999/xhtml">
         Tagesarten werden in der Planung definiert und über Schnittstellen (z.&#160;B. VDV&#8209;452) übergeben. Im DMS
         sorgt der VDV&#8209;Kalender dafür, dass <em>operative</em> Funktionen die korrekte Tageslogik verwenden
         (z.&#160;B. Ferienfahrpläne, Sonderfahrten an Feiertagen).
     </p>
-                                        <ul>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li><strong>Betriebstag</strong>: Datum, ggf. mit betrieblichem Tageswechsel.</li>
                                             <li><strong>Tagesart</strong>: Klassifizierung des Betriebstags (Regel&#8209;/Sondertage).</li>
                                             <li><strong>VDV&#8209;Kalender</strong>: Mapping Betriebstag&#160;↔&#160;Tagesart.</li>
                                         </ul>
-                                        <p class="note">Menüpfade/Bezeichnungen können projektspezifisch variieren. Dieses Topic beschreibt den generischen
+                                        <p class="note" xmlns="http://www.w3.org/1999/xhtml">Menüpfade/Bezeichnungen können projektspezifisch variieren. Dieses Topic beschreibt den generischen
         Produktumfang.</p>
-                                        <h2 id="voraussetzungen">Voraussetzungen</h2>
-                                        <ul>
+                                        <h2 id="voraussetzungen" xmlns="http://www.w3.org/1999/xhtml">Voraussetzungen</h2>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li>Sie sind am DMS&#8209;Client angemeldet und verfügen über Anzeigerechte für Fahrplandaten.</li>
                                             <li>Im System liegen Tagesarten und ggf. importierte Kalenderdaten vor.</li>
                                         </ul>
-                                        <h2 id="anzeige">VDV&#8209;Kalender anzeigen</h2>
-                                        <ol>
+                                        <h2 id="anzeige" xmlns="http://www.w3.org/1999/xhtml">VDV&#8209;Kalender anzeigen</h2>
+                                        <ol xmlns="http://www.w3.org/1999/xhtml">
                                             <li value="1">Öffnen Sie die Funktion <em>Fahrplandaten</em>.</li>
                                             <li value="2">Wählen Sie die Sicht <strong>VDV&#8209;Kalender</strong>.</li>
                                             <li value="3">Filtern Sie nach <em>Zeitraum</em> oder <em>Tagesart</em>, um die relevanten Betriebstage einzugrenzen.</li>
                                             <li value="4">Prüfen Sie die Spalten <em>Datum</em>, <em>Tagesart</em>, <em>Quelle</em> und <em>Status</em>.</li>
                                         </ol>
-                                        <p class="tip">Nutzen Sie Spaltensortierung/Textfilter, um anstehende Sondertage (z.&#160;B. Feiertage) schnell zu
+                                        <p class="tip" xmlns="http://www.w3.org/1999/xhtml">Nutzen Sie Spaltensortierung/Textfilter, um anstehende Sondertage (z.&#160;B. Feiertage) schnell zu
         identifizieren.</p>
-                                        <h2 id="pflege">Zuordnung anpassen</h2>
-                                        <p>In Ausnahmefällen kann es erforderlich sein, die Zuordnung manuell zu korrigieren (z.&#160;B. kurzfristig
+                                        <h2 id="pflege" xmlns="http://www.w3.org/1999/xhtml">Zuordnung anpassen</h2>
+                                        <p xmlns="http://www.w3.org/1999/xhtml">In Ausnahmefällen kann es erforderlich sein, die Zuordnung manuell zu korrigieren (z.&#160;B. kurzfristig
         erklärte Feiertage):</p>
-                                        <ol>
+                                        <ol xmlns="http://www.w3.org/1999/xhtml">
                                             <li value="1">Markieren Sie den Betriebstag.</li>
                                             <li value="2">Wählen Sie <em>Tagesart ändern</em> und setzen Sie die korrekte Tagesart.</li>
                                             <li value="3">Speichern Sie die Änderung und dokumentieren Sie den Grund (Kommentar).</li>
                                         </ol>
-                                        <p class="caution">Manuelle Abweichungen sollten sparsam eingesetzt und nach einem erneuten Import/Abgleich
+                                        <p class="caution" xmlns="http://www.w3.org/1999/xhtml">Manuelle Abweichungen sollten sparsam eingesetzt und nach einem erneuten Import/Abgleich
         überprüft werden.</p>
-                                        <h2 id="validierung">Prüfen &amp; validieren</h2>
-                                        <ul>
+                                        <h2 id="validierung" xmlns="http://www.w3.org/1999/xhtml">Prüfen &amp; validieren</h2>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li>Vergleichen Sie Stichproben mit dem <a href="040401_Fahrplandaten_anzeigen.htm" class="MCXref xref" xrefformat="{para}">Fahrplandaten anzeigen</a>.</li>
                                             <li>Stimmen Sie die Zuordnung mit <a href="040403_DMS_Tagesarten.htm" class="MCXref xref" xrefformat="{para}">DMS-Tagesarten</a> ab.</li>
                                             <li>Kontrollieren Sie vor Fahrplanwechseln eine Vorschauperiode (z.&#160;B. 4&#160;Wochen).</li>
                                         </ul>
-                                        <h2 id="best-practice">Hinweise &amp; Best Practice</h2>
-                                        <ul>
+                                        <h2 id="best-practice" xmlns="http://www.w3.org/1999/xhtml">Hinweise &amp; Best Practice</h2>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li>Pflegen Sie Sondertage (Messen, Events) rechtzeitig in der Planung, damit die korrekte Tagesart importiert
             wird.</li>
                                             <li>Dokumentieren Sie manuelle Änderungen mit Datum, Rolle und Begründung.</li>
                                             <li>Synchronisieren Sie regelmäßig: Planung → Import → operative Prüfung.</li>
                                         </ul>
-                                        <h2 id="fehlerbilder">Typische Fehlerbilder</h2>
-                                        <ul>
+                                        <h2 id="fehlerbilder" xmlns="http://www.w3.org/1999/xhtml">Typische Fehlerbilder</h2>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li><strong>Falsche Tagesart für ein Datum:</strong> Importstatus prüfen; ggf. manuell korrigieren und die
             Planungsdaten nachziehen.</li>
                                             <li><strong>Fehlende Zuordnung:</strong> Tagesart im DMS anlegen/aktivieren und den Import erneut durchführen.
@@ -184,8 +184,8 @@
                                             <li><strong>Überschneidungen/Mehrfachzuordnung:</strong> Dubletten bereinigen und Regeln für Sondertage klären.
         </li>
                                         </ul>
-                                        <h2 id="siehe-auch">Siehe auch</h2>
-                                        <ul>
+                                        <h2 id="siehe-auch" xmlns="http://www.w3.org/1999/xhtml">Siehe auch</h2>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li><a href="040401_Fahrplandaten_anzeigen.htm" class="MCXref xref" xrefformat="{para}">Fahrplandaten anzeigen</a>
                                             </li>
                                             <li><a href="040404_DMS_Kalender_pflegen.htm" class="MCXref xref" xrefformat="{para}">Dialog „DMS-Kalender pflegen“</a>

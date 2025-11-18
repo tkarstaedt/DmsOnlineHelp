@@ -119,16 +119,16 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1>Der Dialog "Versorgungsauftrag"</h1>
-                                        <p class="mc-shortdesc">
+                                        <p class="mc-shortdesc" xmlns="http://www.w3.org/1999/xhtml">
         Mit dem Dialog "Versorgungsauftrag" können neue Versorgungsaufträge angelegt und bestehende bearbeitet werden.
         Versorgungsaufträge sind durchzuführende Arbeiten am Fahrzeug (z.B. Durchsicht, Besandung), die das Fahrzeug je
         nach Konfiguration für einen bestimmten Zeitraum für die Disposition sperren.
     </p>
-                                        <h2 id="aufruf-dialog">Aufruf des Dialogs</h2>
-                                        <p class="intro">
+                                        <h2 id="aufruf-dialog" xmlns="http://www.w3.org/1999/xhtml">Aufruf des Dialogs</h2>
+                                        <p class="intro" xmlns="http://www.w3.org/1999/xhtml">
         Sie können den Dialog auf folgende Weisen öffnen:
     </p>
-                                        <ul>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li><strong>Neuen Auftrag anlegen:</strong>
                                                 <ul>
                                                     <li>
@@ -156,18 +156,16 @@
                                                 </ul>
                                             </li>
                                         </ul>
-                                        <h2 id="dialogfelder-beschreibung">Beschreibung der Dialogfelder</h2>
-                                        <div class="MCDropDown MCDropDown_Closed dropdown"><span class="MCDropDownHead dropdownhead"><a href="#" class="MCDropDownHotSpot dropdownhotspot MCDropDownHotSpot_" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Geschlossen" data-mc-alt2="Offen" />
-                Registerkarte "Basisdaten"
-            </a></span>
+                                        <h2 id="dialogfelder-beschreibung" xmlns="http://www.w3.org/1999/xhtml">Beschreibung der Dialogfelder</h2>
+                                        <div class="MCDropDown MCDropDown_Closed dropdown"><span class="MCDropDownHead dropdownhead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Geschlossen" data-mc-alt2="Offen" />Registerkarte "Basisdaten" </a></span>
                                             <div class="MCDropDownBody dropdownbody">
-                                                <p>
+                                                <p xmlns="http://www.w3.org/1999/xhtml">
                                                     <img alt="Dialog Fahrzeugversorgung" madcap:mediastyle_sentinel="true" src="/image206.jpg" xmlns:madcap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
                                                 </p>
-                                                <p class="FigureCaption">
+                                                <p class="FigureCaption" xmlns="http://www.w3.org/1999/xhtml">
                 Abbildung 1: Dialog Fahrzeugversorgung
             </p>
-                                                <table cellspacing="21" class="TableStyle-Alternate-Row-Color" style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');">
+                                                <table cellspacing="21" class="TableStyle-Alternate-Row-Color" style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" xmlns="http://www.w3.org/1999/xhtml">
                                                     <col class="TableStyle-Alternate-Row-Color-Column-Column1" style="width: 189px;" />
                                                     <col class="TableStyle-Alternate-Row-Color-Column-Column1" style="width: 811px;" />
                                                     <thead>
@@ -245,27 +243,27 @@
                                                 </table>
                                             </div>
                                         </div>
-                                        <p madcap:conditions="Customers.SSB" xmlns:madcap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+                                        <p madcap:conditions="Customers.SSB" xmlns:madcap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns="http://www.w3.org/1999/xhtml">
         Beim Projekt SSB werden die Versorgungsaufträge (Durchsicht) bei Einfahrt des Fahrzeugs in den Betriebshof vom
         DMS automatisch erzeugt. Dies gilt ausschließlich für den Betriebszweig Bus.
     </p>
-                                        <h2 id="ssb-versorgung-parameter" data-mc-conditions="Customers.SSB">SSB-spezifische Versorgungsparameter</h2>
-                                        <ul data-mc-conditions="Customers.SSB">
+                                        <h2 id="ssb-versorgung-parameter" xmlns="http://www.w3.org/1999/xhtml" data-mc-conditions="Customers.SSB">SSB-spezifische Versorgungsparameter</h2>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml" data-mc-conditions="Customers.SSB">
                                             <li><strong>Zielmenge/Schwellwerte</strong> (Energie/Kraftstoff; Anpassung an Folgeumlauf)</li>
                                             <li><strong>Lade-/Tankfenster</strong> (Zeitfenster mit Depotregeln/Engpasssteuerung)</li>
                                             <li><strong>Bevorzugter Ladepunkt/Zapfsäule</strong> (Rang/Prio, Reservierungslogik)</li>
                                             <li><strong>Energieart/Connector</strong> (z. B. OCPP-Profil; technische Kompatibilität)</li>
                                         </ul>
-                                        <h2 id="ssb-versorgung-freigabe" data-mc-conditions="Customers.SSB">Freigaben &amp; Abhängigkeiten</h2>
-                                        <p data-mc-conditions="Customers.SSB">
+                                        <h2 id="ssb-versorgung-freigabe" xmlns="http://www.w3.org/1999/xhtml" data-mc-conditions="Customers.SSB">Freigaben &amp; Abhängigkeiten</h2>
+                                        <p xmlns="http://www.w3.org/1999/xhtml" data-mc-conditions="Customers.SSB">
         Die Freigabe eines Versorgungsauftrags berücksichtigt Stellplatzbelegung, Sicherheitsvorgaben und das
         Ladefenster
         in Bezug auf <em>Aus-/Einrückzeiten</em>. Konflikte werden als Warnhinweis angezeigt; Alternativen können
         vorgeschlagen werden.
     </p>
-                                        <h2 data-mc-conditions="Customers.SSB">Rückmeldungen
+                                        <h2 xmlns="http://www.w3.org/1999/xhtml" data-mc-conditions="Customers.SSB">Rückmeldungen
         &amp; Monitoring</h2>
-                                        <ul data-mc-conditions="Customers.SSB">
+                                        <ul xmlns="http://www.w3.org/1999/xhtml" data-mc-conditions="Customers.SSB">
                                             <li>Start/Ende der Versorgung mit Messwerten (z. B. SOC vorher/nachher)</li>
                                             <li>Abweichungsgründe (z. B. Ladepunkt belegt, technische Störung)</li>
                                             <li>Weitergabe an Disposition (aktualisierte Einsatzfähigkeit)</li>

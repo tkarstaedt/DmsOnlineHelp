@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Überblick über Begriffe und Konzepte zum Kuppelmanagement in PEAK.DMS: Kuppelauftrag als Überbegriff für Kuppeln/Trennen, Fahrzeugpaar, Kuppelpunkt, Statusmodell, Restriktions-Flags und Rollen." /><title>Begriffe &amp; Konzepte: Kuppelaufträge</title>
+        <meta name="description" content="Überblick über Begriffe und Konzepte zum Kuppelmanagement in PEAK.DMS: Kuppelauftrag als Überbegriff für Kuppeln/Trennen, Fahrzeugpaar, Kuppelpunkt, Statusmodell, Restriktions-Flags und Rollen." xmlns="http://www.w3.org/1999/xhtml" /><title>Begriffe &amp; Konzepte: Kuppelaufträge</title>
         <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
@@ -117,20 +117,20 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1 id="titel">Begriffe &amp; Konzepte: Kuppelaufträge</h1>
-                                        <p class="mc-shortdesc">
+                                        <p class="mc-shortdesc" xmlns="http://www.w3.org/1999/xhtml">
 		Dieses Topic definiert zentrale Begriffe des Kuppelmanagements. <strong>Kuppelaufträge</strong> werden als
 		<strong>Überbegriff</strong> verwendet und schließen <em>Trennaufträge</em> mit ein. Der gleiche Dialog dient
 		zur Bearbeitung beider Typen; er passt nur den Titel an.
 	</p>
-                                        <h2 id="kuppelauftrag">Kuppelauftrag (Überbegriff)</h2>
-                                        <p>
+                                        <h2 id="kuppelauftrag" xmlns="http://www.w3.org/1999/xhtml">Kuppelauftrag (Überbegriff)</h2>
+                                        <p xmlns="http://www.w3.org/1999/xhtml">
 		Ein <strong>Kuppelauftrag</strong> steuert den <em>Zustand</em> eines <strong>Fahrzeugpaars</strong> zu einem
 		<strong>Kuppelpunkt</strong>. Er hat einen <em>Typ</em>
 		(<strong>Kuppeln</strong> oder <strong>Trennen</strong>) und durchläuft ein <em>Statusmodell</em> (z.&#160;B.
 		Geplant → Bestätigt/Storniert → Abgeschlossen).
 	</p>
-                                        <h3 id="attribute">Typische Attribute</h3>
-                                        <ul>
+                                        <h3 id="attribute" xmlns="http://www.w3.org/1999/xhtml">Typische Attribute</h3>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li><strong>Auftragstyp</strong>: Kuppeln | Trennen</li>
                                             <li><strong>Fahrzeugpaar</strong>: A/B (Nummern), Kompatibilität (Kupplungssystem, Klasse, Länge, Energie)</li>
                                             <li><strong>Kuppelpunkt</strong>: Ort (Depot/Halt/Gleis), Zeitpunkt (Soll), optional Puffer</li>
@@ -139,41 +139,41 @@
                                             <li><strong>Status</strong>: Geplant, Aktiv, Bestätigt, Storniert, Abgeschlossen</li>
                                             <li><strong>Meta</strong>: Priorität, Kommentar/Begründung, Ersteller/Bestätiger (Rollen)</li>
                                         </ul>
-                                        <h2 id="fahrzeugpaar">Fahrzeugpaar</h2>
-                                        <p>
+                                        <h2 id="fahrzeugpaar" xmlns="http://www.w3.org/1999/xhtml">Fahrzeugpaar</h2>
+                                        <p xmlns="http://www.w3.org/1999/xhtml">
 		Zwei Fahrzeuge, die als <em>Traktion</em> zusammengeführt oder getrennt werden können. Relevante Eigenschaften:
 		Kupplbarkeit, Energie/SoC, Fahrzeugklasse, Länge, Depot, Sperrstatus.
 	</p>
-                                        <h2 id="kuppelpunkt">Kuppelpunkt</h2>
-                                        <p>
+                                        <h2 id="kuppelpunkt" xmlns="http://www.w3.org/1999/xhtml">Kuppelpunkt</h2>
+                                        <p xmlns="http://www.w3.org/1999/xhtml">
 		Ort&#8209;Zeit&#8209;Referenz für die Maßnahme (z.&#160;B. Betriebshof <strong>/</strong> Gleis, Haltestelle). Ein
 		Kuppelpunkt sollte ausreichend Puffer und die nötige Infrastruktur bieten.
 	</p>
-                                        <h2 id="statusmodell">Statusmodell &amp; Lebenszyklus</h2>
-                                        <ol>
+                                        <h2 id="statusmodell" xmlns="http://www.w3.org/1999/xhtml">Statusmodell &amp; Lebenszyklus</h2>
+                                        <ol xmlns="http://www.w3.org/1999/xhtml">
                                             <li value="1"><strong>Erzeugt</strong> (aus Dispositionsvorgabe/Regel/Import; optional manuell)</li>
                                             <li value="2"><strong>Aktiv</strong> (in der Sicht <em>Kuppelaufträge</em> disponibel)</li>
                                             <li value="3"><strong>Bestätigt</strong> → <em>sofortige Systemwirkung</em> (Kuppeln/Trennen wird operativ vollzogen)</li>
                                             <li value="4"><strong>Storniert</strong> → <em>Restriktions&#8209;Flags</em> an beiden Fahrzeugen (siehe unten)</li>
                                             <li value="5"><strong>Abgeschlossen</strong> (Archiv/Nachweis)</li>
                                         </ol>
-                                        <h2 id="restriktionsflags">Restriktions&#8209;Flags (Störungsmarker)</h2>
-                                        <p>
+                                        <h2 id="restriktionsflags" xmlns="http://www.w3.org/1999/xhtml">Restriktions&#8209;Flags (Störungsmarker)</h2>
+                                        <p xmlns="http://www.w3.org/1999/xhtml">
 		Bei Stornierung legt das System <strong>nicht einsatzverhindernde</strong> Störungen an beiden Fahrzeugen an.
 		Diese enthalten je nach Auftragstyp das Flag <strong>„Nicht kuppeln“</strong> bzw. <strong>„Nicht
 			trennen“</strong>.
 		Die Flags dienen als verbindliche Anweisung an die Disposition und die <a href="../../../04_Betriebssteuerung_und_Disposition/0403_Fahrzeugdisposition/040303_Automatische_Fahrzeugdisposition.htm" class="MCXref xref" xrefformat="{para}">Automatische Fahrzeugdisposition</a>, die entsprechende Maßnahme künftig <em>nicht erneut</em> vorzuschlagen.
 	</p>
-                                        <h2 id="rollen">Rollen &amp; Verantwortlichkeiten</h2>
-                                        <ul>
+                                        <h2 id="rollen" xmlns="http://www.w3.org/1999/xhtml">Rollen &amp; Verantwortlichkeiten</h2>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li><strong>Disposition</strong>: Sicht <em>Kuppelaufträge</em> bedienen, Bestätigen/Stornieren, kommentieren.
 		</li>
                                             <li><strong>Fachadmin</strong>: Regeln/Kompatibilität pflegen, Eskalationen bearbeiten.</li>
                                             <li><strong>Werkstatt/Versorgung</strong>: Sperr&#8209;/Sicherheitszustände liefern, die Kuppelbarkeit beeinflussen.
 		</li>
                                         </ul>
-                                        <h2 id="zusammenhaenge">Zusammenhänge</h2>
-                                        <ul>
+                                        <h2 id="zusammenhaenge" xmlns="http://www.w3.org/1999/xhtml">Zusammenhänge</h2>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li><a href="../050402_Kuppelauftraege/050402_Kuppelauftraege.htm" class="MCXref xref" xrefformat="{para}">Kuppelaufträge</a> (Liste, Toolbar, Kontextmenü, Dialog)
 		</li>
                                             <li><a href="../050402_Kuppelauftraege/050403_Dialog_Kuppelauftrag.htm" class="MCXref xref" xrefformat="{para}">Dialog: Kuppelauftrag</a> (ein Dialog, zwei Modi)

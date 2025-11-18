@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Regeln und Kompatibilitätsanforderungen für Kuppelaufträge in PEAK.DMS: harte und weiche Kriterien, Prüflogik, Konfliktlösung und Best Practices." /><title>Regeln &amp; Kompatibilität</title>
+        <meta name="description" content="Regeln und Kompatibilitätsanforderungen für Kuppelaufträge in PEAK.DMS: harte und weiche Kriterien, Prüflogik, Konfliktlösung und Best Practices." xmlns="http://www.w3.org/1999/xhtml" /><title>Regeln &amp; Kompatibilität</title>
         <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
@@ -118,18 +118,18 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1 id="titel">Regeln &amp; Kompatibilität</h1>
-                                        <p class="mc-shortdesc">
+                                        <p class="mc-shortdesc" xmlns="http://www.w3.org/1999/xhtml">
         Dieses Topic beschreibt die <strong>Regeln</strong> und <strong>Kompatibilitätsanforderungen</strong> für
         Kuppelaufträge. Es unterscheidet <em>harte</em> (verbindliche) Kriterien und <em>weiche</em> (gewichtete)
         Kriterien, erläutert die Prüflogik und zeigt, wie Konflikte gelöst werden.
     </p>
-                                        <h2 id="grundlagen">Grundlagen</h2>
-                                        <p>
+                                        <h2 id="grundlagen" xmlns="http://www.w3.org/1999/xhtml">Grundlagen</h2>
+                                        <p xmlns="http://www.w3.org/1999/xhtml">
         Kuppelaufträge (Typ <em>Kuppeln</em> oder <em>Trennen</em>) betreffen immer ein <a href="05040100_Begriffe_und_Konzepte.htm" class="MCXref xref">Begriffe &amp; Konzepte: Kuppelaufträge</a>. Vor der Bestätigung
         prüft das System die Kompatibilität; die <a href="../../../04_Betriebssteuerung_und_Disposition/0403_Fahrzeugdisposition/040303_Automatische_Fahrzeugdisposition.htm" class="MCXref xref">Automatische Fahrzeugdisposition</a> nutzt dieselben Regeln zur Vorschlagsbildung.
     </p>
-                                        <h2 id="harte-kriterien">Harte Kriterien (müssen erfüllt sein)</h2>
-                                        <ul>
+                                        <h2 id="harte-kriterien" xmlns="http://www.w3.org/1999/xhtml">Harte Kriterien (müssen erfüllt sein)</h2>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li><strong>Kupplungssystem</strong>: mechanisch/elektrisch kompatibel; ggf. Kupplungshöhe/Geometrie.</li>
                                             <li><strong>Technische Freigaben</strong>: Sicherheit/Abnahmen vorhanden; keine sicherheitsrelevanten Sperren.
         </li>
@@ -140,8 +140,8 @@
                                             <li><strong>Restriktions&#8209;Flags</strong>: gesetzte Flags <em>„Nicht kuppeln“</em>/<em>„Nicht trennen“</em>
             schließen die gegenteilige Maßnahme aus.</li>
                                         </ul>
-                                        <h2 id="weiche-kriterien">Weiche Kriterien (werden gewichtet)</h2>
-                                        <ul>
+                                        <h2 id="weiche-kriterien" xmlns="http://www.w3.org/1999/xhtml">Weiche Kriterien (werden gewichtet)</h2>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li><strong>Restreichweite/Energie</strong>: SoC/Tankstand, prognostizierte Reichweite bis nächster Versorgung.
         </li>
                                             <li><strong>Linienkritikalität</strong>: Priorität wichtiger Linien/Umläufe, Abfahrtsnähe.</li>
@@ -149,8 +149,8 @@
                                             <li><strong>Betriebsstabilität</strong>: Minimierung von Folgekonflikten, Pufferzeiten am Kuppelpunkt.</li>
                                             <li><strong>Werkstatt-/Fristenlage</strong>: nächste fällige Prüfung, Soft&#8209;Sperren.</li>
                                         </ul>
-                                        <h2 id="prueflogik">Prüflogik (vereinfacht)</h2>
-                                        <ol>
+                                        <h2 id="prueflogik" xmlns="http://www.w3.org/1999/xhtml">Prüflogik (vereinfacht)</h2>
+                                        <ol xmlns="http://www.w3.org/1999/xhtml">
                                             <li value="1"><strong>Harte Kriterien</strong> prüfen &#160;→&#160; <em>nicht erfüllt</em> =
             <strong>Abbruch</strong>/Stornoempfehlung mit Begründung.</li>
                                             <li value="2"><strong>Weiche Kriterien</strong> scoren &#160;→&#160; Bewertung/Empfehlung (z.&#160;B.
@@ -158,8 +158,8 @@
                                             <li value="3"><strong>Konflikte</strong> sammeln (Sperrungen, Versorgungsslots, Zeit/Ort).</li>
                                             <li value="4"><strong>Ergebnis</strong> anzeigen: Empfehlung + Hinweise; Disponent kann bestätigen oder verwerfen.</li>
                                         </ol>
-                                        <h2 id="konflikte">Konfliktbilder &amp; Maßnahmen</h2>
-                                        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" class="TableStyle-Alternate-Row-Color" cellspacing="21">
+                                        <h2 id="konflikte" xmlns="http://www.w3.org/1999/xhtml">Konfliktbilder &amp; Maßnahmen</h2>
+                                        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/Alternate-Row-Color.css');" class="TableStyle-Alternate-Row-Color" cellspacing="21" xmlns="http://www.w3.org/1999/xhtml">
                                             <thead>
                                                 <tr class="TableStyle-Alternate-Row-Color-Head-Header1">
                                                     <th class="TableStyle-Alternate-Row-Color-HeadE-Column1-Header1">Konflikt</th>
@@ -201,8 +201,8 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <h2 id="best-practice">Best Practices</h2>
-                                        <ul>
+                                        <h2 id="best-practice" xmlns="http://www.w3.org/1999/xhtml">Best Practices</h2>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li><strong>Ein Dialog, zwei Modi:</strong> Bedienlogik identisch für Kuppeln und Trennen; Titel passt sich an
             (siehe Dialog Kuppelauftrag
             <!-- TODO: unresolved link (kein DE-Topic gefunden): ../050402_Kuppelauftraege/05040201_Dialog_Kuppelauftrag.htm -->).
@@ -214,8 +214,8 @@
                                             <li><strong>Dokumentation</strong>: Gründe und Entscheidungen im Auftrag festhalten; erleichtert Auswertung und
             Nachweis.</li>
                                         </ul>
-                                        <h2 id="siehe-auch">Siehe auch</h2>
-                                        <ul>
+                                        <h2 id="siehe-auch" xmlns="http://www.w3.org/1999/xhtml">Siehe auch</h2>
+                                        <ul xmlns="http://www.w3.org/1999/xhtml">
                                             <li><a href="05040100_Begriffe_und_Konzepte.htm" class="MCXref xref">Begriffe &amp; Konzepte: Kuppelaufträge</a>
                                             </li>
                                             <li><a href="../050402_Kuppelauftraege/050402_Kuppelauftraege.htm" class="MCXref xref">Kuppelaufträge</a>
