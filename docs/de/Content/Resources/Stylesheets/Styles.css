@@ -2,10 +2,28 @@
 
 @namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
 
+/* Variable Schriftart-Definition */
+
+@font-face 
+{
+	font-family: 'Manrope';
+	src: url('../Fonts/Manrope-VariableFont_wght.ttf') format('truetype');
+	font-weight: 200 800;
+	font-style: normal;
+}
+
+/* Pfad zur Variable-Font Datei */
+
+/* WICHTIG: Definiert den Bereich (Range) der Dicke. 
+       Manrope deckt meist 200 bis 800 ab. 
+       So weiß der Browser: Ich kann diese Datei für Regular UND Bold nutzen. */
+
 body
 {
 	color: #45494C;
-	font-family: Manrope;
+	font-family: 'Manrope', Arial, sans-serif;
+	/* Optional: Setzt das "normale" Schriftgewicht */
+	font-weight: normal;
 }
 
 .body-container

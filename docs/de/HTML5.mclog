@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<MadCapLog Protocol="2" Description="MadCap Flare 2025 r2 Generated HTML5.fltar" Date="2025-11-18T15:14:02.0772672+01:00" Branch="main" Commit="9a257bb22ff6f3406b8d4e7cba3a14e1edc76148">
+<MadCapLog Protocol="2" Description="MadCap Flare 2025 r2 Generated HTML5.fltar" Date="2025-11-18T15:51:34.6802366+01:00" Branch="main" Commit="2231309971bed9ead1f7912f4900c5cc437b32ca">
     <Messages>Compiling target HTML5...
 Removing previously generated content...
 Loading skin info...
@@ -827,7 +827,7 @@ Generated Skins\Default\Stylesheets\Topic.micro-content.css
 Generated Default.htm
 Saving result set...
 Ignored Compiler Warnings: 264
-Output generated in 49 second(s).
+Output generated in 46 second(s).
 
 Done
 Saving log to "C:\git\PSItrafficProductManual\DMS\User\de\Output\HTML5\HTML5.mclog"
