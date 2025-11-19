@@ -1,16 +1,155 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>DmsOnlineHelp  Auswahl</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DmsOnlineHelp - Selection</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Manrope & JetBrains Mono -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Manrope', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            peak: {
+              orange: '#F84E2B',
+              grey: '#D8D0C4',
+              green: '#9CA28B',
+              dark: '#111827'
+            }
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-  <h1>DmsOnlineHelp</h1>
-  <p>Wählen Sie Ihre Sprache / choose your language:</p>
-  <ul>
-    <li><a href="./de/Content/0000_Einleitung.htm">Deutsch (de)</a></li>
-    <li><a href="./en/Content/0000_Einleitung.htm">English (en)</a></li>
-  </ul>
+
+<body class="bg-gray-50 text-gray-800 antialiased min-h-screen flex flex-col items-center justify-center p-4">
+
+  <div class="max-w-md w-full bg-white rounded-xl shadow-xl overflow-hidden border border-gray-100">
+
+    <!-- Header Section -->
+    <div class="p-8 text-center border-b border-gray-100 bg-gradient-to-b from-white to-gray-50/50">
+      <!-- Logo -->
+      <div class="mb-6 flex justify-center">
+        <svg width="64" viewBox="0 0 350.3 350.5" xmlns="http://www.w3.org/2000/svg" class="drop-shadow-sm">
+          <defs>
+            <style>
+              .st0 {
+                fill: #F84E2B;
+              }
+
+              .st1 {
+                fill: #fff;
+              }
+            </style>
+          </defs>
+          <polygon class="st0" points="0 .2 0 350.2 175 350.2 350 175.2 350 .2 0 .2" />
+          <g>
+            <path class="st1"
+              d="M32.4,67.3h-7.4V25.2h16.6c.4,0,.9,0,1.5,0,.7,0,1.2,0,1.7.2,2.3.4,4.3,1.2,5.8,2.5,1.5,1.3,2.6,2.9,3.3,4.8.7,1.9,1.1,4.1,1.1,6.4s-.4,4.5-1.1,6.4-1.8,3.5-3.3,4.8c-1.5,1.3-3.4,2.1-5.8,2.5-.5,0-1.1.1-1.8.2s-1.2,0-1.5,0h-9.2v14.3h0ZM32.4,32.7v13h8.9c.4,0,.8,0,1.3,0s.9-.1,1.3-.2c1-.3,1.8-.8,2.3-1.5.5-.7.9-1.5,1.1-2.3.2-.8.3-1.7.3-2.4s-.1-1.6-.3-2.4c-.2-.8-.6-1.6-1.1-2.3-.5-.7-1.3-1.2-2.3-1.5-.4-.1-.8-.2-1.3-.2s-.9,0-1.3,0c0,0-8.9,0-8.9,0Z" />
+            <path class="st1" d="M87.6,67.3h-25.7V25.2h25.7v7.4h-18.3v9h15v7.4h-15v10.8h18.3v7.4h0Z" />
+            <path class="st1"
+              d="M100.5,67.3h-7.7l12-42.1h11.1l12,42.1h-7.7l-10.7-37.1h1.4l-10.6,37.1h0ZM120.8,58.6h-20.8v-7.4h20.8v7.4Z" />
+            <path class="st1"
+              d="M141.7,67.3h-7.4V25.2h7.4v19.4l15-19.4h9.1l-16.5,20.8,17.5,21.3h-9.4l-15.7-19.2v19.2h0Z" />
+            <path class="st1"
+              d="M31.9,124.7h-6.9v-42.1h6.7l13,28,13-27.9h6.7v42.1h-6.9v-25.1l-11.4,25.1h-2.6l-11.4-25.1s0,25.1,0,25.1Z" />
+            <path class="st1"
+              d="M90.3,125.5c-3.9,0-7.3-.9-10.2-2.8s-5.1-4.4-6.6-7.7c-1.5-3.3-2.3-7.1-2.3-11.5s.8-8.2,2.3-11.5-3.7,5.9,6.6-7.7,6.2-2.8,10.2-2.8,7.3.9,10.2,2.8c2.8,1.8,5.1,4.4,6.6,7.7s2.3,7.1,2.3,11.5-.8,8.2-2.3,11.5-3.7,5.9-6.6,7.7-6.2,2.8-10.2,2.8ZM90.3,118.1c2.5,0,4.6-.5,6.2-1.7,1.7-1.2,2.9-2.9,3.7-5.1.8-2.2,1.2-4.7,1.2-7.7s-.4-5.5-1.2-7.6c-.8-2.1-2.1-3.8-3.7-5s-3.7-1.8-6.2-1.8c-2.5,0-4.6.5-6.2,1.7-1.7,1.2-2.9,2.9-3.7,5.1s-1.2,4.7-1.2,7.7.4,5.5,1.2,7.6c.8,2.1,2.1,3.8,3.7,5s3.7,1.8,6.2,1.8Z" />
+            <path class="st1"
+              d="M133.7,124.7h-17.4v-42.1h15.8c2.8,0,5.1.6,6.8,1.8,1.7,1.2,3,2.7,3.8,4.5.8,1.8,1.2,3.6,1.2,5.5s-.5,4.3-1.5,5.9-2.4,2.6-4.1,3.1v-1.5c2.5.6,4.3,1.8,5.5,3.7s1.9,4,1.9,6.3-.4,4.7-1.3,6.6c-.9,1.9-2.2,3.4-3.9,4.5-1.8,1.1-4,1.6-6.7,1.6h0ZM123.8,90v9h8.1c.8,0,1.6-.2,2.2-.5.7-.3,1.2-.8,1.6-1.4.4-.7.6-1.5.6-2.5s-.4-2.4-1.1-3.2c-.8-.9-1.8-1.3-3.2-1.3h-8.1ZM123.8,106.4v10.8h9.1c1,0,1.9-.2,2.7-.7s1.4-1.1,1.9-1.9c.4-.8.7-1.8.7-2.9s-.2-1.9-.6-2.7-1-1.4-1.7-1.9c-.8-.5-1.7-.7-2.9-.7h-9.1Z" />
+            <path class="st1" d="M160.4,124.7h-7.4v-42.1h7.4v42.1Z" />
+            <path class="st1" d="M194.9,124.7h-24.4v-42.1h7.4v34.7h16.9v7.4Z" />
+            <path class="st1" d="M208.9,124.7h-7.4v-42.1h7.4v42.1Z" />
+            <path class="st1" d="M235,124.7h-7.4v-34.7h-12.4v-7.4h32.3v7.4h-12.4v34.7h0Z" />
+            <path class="st1" d="M272,124.7h-7.5v-17.1l-13.4-25h8.7l8.5,15.8,8.5-15.8h8.7l-13.5,25v17.1h0Z" />
+          </g>
+        </svg>
+      </div>
+
+      <h1 class="text-2xl font-bold text-gray-900 tracking-tight">DmsOnlineHelp</h1>
+      <p class="text-gray-500 mt-2 text-sm">Select your preferred documentation language</p>
+    </div>
+
+    <!-- Links Section -->
+    <div class="p-6 space-y-3">
+
+      <!-- German -->
+      <a href="./de/Content/0000_Einleitung.htm"
+        class="flex items-center justify-between p-4 rounded-lg border border-gray-200 hover:border-peak-orange hover:bg-peak-orange/5 transition-all duration-200 group bg-white">
+        <div class="flex items-center gap-4">
+          <div class="p-2 bg-gray-100 rounded-full group-hover:bg-white transition-colors">
+            <i data-lucide="book" class="w-5 h-5 text-gray-500 group-hover:text-peak-orange transition-colors"></i>
+          </div>
+          <div>
+            <div class="font-semibold text-gray-900 group-hover:text-peak-orange transition-colors">Deutsch</div>
+            <div class="text-xs text-gray-500">Onlinehilfe (de)</div>
+          </div>
+        </div>
+        <i data-lucide="arrow-right"
+          class="w-4 h-4 text-gray-300 group-hover:text-peak-orange transform group-hover:translate-x-1 transition-all"></i>
+      </a>
+
+      <!-- English -->
+      <a href="./en/Content/0000_Einleitung.htm"
+        class="flex items-center justify-between p-4 rounded-lg border border-gray-200 hover:border-peak-orange hover:bg-peak-orange/5 transition-all duration-200 group bg-white">
+        <div class="flex items-center gap-4">
+          <div class="p-2 bg-gray-100 rounded-full group-hover:bg-white transition-colors">
+            <i data-lucide="book" class="w-5 h-5 text-gray-500 group-hover:text-peak-orange transition-colors"></i>
+          </div>
+          <div>
+            <div class="font-semibold text-gray-900 group-hover:text-peak-orange transition-colors">English</div>
+            <div class="text-xs text-gray-500">Online Help (en)</div>
+          </div>
+        </div>
+        <i data-lucide="arrow-right"
+          class="w-4 h-4 text-gray-300 group-hover:text-peak-orange transform group-hover:translate-x-1 transition-all"></i>
+      </a>
+
+      <!-- OpenAPI -->
+      <a href="./openapi/GeoPositioning/geo_positioning.html"
+        class="flex items-center justify-between p-4 rounded-lg border border-gray-200 hover:border-peak-orange hover:bg-peak-orange/5 transition-all duration-200 group bg-white">
+        <div class="flex items-center gap-4">
+          <div class="p-2 bg-gray-100 rounded-full group-hover:bg-white transition-colors">
+            <i data-lucide="code-2" class="w-5 h-5 text-gray-500 group-hover:text-peak-orange transition-colors"></i>
+          </div>
+          <div>
+            <div class="font-semibold text-gray-900 group-hover:text-peak-orange transition-colors">GeoPositioning</div>
+            <div class="text-xs text-gray-500">OpenAPI Documentation</div>
+          </div>
+        </div>
+        <i data-lucide="arrow-right"
+          class="w-4 h-4 text-gray-300 group-hover:text-peak-orange transform group-hover:translate-x-1 transition-all"></i>
+      </a>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="bg-gray-50 p-4 text-center border-t border-gray-100">
+      <p class="text-xs text-gray-400 font-medium">&copy; 2025 PEAK.X Platform</p>
+    </div>
+
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
+
 </html>

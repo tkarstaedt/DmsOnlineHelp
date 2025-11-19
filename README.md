@@ -10,6 +10,7 @@ Wichtige Ordner (Top-Level)
 
 - `de/` — Deutsche Ausgabe der Onlinehilfe (viele HTML-, JS- und Ressourcen-Dateien)
 - `en/` — Englische Ausgabe der Onlinehilfe
+- `openapi/` — OpenAPI Dokumentation (z.B. GeoPositioning)
 - `Content/`, `Data/`, `Resources/`, `Skins/` — Projekt- und Hilfsdaten (Strukturen, Indizes, Suchdaten)
 - `.gitignore` — Ausschlussregeln für generierte/temporäre Dateien
 - `README.md` — diese Datei
