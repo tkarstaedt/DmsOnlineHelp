@@ -5,22 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PEAK.X OpenAPI – General Instructions</title>
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Manrope & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
-    <!-- Prism.js for Syntax Highlighting -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
     
-    <!-- Icons (Switched to unpkg for better UMD support ensuring window.lucide is available) -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- SVG Favicon embedded as Base64 for better compatibility -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyBpZD0iRWJlbmVfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzNTAuMyAzNTAuNSI+PGRlZnM+PHN0eWxlPi5zdDB7ZmlsbDojZjg0ZTJiO30uc3Qxe2ZpbGw6I2ZmZjt9PC9zdHlsZT48L2RlZnM+PHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIwIC4yIDAgMzUwLjIgMTc1IDM1MC4yIDM1MCAxNzUuMiAzNTAgLjIgMCAuMiIvPjxnPjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0zMi40LDY3LjNoLTcuNFYyNS4yaDE2LjZjLjQsMCwuOSwwLDEuNSwwLC43LDAsMS4yLDAsMS43LjIsMi4zLjQsNC4zLDEuMiw1LjgsMi41LDEuNSwxLjMsMi42LDIuOSwzLjMsNC44LjcsMS45LDEuMSw0LjEsMS4xLDYuNHMtLjQsNC41LTEuMSw2LjQtMS44LDMuNS0zLjMsNC44Yy0xLjUsMS4zLTMuNCwyLjEtNS44LDIuNS0uNSwwLTEuMS4xLTEuOC4ycy0xLjIsMC0xLjUsMGgtOS4ydjE0LjNoMFpNMzIuNCwzMi43djEzaDguOWMuNCwwLC44LDAsMS4zLDBzLjktLjEsMS4zLS4yYzEtLjMsMS44LS44LDIuMy0xLjUuNS0uNywuOS0xLjUsMS4xLTIuMy4yLS44LjMtMS43LjMtMi40cy0uMS0xLjYtLjMtMi40Yy0uMi0uOC0uNi0xLjYtMS4xLTIuMy0uNS0uNy0xLjMtMS4yLTIuMy0xLjUtLjQtLjEtLjgtLjItMS4zLS4ycy0uOSwwLTEuMywwYzAsMC04LjksMC04LjksMFoiLz48cGF0aCBjbGFzcz0ic3QxIiBkPSJNODcuNiw2Ny4zaC0yNS43VjI1LjJoMjUuN3Y3LjRoLTE4LjN2OWgxNXY3LjRoLTE1djEwLjhoMTguM3Y3LjRoMFoiLz48cGF0aCBjbGFzcz0ic3QxIiBkPSJNMTAwLjUsNjcuM2gtNy43bDEyLTQyLjFoMTEuMWwxMiw0Mi4xaC03LjdsLTEwLjctMzcuMWgxLjRsLTEwLjYsMzcuMWgwWk0xMjAuOCw1OC42aC0yMC44di03LjRoMjAuOHY3LjRaIi8+PHBhdGggY2xhc3M9InN0MSIgZD0iTTE0MS43LDY3LjNoLTcuNFYyNS4yaDcuNHYxOS40bDE1LTE5LjRoOS4xbC0xNi41LDIwLjgsMTcuNSwyMS4zaC05LjRsLTE1LjctMTkuMnYxOS4yaDBaIi8+PHBhdGggY2xhc3M9InN0MSIgZD0iTTMxLjksMTI0LjdoLTYuOXYtNDIuMWg2LjdsMTMsMjgsMTMtMjcuOWg2Ljd2NDIuMWgtNi45di0yNS4xbC0xMS40LDI1LjFoLTIuNmwtMTEuNC0yNS4xczAsMjUuMSwwLDI1LjFaIi8+PHBhdGggY2xhc3M9InN0MSIgZD0iTTkwLjMsMTI1LjVjLTMuOSwwLTcuMy0uOS0xMC4yLTIuOHMtNS4xLTQuNC02LjYtNy43Yy0xLjUtMy4zLTIuMy03LjEtMi4zLTExLjVzLjgtOC4yLDIuMy0xMS41LDMuNy01LjksNi42LTcuNyw2LjItMi44LDEwLjItMi44LDcuMy45LDEwLjIsMi44YzIuOCwxLjgsNS4xLDQuNCw2LjYsNy43czIuMyw3LjEsMi4zLDExLjUtLjgsOC4yLDIuMywxMS41LTMuNyw1LjktNi42LDcuNy02LjIsMi44LTEwLjIsMi44Wk05MC4zLDExOC4xYzIuNSwwLDQuNi0uNSw2LjItMS43LDEuNy0xLjIsMi45LTIuOSwzLjctNS4xLjgtMi4yLDEuMi00LjcsMS4yLTcuN3MtLjQtNS41LTEuMi03LjZjLS44LTIuMS0yLjEtMy44LTMuNy01cy0zLjctMS44LTYuMi0xLjhjLTIuNSwwLTQuNi41LTYuMiwxLjctMS43LDEuMi0yLjksMi45LTMuNyw1LjFzLTEuMiw0LjctMS4yLDcuNy40LDUuNSwxLjIsNy42Yy44LDIuMSwyLjEsMy44LDMuNyw1czMuNywxLjgsNi4yLDEuOFoiLz48cGF0aCBjbGFzcz0ic3QxIiBkPSJNMTMzLjcsMTI0LjdoLTE3LjR2LTQyLjFoMTUuOGMyLjgsMCw1LjEuNiw2LjgsMS44LDEuNywxLjIsMywyLjcsMy44LDQuNS44LDEuOCwxLjIsMy42LDEuMiw1LjVzLS41LDQuMy0xLjUsNS45LTIuNCwyLjYtNC4xLDMuMXYtMS41YzIuNS42LDQuMywxLjgsNS41LDMuN3MxLjksNCwxLjksNi4zLS40LDQuNy0xLjMsNi42Yy0uOSwxLjktMi4yLDMuNC0zLjksNC41LTEuOCwxLjEtNCwxLjYtNi43LDEuNmgwWk0xMjMuOCw5MHY5aDguMWMuOCwwLDEuNi0uMiwyLjItLjUuNy0uMywxLjItLjgsMS42LTEuNC40LS43LjYtMS41LjYtMi41cy0uNC0yLjQtMS4xLTMuMmMtLjgtLjktMS44LTEuMy0zLjItMS4zaC04LjFaTTEyMy44LDEwNi40djEwLjhoOS4xYzEsMCwxLjktLjIsMi43LS43czEuNC0xLjEsMS45LTEuOWMuNC0uOC43LTEuOC43LTIuOXMtLjItMS45LS42LTIuNy0xLTEuNC0xLjctMS45Yy0uOC0uNS0xLjctLjctMi45LS43aC05LjFaIi8+PHBhdGggY2xhc3M9InN0MSIgZD0iTTE2MC40LDEyNC43aC03LjR2LTQyLjFoNy40djQyLjFaIi8+PHBhdGggY2xhc3M9InN0MSIgZD0iTTE5NC45LDEyNC43aC0yNC40di00Mi4xaDcuNHYzNC43aDE2Ljl2Ny40WiIvPjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0yMDguOSwxMjQuN2gtNy40di00Mi4xaDcuNHY0Mi4xWiIvPjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0yMzUsMTI0LjdoLTcuNHYtMzQuN2gtMTIuNHYtNy40aDMyLjN2Ny40aC0xMi40djM0LjdoMFoiLz48cGF0aCBjbGFzcz0ic3QxIiBkPSJNMjcyLDEyNC43aC03LjV2LTE3LjFsLTEzLjQtMjVoOC43bDguNSwxNS44LDguNS0xNS44aDguN2wtMTMuNSwyNXYxNy4xaDBaIi8+PC9nPjwvc3ZnPg==">
+    <link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg id="Ebene_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 350.3 350.5"><defs><style>.st0{fill:%23F84E2B;}.st1{fill:%23fff;}</style></defs><polygon class="st0" points="0 .2 0 350.2 175 350.2 350 175.2 350 .2 0 .2"/><g><path class="st1" d="M32.4,67.3h-7.4V25.2h16.6c.4,0,.9,0,1.5,0,.7,0,1.2,0,1.7.2,2.3.4,4.3,1.2,5.8,2.5,1.5,1.3,2.6,2.9,3.3,4.8.7,1.9,1.1,4.1,1.1,6.4s-.4,4.5-1.1,6.4-1.8,3.5-3.3,4.8c-1.5,1.3-3.4,2.1-5.8,2.5-.5,0-1.1.1-1.8.2s-1.2,0-1.5,0h-9.2v14.3h0ZM32.4,32.7v13h8.9c.4,0,.8,0,1.3,0s.9-.1,1.3-.2c1-.3,1.8-.8,2.3-1.5.5-.7.9-1.5,1.1-2.3.2-.8.3-1.7.3-2.4s-.1-1.6-.3-2.4c-.2-.8-.6-1.6-1.1-2.3-.5-.7-1.3-1.2-2.3-1.5-.4-.1-.8-.2-1.3-.2s-.9,0-1.3,0c0,0-8.9,0-8.9,0Z"/><path class="st1" d="M87.6,67.3h-25.7V25.2h25.7v7.4h-18.3v9h15v7.4h-15v10.8h18.3v7.4h0Z"/><path class="st1" d="M100.5,67.3h-7.7l12-42.1h11.1l12,42.1h-7.7l-10.7-37.1h1.4l-10.6,37.1h0ZM120.8,58.6h-20.8v-7.4h20.8v7.4Z"/><path class="st1" d="M141.7,67.3h-7.4V25.2h7.4v19.4l15-19.4h9.1l-16.5,20.8,17.5,21.3h-9.4l-15.7-19.2v19.2h0Z"/><path class="st1" d="M31.9,124.7h-6.9v-42.1h6.7l13,28,13-27.9h6.7v42.1h-6.9v-25.1l-11.4,25.1h-2.6l-11.4-25.1s0,25.1,0,25.1Z"/><path class="st1" d="M90.3,125.5c-3.9,0-7.3-.9-10.2-2.8s-5.1-4.4-6.6-7.7c-1.5-3.3-2.3-7.1-2.3-11.5s.8-8.2,2.3-11.5-3.7,5.9,6.6-7.7,6.2-2.8,10.2-2.8,7.3.9,10.2,2.8c2.8,1.8,5.1,4.4,6.6,7.7s2.3,7.1,2.3,11.5-.8,8.2-2.3,11.5-3.7,5.9-6.6,7.7-6.2,2.8-10.2,2.8ZM90.3,118.1c2.5,0,4.6-.5,6.2-1.7,1.7-1.2,2.9-2.9,3.7-5.1.8-2.2,1.2-4.7,1.2-7.7s-.4-5.5-1.2-7.6c-.8-2.1-2.1-3.8-3.7-5s-3.7-1.8-6.2-1.8c-2.5,0-4.6.5-6.2,1.7-1.7,1.2-2.9,2.9-3.7,5.1s-1.2,4.7-1.2,7.7.4,5.5,1.2,7.6c.8,2.1,2.1,3.8,3.7,5s3.7,1.8,6.2,1.8Z"/><path class="st1" d="M133.7,124.7h-17.4v-42.1h15.8c2.8,0,5.1.6,6.8,1.8,1.7,1.2,3,2.7,3.8,4.5.8,1.8,1.2,3.6,1.2,5.5s-.5,4.3-1.5,5.9-2.4,2.6-4.1,3.1v-1.5c2.5.6,4.3,1.8,5.5,3.7s1.9,4,1.9,6.3-.4,4.7-1.3,6.6c-.9,1.9-2.2,3.4-3.9,4.5-1.8,1.1-4,1.6-6.7,1.6h0ZM123.8,90v9h8.1c.8,0,1.6-.2,2.2-.5.7-.3,1.2-.8,1.6-1.4.4-.7.6-1.5.6-2.5s-.4-2.4-1.1-3.2c-.8-.9-1.8-1.3-3.2-1.3h-8.1ZM123.8,106.4v10.8h9.1c1,0,1.9-.2,2.7-.7s1.4-1.1,1.9-1.9c.4-.8.7-1.8.7-2.9s-.2-1.9-.6-2.7-1-1.4-1.7-1.9c-.8-.5-1.7-.7-2.9-.7h-9.1Z"/><path class="st1" d="M160.4,124.7h-7.4v-42.1h7.4v42.1Z"/><path class="st1" d="M194.9,124.7h-24.4v-42.1h7.4v34.7h16.9v7.4Z"/><path class="st1" d="M208.9,124.7h-7.4v-42.1h7.4v42.1Z"/><path class="st1" d="M235,124.7h-7.4v-34.7h-12.4v-7.4h32.3v7.4h-12.4v34.7h0Z"/><path class="st1" d="M272,124.7h-7.5v-17.1l-13.4-25h8.7l8.5,15.8,8.5-15.8h8.7l-13.5,25v17.1h0Z"/></g></svg>'>
 
     <script>
         tailwind.config = {
@@ -44,41 +39,34 @@
     </script>
 
     <style>
-        /* Custom Scrollbar for Code Blocks */
-        pre::-webkit-scrollbar {
-            height: 8px;
-        }
-        pre::-webkit-scrollbar-track {
-            background: #2d2d2d;
-            border-radius: 4px;
-        }
-        pre::-webkit-scrollbar-thumb {
-            background: #555;
-            border-radius: 4px;
-        }
-        pre::-webkit-scrollbar-thumb:hover {
-            background: #777;
-        }
+        /* Custom Scrollbar */
+        pre::-webkit-scrollbar { height: 8px; }
+        pre::-webkit-scrollbar-track { background: #2d2d2d; border-radius: 4px; }
+        pre::-webkit-scrollbar-thumb { background: #555; border-radius: 4px; }
+        pre::-webkit-scrollbar-thumb:hover { background: #777; }
         
-        /* Smooth scrolling offset for Sticky Header */
-        section {
-            scroll-margin-top: 2rem;
-        }
+        section { scroll-margin-top: 2rem; }
         
         .nav-item.active {
-            color: #F84E2B; /* PEAK Orange */
+            color: #F84E2B;
             border-left: 3px solid #F84E2B;
-            background-color: rgba(248, 78, 43, 0.05); /* Very light orange bg */
+            background-color: rgba(248, 78, 43, 0.05);
             font-weight: 600;
+        }
+        
+        /* Table Styles specific for Modularity list */
+        .mod-header { background-color: #f3f4f6; font-weight: 700; color: #111827; }
+        .modules-table th:first-child { width: 45%; }
+        .modules-table tbody tr td:first-child:not([colspan]) {
+            width: 45%;
+            white-space: nowrap;
         }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
 
-    <!-- Mobile Header -->
     <div class="lg:hidden bg-white border-b p-4 flex justify-between items-center sticky top-0 z-50">
         <div class="flex items-center gap-3">
-            <!-- INLINE SVG LOGO -->
             <svg width="40" viewBox="0 0 350.3 350.5" xmlns="http://www.w3.org/2000/svg">
                 <defs><style>.st0{fill:#F84E2B;}.st1{fill:#fff;}</style></defs>
                 <polygon class="st0" points="0 .2 0 350.2 175 350.2 350 175.2 350 .2 0 .2"/>
@@ -93,11 +81,9 @@
 
     <div class="flex min-h-screen">
         
-        <!-- Sidebar Navigation -->
         <aside id="sidebar" class="fixed inset-y-0 left-0 z-40 w-72 bg-white border-r transform -translate-x-full lg:translate-x-0 transition-transform duration-200 ease-in-out overflow-y-auto">
             <div class="p-6 border-b sticky top-0 bg-white z-10">
                 <div class="flex items-center gap-3 mb-2">
-                    <!-- INLINE SVG LOGO -->
                     <svg width="50" viewBox="0 0 350.3 350.5" xmlns="http://www.w3.org/2000/svg">
                         <defs><style>.st0{fill:#F84E2B;}.st1{fill:#fff;}</style></defs>
                         <polygon class="st0" points="0 .2 0 350.2 175 350.2 350 175.2 350 .2 0 .2"/>
@@ -105,280 +91,329 @@
                     </svg>
                     <h1 class="font-bold text-2xl text-gray-900">PEAK.X</h1>
                 </div>
-                <p class="text-sm text-gray-500 mt-1">General OpenAPI</p>
+                <p class="text-sm text-gray-500 mt-1">Doc <strong>General Usage</strong></p>
                 <div class="mt-2 inline-block px-2 py-0.5 bg-peak-orange/10 text-peak-orange text-xs rounded-full border border-peak-orange/20">v1.3 Docs</div>
             </div>
             
             <nav class="p-4 space-y-1 text-sm">
-                <a href="#intro" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">1. Introduction</a>
-                <a href="#interfaces" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">2. OpenAPI Interfaces</a>
-                <a href="#security" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">3. Security</a>
-                <a href="#methods" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">4. Retrieval Methods</a>
+                <a href="#introduction" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">1. Introduction</a>
+                <a href="#modules" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">2. Modules & Scope</a>
+                <a href="#methods" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">3. HTTP Methods & JSON</a>
+                <a href="#retrieval" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">4. Data Retrieval</a>
                 <div class="pl-4">
                     <a href="#polling" class="nav-item block px-4 py-1.5 text-gray-500 hover:text-peak-orange text-xs border-l border-gray-200">Polling</a>
-                    <a href="#long-polling" class="nav-item block px-4 py-1.5 text-gray-500 hover:text-peak-orange text-xs border-l border-gray-200">Long Polling</a>
+                    <a href="#long-polling" class="nav-item block px-4 py-1.5 text-gray-500 hover:text-peak-orange text-xs border-l border-gray-200">Long Polling (Stream)</a>
                     <a href="#callback" class="nav-item block px-4 py-1.5 text-gray-500 hover:text-peak-orange text-xs border-l border-gray-200">Callback</a>
                 </div>
-                <a href="#config" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">5. Configuration</a>
-                <a href="#appendix" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">6. Appendix</a>
+                <a href="#security" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">5. Security & Rate Limiting</a>
+                <a href="#configuration" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">6. Configuration</a>
             </nav>
         </aside>
 
-        <!-- Main Content -->
         <main class="flex-1 lg:ml-72 w-full max-w-5xl mx-auto p-6 lg:p-12 pb-32">
             
-            <!-- Header -->
             <header class="mb-12 border-b pb-6">
-                <h1 class="text-4xl font-bold text-gray-900 mb-4">Developer Documentation: General OpenAPI Interfaces</h1>
-                <p class="text-lg text-gray-600">General usage instructions, security concepts, and retrieval methods for the <strong>PEAK.X platform</strong>.</p>
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">OpenAPI Interfaces for PEAK.X</h1>
+                <p class="text-lg text-gray-600">General Usage Instructions for Developers. Covers branding, terminology, communication patterns, and configuration.</p>
+                <div class="mt-4 flex gap-4 text-sm text-gray-500">
+                    <span><strong>Date:</strong> 04.11.2025</span>
+                    <span><strong>Status:</strong> In Progress</span>
+                    <span><strong>Confidentiality:</strong> Customers of Peak Mobility GmbH</span>
+                </div>
             </header>
 
-            <!-- 1. Introduction -->
-            <section id="intro" class="mb-16 scroll-mt-24">
+            <section id="introduction" class="mb-16 scroll-mt-24">
                 <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">1. Introduction</h2>
                 
                 <div class="prose max-w-none text-gray-600">
-                    <h3 class="text-lg font-semibold text-gray-800 mt-6 mb-2">1.1 Product Branding</h3>
+                    <h3 class="text-lg font-semibold text-gray-800 mt-6 mb-2">1.1 Product Branding and Terminology</h3>
                     <p class="mb-4">
-                        The software platform formerly known as "PSItraffic" is hereinafter branded as <strong>PEAK.X</strong>. It serves as the foundation for:
+                        The software platform formerly known as "PSItraffic" is hereinafter branded as <strong>PEAK.X</strong>. This platform serves as the technical foundation for industry-specific solutions, including:
                     </p>
                     <ul class="list-disc pl-5 space-y-1 mb-4">
-                        <li><strong>PEAK.DMS:</strong> Depot Management System</li>
-                        <li><strong>PEAK.TMS:</strong> Train Management System</li>
-                        <li><strong>PEAK.ITCS:</strong> Intermodal Transport Control System</li>
+                        <li><strong>PEAK.DMS</strong> (Depot Management System)</li>
+                        <li><strong>PEAK.TMS</strong> (Train Management System)</li>
+                        <li><strong>PEAK.ITCS</strong> (Intermodal Transport Control System)</li>
                     </ul>
-                    <p class="mb-4">The term "PEAK.X" refers to the system capabilities generally, unless a specific product is named.</p>
+                    <p class="mb-4">The OpenAPI specifications described in this manual apply generally to the <strong>PEAK.X</strong> platform.</p>
 
                     <h3 class="text-lg font-semibold text-gray-800 mt-6 mb-2">1.2 About This Manual</h3>
-                    <p class="mb-4">
-                        This manual provides a comprehensive overview of the OpenAPI interfaces used within the PEAK.X platform. It is a central resource for developers integrating these interfaces and administrators configuring them.
+                    <p class="mb-4">This manual serves as a central resource for developers and administrators. It covers API specifications, endpoints, operations, and data models.</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mt-4">
+                        <div class="bg-peak-green/10 p-4 rounded-lg border border-peak-green/20">
+                            <h4 class="font-bold text-gray-900 text-sm mb-1">Purpose</h4>
+                            <p class="text-sm">To define the API in a way that is both human-readable and machine-readable, enabling automated tool integration.</p>
+                        </div>
+                        <div class="bg-peak-green/10 p-4 rounded-lg border border-peak-green/20">
+                            <h4 class="font-bold text-gray-900 text-sm mb-1">Audience</h4>
+                            <p class="text-sm">Developers at public transport companies integrating interfaces and System Administrators configuring the system.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="modules" class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">2. Modules & Scope</h2>
+                <p class="mb-4 text-gray-600">The OpenAPI interfaces of PEAK.X systems are organized into modular components.</p>
+                
+                <div class="overflow-x-auto border rounded-lg shadow-sm bg-white">
+                    <table class="min-w-full text-sm text-left text-gray-600 modules-table">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-100 border-b">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 w-1/3">OpenAPI</th>
+                                <th scope="col" class="px-6 py-3">Description / Usage</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr><td colspan="2" class="px-6 py-2 bg-gray-50 font-bold text-gray-800">Module: Localization</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-6 py-3 font-mono font-medium text-peak-orange">Geo Positioning</td><td class="px-6 py-3">Seamless transmission of geo-positioning data.</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-6 py-3 font-mono font-medium text-peak-orange">Vehicle at Device</td><td class="px-6 py-3">Transmit vehicle location tracked by a stationary device.</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-6 py-3 font-mono font-medium text-peak-orange">Planned Vehicle Depot Position</td><td class="px-6 py-3">Request planned depot vehicle positions.</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-6 py-3 font-mono font-medium text-peak-orange">Vehicle Depot Position</td><td class="px-6 py-3">Request vehicle's exact depot position.</td></tr>
+                            
+                            <tr><td colspan="2" class="px-6 py-2 bg-gray-50 font-bold text-gray-800">Module: Block Management</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-6 py-3 font-mono font-medium text-peak-orange">Actual Vehicle to Block Assignment</td><td class="px-6 py-3">Send vehicles to block/journey sign-on or sign-off data.</td></tr>
+
+                            <tr><td colspan="2" class="px-6 py-2 bg-gray-50 font-bold text-gray-800">Module: Charging Management</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-6 py-3 font-mono font-medium text-peak-orange">Charging Point Master Data</td><td class="px-6 py-3">Import charging point master data; real-time state retrieval.</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-6 py-3 font-mono font-medium text-peak-orange">Weather Forecast</td><td class="px-6 py-3">Send weather forecast data for energy demand calculation.</td></tr>
+
+                            <tr><td colspan="2" class="px-6 py-2 bg-gray-50 font-bold text-gray-800">Module: Fleet Management</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-6 py-3 font-mono font-medium text-peak-orange">Vehicle Depot Departures</td><td class="px-6 py-3">Retrieve list of depot departures.</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-6 py-3 font-mono font-medium text-peak-orange">Vehicle Diagnostics</td><td class="px-6 py-3">Transmit vehicle diagnostic data.</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-6 py-3 font-mono font-medium text-peak-orange">Vehicle Master Data</td><td class="px-6 py-3">Import/update vehicle master data.</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-6 py-3 font-mono font-medium text-peak-orange">Estimated Time of Depot Arrival</td><td class="px-6 py-3">Send actual estimated time of depot arrivals (ETA).</td></tr>
+
+                            <tr><td colspan="2" class="px-6 py-2 bg-gray-50 font-bold text-gray-800">Module: Maintenance</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-6 py-3 font-mono font-medium text-peak-orange">Carbon Brush</td><td class="px-6 py-3">Sending carbon brush status.</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-6 py-3 font-mono font-medium text-peak-orange">Maintenance Order</td><td class="px-6 py-3">Synchronize maintenance orders.</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-6 py-3 font-mono font-medium text-peak-orange">Vehicle Refuel</td><td class="px-6 py-3">Transmitting a refueling message.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="methods" class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">3. HTTP Methods & JSON Format</h2>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">Supported Methods</h3>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center gap-2"><span class="px-2 py-1 bg-blue-100 text-blue-800 font-mono text-xs rounded">GET</span> Retrieve data from server.</li>
+                            <li class="flex items-center gap-2"><span class="px-2 py-1 bg-green-100 text-green-800 font-mono text-xs rounded">POST</span> Create new resources.</li>
+                            <li class="flex items-center gap-2"><span class="px-2 py-1 bg-orange-100 text-orange-800 font-mono text-xs rounded">PUT</span> Update existing resources.</li>
+                            <li class="flex items-center gap-2"><span class="px-2 py-1 bg-red-100 text-red-800 font-mono text-xs rounded">DELETE</span> Delete resources.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">Response Handling</h3>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center gap-2"><span class="font-mono font-bold text-green-600">200/201/202</span> Success / Created / Accepted</li>
+                            <li class="flex items-center gap-2"><span class="font-mono font-bold text-red-500">400</span> Bad Request (Malformed Syntax)</li>
+                            <li class="flex items-center gap-2"><span class="font-mono font-bold text-red-500">401</span> Unauthorized (Auth missing/invalid)</li>
+                            <li class="flex items-center gap-2"><span class="font-mono font-bold text-red-500">500</span> Internal Server Error</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="font-semibold text-gray-800 mb-2">Example Request (JSON)</h3>
+                <div class="border rounded-lg overflow-hidden shadow-sm bg-white relative group mb-6">
+                    <button class="copy-btn absolute top-2 right-2 bg-gray-700 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10">Copy</button>
+                    <pre><code class="language-json">{
+  "vehicleId": "12345",
+  "status": "available",
+  "location": {
+    "latitude": 52.5200,
+    "longitude": 13.4050
+  },
+  "timestamp": "2024-10-18T10:00:00Z"
+}</code></pre>
+                </div>
+
+                <h3 class="font-semibold text-gray-800 mb-2">Example Response (JSON)</h3>
+                <div class="border rounded-lg overflow-hidden shadow-sm bg-white relative group">
+                    <button class="copy-btn absolute top-2 right-2 bg-gray-700 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10">Copy</button>
+                    <pre><code class="language-json">{
+  "vehicleId": "12345",
+  "status": "available",
+  "location": {
+    "latitude": 52.5200,
+    "longitude": 13.4050
+  },
+  "lastUpdated": "2024-10-18T10:00:00Z"
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="retrieval" class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-peak-orange pl-3">4. Data Retrieval Methods</h2>
+                <p class="text-gray-600 mb-8">PEAK.X systems provide multiple communication methods. Each method balances latency, network usage, and complexity.</p>
+
+                <div id="polling" class="mb-12">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">4.1 Polling</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        <strong>Polling</strong> is the simplest method: the client sends an HTTP GET request to a resource endpoint. The server responds immediately with the current data.
+                    </p>
+                    <div class="bg-white border rounded p-4 shadow-sm">
+                        <img src="media/image4.png" alt="Sequence diagram of retrieving data via polling" class="max-w-full h-auto mx-auto rounded">
+                        <p class="text-xs text-center text-gray-400 mt-2">Figure 3: Sequence diagram of retrieving data via polling.</p>
+                    </div>
+                </div>
+
+                <div id="long-polling" class="mb-12">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">4.2 Long Polling (Stream)</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        <strong>Long Polling</strong> keeps the connection open until new information becomes available or a timeout occurs (default: 20s). 
+                        The client can include a <code>clientId</code> to receive only incremental updates.
+                    </p>
+                    <div class="bg-peak-green/10 border-l-4 border-peak-green p-4 mb-4">
+                        <h4 class="text-sm font-bold text-peak-dark mb-1">Handling Client ID</h4>
+                        <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
+                            <li><strong>Empty/Unknown ID:</strong> Server returns complete current dataset.</li>
+                            <li><strong>Known ID:</strong> Server returns only changed data.</li>
+                            <li><strong>Timeout:</strong> If no data changes, returns empty list.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white border rounded p-4 shadow-sm">
+                        <img src="media/image5.png" alt="Sequence diagram of retrieving data via long polling" class="max-w-full h-auto mx-auto rounded">
+                        <p class="text-xs text-center text-gray-400 mt-2">Figure 4: Sequence diagram of retrieving data via long polling.</p>
+                    </div>
+                </div>
+
+                <div id="callback" class="mb-12">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">4.3 Callback</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        <strong>Callback</strong> is an asynchronous, real-time technique. The client <strong>subscribes</strong> to the service via HTTP POST, providing a callback URL. 
+                        The server initiates POST requests to the client whenever new data is available.
+                    </p>
+                    <div class="bg-white border rounded p-4 shadow-sm">
+                        <img src="media/image6.png" alt="Sequence diagram of retrieving data via callback" class="max-w-full h-auto mx-auto rounded">
+                        <p class="text-xs text-center text-gray-400 mt-2">Figure 5: Sequence diagram of retrieving data via callback.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="security" class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">5. Security & Rate Limiting</h2>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-5 rounded-lg border shadow-sm">
+                        <h3 class="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                            <i data-lucide="lock" class="w-5 h-5 text-peak-orange"></i> Authentication
+                        </h3>
+                        <ul class="list-disc pl-5 text-sm text-gray-700 space-y-2">
+                            <li><strong>None:</strong> Not recommended for production.</li>
+                            <li><strong>BasicAuth:</strong> Base64 encoded <code>username:password</code> in Header.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg border shadow-sm">
+                        <h3 class="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                            <i data-lucide="shield" class="w-5 h-5 text-peak-orange"></i> Encryption
+                        </h3>
+                        <p class="text-sm text-gray-700 mb-2">
+                            <strong>HTTPS</strong> is highly recommended to guarantee data encryption (Authentication tokens, credentials).
+                        </p>
+                        <p class="text-xs text-gray-500">Standard Ports: HTTP 5600, HTTPS 5601.</p>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-gray-50 p-5 rounded-lg border">
+                    <h3 class="font-semibold text-gray-900 mb-2">Rate Limiting</h3>
+                    <p class="text-sm text-gray-700 mb-4">
+                        Prevents abuse by defining maximum permits per timeframe.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+                        <div class="bg-white p-3 rounded border"><span class="block text-xs text-gray-500 uppercase">PermitLimit</span><strong>100</strong></div>
+                        <div class="bg-white p-3 rounded border"><span class="block text-xs text-gray-500 uppercase">QueueLimit</span><strong>2</strong></div>
+                        <div class="bg-white p-3 rounded border"><span class="block text-xs text-gray-500 uppercase">Window</span><strong>10s</strong></div>
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <h3 class="font-semibold text-gray-900 mb-2">Localization & Time Zones</h3>
+                    <p class="text-sm text-gray-600">
+                        <strong>ISO 8601</strong> is used for all time inputs/outputs (UTC). 
+                        Example: <code>2024-10-18T10:00:00Z</code>.
                     </p>
                 </div>
             </section>
 
-            <!-- 2. Interfaces & Modules -->
-            <section id="interfaces" class="mb-16">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">2. OpenAPI Interfaces</h2>
-                <p class="mb-4 text-gray-600">
-                    The OpenAPI interfaces are organized into modular components. Below is an overview of key modules available in PEAK.X.
-                </p>
+            <section id="configuration" class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">6. Configuration</h2>
                 
-                <div class="grid gap-6 mt-6">
-                    <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                        <h3 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                            <i data-lucide="map-pin" class="w-5 h-5 text-peak-orange"></i> Module: Localization
-                        </h3>
-                        <div class="overflow-x-auto">
-                            <table class="min-w-full text-sm text-left text-gray-600">
-                                <thead class="bg-gray-50 text-xs uppercase font-semibold text-gray-700">
-                                    <tr>
-                                        <th class="px-4 py-2">Interface</th>
-                                        <th class="px-4 py-2">Description</th>
-                                    </tr>
+                <div class="bg-white p-6 rounded-lg border shadow-sm space-y-6">
+                    
+                    <div>
+                        <h4 class="font-bold text-gray-800 flex items-center gap-2">
+                            <i data-lucide="toggle-right" class="w-5 h-5 text-peak-green"></i> Activating Interfaces
+                        </h4>
+                        <p class="text-sm text-gray-600 mt-2">
+                            In PEAK.X View Maintenance, filter for "Open API". Enable interfaces by setting the property <em>Activated</em> to "Yes".
+                        </p>
+                        <div class="mt-4 grid md:grid-cols-2 gap-4">
+                            <div class="border rounded p-2">
+                                <img src="media/image7.png" alt="List of OpenAPI Interfaces" class="w-full h-auto">
+                                <p class="text-xs text-center mt-1 text-gray-400">Task List</p>
+                            </div>
+                            <div class="border rounded p-2">
+                                <img src="media/image8.png" alt="Activation Dialog" class="w-full h-auto">
+                                <p class="text-xs text-center mt-1 text-gray-400">Property: Activated</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div>
+                        <h4 class="font-bold text-gray-800 flex items-center gap-2">
+                            <i data-lucide="settings" class="w-5 h-5 text-peak-green"></i> HTTPS Configuration
+                        </h4>
+                        <p class="text-sm text-gray-600 mt-2 mb-4">
+                            To setup encrypted connection, the OpenAPI server requires an SSL server certificate.
+                        </p>
+                        
+                        <div class="overflow-x-auto border rounded">
+                            <table class="min-w-full text-sm">
+                                <thead class="bg-gray-100 text-left">
+                                    <tr><th class="px-4 py-2">Parameter</th><th class="px-4 py-2">Value</th><th class="px-4 py-2">Description</th></tr>
                                 </thead>
-                                <tbody class="divide-y divide-gray-100">
-                                    <tr><td class="px-4 py-2 font-mono text-gray-800">Geo Positioning</td><td class="px-4 py-2">Seamless transmission of vehicle GPS data.</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono text-gray-800">Vehicle at Device</td><td class="px-4 py-2">Vehicle location tracked by stationary devices.</td></tr>
-                                    <tr><td class="px-4 py-2 font-mono text-gray-800">Vehicle Depot Position</td><td class="px-4 py-2">Request exact vehicle position within the depot.</td></tr>
+                                <tbody class="divide-y">
+                                    <tr><td class="px-4 py-2 font-mono">HttpsEnabled</td><td class="px-4 py-2">1 (True)</td><td class="px-4 py-2">Enables HTTPS.</td></tr>
+                                    <tr><td class="px-4 py-2 font-mono">HttpsPortNumber</td><td class="px-4 py-2">5601</td><td class="px-4 py-2">Standard secure port.</td></tr>
+                                    <tr><td class="px-4 py-2 font-mono">HttpsCertificateStore</td><td class="px-4 py-2">My</td><td class="px-4 py-2">Cert Store Name.</td></tr>
                                 </tbody>
                             </table>
                         </div>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                        <h3 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                            <i data-lucide="wrench" class="w-5 h-5 text-peak-green"></i> Module: Maintenance
-                        </h3>
-                        <ul class="list-disc pl-5 text-sm text-gray-600 space-y-2">
-                            <li><strong>Maintenance Order:</strong> Synchronize maintenance orders with PEAK.X.</li>
-                            <li><strong>Vehicle Fault:</strong> Report and synchronize vehicle faults.</li>
-                            <li><strong>Resource Management:</strong> Import maintenance resources per shift.</li>
-                            <li><strong>Vehicle Refuel:</strong> Transmit refueling messages.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 3. Security -->
-            <section id="security" class="mb-16">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">3. Security & Auth</h2>
-                
-                <div class="grid md:grid-cols-2 gap-6 mb-6">
-                    <div class="bg-peak-green/10 p-5 rounded-lg border border-peak-green/20">
-                        <h3 class="font-semibold text-gray-900 mb-2 flex items-center gap-2">
-                            <i data-lucide="lock" class="w-5 h-5 text-peak-green"></i> Authentication
-                        </h3>
-                        <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
-                            <li><strong>None:</strong> Only for initial testing (not recommended).</li>
-                            <li><strong>Basic Auth:</strong> Base64-encoded <code>username:password</code> in Header. Requires a PEAK.X user with API rights.</li>
-                        </ul>
-                    </div>
-                    <div class="bg-peak-green/10 p-5 rounded-lg border border-peak-green/20">
-                        <h3 class="font-semibold text-gray-800 mb-2 flex items-center gap-2">
-                            <i data-lucide="shield-check" class="w-5 h-5 text-peak-green"></i> Encryption
-                        </h3>
-                        <p class="text-sm text-gray-700 mb-2">
-                            Communication can be <strong>HTTP</strong> or <strong>HTTPS</strong>.
-                        </p>
-                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-2 text-xs text-yellow-800">
-                            <strong>Important:</strong> HTTPS is highly recommended for production to protect credentials and tokens.
+                        <div class="mt-4 border rounded p-2 max-w-md">
+                            <img src="media/image11.png" alt="HTTPS Config" class="w-full h-auto">
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <!-- 4. Retrieval Methods -->
-            <section id="methods" class="mb-16">
-                <h2 class="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-peak-orange pl-3">4. Data Retrieval Methods</h2>
-                <p class="mb-6 text-gray-600">PEAK.X supports multiple methods to balance latency and complexity.</p>
-
-                <!-- Polling -->
-                <div id="polling" class="mb-10">
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">4.1 Polling</h3>
-                    <div class="bg-white p-6 rounded-lg border shadow-sm">
-                        <p class="text-sm text-gray-600 mb-4">
-                            The simplest method: Client sends <code>GET</code> request, Server responds immediately. Good for occasional updates.
-                        </p>
-                        <div class="flex items-center justify-center bg-gray-50 p-4 rounded border border-gray-200">
-                            <!-- Simplified Diagram representation -->
-                            <div class="text-center text-xs text-gray-500 font-mono">
-                                Client --(GET)--> PEAK.X<br>
-                                Client <--(200 OK)-- PEAK.X
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Long Polling -->
-                <div id="long-polling" class="mb-10">
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">4.2 Long Polling (Stream)</h3>
-                    <div class="bg-white p-6 rounded-lg border shadow-sm">
-                        <p class="text-sm text-gray-600 mb-4">
-                            Connection stays open (default 20s) until data changes. Reduces request frequency.
-                        </p>
-                        <ul class="list-disc pl-5 text-sm text-gray-600 mb-4 space-y-1">
-                            <li>Uses <code>clientId</code> to track state.</li>
-                            <li>If <code>clientId</code> is unknown: Server returns <strong>full dataset</strong>.</li>
-                            <li>If <code>clientId</code> is known: Server returns only <strong>changes</strong> (deltas).</li>
-                        </ul>
-                        <div class="bg-gray-800 text-gray-200 p-3 rounded text-xs font-mono">
-                            GET .../stream?clientId={clientId}
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Callback -->
-                <div id="callback" class="mb-10">
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">4.3 Callback (Push)</h3>
-                    <div class="bg-white p-6 rounded-lg border shadow-sm">
-                        <p class="text-sm text-gray-600 mb-4">
-                            Asynchronous real-time updates. Client subscribes, Server pushes updates via <code>POST</code> to a callback URL.
-                        </p>
-                        <div class="grid md:grid-cols-2 gap-4">
-                            <div class="bg-gray-50 p-3 rounded border text-sm">
-                                <span class="font-bold block text-peak-orange mb-1">Subscribe</span>
-                                <code>POST /resource/subscription</code><br>
-                                Returns <code>subscriptionId</code>.
-                            </div>
-                            <div class="bg-gray-50 p-3 rounded border text-sm">
-                                <span class="font-bold block text-peak-green mb-1">Update</span>
-                                Server sends <code>POST</code> to your URL when data changes.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 5. Configuration -->
-            <section id="config" class="mb-16">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">5. Configuration</h2>
-                
-                <div class="space-y-6">
-                    <div class="bg-white p-6 rounded-lg border shadow-sm">
-                        <h3 class="font-bold text-gray-900 mb-2">System Overview</h3>
-                        <ul class="text-sm text-gray-600 space-y-2">
-                            <li><strong>Database:</strong> PEAK.X database with operational data.</li>
-                            <li><strong>Client:</strong> <code>PifNetCx.exe</code> for admin access.</li>
-                            <li><strong>Server:</strong> <code>PifDmsOpenApiServer.exe</code> hosts the API interfaces.</li>
-                        </ul>
-                        <div class="mt-4 pt-4 border-t">
-                            <h4 class="text-sm font-bold text-gray-800 mb-1">Swagger UI</h4>
-                            <a href="#" class="text-peak-orange hover:underline text-sm font-mono break-all">http://localhost:5600/swagger/index.html</a>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-lg border shadow-sm">
-                        <h3 class="font-bold text-gray-900 mb-2">HTTPS Configuration</h3>
-                        <table class="min-w-full text-sm text-left text-gray-600">
-                            <thead class="bg-gray-50 text-xs uppercase font-semibold text-gray-700">
-                                <tr>
-                                    <th class="px-4 py-2">Parameter</th>
-                                    <th class="px-4 py-2">Default</th>
-                                    <th class="px-4 py-2">Description</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-gray-100">
-                                <tr><td class="px-4 py-2 font-mono">HttpPortNumber</td><td class="px-4 py-2">5600</td><td class="px-4 py-2">Standard HTTP Port</td></tr>
-                                <tr><td class="px-4 py-2 font-mono">HttpsPortNumber</td><td class="px-4 py-2">5601</td><td class="px-4 py-2">Secure HTTPS Port</td></tr>
-                                <tr><td class="px-4 py-2 font-mono text-peak-orange font-bold">HttpsEnabled</td><td class="px-4 py-2">0</td><td class="px-4 py-2">Set to <code>1</code> to enable HTTPS.</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 6. Appendix -->
-            <section id="appendix" class="mb-12">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">6. Appendix</h2>
-                
-                <h3 class="font-semibold text-gray-800 mb-2">Status Code Reference</h3>
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
-                    <div class="bg-green-100 text-green-800 px-3 py-1 rounded text-center text-sm font-mono">200 OK</div>
-                    <div class="bg-green-100 text-green-800 px-3 py-1 rounded text-center text-sm font-mono">201 Created</div>
-                    <div class="bg-red-100 text-red-800 px-3 py-1 rounded text-center text-sm font-mono">401 Unauth</div>
-                    <div class="bg-red-100 text-red-800 px-3 py-1 rounded text-center text-sm font-mono">500 Error</div>
                 </div>
             </section>
 
         </main>
     </div>
 
-    <!-- Prism JS Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
 
-    <!-- Interactive Scripts -->
     <script>
-        // Init Lucide Icons
+        // Init Icons
         window.addEventListener('DOMContentLoaded', () => {
             if (typeof lucide !== 'undefined') {
                 lucide.createIcons();
             }
         });
 
-        // Mobile Menu Toggle
+        // Mobile Menu
         const mobileBtn = document.getElementById('mobile-menu-btn');
         const sidebar = document.getElementById('sidebar');
-        
         mobileBtn.addEventListener('click', () => {
-            const isClosed = sidebar.classList.contains('-translate-x-full');
-            if (isClosed) {
-                sidebar.classList.remove('-translate-x-full');
-            } else {
-                sidebar.classList.add('-translate-x-full');
-            }
+            sidebar.classList.toggle('-translate-x-full');
         });
 
-        // Close sidebar on mobile when clicking a link
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.addEventListener('click', () => {
-                if (window.innerWidth < 1024) {
-                    sidebar.classList.add('-translate-x-full');
-                }
-            });
-        });
-
-        // Scroll Spy Logic
+        // Scroll Spy
         const sections = document.querySelectorAll('section');
         const navItems = document.querySelectorAll('.nav-item');
 
@@ -396,6 +431,19 @@
                 if (li.getAttribute('href').includes(current) && current !== '') {
                     li.classList.add('active');
                 }
+            });
+        });
+
+        // Copy Button
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const pre = e.target.parentElement.querySelector('pre');
+                const code = pre.textContent;
+                navigator.clipboard.writeText(code).then(() => {
+                    const original = e.target.textContent;
+                    e.target.textContent = 'Copied!';
+                    setTimeout(() => { e.target.textContent = original; }, 2000);
+                });
             });
         });
     </script>
