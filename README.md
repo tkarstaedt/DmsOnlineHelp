@@ -6,6 +6,8 @@ Projekt: DmsOnlineHelp
 
 Dieses Repository enthält die lokale Ausgabe der Online‑Hilfe (HTML, Skripte, Ressourcen) für das DmsOnlineHelp‑Projekt.
 
+[https://tkarstaedt.github.io/DmsOnlineHelp/]
+
 Wichtige Ordner (Top-Level)
 
 - `de/` — Deutsche Ausgabe der Onlinehilfe (viele HTML-, JS- und Ressourcen-Dateien)
