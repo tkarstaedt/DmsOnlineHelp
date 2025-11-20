@@ -8,8 +8,10 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Inter & JetBrains Mono -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Manrope & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <!-- Prism.js for Syntax Highlighting -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
@@ -25,14 +27,14 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                        sans: ['Manrope', 'sans-serif'], // Changed to Manrope
                         mono: ['JetBrains Mono', 'monospace'],
                     },
                     colors: {
                         peak: {
-                            orange: '#F84E2B', // NEW Peak Orange
-                            grey: '#D8D0C4',   // NEW Peak Grey (Beige)
-                            green: '#9CA28B',  // NEW Peak Green
+                            orange: '#F84E2B', 
+                            grey: '#D8D0C4',   
+                            green: '#9CA28B',  
                             dark: '#111827'
                         }
                     }
@@ -103,7 +105,7 @@
                     </svg>
                     <h1 class="font-bold text-2xl text-gray-900">PEAK.X</h1>
                 </div>
-                <p class="text-sm text-gray-500 mt-1">Module GeoPositioning</p>
+                <p class="text-sm text-gray-500 mt-1">Module <strong>GeoPositioning</strong></p>
                 <div class="mt-2 inline-block px-2 py-0.5 bg-peak-orange/10 text-peak-orange text-xs rounded-full border border-peak-orange/20">v1.1 Docs</div>
             </div>
             
