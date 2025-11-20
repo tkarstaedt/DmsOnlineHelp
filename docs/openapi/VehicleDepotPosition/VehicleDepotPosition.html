@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEAK.X OpenAPI – VehicleDepotPosition</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Manrope & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Prism.js for Syntax Highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- SVG Favicon embedded as Data URI -->
+    <link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg id="Ebene_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 350.3 350.5"><defs><style>.st0{fill:%23F84E2B;}.st1{fill:%23fff;}</style></defs><polygon class="st0" points="0 .2 0 350.2 175 350.2 350 175.2 350 .2 0 .2"/><g><path class="st1" d="M32.4,67.3h-7.4V25.2h16.6c.4,0,.9,0,1.5,0,.7,0,1.2,0,1.7.2,2.3.4,4.3,1.2,5.8,2.5,1.5,1.3,2.6,2.9,3.3,4.8.7,1.9,1.1,4.1,1.1,6.4s-.4,4.5-1.1,6.4-1.8,3.5-3.3,4.8c-1.5,1.3-3.4,2.1-5.8,2.5-.5,0-1.1.1-1.8.2s-1.2,0-1.5,0h-9.2v14.3h0ZM32.4,32.7v13h8.9c.4,0,.8,0,1.3,0s.9-.1,1.3-.2c1-.3,1.8-.8,2.3-1.5.5-.7.9-1.5,1.1-2.3.2-.8.3-1.7.3-2.4s-.1-1.6-.3-2.4c-.2-.8-.6-1.6-1.1-2.3-.5-.7-1.3-1.2-2.3-1.5-.4-.1-.8-.2-1.3-.2s-.9,0-1.3,0c0,0-8.9,0-8.9,0Z"/><path class="st1" d="M87.6,67.3h-25.7V25.2h25.7v7.4h-18.3v9h15v7.4h-15v10.8h18.3v7.4h0Z"/><path class="st1" d="M100.5,67.3h-7.7l12-42.1h11.1l12,42.1h-7.7l-10.7-37.1h1.4l-10.6,37.1h0ZM120.8,58.6h-20.8v-7.4h20.8v7.4Z"/><path class="st1" d="M141.7,67.3h-7.4V25.2h7.4v19.4l15-19.4h9.1l-16.5,20.8,17.5,21.3h-9.4l-15.7-19.2v19.2h0Z"/><path class="st1" d="M31.9,124.7h-6.9v-42.1h6.7l13,28,13-27.9h6.7v42.1h-6.9v-25.1l-11.4,25.1h-2.6l-11.4-25.1s0,25.1,0,25.1Z"/><path class="st1" d="M90.3,125.5c-3.9,0-7.3-.9-10.2-2.8s-5.1-4.4-6.6-7.7c-1.5-3.3-2.3-7.1-2.3-11.5s.8-8.2,2.3-11.5-3.7,5.9,6.6-7.7,6.2-2.8,10.2-2.8,7.3.9,10.2,2.8c2.8,1.8,5.1,4.4,6.6,7.7s2.3,7.1,2.3,11.5-.8,8.2-2.3,11.5-3.7,5.9-6.6,7.7-6.2,2.8-10.2,2.8ZM90.3,118.1c2.5,0,4.6-.5,6.2-1.7,1.7-1.2,2.9-2.9,3.7-5.1.8-2.2,1.2-4.7,1.2-7.7s-.4-5.5-1.2-7.6c-.8-2.1-2.1-3.8-3.7-5s-3.7-1.8-6.2-1.8c-2.5,0-4.6.5-6.2,1.7-1.7,1.2-2.9,2.9-3.7,5.1s-1.2,4.7-1.2,7.7.4,5.5,1.2,7.6c.8,2.1,2.1,3.8,3.7,5s3.7,1.8,6.2,1.8Z"/><path class="st1" d="M133.7,124.7h-17.4v-42.1h15.8c2.8,0,5.1.6,6.8,1.8,1.7,1.2,3,2.7,3.8,4.5.8,1.8,1.2,3.6,1.2,5.5s-.5,4.3-1.5,5.9-2.4,2.6-4.1,3.1v-1.5c2.5.6,4.3,1.8,5.5,3.7s1.9,4,1.9,6.3-.4,4.7-1.3,6.6c-.9,1.9-2.2,3.4-3.9,4.5-1.8,1.1-4,1.6-6.7,1.6h0ZM123.8,90v9h8.1c.8,0,1.6-.2,2.2-.5.7-.3,1.2-.8,1.6-1.4.4-.7.6-1.5.6-2.5s-.4-2.4-1.1-3.2c-.8-.9-1.8-1.3-3.2-1.3h-8.1ZM123.8,106.4v10.8h9.1c1,0,1.9-.2,2.7-.7s1.4-1.1,1.9-1.9c.4-.8.7-1.8.7-2.9s-.2-1.9-.6-2.7-1-1.4-1.7-1.9c-.8-.5-1.7-.7-2.9-.7h-9.1Z"/><path class="st1" d="M160.4,124.7h-7.4v-42.1h7.4v42.1Z"/><path class="st1" d="M194.9,124.7h-24.4v-42.1h7.4v34.7h16.9v7.4Z"/><path class="st1" d="M208.9,124.7h-7.4v-42.1h7.4v42.1Z"/><path class="st1" d="M235,124.7h-7.4v-34.7h-12.4v-7.4h32.3v7.4h-12.4v34.7h0Z"/><path class="st1" d="M272,124.7h-7.5v-17.1l-13.4-25h8.7l8.5,15.8,8.5-15.8h8.7l-13.5,25v17.1h0Z"/></g></svg>'>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        peak: {
+                            orange: '#F84E2B', 
+                            grey: '#D8D0C4',   
+                            green: '#9CA28B',  
+                            dark: '#111827'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar for Code Blocks */
+        pre::-webkit-scrollbar {
+            height: 8px;
+        }
+        pre::-webkit-scrollbar-track {
+            background: #2d2d2d;
+            border-radius: 4px;
+        }
+        pre::-webkit-scrollbar-thumb {
+            background: #555;
+            border-radius: 4px;
+        }
+        pre::-webkit-scrollbar-thumb:hover {
+            background: #777;
+        }
+        
+        /* Smooth scrolling offset for Sticky Header */
+        section {
+            scroll-margin-top: 2rem;
+        }
+        
+        .nav-item.active {
+            color: #F84E2B; /* PEAK Orange */
+            border-left: 3px solid #F84E2B;
+            background-color: rgba(248, 78, 43, 0.05);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Mobile Header -->
+    <div class="lg:hidden bg-white border-b p-4 flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center gap-3">
+            <svg width="40" viewBox="0 0 350.3 350.5" xmlns="http://www.w3.org/2000/svg">
+                <defs><style>.st0{fill:#F84E2B;}.st1{fill:#fff;}</style></defs>
+                <polygon class="st0" points="0 .2 0 350.2 175 350.2 350 175.2 350 .2 0 .2"/>
+                <g><path class="st1" d="M32.4,67.3h-7.4V25.2h16.6c.4,0,.9,0,1.5,0,.7,0,1.2,0,1.7.2,2.3.4,4.3,1.2,5.8,2.5,1.5,1.3,2.6,2.9,3.3,4.8.7,1.9,1.1,4.1,1.1,6.4s-.4,4.5-1.1,6.4-1.8,3.5-3.3,4.8c-1.5,1.3-3.4,2.1-5.8,2.5-.5,0-1.1.1-1.8.2s-1.2,0-1.5,0h-9.2v14.3h0ZM32.4,32.7v13h8.9c.4,0,.8,0,1.3,0s.9-.1,1.3-.2c1-.3,1.8-.8,2.3-1.5.5-.7.9-1.5,1.1-2.3.2-.8.3-1.7.3-2.4s-.1-1.6-.3-2.4c-.2-.8-.6-1.6-1.1-2.3-.5-.7-1.3-1.2-2.3-1.5-.4-.1-.8-.2-1.3-.2s-.9,0-1.3,0c0,0-8.9,0-8.9,0Z"/><path class="st1" d="M87.6,67.3h-25.7V25.2h25.7v7.4h-18.3v9h15v7.4h-15v10.8h18.3v7.4h0Z"/><path class="st1" d="M100.5,67.3h-7.7l12-42.1h11.1l12,42.1h-7.7l-10.7-37.1h1.4l-10.6,37.1h0ZM120.8,58.6h-20.8v-7.4h20.8v7.4Z"/><path class="st1" d="M141.7,67.3h-7.4V25.2h7.4v19.4l15-19.4h9.1l-16.5,20.8,17.5,21.3h-9.4l-15.7-19.2v19.2h0Z"/><path class="st1" d="M31.9,124.7h-6.9v-42.1h6.7l13,28,13-27.9h6.7v42.1h-6.9v-25.1l-11.4,25.1h-2.6l-11.4-25.1s0,25.1,0,25.1Z"/><path class="st1" d="M90.3,125.5c-3.9,0-7.3-.9-10.2-2.8s-5.1-4.4-6.6-7.7c-1.5-3.3-2.3-7.1-2.3-11.5s.8-8.2,2.3-11.5-3.7,5.9,6.6-7.7,6.2-2.8,10.2-2.8,7.3.9,10.2,2.8c2.8,1.8,5.1,4.4,6.6,7.7s2.3,7.1,2.3,11.5-.8,8.2-2.3,11.5-3.7,5.9-6.6,7.7-6.2,2.8-10.2,2.8ZM90.3,118.1c2.5,0,4.6-.5,6.2-1.7,1.7-1.2,2.9-2.9,3.7-5.1.8-2.2,1.2-4.7,1.2-7.7s-.4-5.5-1.2-7.6c-.8-2.1-2.1-3.8-3.7-5s-3.7-1.8-6.2-1.8c-2.5,0-4.6.5-6.2,1.7-1.7,1.2-2.9,2.9-3.7,5.1s-1.2,4.7-1.2,7.7.4,5.5,1.2,7.6c.8,2.1,2.1,3.8,3.7,5s3.7,1.8,6.2,1.8Z"/><path class="st1" d="M133.7,124.7h-17.4v-42.1h15.8c2.8,0,5.1.6,6.8,1.8,1.7,1.2,3,2.7,3.8,4.5.8,1.8,1.2,3.6,1.2,5.5s-.5,4.3-1.5,5.9-2.4,2.6-4.1,3.1v-1.5c2.5.6,4.3,1.8,5.5,3.7s1.9,4,1.9,6.3-.4,4.7-1.3,6.6c-.9,1.9-2.2,3.4-3.9,4.5-1.8,1.1-4,1.6-6.7,1.6h0ZM123.8,90v9h8.1c.8,0,1.6-.2,2.2-.5.7-.3,1.2-.8,1.6-1.4.4-.7.6-1.5.6-2.5s-.4-2.4-1.1-3.2c-.8-.9-1.8-1.3-3.2-1.3h-8.1ZM123.8,106.4v10.8h9.1c1,0,1.9-.2,2.7-.7s1.4-1.1,1.9-1.9c.4-.8.7-1.8.7-2.9s-.2-1.9-.6-2.7-1-1.4-1.7-1.9c-.8-.5-1.7-.7-2.9-.7h-9.1Z"/><path class="st1" d="M160.4,124.7h-7.4v-42.1h7.4v42.1Z"/><path class="st1" d="M194.9,124.7h-24.4v-42.1h7.4v34.7h16.9v7.4Z"/><path class="st1" d="M208.9,124.7h-7.4v-42.1h7.4v42.1Z"/><path class="st1" d="M235,124.7h-7.4v-34.7h-12.4v-7.4h32.3v7.4h-12.4v34.7h0Z"/><path class="st1" d="M272,124.7h-7.5v-17.1l-13.4-25h8.7l8.5,15.8,8.5-15.8h8.7l-13.5,25v17.1h0Z"/></g>
+            </svg>
+            <div class="font-bold text-xl text-gray-900">PEAK.X API</div>
+        </div>
+        <button id="mobile-menu-btn" class="p-2 text-gray-600 hover:text-gray-900">
+            <i data-lucide="menu"></i>
+        </button>
+    </div>
+
+    <div class="flex min-h-screen">
+        
+        <!-- Sidebar Navigation -->
+        <aside id="sidebar" class="fixed inset-y-0 left-0 z-40 w-72 bg-white border-r transform -translate-x-full lg:translate-x-0 transition-transform duration-200 ease-in-out overflow-y-auto">
+            <div class="p-6 border-b sticky top-0 bg-white z-10">
+                <div class="flex items-center gap-3 mb-2">
+                    <svg width="50" viewBox="0 0 350.3 350.5" xmlns="http://www.w3.org/2000/svg">
+                        <defs><style>.st0{fill:#F84E2B;}.st1{fill:#fff;}</style></defs>
+                        <polygon class="st0" points="0 .2 0 350.2 175 350.2 350 175.2 350 .2 0 .2"/>
+                        <g><path class="st1" d="M32.4,67.3h-7.4V25.2h16.6c.4,0,.9,0,1.5,0,.7,0,1.2,0,1.7.2,2.3.4,4.3,1.2,5.8,2.5,1.5,1.3,2.6,2.9,3.3,4.8.7,1.9,1.1,4.1,1.1,6.4s-.4,4.5-1.1,6.4-1.8,3.5-3.3,4.8c-1.5,1.3-3.4,2.1-5.8,2.5-.5,0-1.1.1-1.8.2s-1.2,0-1.5,0h-9.2v14.3h0ZM32.4,32.7v13h8.9c.4,0,.8,0,1.3,0s.9-.1,1.3-.2c1-.3,1.8-.8,2.3-1.5.5-.7.9-1.5,1.1-2.3.2-.8.3-1.7.3-2.4s-.1-1.6-.3-2.4c-.2-.8-.6-1.6-1.1-2.3-.5-.7-1.3-1.2-2.3-1.5-.4-.1-.8-.2-1.3-.2s-.9,0-1.3,0c0,0-8.9,0-8.9,0Z"/><path class="st1" d="M87.6,67.3h-25.7V25.2h25.7v7.4h-18.3v9h15v7.4h-15v10.8h18.3v7.4h0Z"/><path class="st1" d="M100.5,67.3h-7.7l12-42.1h11.1l12,42.1h-7.7l-10.7-37.1h1.4l-10.6,37.1h0ZM120.8,58.6h-20.8v-7.4h20.8v7.4Z"/><path class="st1" d="M141.7,67.3h-7.4V25.2h7.4v19.4l15-19.4h9.1l-16.5,20.8,17.5,21.3h-9.4l-15.7-19.2v19.2h0Z"/><path class="st1" d="M31.9,124.7h-6.9v-42.1h6.7l13,28,13-27.9h6.7v42.1h-6.9v-25.1l-11.4,25.1h-2.6l-11.4-25.1s0,25.1,0,25.1Z"/><path class="st1" d="M90.3,125.5c-3.9,0-7.3-.9-10.2-2.8s-5.1-4.4-6.6-7.7c-1.5-3.3-2.3-7.1-2.3-11.5s.8-8.2,2.3-11.5-3.7,5.9,6.6-7.7,6.2-2.8,10.2-2.8,7.3.9,10.2,2.8c2.8,1.8,5.1,4.4,6.6,7.7s2.3,7.1,2.3,11.5-.8,8.2-2.3,11.5-3.7,5.9-6.6,7.7-6.2,2.8-10.2,2.8ZM90.3,118.1c2.5,0,4.6-.5,6.2-1.7,1.7-1.2,2.9-2.9,3.7-5.1.8-2.2,1.2-4.7,1.2-7.7s-.4-5.5-1.2-7.6c-.8-2.1-2.1-3.8-3.7-5s-3.7-1.8-6.2-1.8c-2.5,0-4.6.5-6.2,1.7-1.7,1.2-2.9,2.9-3.7,5.1s-1.2,4.7-1.2,7.7.4,5.5,1.2,7.6c.8,2.1,2.1,3.8,3.7,5s3.7,1.8,6.2,1.8Z"/><path class="st1" d="M133.7,124.7h-17.4v-42.1h15.8c2.8,0,5.1.6,6.8,1.8,1.7,1.2,3,2.7,3.8,4.5.8,1.8,1.2,3.6,1.2,5.5s-.5,4.3-1.5,5.9-2.4,2.6-4.1,3.1v-1.5c2.5.6,4.3,1.8,5.5,3.7s1.9,4,1.9,6.3-.4,4.7-1.3,6.6c-.9,1.9-2.2,3.4-3.9,4.5-1.8,1.1-4,1.6-6.7,1.6h0ZM123.8,90v9h8.1c.8,0,1.6-.2,2.2-.5.7-.3,1.2-.8,1.6-1.4.4-.7.6-1.5.6-2.5s-.4-2.4-1.1-3.2c-.8-.9-1.8-1.3-3.2-1.3h-8.1ZM123.8,106.4v10.8h9.1c1,0,1.9-.2,2.7-.7s1.4-1.1,1.9-1.9c.4-.8.7-1.8.7-2.9s-.2-1.9-.6-2.7-1-1.4-1.7-1.9c-.8-.5-1.7-.7-2.9-.7h-9.1Z"/><path class="st1" d="M160.4,124.7h-7.4v-42.1h7.4v42.1Z"/><path class="st1" d="M194.9,124.7h-24.4v-42.1h7.4v34.7h16.9v7.4Z"/><path class="st1" d="M208.9,124.7h-7.4v-42.1h7.4v42.1Z"/><path class="st1" d="M235,124.7h-7.4v-34.7h-12.4v-7.4h32.3v7.4h-12.4v34.7h0Z"/><path class="st1" d="M272,124.7h-7.5v-17.1l-13.4-25h8.7l8.5,15.8,8.5-15.8h8.7l-13.5,25v17.1h0Z"/></g>
+                    </svg>
+                    <h1 class="font-bold text-2xl text-gray-900">PEAK.X</h1>
+                </div>
+                <p class="text-sm text-gray-500 mt-1">Module <strong>VehicleDepotPosition</strong></p>
+                <div class="mt-2 inline-block px-2 py-0.5 bg-peak-orange/10 text-peak-orange text-xs rounded-full border border-peak-orange/20">v2.6.1 Docs</div>
+            </div>
+            
+            <nav class="p-4 space-y-1 text-sm">
+                <a href="#introduction" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">1. Introduction</a>
+                <a href="#overview" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">2. Overview</a>
+                <a href="#tech-specs" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">3. Technical Specs</a>
+                <a href="#endpoints" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">4. Endpoints</a>
+                <div class="pl-4 border-l border-gray-200 ml-4 mb-2">
+                    <a href="#get-filtered" class="nav-item block px-4 py-1.5 text-gray-500 hover:text-peak-orange text-xs">List Vehicles in Depot</a>
+                    <a href="#get-at-position" class="nav-item block px-4 py-1.5 text-gray-500 hover:text-peak-orange text-xs">Vehicle at Position</a>
+                    <a href="#get-single" class="nav-item block px-4 py-1.5 text-gray-500 hover:text-peak-orange text-xs">Single Vehicle Position</a>
+                    <a href="#get-stream" class="nav-item block px-4 py-1.5 text-gray-500 hover:text-peak-orange text-xs">Long Polling (Stream)</a>
+                    <a href="#post-sub" class="nav-item block px-4 py-1.5 text-gray-500 hover:text-peak-orange text-xs">Subscribe (Callback)</a>
+                    <a href="#delete-sub" class="nav-item block px-4 py-1.5 text-gray-500 hover:text-peak-orange text-xs">Unsubscribe</a>
+                </div>
+                <a href="#datamodel" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">5. Data Models</a>
+                <a href="#examples" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">6. Examples</a>
+                <a href="#appendix" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">7. Appendix</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 lg:ml-72 w-full max-w-5xl mx-auto p-6 lg:p-12 pb-32">
+            
+            <!-- Header -->
+            <header class="mb-12 border-b pb-6">
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">OpenAPI: Vehicle Depot Position</h1>
+                <p class="text-lg text-gray-600">Real-time integration of vehicle positions within the <strong>PEAK.DMS</strong> via Single Query, Long Polling, and Callback.</p>
+            </header>
+
+            <!-- 1. Introduction -->
+            <section id="introduction" class="mb-16 scroll-mt-24">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">1. Introduction</h2>
+                
+                <div class="prose max-w-none text-gray-600">
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <i data-lucide="info" class="h-5 w-5 text-blue-500"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm text-blue-700">
+                                    <strong>Prerequisite:</strong> Familiarity with the <a href="general_doc.html" class="font-bold underline hover:text-blue-900">OpenAPI Interfaces for PEAK.X (general_doc.html)</a> is required. It provides context ensuring a correct understanding of security, configuration, and common error handling.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="mb-4">
+                        The <strong>Vehicle Depot Position API</strong> provides external systems with exact location data of vehicles within a depot (managed by PEAK.DMS). It supports three distinct communication technologies tailored to different operational needs:
+                    </p>
+                    <ul class="list-disc pl-5 space-y-1 mb-4">
+                        <li><strong>Single Vehicle Queries:</strong> Standard HTTP GET requests for on-demand data.</li>
+                        <li><strong>Real-Time Update with Long Polling:</strong> Keeps connections open to receive updates immediately.</li>
+                        <li><strong>Real-Time Updates with Callback:</strong> Webhook-style subscriptions where the server pushes updates to a client URL.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 2. Overview -->
+            <section id="overview" class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">2. Overview</h2>
+
+                <p class="text-gray-600 mb-6">
+                    The <strong>Depot Management System (DMS)</strong> continuously receives and processes vehicle position data. Within the PEAK.X system, current vehicle positions can be visualized in the <strong>DepotView</strong>.
+                </p>
+
+                <!-- FIGURE 1 -->
+                <figure class="mb-8 border rounded-lg overflow-hidden shadow-md">
+                    <img src="media/image4.png" alt="Example of depot positions on view DepotView" class="w-full h-auto max-w-4xl mx-auto">
+                    <figcaption class="bg-gray-50 p-3 text-center text-sm text-gray-500 border-t">
+                        <strong>Figure 1:</strong> Example of depot positions on view DepotView.
+                    </figcaption>
+                </figure>
+                
+                <div class="grid md:grid-cols-2 gap-6 mt-6">
+                    <div class="bg-peak-green/10 p-5 rounded-lg border border-peak-green/20">
+                        <h3 class="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                            <i data-lucide="bus" class="w-5 h-5 text-peak-green"></i> Use Cases
+                        </h3>
+                        <ul class="list-disc pl-5 text-sm text-gray-700 space-y-2">
+                            <li><strong>Garage Management:</strong> Locating vehicles for service, cleaning, or charging.</li>
+                            <li><strong>Driver Displays:</strong> Showing drivers where their assigned vehicle is parked.</li>
+                            <li><strong>Visualizations:</strong> External dashboards or mobile apps for depot staff.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-peak-green/10 p-5 rounded-lg border border-peak-green/20">
+                        <h3 class="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-peak-green"></i> Key Benefits
+                        </h3>
+                         <ul class="list-disc pl-5 text-sm text-gray-700 space-y-2">
+                            <li><strong>Operational Transparency:</strong> All systems share a consistent view.</li>
+                            <li><strong>Efficiency:</strong> Faster execution of preparation tasks.</li>
+                            <li><strong>Flexibility:</strong> Choose between Polling, Long Polling, or Push (Callback).</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Tech Specs -->
+            <section id="tech-specs" class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">3. Technical Specifications</h2>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-1">Base URLs</h3>
+                        <div class="space-y-2">
+                             <code class="bg-gray-100 px-3 py-2 rounded text-gray-800 font-mono text-sm block border">https://localhost:8080/api/v2</code>
+                             <code class="bg-gray-100 px-3 py-2 rounded text-gray-800 font-mono text-sm block border">http://localhost:8080/api/v2</code>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">Authentication</h3>
+                            <p class="text-sm text-gray-600 mb-2">Access is controlled via <strong>Authorization Scopes</strong>. If authentication fails, the service responds with <code>401</code>. If permission is missing, it responds with <code>403</code>.</p>
+                            <ul class="list-disc pl-5 text-gray-600 text-sm space-y-1">
+                                <li><strong>Basic Auth:</strong> Base64 encoded (header <code>Authorization</code>).</li>
+                                <li><strong>Bearer Token:</strong> JWT format (header <code>Authorization</code>).</li>
+                                <li><strong>API Key:</strong> Header <code>ApiKey</code>.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">Configuration Parameters</h3>
+                            <p class="text-sm text-gray-600 mb-2">Configurable via the PEAK.X Task settings:</p>
+                            <ul class="list-disc pl-5 text-gray-600 text-sm space-y-1">
+                                <li><strong>LongPollingTimeout:</strong> Default 20s.</li>
+                                <li><strong>NotificationBufferMilliseconds:</strong> Buffer for updates.</li>
+                                <li><strong>HttpLoggingEnabled:</strong> Enable request logging.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Endpoints -->
+            <section id="endpoints" class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-peak-orange pl-3">4. Endpoints</h2>
+
+                <!-- Endpoint 1: List Vehicles -->
+                <div id="get-filtered" class="border rounded-lg overflow-hidden shadow-sm bg-white mb-8">
+                    <div class="bg-gray-50 p-4 border-b flex items-center gap-3">
+                        <span class="px-3 py-1 bg-blue-600 text-white font-bold rounded text-sm shadow-sm">GET</span>
+                        <code class="text-sm font-mono text-gray-700 break-all">/depot-management/localization/operational-data/depots/{depotId}/vehicles</code>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Retrieves a list of vehicles and their exact locations for a given depot. Optionally filters by a specific depot position or vehicle type.</p>
+                        
+                        <h4 class="font-semibold text-gray-800 mb-2 text-sm">Parameters</h4>
+                        <div class="overflow-x-auto mb-4">
+                            <table class="min-w-full text-sm text-left text-gray-600">
+                                <thead class="bg-gray-100 text-xs uppercase font-medium">
+                                    <tr><th class="px-4 py-2">Name</th><th class="px-4 py-2">In</th><th class="px-4 py-2">Type</th><th class="px-4 py-2">Required</th><th class="px-4 py-2">Description</th></tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr><td class="px-4 py-2 font-mono">depotId</td><td class="px-4 py-2">path</td><td class="px-4 py-2">string</td><td class="px-4 py-2 text-red-600 font-bold">Yes</td><td class="px-4 py-2">Depot Identifier.</td></tr>
+                                    <tr><td class="px-4 py-2 font-mono">topologyItemId</td><td class="px-4 py-2">query</td><td class="px-4 py-2">string</td><td class="px-4 py-2">No</td><td class="px-4 py-2">Topology identifier (e.g., "14a").</td></tr>
+                                    <tr><td class="px-4 py-2 font-mono">vehicleTypeId</td><td class="px-4 py-2">query</td><td class="px-4 py-2">string</td><td class="px-4 py-2">No</td><td class="px-4 py-2">Unique identifier (e.g., "BNR2").</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h4 class="font-semibold text-gray-800 mb-2 text-sm">Response (200 OK)</h4>
+                        <div class="relative group">
+                            <button class="copy-btn absolute top-2 right-2 bg-gray-700 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10">Copy</button>
+                            <pre><code class="language-json">[
+  {
+    "vehicleId": "4711",
+    "vehicleTypeId": "BNR2",
+    "branch": "B",
+    "company": "CompanyName",
+    "depotPosition": {
+      "topologyItemId": "14a",
+      "shortName": "T14a",
+      "description": "Track14a",
+      "trackName": "14",
+      "offset": 39,
+      "sectionId": "14/4"
+    },
+    "timestamp": "2022-11-01T08:30:00Z"
+  }
+]</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Endpoint 2: Vehicle at Position -->
+                <div id="get-at-position" class="border rounded-lg overflow-hidden shadow-sm bg-white mb-8">
+                    <div class="bg-gray-50 p-4 border-b flex items-center gap-3">
+                        <span class="px-3 py-1 bg-blue-600 text-white font-bold rounded text-sm shadow-sm">GET</span>
+                        <code class="text-sm font-mono text-gray-700 break-all">/depot-management/localization/operational-data/depots/{depotId}/positions/{topologyItemId}/vehicle</code>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Gets the first or last vehicle of a given depot position. Use the <code>offset</code> parameter to specify positioning logic.</p>
+                        
+                        <h4 class="font-semibold text-gray-800 mb-2 text-sm">Parameters</h4>
+                        <div class="overflow-x-auto mb-4">
+                            <table class="min-w-full text-sm text-left text-gray-600">
+                                <thead class="bg-gray-100 text-xs uppercase font-medium">
+                                    <tr><th class="px-4 py-2">Name</th><th class="px-4 py-2">In</th><th class="px-4 py-2">Type</th><th class="px-4 py-2">Required</th><th class="px-4 py-2">Description</th></tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr><td class="px-4 py-2 font-mono">depotId</td><td class="px-4 py-2">path</td><td class="px-4 py-2">string</td><td class="px-4 py-2 text-red-600 font-bold">Yes</td><td class="px-4 py-2">Depot Identifier.</td></tr>
+                                    <tr><td class="px-4 py-2 font-mono">topologyItemId</td><td class="px-4 py-2">path</td><td class="px-4 py-2">string</td><td class="px-4 py-2 text-red-600 font-bold">Yes</td><td class="px-4 py-2">Topology identifier.</td></tr>
+                                    <tr><td class="px-4 py-2 font-mono">offset</td><td class="px-4 py-2">query</td><td class="px-4 py-2">enum</td><td class="px-4 py-2">No</td><td class="px-4 py-2"><code>MinOffset</code> (Default) or <code>MaxOffset</code>.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <h4 class="font-semibold text-gray-800 mb-2 text-sm">Response (200 OK)</h4>
+                        <div class="relative group">
+                            <button class="copy-btn absolute top-2 right-2 bg-gray-700 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10">Copy</button>
+                            <pre><code class="language-json">{
+  "VehicleId": "4711"
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Endpoint 3: Single Vehicle -->
+                <div id="get-single" class="border rounded-lg overflow-hidden shadow-sm bg-white mb-8">
+                    <div class="bg-gray-50 p-4 border-b flex items-center gap-3">
+                        <span class="px-3 py-1 bg-blue-600 text-white font-bold rounded text-sm shadow-sm">GET</span>
+                        <code class="text-sm font-mono text-gray-700 break-all">/depot-management/localization/operational-data/vehicles/{vehicleId}/depot-position</code>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Retrieves the exact depot position for a specific vehicle identifier.</p>
+                        
+                        <h4 class="font-semibold text-gray-800 mb-2 text-sm">Parameters</h4>
+                        <div class="overflow-x-auto mb-4">
+                            <table class="min-w-full text-sm text-left text-gray-600">
+                                <thead class="bg-gray-100 text-xs uppercase font-medium">
+                                    <tr><th class="px-4 py-2">Name</th><th class="px-4 py-2">In</th><th class="px-4 py-2">Type</th><th class="px-4 py-2">Required</th><th class="px-4 py-2">Description</th></tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr><td class="px-4 py-2 font-mono">vehicleId</td><td class="px-4 py-2">path</td><td class="px-4 py-2">string</td><td class="px-4 py-2 text-red-600 font-bold">Yes</td><td class="px-4 py-2">Vehicle Identifier.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                         <h4 class="font-semibold text-gray-800 mb-2 text-sm">Response (200 OK)</h4>
+                        <div class="relative group">
+                            <button class="copy-btn absolute top-2 right-2 bg-gray-700 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10">Copy</button>
+                            <pre><code class="language-json">{
+  "vehicleId": "4711",
+  "depotPosition": {
+    "topologyItemId": "14a",
+    "shortName": "T14a",
+    "depotId": "Bus Depot #5"
+  },
+  "timestamp": "2022-11-01T08:30:00Z"
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Endpoint 4: Stream (Long Polling) -->
+                <div id="get-stream" class="border rounded-lg overflow-hidden shadow-sm bg-white mb-8">
+                    <div class="bg-gray-50 p-4 border-b flex items-center gap-3">
+                        <span class="px-3 py-1 bg-blue-600 text-white font-bold rounded text-sm shadow-sm">GET</span>
+                        <code class="text-sm font-mono text-gray-700 break-all">/depot-management/localization/operational-data/depots/{depotId}/vehicles/depot-position/stream</code>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            <strong>Long Polling:</strong> Returns incremental updates. The connection remains active (default 20s) until data is available.
+                        </p>
+
+                        <!-- FIGURE 2 -->
+                        <figure class="mb-8 border rounded-lg overflow-hidden shadow-md max-w-2xl">
+                            <img src="media/image5.png" alt="Sequence of real-time updates via long polling" class="w-full h-auto">
+                            <figcaption class="bg-gray-50 p-3 text-center text-sm text-gray-500 border-t">
+                                <strong>Figure 2:</strong> Sequence of real-time updates via long polling.
+                            </figcaption>
+                        </figure>
+
+                        <div class="bg-peak-green/10 p-3 rounded text-sm mb-4 border border-peak-green/20">
+                            <strong>Logic:</strong> If <code>clientId</code> is unknown/empty, all positions are returned. If known, only data changed relative to the previous request is sent.
+                        </div>
+
+                        <h4 class="font-semibold text-gray-800 mb-2 text-sm">Parameters</h4>
+                        <div class="overflow-x-auto mb-4">
+                            <table class="min-w-full text-sm text-left text-gray-600">
+                                <thead class="bg-gray-100 text-xs uppercase font-medium">
+                                    <tr><th class="px-4 py-2">Name</th><th class="px-4 py-2">In</th><th class="px-4 py-2">Type</th><th class="px-4 py-2">Required</th><th class="px-4 py-2">Description</th></tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr><td class="px-4 py-2 font-mono">depotId</td><td class="px-4 py-2">path</td><td class="px-4 py-2">string</td><td class="px-4 py-2 text-red-600 font-bold">Yes</td><td class="px-4 py-2">Depot Identifier.</td></tr>
+                                    <tr><td class="px-4 py-2 font-mono">clientId</td><td class="px-4 py-2">query</td><td class="px-4 py-2">string</td><td class="px-4 py-2">No</td><td class="px-4 py-2">GUID identifying client state.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                         <h4 class="font-semibold text-gray-800 mb-2 text-sm">Response (202 Accepted)</h4>
+                         <p class="text-xs text-gray-500 mb-2">Returns Array of VehicleDepotPosition</p>
+                    </div>
+                </div>
+
+                <!-- Endpoint 5: Subscribe (Callback) -->
+                <div id="post-sub" class="border rounded-lg overflow-hidden shadow-sm bg-white mb-8">
+                    <div class="bg-gray-50 p-4 border-b flex items-center gap-3">
+                        <span class="px-3 py-1 bg-green-600 text-white font-bold rounded text-sm shadow-sm">POST</span>
+                        <code class="text-sm font-mono text-gray-700 break-all">/depot-management/localization/operational-data/depots/{depotId}/vehicles/depot-position/subscription</code>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            Subscribes to a <code>Callback</code> channel. The DMS will POST updates to the provided <code>callbackUrl</code>.
+                        </p>
+
+                        <!-- FIGURE 3 -->
+                        <figure class="mb-8 border rounded-lg overflow-hidden shadow-md max-w-2xl">
+                            <img src="media/image6.png" alt="Sequence of real-time updates via Callback subscription" class="w-full h-auto">
+                            <figcaption class="bg-gray-50 p-3 text-center text-sm text-gray-500 border-t">
+                                <strong>Figure 3:</strong> Sequence of real-time updates via Callback subscription.
+                            </figcaption>
+                        </figure>
+                        
+                        <h4 class="font-semibold text-gray-800 mb-2 text-sm">Request Body (JSON)</h4>
+                        <div class="relative group">
+                            <button class="copy-btn absolute top-2 right-2 bg-gray-700 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10">Copy</button>
+                            <pre><code class="language-json">{
+  "callbackUrl": "https://myserver.com/send/callback/here",
+  "sendCurrentStateOnInit": false
+}</code></pre>
+                        </div>
+
+                         <h4 class="font-semibold text-gray-800 mt-6 mb-2 text-sm">Response (201 Created)</h4>
+                        <div class="relative group">
+                            <button class="copy-btn absolute top-2 right-2 bg-gray-700 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10">Copy</button>
+                            <pre><code class="language-json">{
+  "subscriptionId": "AAA-123-BBB-456"
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Endpoint 6: Unsubscribe -->
+                <div id="delete-sub" class="border rounded-lg overflow-hidden shadow-sm bg-white mb-8">
+                    <div class="bg-gray-50 p-4 border-b flex items-center gap-3">
+                        <span class="px-3 py-1 bg-red-500 text-white font-bold rounded text-sm shadow-sm">DELETE</span>
+                        <code class="text-sm font-mono text-gray-700 break-all">/depot-management/localization/operational-data/vehicles/depot-position/subscription/{subscriptionId}</code>
+                    </div>
+                    <div class="p-6">
+                         <p class="text-gray-600 mb-4">Unsubscribe a subscriber identified by its <code>subscriptionId</code>.</p>
+                         <h4 class="font-semibold text-gray-800 mb-2 text-sm">Parameters</h4>
+                        <div class="overflow-x-auto mb-4">
+                            <table class="min-w-full text-sm text-left text-gray-600">
+                                <thead class="bg-gray-100 text-xs uppercase font-medium">
+                                    <tr><th class="px-4 py-2">Name</th><th class="px-4 py-2">In</th><th class="px-4 py-2">Type</th><th class="px-4 py-2">Required</th></tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr><td class="px-4 py-2 font-mono">subscriptionId</td><td class="px-4 py-2">path</td><td class="px-4 py-2">string</td><td class="px-4 py-2 text-red-600 font-bold">Yes</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- 5. Data Models -->
+            <section id="datamodel" class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">5. Data Models</h2>
+                <p class="mb-4 text-sm text-gray-600">Structure of the objects exchanged in the API.</p>
+
+                <div class="space-y-8">
+                    <!-- VehicleDepotPosition -->
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">VehicleDepotPosition</h3>
+                        <div class="overflow-x-auto border rounded-lg shadow-sm">
+                            <table class="min-w-full text-sm text-left text-gray-600">
+                                <thead class="text-xs text-gray-700 uppercase bg-gray-100 border-b">
+                                    <tr><th class="px-6 py-3">Field</th><th class="px-6 py-3">Type</th><th class="px-6 py-3">Mandatory</th><th class="px-6 py-3">Description</th></tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200 bg-white">
+                                    <tr><td class="px-6 py-3 font-mono text-gray-900">vehicleId</td><td class="px-6 py-3 text-blue-600">string</td><td class="px-6 py-3 text-red-600 font-bold">Yes</td><td class="px-6 py-3">The vehicle identifier.</td></tr>
+                                    <tr><td class="px-6 py-3 font-mono text-gray-900">depotPosition</td><td class="px-6 py-3 text-blue-600">DepotPosition</td><td class="px-6 py-3">No</td><td class="px-6 py-3">Position object. Empty if vehicle is outside depot.</td></tr>
+                                    <tr><td class="px-6 py-3 font-mono text-gray-900">timestamp</td><td class="px-6 py-3 text-purple-600">datetime</td><td class="px-6 py-3 text-red-600 font-bold">Yes</td><td class="px-6 py-3">Time point of response creation.</td></tr>
+                                    <tr><td class="px-6 py-3 font-mono text-gray-900">vehicleTypeId</td><td class="px-6 py-3 text-blue-600">string</td><td class="px-6 py-3">No</td><td class="px-6 py-3">Unique ID of vehicle type.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- DepotPosition -->
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">DepotPosition</h3>
+                        <div class="overflow-x-auto border rounded-lg shadow-sm">
+                            <table class="min-w-full text-sm text-left text-gray-600">
+                                <thead class="text-xs text-gray-700 uppercase bg-gray-100 border-b">
+                                    <tr><th class="px-6 py-3">Field</th><th class="px-6 py-3">Type</th><th class="px-6 py-3">Mandatory</th><th class="px-6 py-3">Description</th></tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200 bg-white">
+                                    <tr><td class="px-6 py-3 font-mono text-gray-900">depotId</td><td class="px-6 py-3 text-blue-600">string</td><td class="px-6 py-3 text-red-600 font-bold">Yes</td><td class="px-6 py-3">Depot identifier.</td></tr>
+                                    <tr><td class="px-6 py-3 font-mono text-gray-900">topologyItemId</td><td class="px-6 py-3 text-blue-600">string</td><td class="px-6 py-3 text-red-600 font-bold">Yes</td><td class="px-6 py-3">Topology ID (Node).</td></tr>
+                                    <tr><td class="px-6 py-3 font-mono text-gray-900">shortName</td><td class="px-6 py-3 text-blue-600">string</td><td class="px-6 py-3 text-red-600 font-bold">Yes</td><td class="px-6 py-3">Short name of topology item.</td></tr>
+                                    <tr><td class="px-6 py-3 font-mono text-gray-900">offset</td><td class="px-6 py-3 text-blue-600">double</td><td class="px-6 py-3">No</td><td class="px-6 py-3">Offset within topology item [cm].</td></tr>
+                                    <tr><td class="px-6 py-3 font-mono text-gray-900">sectionId</td><td class="px-6 py-3 text-blue-600">string</td><td class="px-6 py-3">No</td><td class="px-6 py-3">Section identifier (e.g. 14/4).</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. Examples -->
+            <section id="examples" class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">6. Examples</h2>
+                
+                <div class="space-y-6">
+                    <div class="bg-gray-900 rounded-lg p-6">
+                        <h3 class="text-gray-300 text-sm font-mono mb-2">// Get vehicles in a depot</h3>
+                        <div class="relative group">
+                            <button class="copy-btn absolute top-0 right-0 bg-gray-700 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10">Copy</button>
+                            <pre><code class="language-bash">curl -u user:pass \
+"https://localhost:8080/api/v2/depot-management/localization/operational-data/depots/Bus%20Depot%20%235/vehicles"</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-900 rounded-lg p-6">
+                        <h3 class="text-gray-300 text-sm font-mono mb-2">// Long polling stream (with clientId)</h3>
+                        <div class="relative group">
+                            <button class="copy-btn absolute top-0 right-0 bg-gray-700 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10">Copy</button>
+                            <pre><code class="language-bash">curl -u user:pass \
+"https://localhost:8080/api/v2/depot-management/localization/operational-data/depots/Bus%20D/vehicles/depot-position/stream?clientId=6B29FC40-CA47-1067-B31D-00DD010662DA"</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-900 rounded-lg p-6">
+                         <h3 class="text-gray-300 text-sm font-mono mb-2">// Subscribe for callback</h3>
+                         <div class="relative group">
+                            <button class="copy-btn absolute top-0 right-0 bg-gray-700 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10">Copy</button>
+                            <pre><code class="language-bash">curl -u user:pass -X POST \
+"https://localhost:8080/api/v2/depot-management/localization/operational-data/depots/Bus%20D/vehicles/depot-position/subscription" \
+-H "Content-Type: application/json" \
+-d '{"callbackUrl":"https://myserver.com/send/callback/here","sendCurrentStateOnInit":false}'</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. Appendix -->
+            <section id="appendix" class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">7. Appendix</h2>
+                
+                <h3 class="font-semibold text-gray-800 mb-2">Status Code Reference</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
+                    <div class="bg-green-100 text-green-800 px-3 py-1 rounded text-center text-sm font-mono">200 OK</div>
+                    <div class="bg-green-100 text-green-800 px-3 py-1 rounded text-center text-sm font-mono">201 Created</div>
+                    <div class="bg-green-100 text-green-800 px-3 py-1 rounded text-center text-sm font-mono">202 Accepted</div>
+                    <div class="bg-red-100 text-red-800 px-3 py-1 rounded text-center text-sm font-mono">401 Unauth</div>
+                    <div class="bg-red-100 text-red-800 px-3 py-1 rounded text-center text-sm font-mono">403 Forbidden</div>
+                </div>
+
+                <h3 class="font-semibold text-gray-800 mb-2">Glossary</h3>
+                 <div class="text-sm text-gray-600 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
+                    <div class="flex justify-between border-b pb-1"><span>PEAK.X</span> <span class="text-gray-400">Software Platform</span></div>
+                    <div class="flex justify-between border-b pb-1"><span>PEAK.DMS</span> <span class="text-gray-400">Depot Management System</span></div>
+                    <div class="flex justify-between border-b pb-1"><span>TopologyItem</span> <span class="text-gray-400">A node/location in the depot graph (e.g., Track)</span></div>
+                    <div class="flex justify-between border-b pb-1"><span>Offset</span> <span class="text-gray-400">Distance in cm from start of track</span></div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Prism JS Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Init Lucide Icons
+        window.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const sidebar = document.getElementById('sidebar');
+        
+        mobileBtn.addEventListener('click', () => {
+            const isClosed = sidebar.classList.contains('-translate-x-full');
+            if (isClosed) {
+                sidebar.classList.remove('-translate-x-full');
+            } else {
+                sidebar.classList.add('-translate-x-full');
+            }
+        });
+
+        // Close sidebar on mobile when clicking a link
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', () => {
+                if (window.innerWidth < 1024) {
+                    sidebar.classList.add('-translate-x-full');
+                }
+            });
+        });
+
+        // Scroll Spy Logic
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-item');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(li => {
+                li.classList.remove('active');
+                if (li.getAttribute('href') === '#' + current) {
+                    li.classList.add('active');
+                }
+            });
+        });
+
+        // Copy to Clipboard Logic
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const pre = e.target.parentElement.querySelector('pre');
+                const code = pre.textContent;
+                
+                navigator.clipboard.writeText(code).then(() => {
+                    const originalText = e.target.textContent;
+                    e.target.textContent = 'Copied!';
+                    e.target.classList.add('bg-green-600');
+                    
+                    setTimeout(() => {
+                        e.target.textContent = originalText;
+                        e.target.classList.remove('bg-green-600');
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
