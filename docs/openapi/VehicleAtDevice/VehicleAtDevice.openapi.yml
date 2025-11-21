@@ -1,0 +1,209 @@
+openapi: 3.0.3
+info:
+  version: "1.5"
+  title: PEAK.X Backend OpenAPI for vehicle at a stationary (positioning) device
+  contact:
+    name: Peak Mobility GmbH
+    url: https://www.peakmobility.de
+
+  description: |-
+
+    This _PEAK.X_ backend OpenAPI provides the method `vehicle-position` which can be used by an external system to send position information about the location of a vehicle tracked by a stationary positioning device to the Depot Management System (DMS) _PEAK.DMS_.
+    The data includes the position data of the stationary positioning device and the identification data of a mobile device mounted on the located vehicle.
+    The timestamp denotes the time when the vehicle was tracked.
+
+    **Additional Notes on Security**
+    
+    This endpoint supports the following authentication methods:
+    - **Basic authentication**
+    - **Bearer token**
+    - **API key**
+
+    If authentication fails, the service responds with HTTP status code **401 Unauthorized**.
+
+    In addition, access is controlled by **authorization scopes**. If the authenticated user does not have permission to access or modify this endpoint's resource, the service will respond with **403 Forbidden**.
+
+    ---
+
+    Das _PEAK.X_-Backend OpenAPI stellt die Methode "vehicle-position" zur Verfügung, die von einem externen System verwendet werden kann, um Positionsinformationen über den Standort eines Fahrzeugs, das von einem stationären Ortungsgerät erfasst wird, an das Depot Management System (DMS) _PEAK.DMS_ zu senden.
+    Die Daten umfassen die Positionsdaten des stationären Ortungsgeräts und die Identifikationsdaten eines mobilen Geräts, welches am georteten Fahrzeug angebracht ist.
+    Der Zeitstempel gibt den Zeitpunkt an, zu dem das Fahrzeug geortet wurde.
+
+    **Zusätzliche Hinweise zur Sicherheit**
+
+    Dieser Endpunkt unterstützt die folgenden Authentifizierungsverfahren:
+    - **HTTP-Basisauthentifizierung**
+    - **Bearer-Token**
+    - **API-Schlüssel**
+    
+    Falls die Authentifizierung fehlschlägt, antwortet der Dienst mit dem HTTP-Statuscode **401 Unauthorized** (Nicht autorisiert).
+    
+    Darüber hinaus wird der Zugriff über **Autorisierungs-Scopes** gesteuert. Hat der authentifizierte Benutzer keine Berechtigung zum Zugriff auf oder zur Änderung der Ressource dieses Endpunkts, antwortet der Dienst mit **403 Forbidden** (Zugriff verweigert).
+
+servers:
+  - url: https://localhost:8080/api/v1
+  - url: http://localhost:8080/api/v1
+
+security: # Security, will be globally used here
+  - BasicAuth: []
+  - BearerAuth: []
+  - ApiKeyAuth: []
+
+tags:
+  - name: Incoming positioning data
+    description: Information about position of a stationary positioning device as well as the identification data of mobile device(s) mounted on the tracked vehicle can be send by an external system to the DMS.
+
+paths:
+  /common/localization/topology-devices/{topologyDeviceType}/{topologyDeviceId}/vehicle-position:
+    put:
+      tags:
+        - Incoming positioning data
+      summary: The position information of a stationary positioning device and information about the tracked vehicle (identification of mobile device mounted on the tracked vehicle) is send to the DMS.
+      description: |-
+        The position information of a stationary positioning device and information about the tracked vehicle (identification of mobile device mounted on the tracked vehicle) is send to the DMS.
+      operationId: putVehiclePosition
+      parameters:
+        - in: path
+          name: topologyDeviceId
+          required: true
+          description: The DMS device identifier of a stationary positioning device (in DMS associated with a depot area or a track).
+          schema:
+            type: string
+            example: "1"
+        - in: path
+          name: topologyDeviceType
+          required: true
+          description: The DMS device type of the stationary positioning device.
+          schema:
+            type: string
+            example: "RFID-reader-device"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/VehicleAtDevicePosition"
+        required: true
+      responses:
+        202:
+          description: Successful operation (accepted).
+        400:
+          description: Bad request (malformed syntax).
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProblemDetails"
+        401:
+          description: Authentication information is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProblemDetails"
+        403:
+          description: Access forbidden.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProblemDetails"
+        500:
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProblemDetails"
+
+components:
+  schemas:
+    VehicleAtDevicePosition:
+      type: object
+      description: |-
+        The position data of a stationary positioning device and the identification data of a mobile positioning device of a tracked vehicle.
+        The positioning device can be mounted within or outside a depot.
+      required:
+        - vehiclePositioningDeviceId
+        - vehiclePositioningDeviceType
+      properties:
+        vehiclePositioningDeviceId:
+          type: string
+          example: "00:00:00:00:00:01"
+          description: The vehicle device identifier. For instance, it could be a MAC address.
+        vehiclePositioningDeviceType:
+          type: string
+          example: "RFID-Transponder"
+          description: The vehicle device type.
+        receivedSignalStrengthIndicator:
+          type: number
+          description: |-
+            The received signal strength indicator (RSSI) is a measurement of the power present in a received radio signal.
+            It is an estimated measurement of how well a device can detect / receive signals from any wireless access point or Wi-Fi router.
+            An RSSI closer to 0 is stronger, and closer to -100 is weaker. \
+            This indicator can be additionally utilized to locate vehicles along a track since the strength of the indicator increases as the vehicle gets closer to the detector.
+          format: double
+          example: -55.6
+        timestamp:
+          type: string
+          format: date-time
+          description: The timestamp at which the positioning data was created.
+          example: 2022-11-01T08:30:00Z
+
+    ProblemDetails:
+      type: object
+      description: |-
+        Canonical model for error response.
+      properties:
+        type:
+          type: string
+          example: This is a type of problem details.
+          nullable: true
+          description: |-
+            A URI reference [RFC3986](https://www.rfc-editor.org/rfc/rfc3986) that identifies the problem type. \
+            This specification encourages that, when dereferenced, it provide human-readable documentation for the problem type (e.g., using HTML [W3C.REC-html5-20141028](https://www.rfc-editor.org/rfc/rfc7807#ref-W3C.REC-html5-20141028)). \
+            When this member is not present, its value is assumed to be "about:blank".
+        title:
+          type: string
+          example: This is a title of problem details.
+          nullable: true
+          description: |-
+            A short, human-readable summary of the problem type. \
+            It SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization (e.g., using proactive content negotiation; see [RFC7231, Section 3.4](https://www.rfc-editor.org/rfc/rfc7231#section-3.4)).
+        status:
+          type: integer
+          format: int32
+          nullable: true
+          description: |-
+            The HTTP status code ([RFC7231, Section 6](https://www.rfc-editor.org/rfc/rfc7231#section-6)) generated by the origin server for this occurrence of the problem.
+        detail:
+          type: string
+          example: This is a detail of problem details.
+          nullable: true
+          description: |-
+            A human-readable explanation specific to this occurrence of the problem.
+        instance:
+          type: string
+          example: This is an instance of problem details.
+          nullable: true
+          description: |-
+            A URI reference that identifies the specific occurrence of the problem. It may or may not yield further information if dereferenced.
+      additionalProperties: {}
+
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+      description: |-
+        Authorization header with Basic authentication scheme, header name (`Authorization`) is case-insensitive.
+        The authentication value (username:password) must be sent base64-encoded.\
+        Example: `Authorization: Basic dXNlcjE6cEBzc3cwcmQ=`
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: |-
+        Authorization header with Bearer scheme, header name (`Authorization`) is case-insensitive.
+        The token format is `JWT`.\
+        Example: `Authorization: Bearer eyJhbGciOi...`
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: ApiKey   # canonical header name
+      description: |-
+        The *API key* authentication security scheme. The ApiKey is sent in the header; header name is case-insensitive.\
+        Example: `ApiKey: abc123xyz456`
