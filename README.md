@@ -13,7 +13,7 @@ Wichtige Ordner (Top-Level)
 - `Content/`, `Data/`, `Resources/`, `Skins/` — Projekt- und Hilfsdaten (Strukturen, Indizes, Suchdaten)
 - `.gitignore` — Ausschlussregeln für generierte/temporäre Dateien
 - `README.md` — diese Datei
-
+Startseite [https://tkarstaedt.github.io/DmsOnlineHelp/index.html]
 Aktueller Repo‑Status
 
 - Ein lokales Git‑Repository wurde initialisiert (Branch `main`).
