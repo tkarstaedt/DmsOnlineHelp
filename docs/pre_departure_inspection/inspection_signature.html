@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspection Signature</title>
+    
+    <!-- Google Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        /* --- CSS Variables & Reset (Consistent with previous pages) --- */
+        :root {
+            --primary-orange: #FF4F30;
+            --bg-grey: #EEF0F4;
+            --header-bg: #E0E0E0;
+            --card-bg: #FFFFFF;
+            --text-dark: #1A1A1A;
+            --text-grey: #666666;
+            --border-color: #D1D1D1;
+            --btn-dark: #404040;
+            --success-green: #2E7D32;
+            --error-red: #D32F2F;
+            --info-blue-bg: #E3F2FD;
+            --info-blue-text: #0D47A1;
+            
+            --nav-height: 65px;
+            --header-height: 50px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-grey);
+            color: var(--text-dark);
+            padding-bottom: calc(var(--nav-height) + 40px); 
+            /* Prevent pull-to-refresh on mobile to help with canvas drawing */
+            overscroll-behavior: none;
+        }
+
+        /* --- Header --- */
+        header {
+            background-color: var(--header-bg);
+            height: var(--header-height);
+            display: grid;
+            grid-template-columns: 48px 1fr 48px;
+            align-items: center;
+            padding: 0 8px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
+            border-top: 4px solid var(--primary-orange); 
+        }
+
+        .back-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-dark);
+        }
+
+        h1 {
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* --- Main Content --- */
+        .container {
+            padding: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Info / Confirmation Box */
+        .confirmation-card {
+            background-color: var(--info-blue-bg);
+            border: 1px solid #BBDEFB;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 20px;
+            color: var(--info-blue-text);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .confirmation-text {
+            margin-bottom: 12px;
+        }
+
+        /* Status Selection */
+        .status-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 16px;
+            background-color: rgba(255,255,255,0.5);
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+        }
+
+        .radio-option input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            accent-color: var(--primary-orange);
+        }
+
+        .radio-label {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .radio-label.warning {
+            color: var(--error-red);
+        }
+
+        /* Form Fields */
+        .form-label {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-grey);
+            margin: 24px 0 8px 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: var(--card-bg);
+            color: var(--text-dark);
+        }
+
+        /* Signature Pad */
+        .signature-wrapper {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            /* Ensures canvas isn't blurry on high DPI screens logic handled in JS */
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 200px;
+            cursor: crosshair;
+            background-color: #fff;
+        }
+
+        .signature-actions {
+            display: flex;
+            justify-content: flex-end;
+            padding: 8px;
+            background-color: #f9f9f9;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .reset-btn {
+            background-color: #9E9E9E;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+        }
+
+        /* Submit Button */
+        .action-area {
+            margin-top: 32px;
+        }
+
+        .submit-btn {
+            background-color: var(--primary-orange);
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(255, 79, 48, 0.25);
+            transition: background-color 0.2s;
+        }
+
+        .submit-btn:active {
+            background-color: #e64a2e;
+            transform: scale(0.99);
+        }
+
+        /* --- Footer Navigation --- */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: var(--nav-height);
+            background-color: #EFEFEF;
+            border-top: 1px solid #CCC;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--text-dark);
+            width: 20%;
+            height: 100%;
+        }
+        
+        .nav-item .material-symbols-outlined {
+            font-size: 24px;
+            font-weight: 300;
+            margin-bottom: 4px;
+        }
+
+        .nav-item span {
+            font-size: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <button class="back-btn" onclick="history.back()">
+            <span class="material-symbols-outlined">arrow_back</span>
+        </button>
+        <h1>Inspection Signature</h1>
+        <div style="width: 40px;"></div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="container">
+        
+        <!-- Confirmation Text Box -->
+        <div class="confirmation-card">
+            <div class="confirmation-text">
+                <strong>Legal Declaration:</strong><br>
+                The pre-departure inspection was performed to the best of my knowledge and belief. All identified defects have been described in the previous report.
+            </div>
+            
+            <div class="status-group">
+                <div>Vehicle status is:</div>
+                <label class="radio-option">
+                    <input type="radio" name="status" value="ready" checked>
+                    <span class="radio-label">Ready for service</span>
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="status" value="not_ready">
+                    <span class="radio-label warning">Not ready for service</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Driver Name -->
+        <div class="form-label">Driver Name</div>
+        <input type="text" class="input-field" value="Max Mustermann" placeholder="Enter full name">
+
+        <!-- Signature Canvas -->
+        <div class="form-label">Signature</div>
+        <div class="signature-wrapper">
+            <canvas id="sig-canvas"></canvas>
+            <div class="signature-actions">
+                <button class="reset-btn" id="sig-clearBtn">
+                    <span class="material-symbols-outlined" style="font-size: 16px;">close</span>
+                    Clear
+                </button>
+            </div>
+        </div>
+
+        <!-- Final Submit -->
+        <div class="action-area">
+            <button class="submit-btn" onclick="alert('Report signed and archived successfully.')">
+                <span class="material-symbols-outlined">check_circle</span>
+                Complete Inspection
+            </button>
+        </div>
+
+    </main>
+
+    <!-- FOOTER NAV -->
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">description</span>
+            <span>Overview</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">radar</span>
+            <span>VSP</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">garage</span>
+            <span>Garage</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">shower</span>
+            <span>Supply</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">directions_bus</span>
+            <span>Vehicles</span>
+        </a>
+    </nav>
+
+    <!-- Signature Logic -->
+    <script>
+        (function() {
+            // Get a reference to the canvas object
+            var canvas = document.getElementById('sig-canvas');
+            var ctx = canvas.getContext('2d');
+            var clearBtn = document.getElementById('sig-clearBtn');
+
+            // Set canvas size dynamically to fit container
+            function resizeCanvas() {
+                var ratio = Math.max(window.devicePixelRatio || 1, 1);
+                canvas.width = canvas.offsetWidth * ratio;
+                canvas.height = canvas.offsetHeight * ratio;
+                ctx.scale(ratio, ratio);
+            }
+            window.addEventListener("resize", resizeCanvas);
+            resizeCanvas();
+
+            // Config
+            var drawing = false;
+            var mousePos = { x:0, y:0 };
+            var lastPos = mousePos;
+
+            // Styles
+            ctx.strokeStyle = "#222";
+            ctx.lineWidth = 2;
+            ctx.lineCap = 'round';
+
+            // Helper to get position relative to canvas
+            function getMousePos(canvasDom, mouseEvent) {
+                var rect = canvasDom.getBoundingClientRect();
+                return {
+                    x: mouseEvent.clientX - rect.left,
+                    y: mouseEvent.clientY - rect.top
+                };
+            }
+
+            // --- Mouse Events ---
+            canvas.addEventListener("mousedown", function (e) {
+                drawing = true;
+                lastPos = getMousePos(canvas, e);
+            }, false);
+
+            canvas.addEventListener("mouseup", function (e) {
+                drawing = false;
+            }, false);
+
+            canvas.addEventListener("mousemove", function (e) {
+                mousePos = getMousePos(canvas, e);
+                renderCanvas();
+            }, false);
+
+            // --- Touch Events ---
+            canvas.addEventListener("touchstart", function (e) {
+                mousePos = getTouchPos(canvas, e);
+                var touch = e.touches[0];
+                var mouseEvent = new MouseEvent("mousedown", {
+                    clientX: touch.clientX,
+                    clientY: touch.clientY
+                });
+                canvas.dispatchEvent(mouseEvent);
+            }, false);
+
+            canvas.addEventListener("touchend", function (e) {
+                var mouseEvent = new MouseEvent("mouseup", {});
+                canvas.dispatchEvent(mouseEvent);
+            }, false);
+
+            canvas.addEventListener("touchmove", function (e) {
+                var touch = e.touches[0];
+                var mouseEvent = new MouseEvent("mousemove", {
+                    clientX: touch.clientX,
+                    clientY: touch.clientY
+                });
+                canvas.dispatchEvent(mouseEvent);
+                // Prevent scrolling when drawing
+                e.preventDefault(); 
+            }, false);
+
+            function getTouchPos(canvasDom, touchEvent) {
+                var rect = canvasDom.getBoundingClientRect();
+                return {
+                    x: touchEvent.touches[0].clientX - rect.left,
+                    y: touchEvent.touches[0].clientY - rect.top
+                };
+            }
+
+            // Draw
+            function renderCanvas() {
+                if (drawing) {
+                    ctx.beginPath();
+                    ctx.moveTo(lastPos.x, lastPos.y);
+                    ctx.lineTo(mousePos.x, mousePos.y);
+                    ctx.stroke();
+                    lastPos = mousePos;
+                }
+            }
+
+            // Clear
+            clearBtn.addEventListener("click", function() {
+                // Clear using the scaled width/height
+                var ratio = Math.max(window.devicePixelRatio || 1, 1);
+                ctx.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight);
+            });
+
+        })();
+    </script>
+</body>
+</html>

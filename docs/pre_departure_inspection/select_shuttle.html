@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Shuttle</title>
+    
+    <!-- Google Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        /* --- CSS Variables & Reset (Consistent with previous pages) --- */
+        :root {
+            --primary-orange: #FF4F30;
+            --bg-grey: #EEF0F4;
+            --header-bg: #E0E0E0;
+            --card-bg: #FFFFFF;
+            --text-dark: #1A1A1A;
+            --text-grey: #666666;
+            --border-color: #D1D1D1;
+            --btn-dark: #404040;
+            --success-green: #2E7D32;
+            
+            --nav-height: 65px;
+            --header-height: 50px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-grey);
+            color: var(--text-dark);
+            padding-bottom: calc(var(--nav-height) + 40px); 
+        }
+
+        /* --- Header --- */
+        header {
+            background-color: var(--header-bg);
+            height: var(--header-height);
+            display: grid;
+            grid-template-columns: 48px 1fr 48px;
+            align-items: center;
+            padding: 0 8px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
+            border-top: 4px solid var(--primary-orange); 
+        }
+
+        .back-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-dark);
+        }
+
+        h1 {
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* --- Main Content --- */
+        .container {
+            padding: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Search Area */
+        .search-wrapper {
+            position: relative;
+            margin-bottom: 24px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 14px 48px 14px 16px; /* Space for icon right */
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: var(--card-bg);
+            outline: none;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary-orange);
+            box-shadow: 0 0 0 2px rgba(255, 79, 48, 0.1);
+        }
+
+        .scan-icon {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-dark);
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        .list-header {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-grey);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Shuttle List */
+        .shuttle-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .shuttle-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        /* Selected State */
+        .shuttle-item.selected {
+            border-color: var(--primary-orange);
+            background-color: rgba(255, 79, 48, 0.05); /* Very light orange tint */
+            box-shadow: 0 2px 8px rgba(255, 79, 48, 0.15);
+        }
+
+        .shuttle-item:active {
+            transform: scale(0.99);
+        }
+
+        .shuttle-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .shuttle-id {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .shuttle-type {
+            font-size: 13px;
+            color: var(--text-grey);
+        }
+
+        .status-dot {
+            height: 8px;
+            width: 8px;
+            background-color: var(--success-green);
+            border-radius: 50%;
+            display: inline-block;
+        }
+        
+        .radio-indicator {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            border: 2px solid var(--text-grey);
+            position: relative;
+        }
+
+        .shuttle-item.selected .radio-indicator {
+            border-color: var(--primary-orange);
+        }
+
+        .shuttle-item.selected .radio-indicator::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            background-color: var(--primary-orange);
+            border-radius: 50%;
+        }
+
+        /* Action Area */
+        .action-area {
+            margin-top: 40px;
+        }
+
+        .submit-btn {
+            background-color: var(--primary-orange);
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(255, 79, 48, 0.25);
+            transition: background-color 0.2s;
+        }
+
+        .submit-btn:active {
+            background-color: #e64a2e;
+            transform: scale(0.99);
+        }
+        
+        /* Empty State (Optional visual aid) */
+        .no-results {
+            text-align: center;
+            color: var(--text-grey);
+            padding: 40px 0;
+            display: none;
+        }
+
+        /* --- Footer Navigation --- */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: var(--nav-height);
+            background-color: #EFEFEF;
+            border-top: 1px solid #CCC;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--text-dark);
+            width: 20%;
+            height: 100%;
+        }
+        
+        .nav-item .material-symbols-outlined {
+            font-size: 24px;
+            font-weight: 300;
+            margin-bottom: 4px;
+        }
+
+        .nav-item span {
+            font-size: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <button class="back-btn" onclick="history.back()">
+            <span class="material-symbols-outlined">arrow_back</span>
+        </button>
+        <h1>Select Shuttle</h1>
+        <div style="width: 40px;"></div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="container">
+        
+        <!-- Search Input -->
+        <div class="search-wrapper">
+            <input type="text" class="search-input" placeholder="Search Vehicle ID..." value="8967">
+            <span class="material-symbols-outlined scan-icon">qr_code_scanner</span>
+        </div>
+
+        <!-- Results List -->
+        <div class="list-header">Available Vehicles</div>
+        
+        <div class="shuttle-list">
+            
+            <!-- Item 1 (Selected) -->
+            <div class="shuttle-item selected">
+                <div class="shuttle-info">
+                    <div class="shuttle-id">
+                        ID: 8967 
+                        <span class="status-dot"></span>
+                    </div>
+                    <div class="shuttle-type">Shuttle Type: eVersum eShuttle • Depot A</div>
+                </div>
+                <div class="radio-indicator"></div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="shuttle-item">
+                <div class="shuttle-info">
+                    <div class="shuttle-id">
+                        ID: 4521
+                        <span class="status-dot" style="background-color: #F57F17;"></span>
+                    </div>
+                    <div class="shuttle-type">Shuttle Type: VW ID. Buzz AD • Garage</div>
+                </div>
+                <div class="radio-indicator"></div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="shuttle-item">
+                <div class="shuttle-info">
+                    <div class="shuttle-id">
+                        ID: 1290
+                        <span class="status-dot"></span>
+                    </div>
+                    <div class="shuttle-type">Shuttle Type: Holon Mover • Depot B</div>
+                </div>
+                <div class="radio-indicator"></div>
+            </div>
+
+        </div>
+
+        <div class="no-results">No vehicles found.</div>
+
+        <!-- Submit Button -->
+        <div class="action-area">
+            <!-- This would navigate to the Inspection Page -->
+            <button class="submit-btn" onclick="window.location.href='pre_departure_inspection.html'">
+                <span class="material-symbols-outlined">directions_car</span>
+                Start test drive
+            </button>
+        </div>
+
+    </main>
+
+    <!-- FOOTER NAV -->
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">description</span>
+            <span>Overview</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">radar</span>
+            <span>VSP</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">garage</span>
+            <span>Garage</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">shower</span>
+            <span>Supply</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">directions_bus</span>
+            <span>Vehicles</span>
+        </a>
+    </nav>
+
+</body>
+</html>

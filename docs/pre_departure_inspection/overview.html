@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Dashboard Mockup</title>
+    
+    <!-- Google Material Icons (Outlined style) -->
+    <!-- UPDATE: Importbereich erweitert auf wght 100..700, damit dünne Linien möglich sind -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        /* --- CSS Variablen & Reset --- */
+        :root {
+            --primary-orange: #FF4F30;
+            --bg-grey: #EEF0F4;
+            --header-bg: #E0E0E0;
+            --card-bg: #FFFFFF;
+            --text-dark: #1A1A1A;
+            --text-grey: #666666;
+            --border-color: #D1D1D1;
+            --btn-dark: #404040;
+            
+            --nav-height: 65px;
+            --header-height: 50px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-grey);
+            color: var(--text-dark);
+            /* Platz unten für die fixierte Navigation */
+            padding-bottom: calc(var(--nav-height) + 20px); 
+        }
+
+        /* --- Header (Verbesserte Zentrierung) --- */
+        header {
+            background-color: var(--header-bg);
+            height: var(--header-height);
+            /* Grid Layout für exakte Zentrierung des Titels */
+            display: grid;
+            grid-template-columns: 48px 1fr 48px; /* Links Icon, Mitte Titel, Rechts Leer */
+            align-items: center;
+            padding: 0 8px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
+            border-top: 4px solid var(--primary-orange); 
+        }
+
+        .menu-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+            /* Kein margin mehr nötig dank Grid */
+        }
+
+        /* --- Hauptinhalt (Main Grid) --- */
+        .dashboard-container {
+            padding: 16px;
+            display: grid;
+            
+            /* MOBILE PORTRAIT: 2 Spalten */
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            
+            /* Zentrierungs-Logik */
+            width: 100%;
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+
+        /* LANDSCAPE / TABLET BREAKPOINT (> 600px) */
+        @media (min-width: 600px) {
+            .dashboard-container {
+                /* 4 Spalten wie angefordert */
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* --- Kacheln (Cards) --- */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 16px; 
+            text-align: center;
+            aspect-ratio: 1 / 1;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            transition: transform 0.1s;
+            cursor: default;
+            
+            /* UPDATE: Wichtig für absolute Positionierung des Labels */
+            position: relative;
+        }
+
+        .card:active {
+            transform: scale(0.98);
+        }
+
+        .card .material-symbols-outlined {
+            /* UPDATE: Größe auf 80px erhöht (ca. 50% der Kachelhöhe auf Mobile) */
+            font-size: 80px; 
+            /* Margin bottom entfernt, da Label jetzt absolut positioniert ist */
+            margin-bottom: 0; 
+            color: var(--text-dark);
+            /* UPDATE: Linienstärke auf 200 verringert (Extra Light) für feineren Look */
+            font-weight: 200; 
+            
+            /* Optional: Icon etwas nach oben schieben, damit es optisch mittig über dem Text wirkt */
+            transform: translateY(-10px);
+        }
+
+        .card-label {
+            font-size: 14px;
+            color: var(--text-dark);
+            font-weight: 400;
+            line-height: 1.2;
+            
+            /* UPDATE: Absolute Positionierung unten */
+            position: absolute;
+            bottom: 10%;
+            left: 0;
+            width: 100%;
+            padding: 0 8px; /* Damit langer Text nicht am Rand klebt */
+        }
+
+        /* UPDATE: Spezial-Styling für die Shuttle-Kachel */
+        .card.card-shuttle .material-symbols-outlined {
+            color: var(--primary-orange);
+        }
+
+        /* --- Spezialkarte: "Current Duty" (Breit) --- */
+        .card.wide {
+            /* GRID LOGIC: Immer 2 Spalten breit */
+            grid-column: span 2;
+            
+            aspect-ratio: auto; 
+            align-items: flex-start; 
+            justify-content: space-between;
+            text-align: left;
+            padding: 20px;
+            min-height: 150px; 
+        }
+
+        .wide-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 16px;
+        }
+        
+        /* Icon in der Header-Zeile der breiten Karte muss klein bleiben */
+        .wide-header .material-symbols-outlined {
+            font-size: 24px;
+            margin-bottom: 0;
+            font-weight: 300; /* Normal weight für kleine Icons, aber etwas leichter als zuvor */
+            transform: none; /* Kein Verschieben nötig */
+        }
+
+        .wide-subtext {
+            font-size: 14px;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .login-btn {
+            background-color: var(--btn-dark);
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+        
+        .login-btn .material-symbols-outlined {
+            font-size: 20px;
+            margin-bottom: 0;
+            color: white;
+            font-weight: 300;
+            transform: none;
+        }
+
+        /* --- Footer Navigation --- */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: var(--nav-height);
+            background-color: #EFEFEF;
+            border-top: 1px solid #CCC;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--text-dark);
+            width: 20%;
+            height: 100%;
+        }
+
+        .nav-item.active {
+            color: var(--primary-orange);
+            font-weight: 600;
+        }
+        
+        .nav-item.active .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1; 
+            color: black; /* Icon aktiv schwarz gemäß Screenshot */
+            font-weight: 400; /* Gefüllte Icons wirken besser mit etwas mehr Gewicht */
+        }
+
+        .nav-item span {
+            font-size: 10px;
+            margin-top: 4px;
+        }
+
+        .nav-item .material-symbols-outlined {
+            font-size: 24px;
+            /* Reset für Nav Icons auf normale Größe, hier etwas leichter */
+            font-weight: 300;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <button class="menu-btn">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+        
+        <h1>Overview</h1>
+        
+        <!-- Leeres Div für Grid-Balance (rechts) -->
+        <div></div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="dashboard-container">
+        
+        <!-- 1. Depot arrivals -->
+        <div class="card">
+            <span class="material-symbols-outlined">login</span>
+            <span class="card-label">Depot arrivals</span>
+        </div>
+
+        <!-- 2. Depot departures -->
+        <div class="card">
+            <span class="material-symbols-outlined">logout</span>
+            <span class="card-label">Depot departures</span>
+        </div>
+
+        <!-- 3. Vehicle faults (FIX: Icon Name geändert) -->
+        <div class="card">
+            <span class="material-symbols-outlined">bus_alert</span>
+            <span class="card-label">Vehicle faults</span>
+        </div>
+
+        <!-- 4. Incidents -->
+        <div class="card">
+            <span class="material-symbols-outlined">calendar_today</span>
+            <span class="card-label">Incidents</span>
+        </div>
+
+        <!-- 5. Current Duty (Breit) -->
+        <div class="card wide">
+            <div>
+                <div class="wide-header">
+                    <span class="material-symbols-outlined">input</span>
+                    Your current duty
+                </div>
+                <div class="wide-subtext">
+                    Unknown status of your duty login.
+                </div>
+            </div>
+            <button class="login-btn">
+                <span class="material-symbols-outlined">timer</span>
+                Login to duty
+            </button>
+        </div>
+
+        <!-- 6. Depot view -->
+        <div class="card">
+            <span class="material-symbols-outlined">grid_view</span>
+            <span class="card-label">Depot view</span>
+        </div>
+
+        <!-- 7. External communication -->
+        <div class="card">
+            <span class="material-symbols-outlined">chat_bubble</span>
+            <span class="card-label">External communication</span>
+        </div>
+
+        <!-- 8. Coupling orders -->
+        <div class="card">
+            <span class="material-symbols-outlined">link</span>
+            <span class="card-label">Coupling orders</span>
+        </div>
+
+        <!-- 9. VSP -->
+        <div class="card">
+            <span class="material-symbols-outlined">radar</span>
+            <span class="card-label">VSP</span>
+        </div>
+
+        <!-- 10. Garage -->
+        <div class="card">
+            <span class="material-symbols-outlined">garage</span>
+            <span class="card-label">Garage</span>
+        </div>
+
+        <!-- 11. Supply -->
+        <div class="card">
+            <span class="material-symbols-outlined">shower</span>
+            <span class="card-label">Supply</span>
+        </div>
+
+        <!-- 12. Vehicles -->
+        <div class="card">
+            <span class="material-symbols-outlined">directions_bus</span>
+            <span class="card-label">Vehicles</span>
+        </div>
+
+        <!-- 13. Start test drive (ICON CHANGED TO CHECKLIST) -->
+        <!-- UPDATE: Link zur Auswahlseite hinzugefügt und Cursor angepasst -->
+        <div class="card card-shuttle" onclick="window.location.href='select_shuttle.html'" style="cursor: pointer;">
+            <!-- UPDATE: Icon von 'airport_shuttle' auf 'checklist' geändert -->
+            <span class="material-symbols-outlined">checklist</span>
+            <span class="card-label">Pre-Departure Inspection</span>
+        </div>
+
+    </main>
+
+    <!-- BOTTOM NAVIGATION -->
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item active">
+            <span class="material-symbols-outlined">description</span>
+            <span>Overview</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">radar</span>
+            <span>VSP</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">garage</span>
+            <span>Garage</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">shower</span>
+            <span>Supply</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">directions_bus</span>
+            <span>Vehicles</span>
+        </a>
+    </nav>
+
+</body>
+</html>
