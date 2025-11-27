@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEAK.X OpenAPI - VehicleAtDevice</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Manrope & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Prism.js for Syntax Highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    
+    <!-- Icons (Switched to unpkg for better UMD support ensuring window.lucide is available) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- SVG Favicon embedded as Data URI -->
+    <link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg id="Ebene_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 350.3 350.5"><defs><style>.st0{fill:%23F84E2B;}.st1{fill:%23fff;}</style></defs><polygon class="st0" points="0 .2 0 350.2 175 350.2 350 175.2 350 .2 0 .2"/><g><path class="st1" d="M32.4,67.3h-7.4V25.2h16.6c.4,0,.9,0,1.5,0,.7,0,1.2,0,1.7.2,2.3.4,4.3,1.2,5.8,2.5,1.5,1.3,2.6,2.9,3.3,4.8.7,1.9,1.1,4.1,1.1,6.4s-.4,4.5-1.1,6.4-1.8,3.5-3.3,4.8c-1.5,1.3-3.4,2.1-5.8,2.5-.5,0-1.1.1-1.8.2s-1.2,0-1.5,0h-9.2v14.3h0ZM32.4,32.7v13h8.9c.4,0,.8,0,1.3,0s.9-.1,1.3-.2c1-.3,1.8-.8,2.3-1.5.5-.7.9-1.5,1.1-2.3.2-.8.3-1.7.3-2.4s-.1-1.6-.3-2.4c-.2-.8-.6-1.6-1.1-2.3-.5-.7-1.3-1.2-2.3-1.5-.4-.1-.8-.2-1.3-.2s-.9,0-1.3,0c0,0-8.9,0-8.9,0Z"/><path class="st1" d="M87.6,67.3h-25.7V25.2h25.7v7.4h-18.3v9h15v7.4h-15v10.8h18.3v7.4h0Z"/><path class="st1" d="M100.5,67.3h-7.7l12-42.1h11.1l12,42.1h-7.7l-10.7-37.1h1.4l-10.6,37.1h0ZM120.8,58.6h-20.8v-7.4h20.8v7.4Z"/><path class="st1" d="M141.7,67.3h-7.4V25.2h7.4v19.4l15-19.4h9.1l-16.5,20.8,17.5,21.3h-9.4l-15.7-19.2v19.2h0Z"/><path class="st1" d="M31.9,124.7h-6.9v-42.1h6.7l13,28,13-27.9h6.7v42.1h-6.9v-25.1l-11.4,25.1h-2.6l-11.4-25.1s0,25.1,0,25.1Z"/><path class="st1" d="M90.3,125.5c-3.9,0-7.3-.9-10.2-2.8s-5.1-4.4-6.6-7.7c-1.5-3.3-2.3-7.1-2.3-11.5s.8-8.2,2.3-11.5-3.7,5.9,6.6-7.7,6.2-2.8,10.2-2.8,7.3.9,10.2,2.8c2.8,1.8,5.1,4.4,6.6,7.7s2.3,7.1,2.3,11.5-.8,8.2-2.3,11.5-3.7,5.9-6.6,7.7-6.2,2.8-10.2,2.8ZM90.3,118.1c2.5,0,4.6-.5,6.2-1.7,1.7-1.2,2.9-2.9,3.7-5.1.8-2.2,1.2-4.7,1.2-7.7s-.4-5.5-1.2-7.6c-.8-2.1-2.1-3.8-3.7-5s-3.7-1.8-6.2-1.8c-2.5,0-4.6.5-6.2,1.7-1.7,1.2-2.9,2.9-3.7,5.1s-1.2,4.7-1.2,7.7.4,5.5,1.2,7.6c.8,2.1,2.1,3.8,3.7,5s3.7,1.8,6.2,1.8Z"/><path class="st1" d="M133.7,124.7h-17.4v-42.1h15.8c2.8,0,5.1.6,6.8,1.8,1.7,1.2,3,2.7,3.8,4.5.8,1.8,1.2,3.6,1.2,5.5s-.5,4.3-1.5,5.9-2.4,2.6-4.1,3.1v-1.5c2.5.6,4.3,1.8,5.5,3.7s1.9,4,1.9,6.3-.4,4.7-1.3,6.6c-.9,1.9-2.2,3.4-3.9,4.5-1.8,1.1-4,1.6-6.7,1.6h0ZM123.8,90v9h8.1c.8,0,1.6-.2,2.2-.5.7-.3,1.2-.8,1.6-1.4.4-.7.6-1.5.6-2.5s-.4-2.4-1.1-3.2c-.8-.9-1.8-1.3-3.2-1.3h-8.1ZM123.8,106.4v10.8h9.1c1,0,1.9-.2,2.7-.7s1.4-1.1,1.9-1.9c.4-.8.7-1.8.7-2.9s-.2-1.9-.6-2.7-1-1.4-1.7-1.9c-.8-.5-1.7-.7-2.9-.7h-9.1Z"/><path class="st1" d="M160.4,124.7h-7.4v-42.1h7.4v42.1Z"/><path class="st1" d="M194.9,124.7h-24.4v-42.1h7.4v34.7h16.9v7.4Z"/><path class="st1" d="M208.9,124.7h-7.4v-42.1h7.4v42.1Z"/><path class="st1" d="M235,124.7h-7.4v-34.7h-12.4v-7.4h32.3v7.4h-12.4v34.7h0Z"/><path class="st1" d="M272,124.7h-7.5v-17.1l-13.4-25h8.7l8.5,15.8,8.5-15.8h8.7l-13.5,25v17.1h0Z"/></g></svg>'>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'], // Changed to Manrope
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        peak: {
+                            orange: '#F84E2B', 
+                            grey: '#D8D0C4',   
+                            green: '#9CA28B',  
+                            dark: '#111827'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar for Code Blocks */
+        pre::-webkit-scrollbar {
+            height: 8px;
+        }
+        pre::-webkit-scrollbar-track {
+            background: #2d2d2d;
+            border-radius: 4px;
+        }
+        pre::-webkit-scrollbar-thumb {
+            background: #555;
+            border-radius: 4px;
+        }
+        pre::-webkit-scrollbar-thumb:hover {
+            background: #777;
+        }
+        
+        /* Smooth scrolling offset for Sticky Header */
+        section {
+            scroll-margin-top: 2rem;
+        }
+        
+        .nav-item.active {
+            color: #F84E2B; /* PEAK Orange */
+            border-left: 3px solid #F84E2B;
+            background-color: rgba(248, 78, 43, 0.05); /* Very light orange bg */
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Mobile Header -->
+    <div class="lg:hidden bg-white border-b p-4 flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center gap-3">
+            <!-- INLINE SVG LOGO -->
+            <svg width="40" viewBox="0 0 350.3 350.5" xmlns="http://www.w3.org/2000/svg">
+                <defs><style>.st0{fill:#F84E2B;}.st1{fill:#fff;}</style></defs>
+                <polygon class="st0" points="0 .2 0 350.2 175 350.2 350 175.2 350 .2 0 .2"/>
+                <g><path class="st1" d="M32.4,67.3h-7.4V25.2h16.6c.4,0,.9,0,1.5,0,.7,0,1.2,0,1.7.2,2.3.4,4.3,1.2,5.8,2.5,1.5,1.3,2.6,2.9,3.3,4.8.7,1.9,1.1,4.1,1.1,6.4s-.4,4.5-1.1,6.4-1.8,3.5-3.3,4.8c-1.5,1.3-3.4,2.1-5.8,2.5-.5,0-1.1.1-1.8.2s-1.2,0-1.5,0h-9.2v14.3h0ZM32.4,32.7v13h8.9c.4,0,.8,0,1.3,0s.9-.1,1.3-.2c1-.3,1.8-.8,2.3-1.5.5-.7.9-1.5,1.1-2.3.2-.8.3-1.7.3-2.4s-.1-1.6-.3-2.4c-.2-.8-.6-1.6-1.1-2.3-.5-.7-1.3-1.2-2.3-1.5-.4-.1-.8-.2-1.3-.2s-.9,0-1.3,0c0,0-8.9,0-8.9,0Z"/><path class="st1" d="M87.6,67.3h-25.7V25.2h25.7v7.4h-18.3v9h15v7.4h-15v10.8h18.3v7.4h0Z"/><path class="st1" d="M100.5,67.3h-7.7l12-42.1h11.1l12,42.1h-7.7l-10.7-37.1h1.4l-10.6,37.1h0ZM120.8,58.6h-20.8v-7.4h20.8v7.4Z"/><path class="st1" d="M141.7,67.3h-7.4V25.2h7.4v19.4l15-19.4h9.1l-16.5,20.8,17.5,21.3h-9.4l-15.7-19.2v19.2h0Z"/><path class="st1" d="M31.9,124.7h-6.9v-42.1h6.7l13,28,13-27.9h6.7v42.1h-6.9v-25.1l-11.4,25.1h-2.6l-11.4-25.1s0,25.1,0,25.1Z"/><path class="st1" d="M90.3,125.5c-3.9,0-7.3-.9-10.2-2.8s-5.1-4.4-6.6-7.7c-1.5-3.3-2.3-7.1-2.3-11.5s.8-8.2,2.3-11.5-3.7,5.9,6.6-7.7,6.2-2.8,10.2-2.8,7.3.9,10.2,2.8c2.8,1.8,5.1,4.4,6.6,7.7s2.3,7.1,2.3,11.5-.8,8.2-2.3,11.5-3.7,5.9-6.6,7.7-6.2,2.8-10.2,2.8ZM90.3,118.1c2.5,0,4.6-.5,6.2-1.7,1.7-1.2,2.9-2.9,3.7-5.1.8-2.2,1.2-4.7,1.2-7.7s-.4-5.5-1.2-7.6c-.8-2.1-2.1-3.8-3.7-5s-3.7-1.8-6.2-1.8c-2.5,0-4.6.5-6.2,1.7-1.7,1.2-2.9,2.9-3.7,5.1s-1.2,4.7-1.2,7.7.4,5.5,1.2,7.6c.8,2.1,2.1,3.8,3.7,5s3.7,1.8,6.2,1.8Z"/><path class="st1" d="M133.7,124.7h-17.4v-42.1h15.8c2.8,0,5.1.6,6.8,1.8,1.7,1.2,3,2.7,3.8,4.5.8,1.8,1.2,3.6,1.2,5.5s-.5,4.3-1.5,5.9-2.4,2.6-4.1,3.1v-1.5c2.5.6,4.3,1.8,5.5,3.7s1.9,4,1.9,6.3-.4,4.7-1.3,6.6c-.9,1.9-2.2,3.4-3.9,4.5-1.8,1.1-4,1.6-6.7,1.6h0ZM123.8,90v9h8.1c.8,0,1.6-.2,2.2-.5.7-.3,1.2-.8,1.6-1.4.4-.7.6-1.5.6-2.5s-.4-2.4-1.1-3.2c-.8-.9-1.8-1.3-3.2-1.3h-8.1ZM123.8,106.4v10.8h9.1c1,0,1.9-.2,2.7-.7s1.4-1.1,1.9-1.9c.4-.8.7-1.8.7-2.9s-.2-1.9-.6-2.7-1-1.4-1.7-1.9c-.8-.5-1.7-.7-2.9-.7h-9.1Z"/><path class="st1" d="M160.4,124.7h-7.4v-42.1h7.4v42.1Z"/><path class="st1" d="M194.9,124.7h-24.4v-42.1h7.4v34.7h16.9v7.4Z"/><path class="st1" d="M208.9,124.7h-7.4v-42.1h7.4v42.1Z"/><path class="st1" d="M235,124.7h-7.4v-34.7h-12.4v-7.4h32.3v7.4h-12.4v34.7h0Z"/><path class="st1" d="M272,124.7h-7.5v-17.1l-13.4-25h8.7l8.5,15.8,8.5-15.8h8.7l-13.5,25v17.1h0Z"/></g>
+            </svg>
+            <div class="font-bold text-xl text-gray-900">PEAK.X API</div>
+        </div>
+        <button id="mobile-menu-btn" class="p-2 text-gray-600 hover:text-gray-900">
+            <i data-lucide="menu"></i>
+        </button>
+    </div>
+
+    <div class="flex min-h-screen">
+        
+        <!-- Sidebar Navigation -->
+        <aside id="sidebar" class="fixed inset-y-0 left-0 z-40 w-72 bg-white border-r transform -translate-x-full lg:translate-x-0 transition-transform duration-200 ease-in-out overflow-y-auto">
+            <div class="p-6 border-b sticky top-0 bg-white z-10">
+                <div class="flex items-center gap-3 mb-2">
+                    <!-- INLINE SVG LOGO -->
+                    <svg width="50" viewBox="0 0 350.3 350.5" xmlns="http://www.w3.org/2000/svg">
+                        <defs><style>.st0{fill:#F84E2B;}.st1{fill:#fff;}</style></defs>
+                        <polygon class="st0" points="0 .2 0 350.2 175 350.2 350 175.2 350 .2 0 .2"/>
+                        <g><path class="st1" d="M32.4,67.3h-7.4V25.2h16.6c.4,0,.9,0,1.5,0,.7,0,1.2,0,1.7.2,2.3.4,4.3,1.2,5.8,2.5,1.5,1.3,2.6,2.9,3.3,4.8.7,1.9,1.1,4.1,1.1,6.4s-.4,4.5-1.1,6.4-1.8,3.5-3.3,4.8c-1.5,1.3-3.4,2.1-5.8,2.5-.5,0-1.1.1-1.8.2s-1.2,0-1.5,0h-9.2v14.3h0ZM32.4,32.7v13h8.9c.4,0,.8,0,1.3,0s.9-.1,1.3-.2c1-.3,1.8-.8,2.3-1.5.5-.7.9-1.5,1.1-2.3.2-.8.3-1.7.3-2.4s-.1-1.6-.3-2.4c-.2-.8-.6-1.6-1.1-2.3-.5-.7-1.3-1.2-2.3-1.5-.4-.1-.8-.2-1.3-.2s-.9,0-1.3,0c0,0-8.9,0-8.9,0Z"/><path class="st1" d="M87.6,67.3h-25.7V25.2h25.7v7.4h-18.3v9h15v7.4h-15v10.8h18.3v7.4h0Z"/><path class="st1" d="M100.5,67.3h-7.7l12-42.1h11.1l12,42.1h-7.7l-10.7-37.1h1.4l-10.6,37.1h0ZM120.8,58.6h-20.8v-7.4h20.8v7.4Z"/><path class="st1" d="M141.7,67.3h-7.4V25.2h7.4v19.4l15-19.4h9.1l-16.5,20.8,17.5,21.3h-9.4l-15.7-19.2v19.2h0Z"/><path class="st1" d="M31.9,124.7h-6.9v-42.1h6.7l13,28,13-27.9h6.7v42.1h-6.9v-25.1l-11.4,25.1h-2.6l-11.4-25.1s0,25.1,0,25.1Z"/><path class="st1" d="M90.3,125.5c-3.9,0-7.3-.9-10.2-2.8s-5.1-4.4-6.6-7.7c-1.5-3.3-2.3-7.1-2.3-11.5s.8-8.2,2.3-11.5-3.7,5.9,6.6-7.7,6.2-2.8,10.2-2.8,7.3.9,10.2,2.8c2.8,1.8,5.1,4.4,6.6,7.7s2.3,7.1,2.3,11.5-.8,8.2-2.3,11.5-3.7,5.9-6.6,7.7-6.2,2.8-10.2,2.8ZM90.3,118.1c2.5,0,4.6-.5,6.2-1.7,1.7-1.2,2.9-2.9,3.7-5.1.8-2.2,1.2-4.7,1.2-7.7s-.4-5.5-1.2-7.6c-.8-2.1-2.1-3.8-3.7-5s-3.7-1.8-6.2-1.8c-2.5,0-4.6.5-6.2,1.7-1.7,1.2-2.9,2.9-3.7,5.1s-1.2,4.7-1.2,7.7.4,5.5,1.2,7.6c.8,2.1,2.1,3.8,3.7,5s3.7,1.8,6.2,1.8Z"/><path class="st1" d="M133.7,124.7h-17.4v-42.1h15.8c2.8,0,5.1.6,6.8,1.8,1.7,1.2,3,2.7,3.8,4.5.8,1.8,1.2,3.6,1.2,5.5s-.5,4.3-1.5,5.9-2.4,2.6-4.1,3.1v-1.5c2.5.6,4.3,1.8,5.5,3.7s1.9,4,1.9,6.3-.4,4.7-1.3,6.6c-.9,1.9-2.2,3.4-3.9,4.5-1.8,1.1-4,1.6-6.7,1.6h0ZM123.8,90v9h8.1c.8,0,1.6-.2,2.2-.5.7-.3,1.2-.8,1.6-1.4.4-.7.6-1.5.6-2.5s-.4-2.4-1.1-3.2c-.8-.9-1.8-1.3-3.2-1.3h-8.1ZM123.8,106.4v10.8h9.1c1,0,1.9-.2,2.7-.7s1.4-1.1,1.9-1.9c.4-.8.7-1.8.7-2.9s-.2-1.9-.6-2.7-1-1.4-1.7-1.9c-.8-.5-1.7-.7-2.9-.7h-9.1Z"/><path class="st1" d="M160.4,124.7h-7.4v-42.1h7.4v42.1Z"/><path class="st1" d="M194.9,124.7h-24.4v-42.1h7.4v34.7h16.9v7.4Z"/><path class="st1" d="M208.9,124.7h-7.4v-42.1h7.4v42.1Z"/><path class="st1" d="M235,124.7h-7.4v-34.7h-12.4v-7.4h32.3v7.4h-12.4v34.7h0Z"/><path class="st1" d="M272,124.7h-7.5v-17.1l-13.4-25h8.7l8.5,15.8,8.5-15.8h8.7l-13.5,25v17.1h0Z"/></g>
+                    </svg>
+                    <h1 class="font-bold text-2xl text-gray-900">PEAK.X</h1>
+                </div>
+                <p class="text-sm text-gray-500 mt-1">Module <strong>VehicleAtDevice</strong></p>
+                <div class="mt-2 inline-block px-2 py-0.5 bg-peak-orange/10 text-peak-orange text-xs rounded-full border border-peak-orange/20">v1.5 Docs</div>
+            </div>
+            
+            
+            <nav class="p-4 space-y-1 text-sm">
+                <a href="#introduction" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">1. Introduction</a>
+                <a href="#overview" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">2. Overview</a>
+                <a href="#tech-specs" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">3. Technical Specs</a>
+                <a href="#endpoints" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">4. Endpoints</a>
+                <div class="pl-4">
+                    <a href="#put-vehicle" class="nav-item block px-4 py-1.5 text-gray-500 hover:text-peak-orange text-xs border-l border-gray-200">PUT Vehicle Position</a>
+                </div>
+                <a href="#datamodel" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">5. Data Model</a>
+                <a href="#examples" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">6. Examples</a>
+                <a href="#configuration" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">7. Configuration</a>
+                <a href="#best-practices" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">8. Best Practices</a>
+                <a href="#appendix" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">9. Appendix</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 lg:ml-72 w-full max-w-5xl mx-auto p-6 lg:p-12 pb-32">
+            <!-- Header -->
+            <header class="mb-12 border-b pb-6">
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">Developer Documentation: Vehicle at Device</h1>
+                <p class="text-lg text-gray-600">Stationary positioning devices report located vehicles to the <strong>PEAK.DMS</strong> through the PEAK.X platform.</p>
+            </header>
+
+            
+            <!-- 1. Introduction -->
+            <section id="introduction" class="mb-16 scroll-mt-24">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">1. Introduction</h2>
+                
+                <div class="prose max-w-none text-gray-600">
+                    <h3 class="text-lg font-semibold text-gray-800 mt-6 mb-2">1.1 Purpose of the Document</h3>
+                    <p class="mb-4">
+                        This document describes the REST endpoint <strong>vehicle-position</strong>. It allows external systems to send position information captured by a stationary positioning device together with the identification of the vehicle-mounted device to <strong>PEAK.DMS</strong>.
+                    </p>
+
+                    <h3 class="text-lg font-semibold text-gray-800 mt-6 mb-2">1.2 Target Audience</h3>
+                    <ul class="list-disc pl-5 space-y-1 mb-4">
+                        <li><strong>Backend Developers:</strong> Sending positioning events from yard hardware.</li>
+                        <li><strong>Integration Engineers:</strong> Bridging RFID readers or similar topology devices into PEAK.X.</li>
+                        <li><strong>Operations:</strong> Monitoring gateway activity and troubleshooting authentication.</li>
+                    </ul>
+
+                    <h3 class="text-lg font-semibold text-gray-800 mt-6 mb-2">1.3 Version History</h3>
+                    <div class="overflow-x-auto rounded-lg border">
+                        <table class="min-w-full bg-white text-sm">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th class="px-4 py-2 text-left font-medium text-gray-700">Version</th>
+                                    <th class="px-4 py-2 text-left font-medium text-gray-700">Date</th>
+                                    <th class="px-4 py-2 text-left font-medium text-gray-700">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-4 py-2">1.5</td>
+                                    <td class="px-4 py-2">2025-11-21</td>
+                                    <td class="px-4 py-2">Documented security schemes (Basic, Bearer, ApiKey) and examples.</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-2">1.0</td>
+                                    <td class="px-4 py-2">2022-11-01</td>
+                                    <td class="px-4 py-2">Initial publication of VehicleAtDevice OpenAPI.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            
+            <!-- 2. Overview -->
+            <section id="overview" class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">2. Overview</h2>
+                <p class="mb-4 text-gray-600">
+                    The VehicleAtDevice endpoint collects detections from stationary positioning devices installed at tracks, gates, or charging spots. Each detection contains the device identity and the vehicle-mounted transponder ID to keep PEAK.DMS updated.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6 mt-6">
+                    <div class="bg-peak-green/10 p-5 rounded-lg border border-peak-green/20">
+                        <h3 class="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                            <i data-lucide="radar" class="w-5 h-5 text-peak-green"></i> Use Cases
+                        </h3>
+                        <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
+                            <li>Gate or depot entry detection with RFID or BLE.</li>
+                            <li>Tracking vehicles along a track via signal strength.</li>
+                            <li>Reconciliation of planned vs. actual vehicle presence.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-peak-green/10 p-5 rounded-lg border border-peak-green/20">
+                        <h3 class="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                            <i data-lucide="git-branch" class="w-5 h-5 text-peak-green"></i> Data Flow
+                        </h3>
+                        <p class="text-sm text-gray-700">
+                            <strong>Topology Device</strong> (e.g., RFID reader) &rarr; <strong>vehicle-position PUT</strong> &rarr; <strong>PEAK.X backend</strong> &rarr; <strong>Depot Management</strong>.
+                        </p>
+                        <p class="text-xs text-gray-500 mt-2">Synchronous REST write; internal processing persists detections for further services.</p>
+                    </div>
+                </div>
+            </section>
+
+            
+            <!-- 3. Tech Specs -->
+            <section id="tech-specs" class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">3. Technical Specifications</h2>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-1">Base URLs</h3>
+                        <div class="space-y-2">
+                            <code class="bg-gray-100 px-3 py-2 rounded text-gray-800 font-mono text-sm block border">https://localhost:8080/api/v1</code>
+                            <code class="bg-gray-100 px-3 py-2 rounded text-gray-800 font-mono text-sm block border">http://localhost:8080/api/v1</code>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">Authentication</h3>
+                            <ul class="list-disc pl-5 text-gray-600 text-sm space-y-1">
+                                <li><strong>Basic Auth</strong> header (<code>Authorization: Basic &lt;base64&gt;</code>).</li>
+                                <li><strong>Bearer Token</strong> header (<code>Authorization: Bearer &lt;jwt&gt;</code>).</li>
+                                <li><strong>API Key</strong> header (<code>ApiKey: &lt;token&gt;</code>).</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">Content</h3>
+                            <ul class="list-disc pl-5 text-gray-600 text-sm space-y-1">
+                                <li><strong>Method:</strong> PUT.</li>
+                                <li><strong>Content-Type:</strong> <code>application/json</code>.</li>
+                                <li><strong>Timezone:</strong> Timestamps in UTC ISO 8601.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 text-sm text-yellow-800">
+                        <strong>Security:</strong> Failed authentication returns HTTP 401. Missing authorization scope results in HTTP 403.
+                    </div>
+                </div>
+            </section>
+
+            
+            <!-- 4. Endpoints -->
+            <section id="endpoints" class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-peak-orange pl-3">4. Endpoint Description</h2>
+
+                <div id="put-vehicle" class="border rounded-lg overflow-hidden shadow-sm bg-white">
+                    <!-- Endpoint Header -->
+                    <div class="bg-gray-50 p-4 border-b flex items-center gap-3">
+                        <span class="px-3 py-1 bg-peak-orange text-white font-bold rounded text-sm shadow-sm">PUT</span>
+                        <code class="text-sm font-mono text-gray-700 break-all">/common/localization/topology-devices/{topologyDeviceType}/{topologyDeviceId}/vehicle-position</code>
+                    </div>
+                    
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Sends position information from a stationary positioning device together with the tracked vehicle's device identifier.</p>
+                        
+                        <h4 class="font-semibold text-gray-800 mb-2 text-sm">Path Parameters</h4>
+                        <div class="overflow-x-auto mb-4">
+                            <table class="min-w-full text-sm text-left text-gray-600">
+                                <thead class="bg-gray-100 text-xs uppercase font-medium">
+                                    <tr>
+                                        <th class="px-4 py-2">Name</th>
+                                        <th class="px-4 py-2">Type</th>
+                                        <th class="px-4 py-2">Required</th>
+                                        <th class="px-4 py-2">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="px-4 py-2 font-mono">topologyDeviceId</td>
+                                        <td class="px-4 py-2">string</td>
+                                        <td class="px-4 py-2 text-red-600 font-bold">Yes</td>
+                                        <td class="px-4 py-2">DMS identifier of the stationary positioning device (linked to a depot area or track).</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2 font-mono">topologyDeviceType</td>
+                                        <td class="px-4 py-2">string</td>
+                                        <td class="px-4 py-2 text-red-600 font-bold">Yes</td>
+                                        <td class="px-4 py-2">DMS device type of the stationary positioning device.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h4 class="font-semibold text-gray-800 mb-2 text-sm">Request Body (JSON)</h4>
+                        <div class="relative group">
+                            <button class="copy-btn absolute top-2 right-2 bg-gray-700 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10">Copy</button>
+                            <pre><code class="language-json">{
+  "vehiclePositioningDeviceId": "00:00:00:00:00:01",
+  "vehiclePositioningDeviceType": "RFID-Transponder",
+  "receivedSignalStrengthIndicator": -55.6,
+  "timestamp": "2022-11-01T08:30:00Z"
+}</code></pre>
+                        </div>
+
+                        <h4 class="font-semibold text-gray-800 mt-6 mb-2 text-sm">Response (202 Accepted)</h4>
+                        <p class="text-sm text-gray-600 mb-3">Accepted for processing. Body may be empty.</p>
+
+                        <h4 class="font-semibold text-gray-800 mt-6 mb-2 text-sm">Error (ProblemDetails)</h4>
+                        <div class="relative group">
+                            <button class="copy-btn absolute top-2 right-2 bg-gray-700 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10">Copy</button>
+                            <pre><code class="language-json">{
+  "status": 400,
+  "title": "Bad Request",
+  "detail": "vehiclePositioningDeviceId is missing.",
+  "instance": "/common/localization/topology-devices/RFID-reader-device/1/vehicle-position"
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <!-- 5. Data Model -->
+            <section id="datamodel" class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">5. Data Model: VehicleAtDevicePosition</h2>
+                <p class="mb-4 text-sm text-gray-600">Fields sent by stationary positioning devices.</p>
+
+                <div class="overflow-x-auto border rounded-lg shadow-sm">
+                    <table class="min-w-full text-sm text-left text-gray-600">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-100 border-b">
+                            <tr>
+                                <th class="px-6 py-3 w-32">Field</th>
+                                <th class="px-6 py-3 w-24">Type</th>
+                                <th class="px-6 py-3 w-24">Mandatory</th>
+                                <th class="px-6 py-3">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 bg-white">
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-3 font-mono font-medium text-gray-900">vehiclePositioningDeviceId</td>
+                                <td class="px-6 py-3 text-blue-600">string</td>
+                                <td class="px-6 py-3 text-red-600 font-bold">Yes</td>
+                                <td class="px-6 py-3">Identifier of the vehicle device (e.g., MAC address).</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-3 font-mono font-medium text-gray-900">vehiclePositioningDeviceType</td>
+                                <td class="px-6 py-3 text-blue-600">string</td>
+                                <td class="px-6 py-3 text-red-600 font-bold">Yes</td>
+                                <td class="px-6 py-3">Type of the vehicle-mounted device (e.g., RFID-Transponder).</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-3 font-mono font-medium text-gray-900">receivedSignalStrengthIndicator</td>
+                                <td class="px-6 py-3 text-blue-600">number</td>
+                                <td class="px-6 py-3">No</td>
+                                <td class="px-6 py-3">RSSI value; closer to 0 is stronger and can indicate distance.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-3 font-mono font-medium text-gray-900">timestamp</td>
+                                <td class="px-6 py-3 text-purple-600">datetime</td>
+                                <td class="px-6 py-3">No</td>
+                                <td class="px-6 py-3">Moment the positioning data was created (UTC ISO 8601).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="text-xs text-gray-400 mt-2 italic">Error responses follow the standard ProblemDetails schema.</p>
+            </section>
+
+            
+            <!-- 6. Examples -->
+            <section id="examples" class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">6. Examples</h2>
+                
+                <div class="bg-gray-900 rounded-lg p-6 mb-4">
+                    <h3 class="text-gray-300 text-sm font-mono mb-2">// Send vehicle position from a topology device</h3>
+                    <div class="relative group">
+                        <button class="copy-btn absolute top-0 right-0 bg-gray-700 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10">Copy</button>
+                        <pre><code class="language-bash">curl -u user:pass -X PUT \
+"https://localhost:8080/api/v1/common/localization/topology-devices/RFID-reader-device/1/vehicle-position" \
+-H "Content-Type: application/json" \
+-d '{"vehiclePositioningDeviceId":"00:00:00:00:00:01","vehiclePositioningDeviceType":"RFID-Transponder","receivedSignalStrengthIndicator":-55.6,"timestamp":"2022-11-01T08:30:00Z"}'</code></pre>
+                    </div>
+                </div>
+
+                <div class="bg-red-50 border border-red-100 rounded-lg p-6">
+                    <h3 class="text-red-800 font-bold mb-2 flex items-center gap-2">
+                        <i data-lucide="alert-triangle" class="w-5 h-5"></i> 401 Unauthorized
+                    </h3>
+                    <p class="text-sm text-red-700 mb-3">Occurs when authentication headers are missing or invalid.</p>
+                    <div class="relative group">
+                        <button class="copy-btn absolute top-2 right-2 bg-gray-700 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10">Copy</button>
+                        <pre><code class="language-json">{
+  "status": 401,
+  "title": "Unauthorized",
+  "detail": "Authentication credentials were not provided."
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            
+            <!-- 7. Configuration -->
+            <section id="configuration" class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">7. Configuration</h2>
+                
+                <div class="bg-white p-6 rounded-lg border shadow-sm space-y-4">
+                    <div>
+                        <h4 class="font-bold text-gray-800">Interface Activation</h4>
+                        <p class="text-sm text-gray-600">Enable the VehicleAtDevice OpenAPI in PEAK.X and ensure connected topology devices are registered with their <em>topologyDeviceType</em> and <em>topologyDeviceId</em>.</p>
+                    </div>
+                    <hr>
+                    <div>
+                        <h4 class="font-bold text-gray-800">Transport</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-2">
+                            <div class="bg-gray-50 p-2 rounded font-mono text-xs">HTTPS recommended for production</div>
+                            <div class="bg-gray-50 p-2 rounded font-mono text-xs">Content-Type: application/json</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div>
+                        <h4 class="font-bold text-gray-800">Swagger UI</h4>
+                        <p class="text-sm text-gray-600 mb-2">Explore and test via browser:</p>
+                        <a href="#" class="text-blue-600 hover:underline text-sm break-all">https://localhost:8080/swagger/index.html</a>
+                    </div>
+                </div>
+            </section>
+
+            
+            <!-- 8. Best Practices -->
+            <section id="best-practices" class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">8. Best Practices</h2>
+                <div class="bg-peak-green/10 border border-peak-green/20 rounded-lg p-6">
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-peak-green mt-0.5"></i>
+                            <span class="text-gray-900 text-sm"><strong>Send UTC timestamps:</strong> Keep all <code>timestamp</code> values in ISO 8601 UTC to avoid time drift.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-peak-green mt-0.5"></i>
+                            <span class="text-gray-900 text-sm"><strong>Validate identifiers:</strong> Ensure <code>vehiclePositioningDeviceId</code> and topology path segments exist in PEAK.DMS.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-peak-green mt-0.5"></i>
+                            <span class="text-gray-900 text-sm"><strong>Monitor RSSI trends:</strong> Use <code>receivedSignalStrengthIndicator</code> to infer proximity to the reader when applicable.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            
+            <!-- 9. Appendix -->
+            <section id="appendix" class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">9. Appendix</h2>
+                
+                <h3 class="font-semibold text-gray-800 mb-2">Status Code Reference</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
+                    <div class="bg-green-100 text-green-800 px-3 py-1 rounded text-center text-sm font-mono">202 Accepted</div>
+                    <div class="bg-red-100 text-red-800 px-3 py-1 rounded text-center text-sm font-mono">400 Bad Req</div>
+                    <div class="bg-red-100 text-red-800 px-3 py-1 rounded text-center text-sm font-mono">401 Unauth</div>
+                    <div class="bg-red-100 text-red-800 px-3 py-1 rounded text-center text-sm font-mono">403 Forbidden</div>
+                    <div class="bg-red-100 text-red-800 px-3 py-1 rounded text-center text-sm font-mono">500 Server Err</div>
+                </div>
+
+                <h3 class="font-semibold text-gray-800 mb-2">Glossary</h3>
+                <div class="text-sm text-gray-600 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
+                    <div class="flex justify-between border-b pb-1"><span>PEAK.X</span> <span class="text-gray-400">Software Platform</span></div>
+                    <div class="flex justify-between border-b pb-1"><span>PEAK.DMS</span> <span class="text-gray-400">Depot Management System</span></div>
+                    <div class="flex justify-between border-b pb-1"><span>Topology Device</span> <span class="text-gray-400">Stationary positioning hardware</span></div>
+                    <div class="flex justify-between border-b pb-1"><span>ProblemDetails</span> <span class="text-gray-400">Standard error payload (RFC 7807)</span></div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Prism JS Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Init Lucide Icons
+        window.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const sidebar = document.getElementById('sidebar');
+        
+        mobileBtn.addEventListener('click', () => {
+            const isClosed = sidebar.classList.contains('-translate-x-full');
+            if (isClosed) {
+                sidebar.classList.remove('-translate-x-full');
+            } else {
+                sidebar.classList.add('-translate-x-full');
+            }
+        });
+
+        // Close sidebar on mobile when clicking a link
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', () => {
+                if (window.innerWidth < 1024) {
+                    sidebar.classList.add('-translate-x-full');
+                }
+            });
+        });
+
+        // Scroll Spy Logic
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-item');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(li => {
+                li.classList.remove('active');
+                if (li.getAttribute('href').includes(current) && current !== '') {
+                    li.classList.add('active');
+                }
+            });
+        });
+
+        // Copy to Clipboard Logic
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const pre = e.target.parentElement.querySelector('pre');
+                const code = pre.textContent;
+                
+                navigator.clipboard.writeText(code).then(() => {
+                    const originalText = e.target.textContent;
+                    e.target.textContent = 'Copied!';
+                    e.target.classList.add('bg-green-600');
+                    
+                    setTimeout(() => {
+                        e.target.textContent = originalText;
+                        e.target.classList.remove('bg-green-600');
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
