@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicles</title>
+    
+    <!-- Google Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        /* --- CSS Variablen & Reset (Konsistent mit den vorhandenen Seiten) --- */
+        :root {
+            --primary-orange: #FF4F30;
+            --bg-grey: #EEF0F4;
+            --header-bg: #E0E0E0;
+            --card-bg: #FFFFFF;
+            --text-dark: #1A1A1A;
+            --text-grey: #666666;
+            --border-color: #D1D1D1;
+            --btn-dark: #404040;
+            --success-green: #2E7D32;
+            --warning-amber: #F57F17;
+            --error-red: #D32F2F;
+            --nav-height: 65px;
+            --header-height: 50px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-grey);
+            color: var(--text-dark);
+            padding-bottom: calc(var(--nav-height) + 20px); 
+        }
+
+        /* --- Header --- */
+        header {
+            background-color: var(--header-bg);
+            height: var(--header-height);
+            display: grid;
+            grid-template-columns: 48px 1fr 96px; /* Platz für Menü links, Titel Mitte, Filter/Grid rechts */
+            align-items: center;
+            padding: 0 8px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
+            border-top: 4px solid var(--primary-orange); 
+        }
+
+        .header-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-dark);
+        }
+
+        .header-actions {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        h1 {
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* --- Hauptinhalt --- */
+        .container {
+            padding: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Liste der Fahrzeuge */
+        .vehicle-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Kleinerer Abstand als in select_shuttle.html, um das Bild besser zu treffen */
+        }
+
+        .vehicle-item {
+            background-color: var(--card-bg);
+            border-radius: 4px;
+            padding: 16px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            position: relative;
+            border-left: 4px solid var(--card-bg); /* Wird dynamisch für den Status gesetzt */
+            transition: border-left 0.2s;
+            cursor: pointer;
+        }
+        
+        /* Simuliere leicht aktiven Zustand oder Hover-Effekt */
+        .vehicle-item:active {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .vehicle-id {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .vehicle-detail {
+            font-size: 14px;
+            color: var(--text-grey);
+            margin-bottom: 4px;
+            line-height: 1.4;
+        }
+        
+        .detail-label {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* --- Status Badge (Oben rechts, wie im Bild) --- */
+        .status-badge {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Status Farben basierend auf Bild und Anpassungen */
+        .status-d { /* D - Einsatz -> D - Operation */
+            background-color: #558B2F; /* Dunkelgrün */
+        }
+        .status-b { /* B - Nur manueller Einsatz -> B - Manual Operation Only */
+            background-color: var(--error-red); /* Rot */
+        }
+        .status-c { /* C - Bedingter Einsatz -> C - Conditional Operation */
+            background-color: var(--warning-amber); /* Orange/Gelb */
+        }
+        .status-ok { /* No vehicle faults */
+            background-color: #D6D9E0; /* Helles Grau (Angewiesen) */
+            color: var(--text-dark);
+        }
+
+        /* --- Icon Badges (Unten rechts, wie im Bild) --- */
+        .icon-badges {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .badge-icon-wrapper {
+            position: relative;
+            color: var(--text-dark);
+        }
+
+        .badge-icon-wrapper .material-symbols-outlined {
+            font-size: 28px;
+            font-weight: 300;
+        }
+
+        .badge-count {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            background-color: var(--primary-orange);
+            color: white;
+            border-radius: 50%;
+            font-size: 10px;
+            font-weight: 700;
+            width: 16px;
+            height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--card-bg); /* Rand, damit es sich vom Hintergrund abhebt */
+        }
+
+        /* --- Footer Navigation --- */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: var(--nav-height);
+            background-color: #EFEFEF;
+            border-top: 1px solid #CCC;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--text-dark);
+            width: 20%;
+            height: 100%;
+        }
+
+        .nav-item.active {
+            color: var(--primary-orange);
+            font-weight: 600;
+        }
+        
+        .nav-item.active .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1; 
+            color: black; 
+            font-weight: 400; 
+        }
+
+        .nav-item span {
+            font-size: 10px;
+            margin-top: 4px;
+        }
+
+        .nav-item .material-symbols-outlined {
+            font-size: 24px;
+            font-weight: 300;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- HEADER (Angepasst an das Bild) -->
+    <header>
+        <button class="header-btn">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+        <h1>Vehicles</h1>
+        <div class="header-actions">
+            <button class="header-btn">
+                <span class="material-symbols-outlined">filter_list</span>
+            </button>
+            <button class="header-btn">
+                <span class="material-symbols-outlined">grid_view</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="container">
+        <div class="vehicle-list">
+            
+            <!-- Fahrzeug 1: D - Einsatz -> D - Operation -->
+            <div class="vehicle-item">
+                <div class="vehicle-id">Vehicle: 1057</div>
+                <div class="vehicle-detail">
+                    <span class="detail-label">Vehicle type:</span> ETB6 ETB12 Hänger
+                </div>
+                <div class="vehicle-detail">
+                    <span class="detail-label">Position:</span> [FSD] 11+0m (1057)
+                </div>
+                
+                <div class="status-badge status-d">D - Operation</div>
+
+                <div class="icon-badges">
+                    <!-- Icon für Defekte/Probleme -->
+                    <div class="badge-icon-wrapper">
+                        <span class="material-symbols-outlined">bus_alert</span>
+                        <span class="badge-count">1</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fahrzeug 2: B - Nur manueller Einsatz -> B - Manual Operation Only -->
+            <div class="vehicle-item">
+                <div class="vehicle-id">Vehicle: 4081</div>
+                <div class="vehicle-detail">
+                    <span class="detail-label">Vehicle type:</span> GT8 - historisch
+                </div>
+                <div class="vehicle-detail">
+                    <span class="detail-label">Position:</span>
+                </div>
+                
+                <div class="status-badge status-b">B - Manual Operation Only</div>
+
+                <div class="icon-badges">
+                    <div class="badge-icon-wrapper">
+                        <span class="material-symbols-outlined">bus_alert</span>
+                        <span class="badge-count">2</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fahrzeug 3: No vehicle faults (Helleres Grau) -->
+            <div class="vehicle-item">
+                <div class="vehicle-id">Vehicle: 4082</div>
+                <div class="vehicle-detail">
+                    <span class="detail-label">Vehicle type:</span> GTW8Z
+                </div>
+                <div class="vehicle-detail">
+                    <span class="detail-label">Position:</span>
+                </div>
+                
+                <div class="status-badge status-ok">No vehicle faults</div>
+
+                <div class="icon-badges">
+                    <!-- Icon für Inspection (Checkliste) -->
+                    <div class="badge-icon-wrapper">
+                        <span class="material-symbols-outlined">checklist</span>
+                        <span class="badge-count">1</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fahrzeug 4: D - Einsatz -> D - Operation (mit zwei Badges) -->
+            <div class="vehicle-item">
+                <div class="vehicle-id">Vehicle: 4098</div>
+                <div class="vehicle-detail">
+                    <span class="detail-label">Vehicle type:</span> GTW8Z
+                </div>
+                <div class="vehicle-detail">
+                    <span class="detail-label">Position:</span>
+                </div>
+                
+                <div class="status-badge status-d">D - Operation</div>
+
+                <div class="icon-badges">
+                    <!-- Icon für Inspection (Checkliste) -->
+                    <div class="badge-icon-wrapper">
+                        <span class="material-symbols-outlined">checklist</span>
+                        <span class="badge-count">1</span>
+                    </div>
+                    <!-- Icon für Defekte/Probleme -->
+                    <div class="badge-icon-wrapper">
+                        <span class="material-symbols-outlined">bus_alert</span>
+                        <span class="badge-count">1</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fahrzeug 5: C - Bedingter Einsatz -> C - Conditional Operation -->
+            <div class="vehicle-item">
+                <div class="vehicle-id">Vehicle: 4102</div>
+                <div class="vehicle-detail">
+                    <span class="detail-label">Vehicle type:</span> GTW8Z
+                </div>
+                <div class="vehicle-detail">
+                    <span class="detail-label">Position:</span>
+                </div>
+                
+                <div class="status-badge status-c">C - Conditional Operation</div>
+
+                <div class="icon-badges">
+                    <!-- Icon für Tanken/Supply oder Warning -->
+                    <div class="badge-icon-wrapper">
+                        <span class="material-symbols-outlined">local_gas_station</span>
+                        <span class="badge-count">1</span>
+                    </div>
+                    <div class="badge-icon-wrapper">
+                        <span class="material-symbols-outlined">bus_alert</span>
+                        <span class="badge-count">1</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER NAV (Von overview.html kopiert und 'Vehicles' auf active gesetzt) -->
+    <nav class="bottom-nav">
+        <a href="overview.html" class="nav-item">
+            <span class="material-symbols-outlined">description</span>
+            <span>Overview</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">radar</span>
+            <span>VSP</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">garage</span>
+            <span>Garage</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">shower</span>
+            <span>Supply</span>
+        </a>
+        <a href="#" class="nav-item active">
+            <span class="material-symbols-outlined">directions_bus</span>
+            <span>Vehicles</span>
+        </a>
+    </nav>
+
+</body>
+</html>

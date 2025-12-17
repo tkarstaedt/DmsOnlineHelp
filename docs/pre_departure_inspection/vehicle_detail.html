@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Detail</title>
+    
+    <!-- Google Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        /* --- CSS Variablen & Reset (Konsistent mit den vorhandenen Seiten) --- */
+        :root {
+            --primary-orange: #FF4F30;
+            --bg-grey: #EEF0F4;
+            --header-bg: #E0E0E0;
+            --card-bg: #FFFFFF;
+            --text-dark: #1A1A1A;
+            --text-grey: #666666;
+            --border-color: #D1D1D1;
+            --btn-dark: #404040;
+            --success-green: #558B2F; /* D - Einsatz Farbe */
+            --warning-amber: #F57F17;
+            --error-red: #D32F2F;
+            --info-orange: #FF6E40; /* Für Info-Karten-Titel */
+            
+            --nav-height: 65px;
+            --header-height: 50px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-grey);
+            color: var(--text-dark);
+            padding-bottom: calc(var(--nav-height) + 20px); 
+        }
+
+        /* --- Header --- */
+        header {
+            background-color: var(--header-bg);
+            height: var(--header-height);
+            display: grid;
+            grid-template-columns: 48px 1fr 48px;
+            align-items: center;
+            padding: 0 8px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
+            border-top: 4px solid var(--primary-orange); 
+        }
+
+        .back-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-dark);
+        }
+
+        h1 {
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        /* --- Hauptinhalt --- */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* --- Vehicle Header Block --- */
+        .vehicle-header-block {
+            padding: 16px;
+            background-color: var(--card-bg); /* Hintergrundfarbe auf Weiß setzen, um sich vom grauen Hintergrund abzusetzen */
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .vehicle-id-status {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .vehicle-id {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        /* Status Badge (Von vehicle_list übernommen) */
+        .status-badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 700;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background-color: var(--success-green); /* Default: D - Operation */
+            white-space: nowrap;
+        }
+
+        /* Detailzeilen */
+        .detail-row {
+            font-size: 14px;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: var(--text-grey);
+            display: inline-block;
+            min-width: 120px; /* Für bessere Ausrichtung */
+        }
+        
+        .detail-value {
+             font-weight: 400;
+        }
+
+        /* --- Tabs Navigation --- */
+        .tabs-nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: var(--header-height);
+            z-index: 50;
+        }
+
+        .tab-item {
+            padding: 12px 16px;
+            text-decoration: none;
+            color: var(--text-grey);
+            font-weight: 500;
+            font-size: 15px;
+            border-bottom: 2px solid transparent;
+            transition: color 0.2s, border-bottom 0.2s;
+            cursor: pointer;
+        }
+
+        .tab-item.active {
+            color: var(--primary-orange);
+            border-bottom: 2px solid var(--primary-orange);
+        }
+
+        /* --- Card Sektionen --- */
+        .section-container {
+            padding: 16px;
+        }
+
+        .card-section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 16px 0; /* Vertikales Padding innen */
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0 16px 12px 16px;
+            border-bottom: 1px solid var(--bg-grey);
+            margin-bottom: 12px;
+        }
+
+        .card-header .material-symbols-outlined {
+            font-size: 20px;
+            color: var(--info-orange); /* Orange Icon Farbe */
+            font-weight: 700;
+            font-variation-settings: 'FILL' 1;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--info-orange); /* Orange Text Farbe */
+        }
+        
+        /* --- Info Content Style (Innerhalb der Sektion) --- */
+        .info-content {
+            padding: 0 16px;
+        }
+
+        .info-item {
+            margin-bottom: 12px;
+        }
+
+        .item-label {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text-grey);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .item-value {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-dark);
+            display: block;
+        }
+        
+        /* --- Disposition / Action List Style --- */
+        .action-list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+            border-top: 1px solid var(--bg-grey);
+            cursor: pointer;
+        }
+        
+        .action-list-item:first-child {
+            border-top: none;
+        }
+        
+        .action-list-item:active {
+            background-color: rgba(0,0,0,0.03);
+        }
+
+        .action-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .action-icon {
+            font-size: 24px;
+            color: var(--text-dark);
+            font-weight: 300;
+        }
+
+        .action-label {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .action-list-item .material-symbols-outlined:last-child {
+            font-size: 20px;
+            color: var(--text-grey);
+        }
+        
+        /* --- Custom Button Style für "Start test drive" --- */
+        .test-drive-btn {
+            background-color: var(--primary-orange);
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(255, 79, 48, 0.2);
+            transition: background-color 0.2s;
+            margin-bottom: 20px; /* NEU: Abstand nach unten zur Disposition Section */
+        }
+        
+        .test-drive-btn:active {
+            background-color: #e64a2e;
+            transform: scale(0.99);
+        }
+        
+        /* --- Footer Navigation --- */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: var(--nav-height);
+            background-color: #EFEFEF;
+            border-top: 1px solid #CCC;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--text-dark);
+            width: 20%;
+            height: 100%;
+        }
+
+        .nav-item.active {
+            color: var(--primary-orange);
+            font-weight: 600;
+        }
+        
+        .nav-item.active .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1; 
+            color: black; 
+            font-weight: 400; 
+        }
+
+        .nav-item span {
+            font-size: 10px;
+            margin-top: 4px;
+        }
+
+        .nav-item .material-symbols-outlined {
+            font-size: 24px;
+            font-weight: 300;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <button class="back-btn" onclick="history.back()">
+            <span class="material-symbols-outlined">arrow_back_ios_new</span>
+        </button>
+        <h1>Vehicle: 1057</h1>
+        <!-- Platzhalter für rechtes Icon/Menü -->
+        <div style="width: 40px;"></div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+        
+        <!-- Vehicle Header Block (Info oben) -->
+        <div class="vehicle-header-block">
+            <div class="vehicle-id-status">
+                <span class="vehicle-id">Vehicle: 1057</span>
+                <div class="status-badge">D - Operation</div>
+            </div>
+            
+            <div class="detail-row">
+                <span class="detail-label">Vehicle type:</span>
+                <span class="detail-value">ETB6 ETB12 Hänger</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Dispo vehicle type:</span>
+                <span class="detail-value">-</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Operation level:</span>
+                <span class="detail-value">Out of order</span>
+            </div>
+        </div>
+
+        <!-- Tabs Navigation -->
+        <nav class="tabs-nav">
+            <a href="#" class="tab-item active">Details</a>
+            <a href="#" class="tab-item">Garage</a>
+            <a href="#" class="tab-item">Supply</a>
+            <a href="#" class="tab-item">Faults</a>
+        </nav>
+        
+        <!-- SECTION CONTAINER (für den Inhalt des aktiven Tabs) -->
+        <div class="section-container">
+
+            <!-- Card 1: Vehicle info -->
+            <div class="card-section">
+                <div class="card-header">
+                    <span class="material-symbols-outlined">info</span>
+                    <span class="card-title">Vehicle info</span>
+                </div>
+                <div class="info-content">
+                    <div class="info-item">
+                        <span class="item-label">Position</span>
+                        <span class="item-value">[FSD] 11+0m (1057)</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="item-label">Dispo position</span>
+                        <span class="item-value">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="item-label">Home depot</span>
+                        <span class="item-value">FSL</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="item-label">Manufacturer</span>
+                        <span class="item-value">DUEWAG</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="item-label">Construction year</span>
+                        <span class="item-value">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEUER STANDORT DES BUTTONS -->
+            <button class="test-drive-btn" onclick="window.location.href='pre_departure_inspection.html'">
+                <span class="material-symbols-outlined">directions_car</span>
+                Start test drive
+            </button>
+            
+            <!-- Card 2: Disposition -->
+            <div class="card-section">
+                <div class="card-header">
+                    <span class="material-symbols-outlined">adjust</span>
+                    <span class="card-title">Disposition</span>
+                </div>
+                
+                <!-- Action List -->
+                <div class="action-list">
+                    <!-- Set position -->
+                    <a href="#" class="action-list-item">
+                        <div class="action-left">
+                            <span class="material-symbols-outlined action-icon">near_me_disabled</span>
+                            <span class="action-label">Set position</span>
+                        </div>
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </a>
+                    
+                    <!-- Remove position -->
+                    <a href="#" class="action-list-item">
+                        <div class="action-left">
+                            <span class="material-symbols-outlined action-icon">close_fullscreen</span>
+                            <span class="action-label">Remove position</span>
+                        </div>
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </a>
+
+                    <!-- Dispatch manually -->
+                    <a href="#" class="action-list-item">
+                        <div class="action-left">
+                            <span class="material-symbols-outlined action-icon">select_window</span>
+                            <span class="action-label">Dispatch manually</span>
+                        </div>
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </a>
+                    
+                    <!-- Dispatch automatically -->
+                    <a href="#" class="action-list-item">
+                        <div class="action-left">
+                            <span class="material-symbols-outlined action-icon">check_circle</span>
+                            <span class="action-label">Dispatch automatically</span>
+                        </div>
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </a>
+
+                    <!-- Remove allocated position (aus dem 2. Screenshot übernommen) -->
+                    <a href="#" class="action-list-item">
+                        <div class="action-left">
+                            <span class="material-symbols-outlined action-icon">cancel</span>
+                            <span class="action-label">Remove allocated position</span>
+                        </div>
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </a>
+                </div>
+                
+            </div>
+            
+            <!-- Card 3: Next orders (Aus dem 2. Screenshot übernommen) -->
+            <div class="card-section">
+                <div class="card-header">
+                    <span class="material-symbols-outlined">edit_calendar</span>
+                    <span class="card-title">Next orders</span>
+                </div>
+                <div class="action-list">
+                    <a href="#" class="action-list-item">
+                        <div class="action-left">
+                            <span class="material-symbols-outlined action-icon">home</span>
+                            <span class="action-label">Besanden (3 tägig)</span>
+                            <!-- Zeile mit Datum/Uhrzeit unterhalb des Labels wäre besser, aber wir halten das Label einfach -->
+                        </div>
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </a>
+                </div>
+                <div class="info-content" style="padding-top: 12px; border-top: 1px solid var(--bg-grey);">
+                    <div class="info-item" style="margin-bottom: 0;">
+                        <span class="item-label">Start time:</span>
+                        <span class="item-value">1/8/2024 12:00:00 AM</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+
+    </main>
+
+    <!-- FOOTER NAV (Von vehicle_list.html übernommen und Vehicles auf active gesetzt) -->
+    <nav class="bottom-nav">
+        <a href="overview.html" class="nav-item">
+            <span class="material-symbols-outlined">description</span>
+            <span>Overview</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">radar</span>
+            <span>VSP</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">garage</span>
+            <span>Garage</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">shower</span>
+            <span>Supply</span>
+        </a>
+        <a href="vehicle_list.html" class="nav-item active">
+            <span class="material-symbols-outlined">directions_bus</span>
+            <span>Vehicles</span>
+        </a>
+    </nav>
+
+</body>
+</html>

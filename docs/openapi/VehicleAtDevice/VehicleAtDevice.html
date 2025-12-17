@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PEAK.X OpenAPI – GeoPositioning</title>
+    <title>PEAK.X OpenAPI - VehicleAtDevice</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -105,9 +105,10 @@
                     </svg>
                     <h1 class="font-bold text-2xl text-gray-900">PEAK.X</h1>
                 </div>
-                <p class="text-sm text-gray-500 mt-1">Module <strong>GeoPositioning</strong></p>
-                <div class="mt-2 inline-block px-2 py-0.5 bg-peak-orange/10 text-peak-orange text-xs rounded-full border border-peak-orange/20">v1.1 Docs</div>
+                <p class="text-sm text-gray-500 mt-1">Module <strong>VehicleAtDevice</strong></p>
+                <div class="mt-2 inline-block px-2 py-0.5 bg-peak-orange/10 text-peak-orange text-xs rounded-full border border-peak-orange/20">v1.5 Docs</div>
             </div>
+            
             
             <nav class="p-4 space-y-1 text-sm">
                 <a href="#introduction" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">1. Introduction</a>
@@ -115,7 +116,7 @@
                 <a href="#tech-specs" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">3. Technical Specs</a>
                 <a href="#endpoints" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">4. Endpoints</a>
                 <div class="pl-4">
-                    <a href="#put-geo" class="nav-item block px-4 py-1.5 text-gray-500 hover:text-peak-orange text-xs border-l border-gray-200">PUT Geopositions</a>
+                    <a href="#put-vehicle" class="nav-item block px-4 py-1.5 text-gray-500 hover:text-peak-orange text-xs border-l border-gray-200">PUT Vehicle Position</a>
                 </div>
                 <a href="#datamodel" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">5. Data Model</a>
                 <a href="#examples" class="nav-item block px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-r border-l-4 border-transparent transition-all">6. Examples</a>
@@ -127,13 +128,13 @@
 
         <!-- Main Content -->
         <main class="flex-1 lg:ml-72 w-full max-w-5xl mx-auto p-6 lg:p-12 pb-32">
-            
             <!-- Header -->
             <header class="mb-12 border-b pb-6">
-                <h1 class="text-4xl font-bold text-gray-900 mb-4">Developer Documentation: OpenAPI GeoPositioning</h1>
-                <p class="text-lg text-gray-600">Technical integration of vehicle and positioning data into the <strong>PEAK.X platform</strong> (e.g., PEAK.DMS).</p>
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">Developer Documentation: Vehicle at Device</h1>
+                <p class="text-lg text-gray-600">Stationary positioning devices report located vehicles to the <strong>PEAK.DMS</strong> through the PEAK.X platform.</p>
             </header>
 
+            
             <!-- 1. Introduction -->
             <section id="introduction" class="mb-16 scroll-mt-24">
                 <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">1. Introduction</h2>
@@ -141,17 +142,17 @@
                 <div class="prose max-w-none text-gray-600">
                     <h3 class="text-lg font-semibold text-gray-800 mt-6 mb-2">1.1 Purpose of the Document</h3>
                     <p class="mb-4">
-                        This document describes the REST API <strong>GeoPositioning</strong> of the PEAK.X platform. It serves as a technical foundation for integrating vehicle and positioning data (GPS) in real-time.
+                        This document describes the REST endpoint <strong>vehicle-position</strong>. It allows external systems to send position information captured by a stationary positioning device together with the identification of the vehicle-mounted device to <strong>PEAK.DMS</strong>.
                     </p>
 
                     <h3 class="text-lg font-semibold text-gray-800 mt-6 mb-2">1.2 Target Audience</h3>
                     <ul class="list-disc pl-5 space-y-1 mb-4">
-                        <li><strong>Software Developers:</strong> Integrating vehicle tracking systems.</li>
-                        <li><strong>System Integrators:</strong> Coupling backend systems.</li>
-                        <li><strong>System Administrators:</strong> Configuration and testing of PEAK.X interfaces.</li>
+                        <li><strong>Backend Developers:</strong> Sending positioning events from yard hardware.</li>
+                        <li><strong>Integration Engineers:</strong> Bridging RFID readers or similar topology devices into PEAK.X.</li>
+                        <li><strong>Operations:</strong> Monitoring gateway activity and troubleshooting authentication.</li>
                     </ul>
 
-                    <h3 class="text-lg font-semibold text-gray-800 mt-6 mb-2">1.5 Version History</h3>
+                    <h3 class="text-lg font-semibold text-gray-800 mt-6 mb-2">1.3 Version History</h3>
                     <div class="overflow-x-auto rounded-lg border">
                         <table class="min-w-full bg-white text-sm">
                             <thead class="bg-gray-100">
@@ -163,14 +164,14 @@
                             </thead>
                             <tbody class="divide-y divide-gray-200">
                                 <tr>
-                                    <td class="px-4 py-2">1.1</td>
-                                    <td class="px-4 py-2">2025-11-19</td>
-                                    <td class="px-4 py-2">Updated product branding (PEAK.X)</td>
+                                    <td class="px-4 py-2">1.5</td>
+                                    <td class="px-4 py-2">2025-11-21</td>
+                                    <td class="px-4 py-2">Documented security schemes (Basic, Bearer, ApiKey) and examples.</td>
                                 </tr>
                                 <tr>
                                     <td class="px-4 py-2">1.0</td>
-                                    <td class="px-4 py-2">2025-11-11</td>
-                                    <td class="px-4 py-2">Initial creation of developer documentation</td>
+                                    <td class="px-4 py-2">2022-11-01</td>
+                                    <td class="px-4 py-2">Initial publication of VehicleAtDevice OpenAPI.</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -178,224 +179,255 @@
                 </div>
             </section>
 
+            
             <!-- 2. Overview -->
             <section id="overview" class="mb-16">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">2. API Overview</h2>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">2. Overview</h2>
                 <p class="mb-4 text-gray-600">
-                    The GeoPositioning API allows external systems to transmit current position data of mobile units (e.g., vehicles) to PEAK.X.
+                    The VehicleAtDevice endpoint collects detections from stationary positioning devices installed at tracks, gates, or charging spots. Each detection contains the device identity and the vehicle-mounted transponder ID to keep PEAK.DMS updated.
                 </p>
                 
                 <div class="grid md:grid-cols-2 gap-6 mt-6">
                     <div class="bg-peak-green/10 p-5 rounded-lg border border-peak-green/20">
                         <h3 class="font-semibold text-gray-900 mb-2 flex items-center gap-2">
-                            <i data-lucide="cpu" class="w-5 h-5 text-peak-green"></i> Use Cases
+                            <i data-lucide="radar" class="w-5 h-5 text-peak-green"></i> Use Cases
                         </h3>
                         <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
-                            <li>Transmission of real-time positions (GPS).</li>
-                            <li>Provisioning for PEAK.ITCS & Control Centers.</li>
-                            <li>Historical analysis of vehicle movements.</li>
+                            <li>Gate or depot entry detection with RFID or BLE.</li>
+                            <li>Tracking vehicles along a track via signal strength.</li>
+                            <li>Reconciliation of planned vs. actual vehicle presence.</li>
                         </ul>
                     </div>
                     <div class="bg-peak-green/10 p-5 rounded-lg border border-peak-green/20">
                         <h3 class="font-semibold text-gray-800 mb-2 flex items-center gap-2">
-                            <i data-lucide="layers" class="w-5 h-5 text-peak-green"></i> Architecture
+                            <i data-lucide="git-branch" class="w-5 h-5 text-peak-green"></i> Data Flow
                         </h3>
                         <p class="text-sm text-gray-700">
-                            <strong>Client</strong> &rarr; <strong>REST API</strong> &rarr; <strong>PEAK.X Backend</strong> &rarr; Topic System.
+                            <strong>Topology Device</strong> (e.g., RFID reader) &rarr; <strong>vehicle-position PUT</strong> &rarr; <strong>PEAK.X backend</strong> &rarr; <strong>Depot Management</strong>.
                         </p>
-                        <p class="text-xs text-gray-500 mt-2">Synchronous REST call, internal asynchronous processing.</p>
+                        <p class="text-xs text-gray-500 mt-2">Synchronous REST write; internal processing persists detections for further services.</p>
                     </div>
                 </div>
             </section>
 
+            
             <!-- 3. Tech Specs -->
             <section id="tech-specs" class="mb-16">
                 <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">3. Technical Specifications</h2>
                 
                 <div class="space-y-6">
-                    <!-- URL -->
                     <div>
-                        <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-1">Base URL</h3>
-                        <code class="bg-gray-100 px-3 py-2 rounded text-gray-800 font-mono text-sm block border">https://&lt;server&gt;:5601/api/v1/common/localization/positioning-device/geopositions</code>
+                        <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-1">Base URLs</h3>
+                        <div class="space-y-2">
+                            <code class="bg-gray-100 px-3 py-2 rounded text-gray-800 font-mono text-sm block border">https://localhost:8080/api/v1</code>
+                            <code class="bg-gray-100 px-3 py-2 rounded text-gray-800 font-mono text-sm block border">http://localhost:8080/api/v1</code>
+                        </div>
                     </div>
 
-                    <!-- Grid for details -->
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <h3 class="text-lg font-semibold mb-2">Authentication</h3>
                             <ul class="list-disc pl-5 text-gray-600 text-sm space-y-1">
-                                <li><strong>Basic Auth:</strong> Base64 encoded in Header.</li>
-                                <li><strong>Role:</strong> <code>GeoPositionsDmsOpenApi PutGeoPosition</code> required.</li>
+                                <li><strong>Basic Auth</strong> header (<code>Authorization: Basic &lt;base64&gt;</code>).</li>
+                                <li><strong>Bearer Token</strong> header (<code>Authorization: Bearer &lt;jwt&gt;</code>).</li>
+                                <li><strong>API Key</strong> header (<code>ApiKey: &lt;token&gt;</code>).</li>
                             </ul>
                         </div>
                         <div>
-                            <h3 class="text-lg font-semibold mb-2">Rate Limiting</h3>
+                            <h3 class="text-lg font-semibold mb-2">Content</h3>
                             <ul class="list-disc pl-5 text-gray-600 text-sm space-y-1">
-                                <li><strong>PermitLimit:</strong> 100 Requests / 10s</li>
-                                <li><strong>QueueLimit:</strong> 2 Requests</li>
+                                <li><strong>Method:</strong> PUT.</li>
+                                <li><strong>Content-Type:</strong> <code>application/json</code>.</li>
+                                <li><strong>Timezone:</strong> Timestamps in UTC ISO 8601.</li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 text-sm text-yellow-800">
-                        <strong>Important:</strong> Communication exclusively via HTTPS. Timestamps must be in <strong>UTC (ISO 8601)</strong>.
+                        <strong>Security:</strong> Failed authentication returns HTTP 401. Missing authorization scope results in HTTP 403.
                     </div>
                 </div>
             </section>
 
+            
             <!-- 4. Endpoints -->
             <section id="endpoints" class="mb-16">
                 <h2 class="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-peak-orange pl-3">4. Endpoint Description</h2>
 
-                <div id="put-geo" class="border rounded-lg overflow-hidden shadow-sm bg-white">
+                <div id="put-vehicle" class="border rounded-lg overflow-hidden shadow-sm bg-white">
                     <!-- Endpoint Header -->
                     <div class="bg-gray-50 p-4 border-b flex items-center gap-3">
                         <span class="px-3 py-1 bg-peak-orange text-white font-bold rounded text-sm shadow-sm">PUT</span>
-                        <code class="text-sm font-mono text-gray-700 break-all">/api/v1/common/localization/positioning-device/geopositions</code>
+                        <code class="text-sm font-mono text-gray-700 break-all">/common/localization/topology-devices/{topologyDeviceType}/{topologyDeviceId}/vehicle-position</code>
                     </div>
                     
                     <div class="p-6">
-                        <p class="text-gray-600 mb-4">Transmits a list of geoposition records to the system.</p>
+                        <p class="text-gray-600 mb-4">Sends position information from a stationary positioning device together with the tracked vehicle's device identifier.</p>
                         
-                        <h4 class="font-semibold text-gray-800 mb-2 text-sm">Request Body (JSON Array)</h4>
-                        <div class="relative group">
-                            <button class="copy-btn absolute top-2 right-2 bg-gray-700 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10">Copy</button>
-                            <pre><code class="language-json">[
-  {
-    "deviceId": "4711",
-    "deviceType": "PositioningDevice",
-    "coordinateNorth": 41.40338,
-    "coordinateEast": 2.17403,
-    "altitude": 43.5,
-    "azimuth": 243.5,
-    "coordinateSystem": "WGS84",
-    "timeOfPosition": "2025-01-01T10:00:00Z",
-    "accuracy": 4.3,
-    "velocity": 55.6,
-    "receivedSignalStrengthIndicator": -55.6,
-    "timestamp": "2025-01-01T10:00:01Z"
-  }
-]</code></pre>
+                        <h4 class="font-semibold text-gray-800 mb-2 text-sm">Path Parameters</h4>
+                        <div class="overflow-x-auto mb-4">
+                            <table class="min-w-full text-sm text-left text-gray-600">
+                                <thead class="bg-gray-100 text-xs uppercase font-medium">
+                                    <tr>
+                                        <th class="px-4 py-2">Name</th>
+                                        <th class="px-4 py-2">Type</th>
+                                        <th class="px-4 py-2">Required</th>
+                                        <th class="px-4 py-2">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="px-4 py-2 font-mono">topologyDeviceId</td>
+                                        <td class="px-4 py-2">string</td>
+                                        <td class="px-4 py-2 text-red-600 font-bold">Yes</td>
+                                        <td class="px-4 py-2">DMS identifier of the stationary positioning device (linked to a depot area or track).</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2 font-mono">topologyDeviceType</td>
+                                        <td class="px-4 py-2">string</td>
+                                        <td class="px-4 py-2 text-red-600 font-bold">Yes</td>
+                                        <td class="px-4 py-2">DMS device type of the stationary positioning device.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
 
-                        <h4 class="font-semibold text-gray-800 mt-6 mb-2 text-sm">Response (202 Accepted)</h4>
+                        <h4 class="font-semibold text-gray-800 mb-2 text-sm">Request Body (JSON)</h4>
                         <div class="relative group">
                             <button class="copy-btn absolute top-2 right-2 bg-gray-700 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10">Copy</button>
                             <pre><code class="language-json">{
-  "status": 202,
-  "message": "Position data successfully accepted."
+  "vehiclePositioningDeviceId": "00:00:00:00:00:01",
+  "vehiclePositioningDeviceType": "RFID-Transponder",
+  "receivedSignalStrengthIndicator": -55.6,
+  "timestamp": "2022-11-01T08:30:00Z"
 }</code></pre>
                         </div>
-                    </div>
-                </div>
-            </section>
 
-            <!-- 5. Data Model -->
-            <section id="datamodel" class="mb-16">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">5. Data Model: GeoPosition</h2>
-                <p class="mb-4 text-sm text-gray-600">Detailed description of fields in the JSON object.</p>
+                        <h4 class="font-semibold text-gray-800 mt-6 mb-2 text-sm">Response (202 Accepted)</h4>
+                        <p class="text-sm text-gray-600 mb-3">Accepted for processing. Body may be empty.</p>
 
-                <div class="overflow-x-auto border rounded-lg shadow-sm">
-                    <table class="min-w-full text-sm text-left text-gray-600">
-                        <thead class="text-xs text-gray-700 uppercase bg-gray-100 border-b">
-                            <tr>
-                                <th scope="col" class="px-6 py-3 w-32">Field</th>
-                                <th scope="col" class="px-6 py-3 w-24">Type</th>
-                                <th scope="col" class="px-6 py-3 w-24">Mandatory</th>
-                                <th scope="col" class="px-6 py-3">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-200 bg-white">
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-6 py-3 font-mono font-medium text-gray-900">deviceId</td>
-                                <td class="px-6 py-3 text-blue-600">string</td>
-                                <td class="px-6 py-3 text-red-600 font-bold">Yes</td>
-                                <td class="px-6 py-3">ID of the sending device.</td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-6 py-3 font-mono font-medium text-gray-900">deviceType</td>
-                                <td class="px-6 py-3 text-blue-600">string</td>
-                                <td class="px-6 py-3 text-red-600 font-bold">Yes</td>
-                                <td class="px-6 py-3">Device type (e.g., GPS Module).</td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-6 py-3 font-mono font-medium text-gray-900">coordinateNorth</td>
-                                <td class="px-6 py-3 text-blue-600">number</td>
-                                <td class="px-6 py-3 text-red-600 font-bold">Yes</td>
-                                <td class="px-6 py-3">Latitude (WGS84) or North value (ENU).</td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-6 py-3 font-mono font-medium text-gray-900">coordinateEast</td>
-                                <td class="px-6 py-3 text-blue-600">number</td>
-                                <td class="px-6 py-3 text-red-600 font-bold">Yes</td>
-                                <td class="px-6 py-3">Longitude (WGS84) or East value (ENU).</td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-6 py-3 font-mono font-medium text-gray-900">coordinateSystem</td>
-                                <td class="px-6 py-3 text-purple-600">enum</td>
-                                <td class="px-6 py-3 text-red-600 font-bold">Yes</td>
-                                <td class="px-6 py-3"><code>WGS84</code> or <code>ENUInMeters</code>.</td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-6 py-3 font-mono font-medium text-gray-900">timeOfPosition</td>
-                                <td class="px-6 py-3 text-purple-600">datetime</td>
-                                <td class="px-6 py-3 text-red-600 font-bold">Yes</td>
-                                <td class="px-6 py-3">Time of measurement (UTC ISO 8601).</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="text-xs text-gray-400 mt-2 italic">* For optional fields (altitude, velocity, etc.) see Swagger definition.</p>
-            </section>
-
-            <!-- 6. Examples -->
-            <section id="examples" class="mb-16">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">6. Examples & Errors</h2>
-                
-                <div class="grid gap-6">
-                    <div class="bg-red-50 border border-red-100 rounded-lg p-6">
-                        <h3 class="text-red-800 font-bold mb-2 flex items-center gap-2">
-                            <i data-lucide="alert-circle" class="w-5 h-5"></i> 400 Bad Request
-                        </h3>
-                        <p class="text-sm text-red-700 mb-3">Occurs when mandatory fields are missing or data types are incorrect.</p>
+                        <h4 class="font-semibold text-gray-800 mt-6 mb-2 text-sm">Error (ProblemDetails)</h4>
                         <div class="relative group">
                             <button class="copy-btn absolute top-2 right-2 bg-gray-700 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10">Copy</button>
                             <pre><code class="language-json">{
   "status": 400,
   "title": "Bad Request",
-  "detail": "Field 'coordinateSystem' is missing."
+  "detail": "vehiclePositioningDeviceId is missing.",
+  "instance": "/common/localization/topology-devices/RFID-reader-device/1/vehicle-position"
 }</code></pre>
                         </div>
                     </div>
                 </div>
             </section>
 
+            
+            <!-- 5. Data Model -->
+            <section id="datamodel" class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">5. Data Model: VehicleAtDevicePosition</h2>
+                <p class="mb-4 text-sm text-gray-600">Fields sent by stationary positioning devices.</p>
+
+                <div class="overflow-x-auto border rounded-lg shadow-sm">
+                    <table class="min-w-full text-sm text-left text-gray-600">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-100 border-b">
+                            <tr>
+                                <th class="px-6 py-3 w-32">Field</th>
+                                <th class="px-6 py-3 w-24">Type</th>
+                                <th class="px-6 py-3 w-24">Mandatory</th>
+                                <th class="px-6 py-3">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 bg-white">
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-3 font-mono font-medium text-gray-900">vehiclePositioningDeviceId</td>
+                                <td class="px-6 py-3 text-blue-600">string</td>
+                                <td class="px-6 py-3 text-red-600 font-bold">Yes</td>
+                                <td class="px-6 py-3">Identifier of the vehicle device (e.g., MAC address).</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-3 font-mono font-medium text-gray-900">vehiclePositioningDeviceType</td>
+                                <td class="px-6 py-3 text-blue-600">string</td>
+                                <td class="px-6 py-3 text-red-600 font-bold">Yes</td>
+                                <td class="px-6 py-3">Type of the vehicle-mounted device (e.g., RFID-Transponder).</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-3 font-mono font-medium text-gray-900">receivedSignalStrengthIndicator</td>
+                                <td class="px-6 py-3 text-blue-600">number</td>
+                                <td class="px-6 py-3">No</td>
+                                <td class="px-6 py-3">RSSI value; closer to 0 is stronger and can indicate distance.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-3 font-mono font-medium text-gray-900">timestamp</td>
+                                <td class="px-6 py-3 text-purple-600">datetime</td>
+                                <td class="px-6 py-3">No</td>
+                                <td class="px-6 py-3">Moment the positioning data was created (UTC ISO 8601).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="text-xs text-gray-400 mt-2 italic">Error responses follow the standard ProblemDetails schema.</p>
+            </section>
+
+            
+            <!-- 6. Examples -->
+            <section id="examples" class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">6. Examples</h2>
+                
+                <div class="bg-gray-900 rounded-lg p-6 mb-4">
+                    <h3 class="text-gray-300 text-sm font-mono mb-2">// Send vehicle position from a topology device</h3>
+                    <div class="relative group">
+                        <button class="copy-btn absolute top-0 right-0 bg-gray-700 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10">Copy</button>
+                        <pre><code class="language-bash">curl -u user:pass -X PUT \
+"https://localhost:8080/api/v1/common/localization/topology-devices/RFID-reader-device/1/vehicle-position" \
+-H "Content-Type: application/json" \
+-d '{"vehiclePositioningDeviceId":"00:00:00:00:00:01","vehiclePositioningDeviceType":"RFID-Transponder","receivedSignalStrengthIndicator":-55.6,"timestamp":"2022-11-01T08:30:00Z"}'</code></pre>
+                    </div>
+                </div>
+
+                <div class="bg-red-50 border border-red-100 rounded-lg p-6">
+                    <h3 class="text-red-800 font-bold mb-2 flex items-center gap-2">
+                        <i data-lucide="alert-triangle" class="w-5 h-5"></i> 401 Unauthorized
+                    </h3>
+                    <p class="text-sm text-red-700 mb-3">Occurs when authentication headers are missing or invalid.</p>
+                    <div class="relative group">
+                        <button class="copy-btn absolute top-2 right-2 bg-gray-700 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10">Copy</button>
+                        <pre><code class="language-json">{
+  "status": 401,
+  "title": "Unauthorized",
+  "detail": "Authentication credentials were not provided."
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            
             <!-- 7. Configuration -->
             <section id="configuration" class="mb-16">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">7. PEAK.X Configuration</h2>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">7. Configuration</h2>
                 
                 <div class="bg-white p-6 rounded-lg border shadow-sm space-y-4">
                     <div>
-                        <h4 class="font-bold text-gray-800">Activation</h4>
-                        <p class="text-sm text-gray-600">Task <strong>OpenAPI – Geo Positioning</strong>: Set Property <em>Activated</em> to "Yes".</p>
+                        <h4 class="font-bold text-gray-800">Interface Activation</h4>
+                        <p class="text-sm text-gray-600">Enable the VehicleAtDevice OpenAPI in PEAK.X and ensure connected topology devices are registered with their <em>topologyDeviceType</em> and <em>topologyDeviceId</em>.</p>
                     </div>
                     <hr>
                     <div>
-                        <h4 class="font-bold text-gray-800">HTTPS Configuration</h4>
-                        <div class="grid grid-cols-2 gap-4 mt-2">
-                            <div class="bg-gray-50 p-2 rounded font-mono text-xs">HttpsEnabled = 1</div>
-                            <div class="bg-gray-50 p-2 rounded font-mono text-xs">HttpsPortNumber = 5601</div>
+                        <h4 class="font-bold text-gray-800">Transport</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-2">
+                            <div class="bg-gray-50 p-2 rounded font-mono text-xs">HTTPS recommended for production</div>
+                            <div class="bg-gray-50 p-2 rounded font-mono text-xs">Content-Type: application/json</div>
                         </div>
                     </div>
                     <hr>
                     <div>
                         <h4 class="font-bold text-gray-800">Swagger UI</h4>
-                        <p class="text-sm text-gray-600 mb-2">Interactive test in browser:</p>
-                        <a href="#" class="text-blue-600 hover:underline text-sm break-all">https://&lt;server&gt;:5601/swagger/index.html</a>
+                        <p class="text-sm text-gray-600 mb-2">Explore and test via browser:</p>
+                        <a href="#" class="text-blue-600 hover:underline text-sm break-all">https://localhost:8080/swagger/index.html</a>
                     </div>
                 </div>
             </section>
 
+            
             <!-- 8. Best Practices -->
             <section id="best-practices" class="mb-16">
                 <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">8. Best Practices</h2>
@@ -403,38 +435,40 @@
                     <ul class="space-y-3">
                         <li class="flex items-start gap-3">
                             <i data-lucide="check-circle" class="w-5 h-5 text-peak-green mt-0.5"></i>
-                            <span class="text-gray-900 text-sm"><strong>HTTPS only:</strong> Security is the top priority.</span>
+                            <span class="text-gray-900 text-sm"><strong>Send UTC timestamps:</strong> Keep all <code>timestamp</code> values in ISO 8601 UTC to avoid time drift.</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <i data-lucide="check-circle" class="w-5 h-5 text-peak-green mt-0.5"></i>
-                            <span class="text-gray-900 text-sm"><strong>Retry Logic:</strong> Implement backoff strategies for HTTP 429 (Rate Limits).</span>
+                            <span class="text-gray-900 text-sm"><strong>Validate identifiers:</strong> Ensure <code>vehiclePositioningDeviceId</code> and topology path segments exist in PEAK.DMS.</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <i data-lucide="check-circle" class="w-5 h-5 text-peak-green mt-0.5"></i>
-                            <span class="text-gray-900 text-sm"><strong>Time Sync:</strong> Regularly check system time (UTC).</span>
+                            <span class="text-gray-900 text-sm"><strong>Monitor RSSI trends:</strong> Use <code>receivedSignalStrengthIndicator</code> to infer proximity to the reader when applicable.</span>
                         </li>
                     </ul>
                 </div>
             </section>
 
+            
             <!-- 9. Appendix -->
             <section id="appendix" class="mb-12">
                 <h2 class="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-peak-orange pl-3">9. Appendix</h2>
                 
                 <h3 class="font-semibold text-gray-800 mb-2">Status Code Reference</h3>
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
-                    <div class="bg-green-100 text-green-800 px-3 py-1 rounded text-center text-sm font-mono">200 OK</div>
                     <div class="bg-green-100 text-green-800 px-3 py-1 rounded text-center text-sm font-mono">202 Accepted</div>
                     <div class="bg-red-100 text-red-800 px-3 py-1 rounded text-center text-sm font-mono">400 Bad Req</div>
                     <div class="bg-red-100 text-red-800 px-3 py-1 rounded text-center text-sm font-mono">401 Unauth</div>
+                    <div class="bg-red-100 text-red-800 px-3 py-1 rounded text-center text-sm font-mono">403 Forbidden</div>
+                    <div class="bg-red-100 text-red-800 px-3 py-1 rounded text-center text-sm font-mono">500 Server Err</div>
                 </div>
 
                 <h3 class="font-semibold text-gray-800 mb-2">Glossary</h3>
                 <div class="text-sm text-gray-600 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
                     <div class="flex justify-between border-b pb-1"><span>PEAK.X</span> <span class="text-gray-400">Software Platform</span></div>
                     <div class="flex justify-between border-b pb-1"><span>PEAK.DMS</span> <span class="text-gray-400">Depot Management System</span></div>
-                    <div class="flex justify-between border-b pb-1"><span>WGS84</span> <span class="text-gray-400">World Geodetic System 1984</span></div>
-                    <div class="flex justify-between border-b pb-1"><span>ENU</span> <span class="text-gray-400">East-North-Up</span></div>
+                    <div class="flex justify-between border-b pb-1"><span>Topology Device</span> <span class="text-gray-400">Stationary positioning hardware</span></div>
+                    <div class="flex justify-between border-b pb-1"><span>ProblemDetails</span> <span class="text-gray-400">Standard error payload (RFC 7807)</span></div>
                 </div>
             </section>
 
@@ -444,6 +478,7 @@
     <!-- Prism JS Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
 
     <!-- Interactive Scripts -->
     <script>
