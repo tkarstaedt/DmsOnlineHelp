@@ -340,10 +340,9 @@
 
         <!-- Submit Button -->
         <div class="action-area">
-            <!-- This would navigate to the Inspection Page -->
-            <button class="submit-btn" onclick="window.location.href='pre_departure_inspection.html'">
+            <button class="submit-btn" onclick="confirmTestDrive()">
                 <span class="material-symbols-outlined">directions_car</span>
-                Start test drive
+                Initiate Test Drive
             </button>
         </div>
 
@@ -367,11 +366,19 @@
             <span class="material-symbols-outlined">shower</span>
             <span>Supply</span>
         </a>
-        <a href="#" class="nav-item">
+        <a href="vehicles_list.html" class="nav-item">
             <span class="material-symbols-outlined">directions_bus</span>
             <span>Vehicles</span>
         </a>
     </nav>
 
 </body>
+
+<script>
+    function confirmTestDrive() {
+        const ok = confirm("Proceed to manual visual inspection for the selected shuttle?");
+        if (!ok) return;
+        window.location.href = 'visual_checks.html';
+    }
+</script>
 </html>

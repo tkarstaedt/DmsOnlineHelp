@@ -356,7 +356,7 @@
         </div>
 
         <!-- 12. Vehicles -->
-        <div class="card">
+        <div class="card" onclick="window.location.href='vehicles_list.html'" style="cursor: pointer;">
             <span class="material-symbols-outlined">directions_bus</span>
             <span class="card-label">Vehicles</span>
         </div>
@@ -366,14 +366,26 @@
         <div class="card card-shuttle" onclick="window.location.href='select_shuttle.html'" style="cursor: pointer;">
             <!-- UPDATE: Icon von 'airport_shuttle' auf 'checklist' geändert -->
             <span class="material-symbols-outlined">checklist</span>
-            <span class="card-label">Pre-Departure Inspection</span>
+            <span class="card-label">Pre-Departure Checkup</span>
+        </div>
+
+        <!-- 14. Post-trip Inspection -->
+        <div class="card card-shuttle" onclick="window.location.href='select_shuttle.html'" style="cursor: pointer;">
+            <span class="material-symbols-outlined">fact_check</span>
+            <span class="card-label">Post-trip Inspection</span>
+        </div>
+
+        <!-- 15. Open inspections -->
+        <div class="card card-shuttle" onclick="window.location.href='open_inspections.html'" style="cursor: pointer;">
+            <span class="material-symbols-outlined">pending_actions</span>
+            <span class="card-label">Open inspections</span>
         </div>
 
     </main>
 
     <!-- BOTTOM NAVIGATION -->
     <nav class="bottom-nav">
-        <a href="#" class="nav-item active">
+        <a href="overview.html" class="nav-item active">
             <span class="material-symbols-outlined">description</span>
             <span>Overview</span>
         </a>
@@ -389,7 +401,7 @@
             <span class="material-symbols-outlined">shower</span>
             <span>Supply</span>
         </a>
-        <a href="#" class="nav-item">
+        <a href="vehicles_list.html" class="nav-item">
             <span class="material-symbols-outlined">directions_bus</span>
             <span>Vehicles</span>
         </a>

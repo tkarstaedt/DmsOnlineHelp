@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sitemap</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif; }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-900">
+  <div class="max-w-7xl mx-auto px-8 py-12">
+    <header class="flex flex-col gap-2 mb-10">
+      <p class="text-xs tracking-[0.25em] uppercase text-slate-500">Departure Control</p>
+      <h1 class="text-3xl font-semibold">Sitemap</h1>
+      <p class="text-slate-600">Seiten als Blöcke mit Kurzbeschreibung und visualisierten Verbindungen.</p>
+    </header>
+
+    <!-- Flow 1: Shuttle Inspection -->
+    <section class="mb-10">
+      <h2 class="text-lg font-semibold text-slate-800 mb-4">Flow: Shuttle Inspection</h2>
+      <div class="flex flex-wrap items-center gap-3">
+        <a href="overview.html" class="block rounded-xl bg-white border border-slate-200 shadow-sm px-4 py-3 text-sm font-semibold hover:border-blue-500">Overview</a>
+        <div class="h-px flex-1 min-w-[40px] bg-slate-300"></div>
+        <a href="select_shuttle.html" class="block rounded-xl bg-white border border-slate-200 shadow-sm px-4 py-3 text-sm hover:border-blue-500">
+          <div class="font-semibold">Select Shuttle</div>
+          <div class="text-xs text-slate-500">Fahrzeug wählen</div>
+        </a>
+        <div class="h-px flex-1 min-w-[40px] bg-slate-300"></div>
+        <a href="visual_checks.html" class="block rounded-xl bg-white border border-slate-200 shadow-sm px-4 py-3 text-sm hover:border-blue-500">
+          <div class="font-semibold">Manual Visual Inspection</div>
+          <div class="text-xs text-slate-500">Manuelle Checks</div>
+        </a>
+        <div class="h-px flex-1 min-w-[40px] bg-slate-300"></div>
+        <a href="pre_departure_checkup.html" class="block rounded-xl bg-white border border-slate-200 shadow-sm px-4 py-3 text-sm hover:border-blue-500">
+          <div class="font-semibold">Pre-departure Checkup</div>
+          <div class="text-xs text-slate-500">Autonome Tests</div>
+        </a>
+        <div class="h-px flex-1 min-w-[40px] bg-slate-300"></div>
+        <a href="inspection_signature.html" class="block rounded-xl bg-white border border-slate-200 shadow-sm px-4 py-3 text-sm hover:border-blue-500">
+          <div class="font-semibold">Inspection Signature</div>
+          <div class="text-xs text-slate-500">Digitale Signatur</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Flow 2: Vehicles -->
+    <section class="mb-10">
+      <h2 class="text-lg font-semibold text-slate-800 mb-4">Flow: Vehicles</h2>
+      <div class="flex flex-wrap items-center gap-3">
+        <a href="overview.html" class="block rounded-xl bg-white border border-slate-200 shadow-sm px-4 py-3 text-sm font-semibold hover:border-blue-500">Overview</a>
+        <div class="h-px flex-1 min-w-[40px] bg-slate-300"></div>
+        <a href="vehicles_list.html" class="block rounded-xl bg-white border border-slate-200 shadow-sm px-4 py-3 text-sm hover:border-blue-500">
+          <div class="font-semibold">Vehicle list</div>
+          <div class="text-xs text-slate-500">Flottenübersicht</div>
+        </a>
+        <div class="h-px flex-1 min-w-[40px] bg-slate-300"></div>
+        <a href="vehicle_detail.html" class="block rounded-xl bg-white border border-slate-200 shadow-sm px-4 py-3 text-sm hover:border-blue-500">
+          <div class="font-semibold">Vehicle detail</div>
+          <div class="text-xs text-slate-500">Fahrzeug-Details</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Flow 3: Offene Inspektionen -->
+    <section class="mb-6">
+      <h2 class="text-lg font-semibold text-slate-800 mb-4">Flow: Offene Inspektionen</h2>
+      <div class="flex flex-wrap items-center gap-3">
+        <a href="overview.html" class="block rounded-xl bg-white border border-slate-200 shadow-sm px-4 py-3 text-sm font-semibold hover:border-blue-500">Overview</a>
+        <div class="h-px flex-1 min-w-[40px] bg-slate-300"></div>
+        <a href="open_inspections.html" class="block rounded-xl bg-white border border-slate-200 shadow-sm px-4 py-3 text-sm hover:border-blue-500">
+          <div class="font-semibold">Open inspections</div>
+          <div class="text-xs text-slate-500">Angeforderte Checks</div>
+        </a>
+      </div>
+    </section>
+
+    <footer class="mt-10 text-xs text-slate-500">
+      Statische Mock-Pages · Tailwind via CDN.
+    </footer>
+  </div>
+</body>
+</html>
