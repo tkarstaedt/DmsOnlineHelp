@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sitemap Visualization</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* App Color Palette */
+    :root {
+      --primary-orange: #FF4F30;
+      --bg-grey: #EEF0F4;
+      --header-bg: #E0E0E0;
+      --card-bg: #FFFFFF;
+      --text-dark: #1A1A1A;
+      --text-grey: #666666;
+      --border-color: #D1D1D1;
+      --btn-dark: #404040;
+      --success-green: #2E7D32;
+    }
+    body { 
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif; 
+      background-color: var(--bg-grey);
+      color: var(--text-dark);
+    }
+    /* Header Styling Override */
+    header {
+      border-top: 4px solid var(--primary-orange);
+      padding-top: 20px; /* Space for the border */
+    }
+    
+    /* Mermaid Font Fix */
+    .mermaid svg, .mermaid svg * {
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif !important;
+    }
+    .mermaid .node, .mermaid .node *, 
+    .mermaid .label, .mermaid .label *, 
+    .mermaid .edgeLabel, .mermaid .edgeLabel *,
+    .mermaid foreignObject div {
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif !important;
+    }
+    /* Fix Edge Label Background */
+    .mermaid .edgeLabel {
+      background-color: white !important;
+      color: var(--text-grey) !important;
+    }
+  </style>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ 
+      startOnLoad: true, 
+      theme: 'base', 
+      themeVariables: { 
+        fontFamily: '"Inter", system-ui, sans-serif',
+        fontSize: '16px',
+        edgeLabelBackground: '#ffffff',
+        tertiaryColor: '#ffffff' /* Helps prevents some default pink backgrounds */
+      } 
+    });
+  </script>
+</head>
+<body class="min-h-screen">
+  <div class="max-w-7xl mx-auto px-8 py-12">
+    <header class="flex flex-col gap-2 mb-10">
+      <p class="text-xs tracking-[0.25em] uppercase text-slate-500">Pre-Departure Checkup</p>
+      <h1 class="text-3xl font-semibold">Sitemap Visualization</h1>
+      <p class="text-slate-600">Interactive OVerview.</p>
+    </header>
+
+    <div class="overflow-x-auto">
+      <div class="mermaid">
+        flowchart TD
+          %% Define Nodes
+          Overview["<div style='min-width:200px; min-height:60px; padding:10px; display:flex; flex-direction:column; justify-content:top; align-items:center; line-height:1.2;'><b>Overview</b><span style='font-size:0.8em; color:#666; margin-top:8px;'>Dashboard</span></div>"]
+          
+          %% Flow 1: Shuttle Inspection
+          SelectShuttle["<div style='min-width:200px; min-height:60px; padding:8px; display:flex; flex-direction:column; justify-content:top; align-items:center; line-height:1.2;'><b>Select Shuttle</b><span style='font-size:0.8em; color:#666; margin-top:8px;'>Fahrzeug wählen</span></div>"]
+          VisualChecks["<div style='min-width:200px; min-height:60px; padding:8px; display:flex; flex-direction:column; justify-content:top; align-items:center; line-height:1.2;'><b>Manual Visual Inspection</b><span style='font-size:0.8em; color:#666; margin-top:8px;'>Manuelle Checks</span></div>"]
+          PreDeparture["<div style='min-width:200px; min-height:60px; padding:8px; display:flex; flex-direction:column; justify-content:top; align-items:center; line-height:1.2;'><b>Pre-departure Checkup</b><span style='font-size:0.8em; color:#666; margin-top:8px;'>Autonome Tests</span></div>"]
+          Signature["<div style='min-width:200px; min-height:60px; padding:8px; display:flex; flex-direction:column; justify-content:top; align-items:center; line-height:1.2;'><b>Inspection Signature</b><span style='font-size:0.8em; color:#666; margin-top:8px;'>Digitale Signatur</span></div>"]
+
+          %% Flow 2: Vehicles
+          VehiclesList["<div style='min-width:200px; min-height:60px; padding:8px; display:flex; flex-direction:column; justify-content:top; align-items:center; line-height:1.2;'><b>Vehicle List</b><span style='font-size:0.8em; color:#666; margin-top:8px;'>Flottenübersicht</span></div>"]
+          VehicleDetail["<div style='min-width:200px; min-height:60px; padding:8px; display:flex; flex-direction:column; justify-content:top; align-items:center; line-height:1.2;'><b>Vehicle Detail</b><span style='font-size:0.8em; color:#666; margin-top:8px;'>Fahrzeug-Details</span></div>"]
+
+          %% Flow 3: Open Inspections   
+          OpenInspections["<div style='min-width:200px; min-height:60px; padding:8px; display:flex; flex-direction:column; justify-content:top; align-items:center; line-height:1.2;'><b>Open Inspections</b><span style='font-size:0.8em; color:#666; margin-top:8px;'>Angeforderte Checks</span></div>"]
+
+          %% Define Connections
+          %% Reordered to: Open Inspections (left), Shuttle (middle), Vehicles (right)
+          Overview --> |Open Inspections| OpenInspections
+          Overview --> |Pre-Departure Checkup| SelectShuttle
+          Overview --> |Vehicles| VehiclesList
+
+          %% Flow 1: Shuttle Inspection
+          SelectShuttle --> |Initiate Test Drive| VisualChecks
+          VisualChecks --> |Continue to Automatic Tests| PreDeparture
+          PreDeparture --> |Sign & Submit Report| Signature
+
+          %% Flow 2: Vehicles
+          VehiclesList --> |Select Vehicle| VehicleDetail
+          VehicleDetail --> |Start test drive| VisualChecks
+
+          %% Flow 3: Open Inspections
+          OpenInspections --> |Select Inspection| PreDeparture
+
+
+          %% Links (Click events)
+          click Overview "overview.html" "Go to Overview"
+          click SelectShuttle "select_shuttle.html" "Go to Select Shuttle"
+          click VisualChecks "visual_checks.html" "Go to Visual Checks"
+          click PreDeparture "pre_departure_checkup.html" "Go to Pre-departure Checkup"
+          click Signature "inspection_signature.html" "Go to Inspection Signature"
+          click VehiclesList "vehicles_list.html" "Go to Vehicles List"
+          click VehicleDetail "vehicle_detail.html" "Go to Vehicle Detail"
+          click OpenInspections "open_inspections.html" "Go to Open Inspections"
+      </div>
+    </div>
+
+    <footer class="mt-10 text-xs text-slate-500">
+      Mermaid.js · Tailwind CSS
+    </footer>
+  </div>
+</body>
+</html>

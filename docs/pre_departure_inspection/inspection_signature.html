@@ -152,46 +152,6 @@
             color: var(--text-dark);
         }
 
-        /* Signature Pad */
-        .signature-wrapper {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            overflow: hidden;
-            position: relative;
-            /* Ensures canvas isn't blurry on high DPI screens logic handled in JS */
-        }
-
-        canvas {
-            display: block;
-            width: 100%;
-            height: 200px;
-            cursor: crosshair;
-            background-color: #fff;
-        }
-
-        .signature-actions {
-            display: flex;
-            justify-content: flex-end;
-            padding: 8px;
-            background-color: #f9f9f9;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .reset-btn {
-            background-color: #9E9E9E;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            font-size: 13px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            cursor: pointer;
-        }
-
         /* Submit Button */
         .action-area {
             margin-top: 32px;
@@ -286,6 +246,10 @@
                     <span class="radio-label">Ready for service</span>
                 </label>
                 <label class="radio-option">
+                    <input type="radio" name="status" value="limited">
+                    <span class="radio-label">Conditionally operable</span>
+                </label>
+                <label class="radio-option">
                     <input type="radio" name="status" value="not_ready">
                     <span class="radio-label warning">Not ready for service</span>
                 </label>
@@ -296,8 +260,29 @@
         <div class="form-label">Driver Name</div>
         <input type="text" class="input-field" value="Max Mustermann" placeholder="Enter full name">
 
-        <!-- Signature Canvas -->
-        <div class="form-label">Signature</div>
+        <!-- Digital Signature (SSO-based) -->
+        <div class="form-label">Digital Signature</div>
+        <div class="confirmation-card" style="background:#fff; border-color: var(--border-color); color: var(--text-dark);">
+            <div class="confirmation-text" style="color: var(--text-grey); margin-bottom: 8px;">
+                Signing with your logged-in account. Device and timestamp will be recorded automatically.
+            </div>
+            <ul style="list-style:none; padding-left:0; margin:0; color: var(--text-dark); font-size:14px; line-height:1.6;">
+                <li><strong>Signed in as:</strong> <span id="signed-in-as">user@entra-id.example</span></li>
+                <li><strong>Auth method:</strong> Entra ID SSO (session)</li>
+                <li><strong>Device:</strong> iOS browser</li>
+                <li><strong>Timestamp:</strong> <span id="signature-timestamp">--:--</span></li>
+            </ul>
+            <div class="status-group" style="margin-top:12px;">
+                <label class="radio-option">
+                    <input type="checkbox" id="confirm-digital">
+                    <span class="radio-label">I confirm to sign digitally with my Entra ID session</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Previous handwriting pad intentionally commented out per new requirement -->
+        <!--
+        <div class="form-label">Signature (Handwritten)</div>
         <div class="signature-wrapper">
             <canvas id="sig-canvas"></canvas>
             <div class="signature-actions">
@@ -307,10 +292,11 @@
                 </button>
             </div>
         </div>
+        -->
 
         <!-- Final Submit -->
         <div class="action-area">
-            <button class="submit-btn" onclick="alert('Report signed and archived successfully.')">
+            <button class="submit-btn" onclick="completeDigitalSignature()">
                 <span class="material-symbols-outlined">check_circle</span>
                 Complete Inspection
             </button>
@@ -336,118 +322,28 @@
             <span class="material-symbols-outlined">shower</span>
             <span>Supply</span>
         </a>
-        <a href="#" class="nav-item">
+        <a href="vehicles_list.html" class="nav-item">
             <span class="material-symbols-outlined">directions_bus</span>
             <span>Vehicles</span>
         </a>
     </nav>
 
-    <!-- Signature Logic -->
+    <!-- Digital signature placeholder logic -->
     <script>
-        (function() {
-            // Get a reference to the canvas object
-            var canvas = document.getElementById('sig-canvas');
-            var ctx = canvas.getContext('2d');
-            var clearBtn = document.getElementById('sig-clearBtn');
-
-            // Set canvas size dynamically to fit container
-            function resizeCanvas() {
-                var ratio = Math.max(window.devicePixelRatio || 1, 1);
-                canvas.width = canvas.offsetWidth * ratio;
-                canvas.height = canvas.offsetHeight * ratio;
-                ctx.scale(ratio, ratio);
+        // Populate timestamp on load
+        const tsEl = document.getElementById('signature-timestamp');
+        if (tsEl) {
+            tsEl.textContent = new Date().toLocaleString();
+        }
+        function completeDigitalSignature() {
+            const confirmed = document.getElementById('confirm-digital').checked;
+            if (!confirmed) {
+                alert('Please confirm the digital signature with your Entra ID session.');
+                return;
             }
-            window.addEventListener("resize", resizeCanvas);
-            resizeCanvas();
-
-            // Config
-            var drawing = false;
-            var mousePos = { x:0, y:0 };
-            var lastPos = mousePos;
-
-            // Styles
-            ctx.strokeStyle = "#222";
-            ctx.lineWidth = 2;
-            ctx.lineCap = 'round';
-
-            // Helper to get position relative to canvas
-            function getMousePos(canvasDom, mouseEvent) {
-                var rect = canvasDom.getBoundingClientRect();
-                return {
-                    x: mouseEvent.clientX - rect.left,
-                    y: mouseEvent.clientY - rect.top
-                };
-            }
-
-            // --- Mouse Events ---
-            canvas.addEventListener("mousedown", function (e) {
-                drawing = true;
-                lastPos = getMousePos(canvas, e);
-            }, false);
-
-            canvas.addEventListener("mouseup", function (e) {
-                drawing = false;
-            }, false);
-
-            canvas.addEventListener("mousemove", function (e) {
-                mousePos = getMousePos(canvas, e);
-                renderCanvas();
-            }, false);
-
-            // --- Touch Events ---
-            canvas.addEventListener("touchstart", function (e) {
-                mousePos = getTouchPos(canvas, e);
-                var touch = e.touches[0];
-                var mouseEvent = new MouseEvent("mousedown", {
-                    clientX: touch.clientX,
-                    clientY: touch.clientY
-                });
-                canvas.dispatchEvent(mouseEvent);
-            }, false);
-
-            canvas.addEventListener("touchend", function (e) {
-                var mouseEvent = new MouseEvent("mouseup", {});
-                canvas.dispatchEvent(mouseEvent);
-            }, false);
-
-            canvas.addEventListener("touchmove", function (e) {
-                var touch = e.touches[0];
-                var mouseEvent = new MouseEvent("mousemove", {
-                    clientX: touch.clientX,
-                    clientY: touch.clientY
-                });
-                canvas.dispatchEvent(mouseEvent);
-                // Prevent scrolling when drawing
-                e.preventDefault(); 
-            }, false);
-
-            function getTouchPos(canvasDom, touchEvent) {
-                var rect = canvasDom.getBoundingClientRect();
-                return {
-                    x: touchEvent.touches[0].clientX - rect.left,
-                    y: touchEvent.touches[0].clientY - rect.top
-                };
-            }
-
-            // Draw
-            function renderCanvas() {
-                if (drawing) {
-                    ctx.beginPath();
-                    ctx.moveTo(lastPos.x, lastPos.y);
-                    ctx.lineTo(mousePos.x, mousePos.y);
-                    ctx.stroke();
-                    lastPos = mousePos;
-                }
-            }
-
-            // Clear
-            clearBtn.addEventListener("click", function() {
-                // Clear using the scaled width/height
-                var ratio = Math.max(window.devicePixelRatio || 1, 1);
-                ctx.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight);
-            });
-
-        })();
+            const user = document.getElementById('signed-in-as').textContent || 'current user';
+            alert(`Report signed digitally as ${user}.`);
+        }
     </script>
 </body>
 </html>

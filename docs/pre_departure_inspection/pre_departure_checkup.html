@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-departure Checkup</title>
+    
+    <!-- Google Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        /* --- CSS Variables & Reset --- */
+        :root {
+            --primary-orange: #FF4F30;
+            --bg-grey: #EEF0F4;
+            --header-bg: #E0E0E0;
+            --card-bg: #FFFFFF;
+            --text-dark: #1A1A1A;
+            --text-grey: #666666;
+            --border-color: #D1D1D1;
+            --btn-dark: #404040;
+            --success-green: #2E7D32;
+            --warning-amber: #F57F17;
+            --processing-blue: #1976D2;
+            
+            --nav-height: 65px;
+            --header-height: 50px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-grey);
+            color: var(--text-dark);
+            padding-bottom: calc(var(--nav-height) + 40px); 
+        }
+
+        /* --- Header --- */
+        header {
+            background-color: var(--header-bg);
+            height: var(--header-height);
+            display: grid;
+            grid-template-columns: 48px 1fr 48px;
+            align-items: center;
+            padding: 0 8px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
+            border-top: 4px solid var(--primary-orange); 
+        }
+
+        .back-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-dark);
+        }
+
+        h1 {
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* --- Inspection Content --- */
+        .inspection-container {
+            padding: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* NEW: Shuttle Info Header */
+        .shuttle-header {
+            display: flex;
+            justify-content: space-between;
+            background-color: #E3E5E8;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .shuttle-info-item {
+            display: flex;
+            flex-direction: column;
+            font-size: 12px;
+            color: var(--text-grey);
+        }
+
+        .shuttle-info-value {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-top: 2px;
+        }
+
+        .section-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-grey);
+            margin: 24px 0 8px 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .section-title:first-child {
+            margin-top: 8px;
+        }
+        .summary-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            margin-top: 4px;
+        }
+        .summary-card details {
+            padding: 0 16px 12px 16px;
+        }
+        .summary-card summary {
+            cursor: pointer;
+            padding: 16px 0 8px 0;
+            font-weight: 600;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .summary-left {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .summary-card summary .chevron {
+            margin-left: auto;
+            color: var(--text-grey);
+            font-size: 20px;
+            transition: transform 0.2s ease;
+        }
+        .summary-card details[open] summary .chevron {
+            transform: rotate(90deg);
+        }
+        .summary-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        .summary-list li {
+            padding: 6px 0;
+            border-bottom: 1px solid var(--bg-grey);
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            color: var(--text-grey);
+        }
+        .summary-list li .status-badge {
+            margin-left: auto;
+        }
+        .summary-list li:last-child {
+            border-bottom: none;
+        }
+
+        .section-icon {
+            font-size: 18px;
+            color: var(--primary-orange);
+        }
+
+        .check-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .check-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+            border-bottom: 1px solid var(--bg-grey);
+        }
+
+        .check-item:last-child {
+            border-bottom: none;
+        }
+
+        .check-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .check-icon {
+            color: var(--text-grey);
+            font-size: 24px;
+        }
+
+        .check-label {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        /* --- Autonomous Status Styles --- */
+        .status-badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 16px;
+        }
+
+        .status-badge.ok {
+            color: var(--success-green);
+            background-color: rgba(46, 125, 50, 0.1);
+        }
+        
+        .status-badge.processing {
+            color: var(--processing-blue);
+            background-color: rgba(25, 118, 210, 0.1);
+        }
+
+        .status-badge .material-symbols-outlined {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        /* --- Battery/SoC Visuals --- */
+        .soc-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .soc-text {
+            font-weight: 700;
+            color: var(--success-green);
+            font-size: 14px;
+        }
+
+        .battery-indicator {
+            display: flex;
+            gap: 2px;
+            width: 40px;
+            height: 20px;
+            padding: 2px;
+            border: 2px solid var(--text-grey);
+            border-radius: 4px;
+            position: relative;
+            /* Battery nipple simulation */
+            margin-right: 4px; 
+        }
+        
+        .battery-indicator::after {
+            content: '';
+            position: absolute;
+            right: -5px;
+            top: 5px;
+            bottom: 5px;
+            width: 3px;
+            background-color: var(--text-grey);
+            border-radius: 0 2px 2px 0;
+        }
+
+        .battery-segment {
+            flex: 1;
+            background-color: #E0E0E0;
+            border-radius: 1px;
+        }
+
+        .battery-segment.filled {
+            background-color: var(--success-green);
+        }
+
+        /* --- Manual Toggle Switch --- */
+        .toggle-switch {
+            position: relative;
+            width: 50px;
+            height: 28px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--success-green);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(22px);
+        }
+
+        /* --- Comment Section --- */
+        .comment-section {
+            margin-top: 16px;
+        }
+
+        #comment-field {
+            display: none;
+            width: 100%;
+            margin-top: 10px;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-family: inherit;
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .text-btn {
+            background: none;
+            border: none;
+            color: var(--text-grey);
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0;
+        }
+
+        /* --- Footer Action Area --- */
+        .action-area {
+            margin-top: 32px;
+            padding-bottom: 20px;
+        }
+
+        .submit-btn {
+            background-color: var(--primary-orange);
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(255, 79, 48, 0.25);
+            transition: background-color 0.2s;
+        }
+
+        .submit-btn:active {
+            background-color: #e64a2e;
+            transform: scale(0.99);
+        }
+        
+        .legal-hint {
+            text-align: center;
+            font-size: 11px;
+            color: var(--text-grey);
+            margin-top: 12px;
+            line-height: 1.4;
+        }
+
+        /* --- Footer Navigation --- */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: var(--nav-height);
+            background-color: #EFEFEF;
+            border-top: 1px solid #CCC;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--text-dark);
+            width: 20%;
+            height: 100%;
+        }
+        
+        .nav-item .material-symbols-outlined {
+            font-size: 24px;
+            font-weight: 300;
+            margin-bottom: 4px;
+        }
+
+        .nav-item span {
+            font-size: 10px;
+        }
+
+    </style>
+    
+    <script>
+        function toggleComment() {
+            const field = document.getElementById('comment-field');
+            const btnText = document.getElementById('comment-toggle-text');
+            const icon = document.getElementById('comment-icon');
+            
+            if (field.style.display === 'block') {
+                field.style.display = 'none';
+                btnText.textContent = 'Add optional comment';
+                icon.textContent = 'add_comment';
+            } else {
+                field.style.display = 'block';
+                btnText.textContent = 'Hide comment';
+                icon.textContent = 'remove';
+                field.focus();
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <button class="back-btn" onclick="history.back()">
+            <span class="material-symbols-outlined">arrow_back</span>
+        </button>
+        <h1>Pre-departure Checkup</h1>
+        <div style="width: 40px;"></div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="inspection-container">
+        
+        <!-- NEW: Shuttle Info Header -->
+        <div class="shuttle-header">
+            <div class="shuttle-info-item">
+                <span>Shuttle Type</span>
+                <span class="shuttle-info-value">eVersum eShuttle</span>
+            </div>
+            <div class="shuttle-info-item" style="text-align: right;">
+                <span>Shuttle ID</span>
+                <span class="shuttle-info-value">8967</span>
+            </div>
+        </div>
+
+        <!-- SECTION: MANUAL SUMMARY (collapsible) -->
+        <div class="summary-card">
+            <details>
+                <summary>
+                    <span class="summary-left">
+                        <span class="material-symbols-outlined">visibility</span>
+                        Manual Visual Inspection (Summary)
+                    </span>
+                    <span class="material-symbols-outlined chevron">chevron_right</span>
+                </summary>
+                <ul class="summary-list">
+                    <li>
+                        <span class="material-symbols-outlined">light_mode</span>
+                        <span class="check-label">Exterior Lights (Front)</span>
+                        <span class="status-badge ok"><span class="material-symbols-outlined">check</span>OK</span>
+                    </li>
+                    <li>
+                        <span class="material-symbols-outlined">flourescent</span>
+                        <span class="check-label">Exterior Lights (Rear/Side)</span>
+                        <span class="status-badge ok"><span class="material-symbols-outlined">check</span>OK</span>
+                    </li>
+                    <li>
+                        <span class="material-symbols-outlined">tire_repair</span>
+                        <span class="check-label">Wheels, Tires & Suspension</span>
+                        <span class="status-badge ok"><span class="material-symbols-outlined">check</span>OK</span>
+                    </li>
+                    <li>
+                        <span class="material-symbols-outlined">minor_crash</span>
+                        <span class="check-label">Bodywork Condition (No New Damage)</span>
+                        <span class="status-badge ok"><span class="material-symbols-outlined">check</span>OK</span>
+                    </li>
+                    <li>
+                        <span class="material-symbols-outlined">airline_seat_recline_normal</span>
+                        <span class="check-label">Cabin / Interior Condition</span>
+                        <span class="status-badge ok"><span class="material-symbols-outlined">check</span>OK</span>
+                    </li>
+                </ul>
+            </details>
+        </div>
+
+        <!-- SECTION: AUTONOMOUS TESTS -->
+        <div class="section-title">
+            <span class="material-symbols-outlined section-icon">smart_toy</span>
+            System Self-Check (Autonomous)
+        </div>
+        
+        <div class="check-card">
+            <div class="check-item">
+                <div class="check-info">
+                    <span class="material-symbols-outlined check-icon">battery_charging_full</span>
+                    <span class="check-label">State of Charge</span>
+                </div>
+                <div class="soc-wrapper">
+                    <span class="soc-text">85%</span>
+                    <div class="battery-indicator">
+                        <div class="battery-segment filled"></div>
+                        <div class="battery-segment filled"></div>
+                        <div class="battery-segment filled"></div>
+                        <div class="battery-segment filled"></div>
+                        <div class="battery-segment"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="check-item">
+                <div class="check-info">
+                    <span class="material-symbols-outlined check-icon">memory</span>
+                    <span class="check-label">Engine & Powertrain</span>
+                </div>
+                <div class="status-badge ok">
+                    <span class="material-symbols-outlined">check</span> OK
+                </div>
+            </div>
+            
+            <div class="check-item">
+                <div class="check-info">
+                    <span class="material-symbols-outlined check-icon">crisis_alert</span>
+                    <span class="check-label">Braking System Diagnostics</span>
+                </div>
+                <div class="status-badge ok">
+                    <span class="material-symbols-outlined">check</span> OK
+                </div>
+            </div>
+
+            <div class="check-item">
+                <div class="check-info">
+                    <span class="material-symbols-outlined check-icon">electric_bolt</span>
+                    <span class="check-label">Lighting Control Unit</span>
+                </div>
+                <div class="status-badge ok">
+                    <span class="material-symbols-outlined">check</span> OK
+                </div>
+            </div>
+
+            <div class="check-item">
+                <div class="check-info">
+                    <span class="material-symbols-outlined check-icon">sensors</span>
+                    <span class="check-label">LiDAR & Sensor Suite</span>
+                </div>
+                <div class="status-badge processing">
+                    <span class="material-symbols-outlined">sync</span> Testing
+                </div>
+            </div>
+        </div>
+
+        <!-- COMMENT SECTION -->
+        <div class="comment-section">
+            <button class="text-btn" onclick="toggleComment()">
+                <span id="comment-icon" class="material-symbols-outlined">add_comment</span>
+                <span id="comment-toggle-text">Add optional comment</span>
+            </button>
+            <textarea id="comment-field" placeholder="Please describe any defects or issues found..."></textarea>
+        </div>
+
+        <!-- SUBMIT ACTION -->
+        <div class="action-area">
+            <!-- UPDATE: Button verlinkt nun auf 'inspection_signature.html' -->
+            <button class="submit-btn" onclick="window.location.href='inspection_signature.html'">
+                <span class="material-symbols-outlined">fact_check</span>
+                Sign & Submit Report
+            </button>
+            <div class="legal-hint">
+                By tapping this button, you confirm the proper conduct of this inspection. The report will be digitally signed and archived for 6 months according to regulations.
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER NAV -->
+    <nav class="bottom-nav">
+        <a href="overview.html" class="nav-item">
+            <span class="material-symbols-outlined">description</span>
+            <span>Overview</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">radar</span>
+            <span>VSP</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">garage</span>
+            <span>Garage</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">shower</span>
+            <span>Supply</span>
+        </a>
+        <a href="vehicles_list.html" class="nav-item">
+            <span class="material-symbols-outlined">directions_bus</span>
+            <span>Vehicles</span>
+        </a>
+    </nav>
+
+</body>
+</html>

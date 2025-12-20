@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Inspections</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        :root {
+            --primary-orange: #FF4F30;
+            --bg-grey: #EEF0F4;
+            --card-bg: #FFFFFF;
+            --text-dark: #1A1A1A;
+            --text-grey: #666666;
+            --border-color: #D1D1D1;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        body { background: var(--bg-grey); color: var(--text-dark); min-height: 100vh; padding: 16px; }
+        .container { max-width: 520px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+        header { display: flex; align-items: center; justify-content: space-between; }
+        h1 { font-size: 20px; font-weight: 600; }
+        .back-btn { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: var(--text-dark); padding: 8px 12px; border: 1px solid var(--border-color); border-radius: 4px; background: #f8f8f8; }
+        .list { display: grid; gap: 12px; }
+        .item { display: flex; align-items: center; gap: 12px; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 12px; text-decoration: none; color: var(--text-dark); }
+        .item:hover { border-color: var(--primary-orange); }
+        .item .material-symbols-outlined { font-size: 32px; color: var(--primary-orange); font-weight: 300; }
+        .item-title { font-weight: 600; }
+        .item-meta { color: var(--text-grey); font-size: 13px; }
+        .status { margin-left: auto; font-size: 12px; color: var(--primary-orange); font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Open inspections</h1>
+            <a href="overview.html" class="back-btn">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Overview
+            </a>
+        </header>
+
+        <div class="list">
+            <a class="item" href="pre_departure_checkup.html">
+                <span class="material-symbols-outlined">pending_actions</span>
+                <div>
+                    <div class="item-title">Pre-departure Checkup</div>
+                    <div class="item-meta">Shuttle 12 · Requested 08:15</div>
+                </div>
+                <span class="status">Open</span>
+            </a>
+
+            <a class="item" href="select_shuttle.html">
+                <span class="material-symbols-outlined">fact_check</span>
+                <div>
+                    <div class="item-title">Post-trip inspection</div>
+                    <div class="item-meta">Shuttle 21 · Requested 07:50</div>
+                </div>
+                <span class="status">Open</span>
+            </a>
+
+            <a class="item" href="pre_departure_checkup.html">
+                <span class="material-symbols-outlined">pending_actions</span>
+                <div>
+                    <div class="item-title">Pre-departure Checkup</div>
+                    <div class="item-meta">Shuttle 34 · Requested 06:40</div>
+                </div>
+                <span class="status">Open</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
