@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAG Logic Blackbox</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        .arrow-right {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .arrow-right::after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, #475569, #6366f1);
+            position: absolute;
+            top: 50%;
+            z-index: 0;
+        }
+        .arrow-right::before {
+            content: '\f0da';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6366f1;
+            z-index: 10;
+        }
+
+        .signal-card {
+            transition: all 0.3s ease;
+        }
+        .signal-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Dash animation for loop */
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+        .animate-dash {
+            stroke-dasharray: 10;
+            stroke-dashoffset: 100;
+            animation: dash 5s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen p-8 flex flex-col items-center justify-center selection:bg-indigo-500 selection:text-white">
+
+    <header class="text-center mb-12">
+        <h1 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-indigo-400 mb-2">
+            Logic Blackbox
+        </h1>
+        <p class="text-slate-400">Input/Output Analysis of Vanna 2.x Orchestration</p>
+    </header>
+
+    <div class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-3 gap-8 items-center relative">
+
+        <!-- INPUT SECTION -->
+        <div class="space-y-6">
+            <h2 class="text-lg font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center">
+                <span class="w-3 h-3 bg-cyan-500 rounded-full mr-2 shadow-[0_0_10px_rgba(6,182,212,0.8)]"></span>
+                Input Signal
+            </h2>
+
+            <!-- Signal 1: User Question -->
+            <div class="signal-card bg-slate-800 border-l-4 border-cyan-500 p-4 rounded-r-lg shadow-lg">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-xs text-cyan-400 font-mono font-bold">RAW STRING</span>
+                    <i class="fa-regular fa-comment-dots text-slate-500"></i>
+                </div>
+                <div class="font-mono text-sm text-slate-200">
+                    "How many vehicles have more than 100,000 km?"
+                </div>
+            </div>
+
+            <!-- Signal 2: Schema Context (RAG) -->
+            <div class="signal-card bg-slate-800 border-l-4 border-amber-500 p-4 rounded-r-lg shadow-lg relative">
+                <!-- Connector Line Visual -->
+                <div class="absolute -left-6 top-1/2 w-6 h-px bg-slate-700"></div>
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-xs text-amber-400 font-mono font-bold">VECTOR CONTEXT</span>
+                    <i class="fa-solid fa-database text-slate-500"></i>
+                </div>
+                <div class="font-mono text-xs text-slate-400 bg-slate-900 p-2 rounded border border-slate-700">
+                    DDL: CREATE TABLE Vehicle (...)<br>
+                    DOC: "MileageCounterId is km..."
+                </div>
+            </div>
+
+            <!-- Signal 3: Chat History -->
+            <div class="signal-card bg-slate-800 border-l-4 border-indigo-500 p-4 rounded-r-lg shadow-lg">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-xs text-indigo-400 font-mono font-bold">STATE / HISTORY</span>
+                    <i class="fa-solid fa-clock-rotate-left text-slate-500"></i>
+                </div>
+                <div class="font-mono text-xs text-slate-400">
+                    [Previous]: "Show all red cars"<br>
+                    DB: "testratte"
+                </div>
+            </div>
+        </div>
+
+        <!-- BLACKBOX (PROCESS) -->
+        <div class="relative py-10 px-6">
+            <!-- Arrows In -->
+            <div class="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-1/2 hidden lg:block">
+                <i class="fa-solid fa-chevron-right text-4xl text-slate-700 animate-pulse"></i>
+            </div>
+
+            <div class="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-3xl p-1 shadow-2xl relative overflow-hidden group">
+                <!-- Animated Border Gradient -->
+                <div class="absolute inset-0 bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-500 opacity-20 group-hover:opacity-30 transition duration-1000"></div>
+                
+                <div class="bg-slate-900 rounded-[22px] p-8 relative z-10 h-full flex flex-col justify-center items-center text-center space-y-6">
+                    
+                    <div class="bg-slate-800 p-4 rounded-full shadow-inner ring-1 ring-slate-700">
+                        <i class="fa-brands fa-python text-5xl text-white"></i>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">Logic Core</h3>
+                        <p class="text-xs text-slate-400 font-mono mt-1">LangdockVanna Class</p>
+                    </div>
+
+                    <!-- Internal Process Visualization -->
+                    <div class="w-full space-y-2 text-xs font-mono text-left bg-black/30 p-4 rounded-lg border border-slate-800 relative">
+                        <!-- Model Badge -->
+                        <div class="absolute -top-3 -right-2 px-2 py-1 bg-indigo-600 rounded text-[10px] font-bold text-white shadow-lg border border-indigo-400 cursor-pointer hover:bg-indigo-500 transition" title="Currently Active Model">
+                            GPT-4o
+                        </div>
+
+                        <div class="flex items-center text-green-400">
+                            <i class="fa-solid fa-check mr-2 w-4"></i> 1. Prompt Construction
+                        </div>
+                        <div class="flex items-center text-green-400">
+                            <i class="fa-solid fa-check mr-2 w-4"></i> 2. API Request (Langdock)
+                        </div>
+                        <div class="flex items-center text-yellow-400">
+                            <i class="fa-solid fa-cog fa-spin mr-2 w-4"></i> 3. SQL Sanitization
+                        </div>
+                        <div class="text-slate-500 pl-6 text-[10px]">
+                            -> Fix: [User] keyword<br>
+                            -> Fix: TOP 10 limit
+                        </div>
+                        <div class="flex items-center text-slate-500">
+                            <i class="fa-regular fa-circle mr-2 w-4"></i> 4. Execution (PyODBC)
+                        </div>
+                    </div>
+
+                    <!-- Privacy Shield -->
+                    <div class="flex items-center space-x-2 text-[10px] bg-emerald-900/20 border border-emerald-500/30 px-3 py-1.5 rounded-full text-emerald-400">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span class="font-bold uppercase tracking-tighter">Privacy Verified:</span>
+                        <span class="text-slate-400">Only schema metadata sent</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Arrows Out (Still inside the middle column container) -->
+            <div class="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 hidden lg:block">
+                <i class="fa-solid fa-chevron-right text-4xl text-slate-700 animate-pulse"></i>
+            </div>
+        </div>
+
+        <!-- OUTPUT SECTION (Column 3) -->
+        <div class="space-y-6">
+            <h2 class="text-lg font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center justify-end">
+                Output Signal
+                <span class="w-3 h-3 bg-emerald-500 rounded-full ml-2 shadow-[0_0_10px_rgba(16,185,129,0.8)]"></span>
+            </h2>
+
+            <!-- Signal 1: Executable SQL -->
+            <div class="signal-card bg-slate-800 border-r-4 border-emerald-500 p-4 rounded-l-lg shadow-lg text-right">
+                <div class="flex justify-end items-center mb-2 space-x-2">
+                    <i class="fa-solid fa-code text-slate-500"></i>
+                    <span class="text-xs text-emerald-400 font-mono font-bold">EXECUTABLE SQL</span>
+                </div>
+                <div class="font-mono text-xs text-emerald-100 bg-slate-900/50 p-2 rounded border border-slate-700/50 text-left overflow-x-auto">
+                    SELECT TOP 10 * FROM [Vehicle]<br>
+                    WHERE Mileage > 100000
+                </div>
+            </div>
+
+            <!-- Signal 2: Pandas DataFrame -->
+            <div class="signal-card bg-slate-800 border-r-4 border-blue-500 p-4 rounded-l-lg shadow-lg text-right">
+                <div class="flex justify-end items-center mb-2 space-x-2">
+                    <i class="fa-solid fa-table text-slate-500"></i>
+                    <span class="text-xs text-blue-400 font-mono font-bold">PANDAS DATAFRAME</span>
+                </div>
+                <div class="flex justify-end">
+                    <table class="text-xs text-slate-400 border-collapse">
+                        <tr><td class="border border-slate-700 px-1">ID</td><td class="border border-slate-700 px-1">Km</td></tr>
+                        <tr><td class="border border-slate-700 px-1">101</td><td class="border border-slate-700 px-1">105k</td></tr>
+                        <tr><td class="border border-slate-700 px-1">...</td><td class="border border-slate-700 px-1">...</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Signal 3: UI Feedback -->
+            <div class="signal-card bg-slate-800 border-r-4 border-purple-500 p-4 rounded-l-lg shadow-lg text-right">
+                <div class="flex justify-end items-center mb-2 space-x-2">
+                    <i class="fa-solid fa-chart-line text-slate-500"></i>
+                    <span class="text-xs text-purple-400 font-mono font-bold">PLOTLY CODE (OPT)</span>
+                </div>
+                <div class="font-mono text-xs text-slate-400">
+                    fig = px.bar(df, x='ID', y='Km')
+                </div>
+            </div>
+        </div>
+
+        <!-- Self-Correction Loop SVG (Full Grid Overlay) -->
+        <!-- "overflow-visible" creates canvas space outside the defined grid width for the outer loop line -->
+        <svg class="absolute inset-0 pointer-events-none hidden lg:block overflow-visible" style="z-index: 0;" width="100%" height="100%" viewBox="0 0 1200 800" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="loopGradientOverlay" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#10b981;stop-opacity:0.5" />
+                    
+                </linearGradient>
+            </defs>
+
+            <!-- 
+                Path Strategy: "Wide Around"
+                - We go to x=1240 (outside the 1200 viewBox width).
+                - Requires class="overflow-visible" on the svg.
+                - Start: Lowered to y=210 (approx middle/lower part of SQL box)
+                - Start X: slightly more right x=1150
+                - Bottom: Lowered 10px to y=760
+            -->
+            <path d="M 1200,270 L 1235,270 L 1235,790 L 600,790 L 600,750" 
+                  fill="none" 
+                  stroke="url(#loopGradientOverlay)" 
+                  stroke-width="3" 
+                  stroke-dasharray="10,5" 
+                  stroke-linejoin="round"
+                  class="animate-dash" />
+
+            <!-- Arrow Head (Upward) -->
+            <path d="M 590,750 L 600,740 L 610,750" 
+                  fill="none" 
+                  stroke="#6366f1" 
+                  stroke-width="3" 
+                  stroke-linejoin="round" />
+
+            <!-- Start Dot (Green) at SQL Box right edge -->
+            <circle cx="1200" cy="270" r="6" fill="#10b981" />
+
+            <!-- Label (Below the line now) -->
+            <text x="1020" y="770" fill="#6366f1" font-size="16" font-family="monospace" font-weight="bold" class="opacity-80" text-anchor="middle">
+                ↺ Self-Correction Loop (Error Feedback)
+            </text>
+        </svg>
+
+    </div>
+
+    <footer class="mt-32 text-slate-600 text-xs">
+        Blackbox Analysis of the STAG Logic Engine • Recipe Engineering
+    </footer>
+
+</body>
+</html>

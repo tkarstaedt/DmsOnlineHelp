@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stag Architecture - Smart Table Augmented Generation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ 
+            startOnLoad: true, 
+            theme: 'dark',
+            securityLevel: 'loose',
+            sequence: { showSequenceNumbers: true }
+        });
+        window.mermaid = mermaid;
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Flow Line Connector */
+        .flow-line {
+            position: relative;
+        }
+        .flow-line::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -2.5rem;
+            width: 2px;
+            height: 2.5rem;
+            background: linear-gradient(to bottom, #475569 0%, #6366f1 100%);
+            transform: translateX(-50%);
+            z-index: 0;
+            opacity: 0.5;
+        }
+        .flow-line-last::after { display: none; }
+        
+        /* Hover Effects */
+        .component-card {
+            transition: all 0.3s ease;
+        }
+        .component-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.2), 0 10px 10px -5px rgba(99, 102, 241, 0.1);
+            border-color: #6366f1;
+        }
+
+        /* Tooltip Logic */
+        .tooltip-container {
+            position: relative;
+        }
+        .tooltip-text {
+            visibility: hidden;
+            width: 220px;
+            background-color: #1e293b;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px;
+            position: absolute;
+            z-index: 50;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -110px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            border: 1px solid #475569;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+            font-size: 0.75rem;
+            pointer-events: none;
+        }
+        .tooltip-container:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+        .tooltip-text::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #1e293b transparent transparent transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen p-4 md:p-8 selection:bg-indigo-500 selection:text-white">
+
+    <!-- Header Section -->
+    <header class="max-w-5xl mx-auto text-center mb-16 animate-fade-in-down">
+        <div class="inline-block p-4 bg-gradient-to-br from-indigo-600 to-violet-600 rounded-2xl mb-6 shadow-lg shadow-indigo-500/20 transform rotate-3 hover:rotate-0 transition duration-500">
+            <i class="fa-solid fa-code-branch text-4xl text-white"></i>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-cyan-300 to-indigo-300 mb-4 tracking-tight">
+            STAG Architecture
+        </h1>
+        <p class="text-slate-400 text-xl font-light">Smart Table Augmented Generation<br><span class="text-indigo-400 text-sm font-semibold uppercase tracking-wider">Native Twin & Enterprise Bridge</span></p>
+        
+        <!-- Action Button -->
+        <div class="mt-8">
+            <button onclick="toggleModal('flow-modal')" class="inline-flex items-center px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-full transition shadow-lg shadow-indigo-500/20 group">
+                <i class="fa-solid fa-play-circle mr-2 group-hover:scale-110 transition"></i>
+                Show Request Flow
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Architecture Container -->
+    <main class="max-w-5xl mx-auto space-y-10 relative px-4">
+
+        <!-- STEP 1: Interface Layer -->
+        <section class="relative z-30 flow-line">
+            <div class="flex items-center mb-2">
+                <span class="bg-indigo-900 text-indigo-300 text-xs font-bold px-2 py-1 rounded uppercase mr-3">Layer 1</span>
+                <h2 class="text-sm font-bold text-slate-400 uppercase tracking-widest">User Interaction</h2>
+            </div>
+            
+            <div class="component-card bg-slate-800 border border-slate-700 rounded-2xl p-8 shadow-xl relative group">
+                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
+                    <i class="fa-solid fa-desktop text-6xl text-indigo-400"></i>
+                </div>
+                
+                <h3 class="text-2xl font-bold text-indigo-300 mb-4">Frontend & Control</h3>
+                <p class="text-slate-400 mb-6 text-sm max-w-2xl">
+                    Where the user (you) interacts with the system. The interface determines which database context is loaded.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Streamlit Block -->
+                    <div class="tooltip-container bg-slate-700/30 p-4 rounded-xl border border-slate-600 hover:bg-slate-700/50 transition cursor-help">
+                        <div class="flex items-center space-x-4">
+                            <!-- Streamlit SVG Icon -->
+                            <div class="bg-red-500/10 p-2 rounded-lg flex items-center justify-center">
+                                <svg class="w-8 h-8" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                    <path d="M 63.992579,72.521325 41.553732,60.660321 2.6034211,40.074058 c -0.035557,-0.03555 -0.1066637,-0.03555 -0.1422174,-0.03555 -1.4221913,-0.675528 -2.87993927,0.746641 -2.3466152,2.168863 l 19.8466965,50.619383 0.0035,0.0109 c 0.02134,0.04994 0.03912,0.09944 0.06046,0.149334 0.814189,1.887956 2.591938,3.054 4.526143,3.512657 0.163538,0.03587 0.280527,0.06782 0.476917,0.107073 0.195451,0.04351 0.46881,0.10282 0.703471,0.120745 0.03912,0.0033 0.07467,0.0033 0.113789,0.0065 h 0.02846 c 0.02841,0.0044 0.05687,0.0044 0.08533,0.0076 h 0.03908 c 0.02491,0.0033 0.05333,0.0033 0.07824,0.0033 h 0.04621 c 0.02846,0.0044 0.05687,0.0044 0.08533,0.0044 v 0 c 25.135232,2.740415 50.493562,2.740415 75.628755,0 v 0 c 0.30207,0 0.59732,-0.0145 0.88147,-0.04263 0.0926,-0.0109 0.18133,-0.02137 0.27051,-0.03195 0.0107,-0.0044 0.0247,-0.0044 0.0354,-0.0076 0.0606,-0.0076 0.12074,-0.01788 0.18133,-0.02857 0.0887,-0.0109 0.17791,-0.02813 0.26666,-0.04612 0.17791,-0.03925 0.25855,-0.06738 0.50004,-0.1506 0.24106,-0.08276 0.64169,-0.22784 0.89214,-0.348585 0.25087,-0.120746 0.42452,-0.236792 0.63444,-0.368201 0.2594,-0.163837 0.50644,-0.331086 0.75689,-0.518812 0.10794,-0.08276 0.18175,-0.135683 0.25983,-0.210351 l -0.0427,-0.02475 z" fill="#ff4b4b" id="path14" style="stroke-width:0.426657" />
+                                    <path d="m 125.44606,40.07457 h -0.0354 L 86.445785,60.660834 108.10586,92.919776 127.90272,42.207855 v -0.07109 c 0.49791,-1.493346 -1.0308,-2.844391 -2.45668,-2.062205" fill="#7d353b" id="path16" style="stroke-width:0.426657" />
+                                    <path d="m 66.069117,30.286053 c -0.995816,-1.454191 -3.164512,-1.454191 -4.124488,0 L 41.553817,60.660572 63.992579,72.521761 106.51616,94.995458 c 0.26709,-0.261532 0.48127,-0.516249 0.7074,-0.785468 0.31999,-0.394664 0.61865,-0.817481 0.8819,-1.290639 L 86.445379,60.660572 Z" fill="#bd4043" id="path18" style="stroke-width:0.426657" />
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="font-bold text-white">Streamlit GUI</div>
+                                <div class="text-xs text-slate-400 font-mono">stag_gui.py</div>
+                            </div>
+                        </div>
+                        <span class="tooltip-text">Renders chat, history, and tables. Enables "hot-swapping" of databases via the sidebar.</span>
+                    </div>
+                    
+                    <!-- Config Block -->
+                    <div class="tooltip-container bg-slate-700/30 p-4 rounded-xl border border-slate-600 hover:bg-slate-700/50 transition cursor-help">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-yellow-500/10 p-3 rounded-lg text-yellow-400"><i class="fa-solid fa-sliders text-xl"></i></div>
+                            <div>
+                                <div class="font-bold text-white">State Management</div>
+                                <div class="text-xs text-slate-400 font-mono">Session State</div>
+                            </div>
+                        </div>
+                        <span class="tooltip-text">Persists active DB connection and chat history to prevent data loss on reloads.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 2: Logic Layer -->
+        <section class="relative z-20 flow-line">
+            <div class="flex items-center mb-2">
+                <span class="bg-cyan-900 text-cyan-300 text-xs font-bold px-2 py-1 rounded uppercase mr-3">Layer 2</span>
+                <h2 class="text-sm font-bold text-slate-400 uppercase tracking-widest">Orchestration Core</h2>
+            </div>
+
+            <div class="component-card bg-slate-800 border border-slate-700 rounded-2xl p-8 shadow-xl relative overflow-hidden">
+                <!-- Background decoration -->
+                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-cyan-500/10 rounded-full blur-3xl"></div>
+
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <div class="flex-1 group cursor-pointer" onclick="window.location.href='vanna_logic_info.html'">
+                        <h3 class="text-2xl font-bold text-cyan-300 mb-2 group-hover:text-cyan-200 transition">
+                            Python Logic (Vanna 2.x) <i class="fa-solid fa-arrow-right-from-bracket opacity-0 group-hover:opacity-100 transition-opacity ml-2 text-sm text-cyan-400"></i>
+                        </h3>
+                        <p class="text-slate-400 text-sm">The control center. Decides what data is sent to the AI and how SQL queries are sanitized.</p>
+                    </div>
+                    
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-cyan-500/30 font-mono text-xs text-cyan-100 shadow-inner min-w-[280px]">
+                        <div class="text-slate-500 mb-1"># Custom Class Implementation</div>
+                        <div class="text-purple-400">class</div> <span class="text-yellow-300">LangdockVanna</span>(...):<br>
+                        &nbsp;&nbsp;<span class="text-slate-400">def</span> <span class="text-blue-300">__init__</span>(self):<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green-400"># Fixes T-SQL Keywords</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;self.sanitize_sql()
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 3: Intelligence Layer (Split) -->
+        <section class="relative z-10 flow-line">
+            <div class="flex items-center mb-2">
+                <span class="bg-green-900 text-green-300 text-xs font-bold px-2 py-1 rounded uppercase mr-3">Layer 3</span>
+                <h2 class="text-sm font-bold text-slate-400 uppercase tracking-widest">Memory & Intelligence</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+                
+                <!-- Left: ChromaDB (Local Memory) -->
+                <div class="component-card bg-slate-800 border-l-4 border-amber-500 rounded-r-2xl rounded-l-md p-6 shadow-xl flex flex-col tooltip-container cursor-help">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-amber-500/20 p-2 rounded-full mr-3 text-amber-400"><i class="fa-solid fa-database"></i></div>
+                        <div>
+                            <h3 class="font-bold text-lg text-amber-100">Local Memory</h3>
+                            <div class="text-xs text-amber-500/80 font-mono uppercase">Vector Store (ChromaDB)</div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-slate-900 flex-grow rounded-lg p-4 border border-slate-700 relative overflow-hidden">
+                        <div class="text-xs text-slate-500 mb-2 font-bold uppercase tracking-wider">Collections (Multi-DB)</div>
+                        <!-- Collection visualization -->
+                        <div class="space-y-2 font-mono text-xs">
+                            <div class="flex items-center justify-between bg-slate-800 p-2 rounded border border-slate-700">
+                                <span class="text-amber-200"><i class="fa-regular fa-folder mr-2"></i>testratte_ddl</span>
+                                <span class="text-slate-500">Active</span>
+                            </div>
+                            <div class="flex items-center justify-between bg-slate-800/50 p-2 rounded border border-slate-700/50 text-slate-500">
+                                <span><i class="fa-regular fa-folder mr-2"></i>bmscustomer_ddl</span>
+                                <span>Idle</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="tooltip-text">Stores knowledge about your table structure (schema). Sensitive data never leaves this local container.</span>
+                </div>
+
+                <!-- Right: Langdock (Remote Brain) -->
+                <div class="component-card bg-slate-800 border-r-4 border-green-500 rounded-l-2xl rounded-r-md p-6 shadow-xl flex flex-col tooltip-container cursor-help">
+                    <div class="flex items-center mb-4 justify-end">
+                        <div class="text-right mr-3">
+                            <h3 class="font-bold text-lg text-green-100">Remote Intelligence</h3>
+                            <div class="text-xs text-green-500/80 font-mono uppercase">LLM API</div>
+                        </div>
+                        <div class="bg-green-500/20 p-2 rounded-full text-green-400"><i class="fa-solid fa-brain"></i></div>
+                    </div>
+
+                    <div class="bg-slate-900 flex-grow rounded-lg p-4 border border-slate-700 flex items-center justify-center relative">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-white mb-1">GPT-4o-mini</div>
+                            <div class="text-xs text-slate-400">via Langdock API</div>
+                            <div class="mt-3 inline-block px-3 py-1 bg-green-900/30 border border-green-800 rounded-full text-green-400 text-xs">
+                                <i class="fa-solid fa-lock mr-1"></i> Enterprise Compliant
+                            </div>
+                        </div>
+                    </div>
+                    <span class="tooltip-text">The "Thinker". Receives only the schema (from Chroma) and the question, generates SQL, and sends it back. Sees no real data.</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- STEP 4: Data Layer -->
+        <section class="relative z-0 pt-4">
+            <div class="flex items-center mb-2 justify-center">
+                <span class="bg-emerald-900 text-emerald-300 text-xs font-bold px-2 py-1 rounded uppercase mr-3">Layer 4</span>
+                <h2 class="text-sm font-bold text-slate-400 uppercase tracking-widest">Data Source</h2>
+            </div>
+
+            <div class="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-2xl p-8 shadow-2xl relative text-center">
+                <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-20"></div>
+                
+                <div class="relative z-10">
+                    <div class="inline-block bg-slate-700 p-5 rounded-full mb-6 shadow-inner ring-4 ring-slate-800/50">
+                        <i class="fa-solid fa-server text-5xl text-emerald-400"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-white mb-2">MS SQL Server Express</h2>
+                    <p class="text-slate-400 text-sm mb-6">Local Instance (On-Premises) • <span class="text-emerald-400 font-mono">localhost\SQLEXPRESS</span></p>
+
+                    <div class="flex justify-center gap-4">
+                        <span class="bg-slate-800 border border-slate-600 px-4 py-2 rounded-lg text-xs font-mono text-slate-300 flex items-center">
+                            <i class="fa-solid fa-plug mr-2 text-indigo-400"></i> PyODBC Driver
+                        </span>
+                        <span class="bg-slate-800 border border-slate-600 px-4 py-2 rounded-lg text-xs font-mono text-slate-300 flex items-center">
+                            <i class="fa-solid fa-shield-halved mr-2 text-indigo-400"></i> Trusted Connection
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-5xl mx-auto mt-20 border-t border-slate-800 pt-8 text-center pb-12">
+        <p class="text-slate-600 text-xs">
+            STAG Architecture Visualization • Created for the "Recipe Engineering" Portfolio
+        </p>
+    </footer>
+
+    <!-- Flow Modal Overlay -->
+    <div id="flow-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-slate-950/80 backdrop-blur-sm" onclick="toggleModal('flow-modal')"></div>
+        
+        <!-- Modal Content -->
+        <div class="bg-slate-900 border border-slate-700 w-full max-w-4xl max-h-[90vh] rounded-3xl shadow-2xl relative z-10 flex flex-col overflow-hidden">
+            <div class="p-6 border-b border-slate-800 flex justify-between items-center bg-slate-800/50">
+                <h3 class="text-xl font-bold text-indigo-300 flex items-center">
+                    <i class="fa-solid fa-route mr-3"></i> Request Lifecycle Sequence
+                </h3>
+                <button onclick="toggleModal('flow-modal')" class="text-slate-400 hover:text-white transition p-2">
+                    <i class="fa-solid fa-xmark text-2xl"></i>
+                </button>
+            </div>
+            
+            <div class="p-8 overflow-y-auto bg-slate-900">
+                <div class="mermaid flex justify-center">
+sequenceDiagram
+    participant U as User
+    participant S as Streamlit GUI
+    participant L as Stag Logic (Custom Vanna)
+    participant C as ChromaDB (Local Context)
+    participant AI as Langdock (Remote AI)
+    participant DB as MS SQL Server
+
+    U->>S: Stellt Frage ("Wie viele Autos...")
+    S->>L: Übergibt Frage & DB-Kontext
+    L->>C: Suche passende Tabellen-Strukturen (RAG)
+    C-->>L: DDL & Dokumentation zurück
+    L->>AI: Prompt (Frage + Schema-Kontext)
+    AI-->>L: Generiertes SQL
+    
+    rect rgb(30, 41, 59)
+        Note right of L: Sanitization Step (Fix T-SQL Keywords)
+    end
+
+    L->>DB: Führt SQL aus
+    DB-->>L: Daten (Pandas DataFrame)
+    L-->>S: SQL + Ergebnisse + Visualisierung
+    S-->>U: Zeigt Antwort & Tabelle
+                </div>
+            </div>
+            
+            <div class="p-4 bg-slate-800/30 text-center">
+                <p class="text-xs text-slate-500 italic">Interaktives Mermaid-Diagramm zur Visualisierung des Datenflusses</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleModal(id) {
+            const modal = document.getElementById(id);
+            if (modal.classList.contains('hidden')) {
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+                // Trigger re-render if needed (though Mermaid auto-renders on load)
+            } else {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
+
+</body>
+</html>
