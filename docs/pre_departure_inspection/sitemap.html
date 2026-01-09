@@ -96,6 +96,7 @@
           SelectShuttle --> |Initiate Test Drive| VisualChecks
           VisualChecks --> |Continue to Automatic Tests| PreDeparture
           PreDeparture --> |Sign & Submit Report| Signature
+          Signature --> |Back to Overview| Overview
 
           %% Flow 2: Vehicles
           VehiclesList --> |Select Vehicle| VehicleDetail

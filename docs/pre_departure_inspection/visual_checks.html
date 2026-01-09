@@ -88,6 +88,10 @@
         .submit-btn { background-color: var(--primary-orange); color: white; border: none; width: 100%; padding: 16px; border-radius: 8px; font-size: 16px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 10px; cursor: pointer; box-shadow: 0 4px 6px rgba(255, 79, 48, 0.25); transition: background-color 0.2s; }
         .submit-btn:active { background-color: #e64a2e; transform: scale(0.99); }
         .legal-hint { text-align: center; font-size: 11px; color: var(--text-grey); margin-top: 12px; line-height: 1.4; }
+        .bottom-nav { position: fixed; bottom: 0; left: 0; width: 100%; height: var(--nav-height); background-color: #EFEFEF; border-top: 1px solid #CCC; display: flex; justify-content: space-around; align-items: center; z-index: 100; }
+        .nav-item { display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; color: var(--text-dark); width: 20%; height: 100%; }
+        .nav-item .material-symbols-outlined { font-size: 24px; font-weight: 300; margin-bottom: 4px; }
+        .nav-item span { font-size: 10px; }
     </style>
     <script>
         function toggleComment() {
@@ -198,5 +202,28 @@
             </div>
         </div>
     </main>
+
+    <nav class="bottom-nav">
+        <a href="overview.html" class="nav-item">
+            <span class="material-symbols-outlined">description</span>
+            <span>Overview</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">radar</span>
+            <span>VSP</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">garage</span>
+            <span>Garage</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">shower</span>
+            <span>Supply</span>
+        </a>
+        <a href="vehicles_list.html" class="nav-item">
+            <span class="material-symbols-outlined">directions_bus</span>
+            <span>Vehicles</span>
+        </a>
+    </nav>
 </body>
 </html>

@@ -180,6 +180,25 @@
             transform: scale(0.99);
         }
 
+        .submit-btn:disabled {
+            background-color: #f0a092;
+            cursor: not-allowed;
+            box-shadow: none;
+            transform: none;
+        }
+
+        .confirmation-link {
+            display: inline-block;
+            margin-top: 8px;
+            color: var(--info-blue-text);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .confirmation-link:hover {
+            text-decoration: underline;
+        }
+
         /* --- Footer Navigation --- */
         .bottom-nav {
             position: fixed;
@@ -296,10 +315,15 @@
 
         <!-- Final Submit -->
         <div class="action-area">
-            <button class="submit-btn" onclick="completeDigitalSignature()">
+            <button id="complete-btn" class="submit-btn" onclick="completeDigitalSignature()">
                 <span class="material-symbols-outlined">check_circle</span>
                 Complete Inspection
             </button>
+        </div>
+
+        <div id="signature-confirmation" class="confirmation-card" style="display:none;">
+            <div id="confirmation-message" class="confirmation-text"></div>
+            <a class="confirmation-link" href="overview.html">Back to Overview</a>
         </div>
 
     </main>
@@ -342,7 +366,18 @@
                 return;
             }
             const user = document.getElementById('signed-in-as').textContent || 'current user';
-            alert(`Report signed digitally as ${user}.`);
+            const completeBtn = document.getElementById('complete-btn');
+            const confirmation = document.getElementById('signature-confirmation');
+            const message = document.getElementById('confirmation-message');
+            if (message) {
+                message.textContent = `Report signed digitally as ${user}.`;
+            }
+            if (confirmation) {
+                confirmation.style.display = 'block';
+            }
+            if (completeBtn) {
+                completeBtn.disabled = true;
+            }
         }
     </script>
 </body>
